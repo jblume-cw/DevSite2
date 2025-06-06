@@ -1,0 +1,262 @@
+{
+  "autoScale": true,
+  "texture": "media/default/texture.png",
+  "textureMap": "media/default/texture.json",
+  "textureKey": "textureBa",
+  "fonts" : {
+    "gameText" : {"font": "24px VT323", "fill": "#FC5B03", "align": "left", "fontWeight": "400"},
+    "menuText": { "font": "20px Alegreya Sans", "fill": "#FFFFFF", "align": "left", "fontWeight": "800", "wordWrap": true, "wordWrapWidth": 365}
+  },
+  "menu": {
+    "background": "splash-bg.png",
+    "textLineSpacing": -10,
+    "text1": "I have to be active every day so I can use up the energy from the food I eat. That's called balance. But you probably know that already!",
+    "text1xy": [230, 167],
+    "text2": "Where you live, I'm sure there are lots of choices of what to do and what to eat. Not here in outer space, though. Can you help me figure out how to balance my snacks with some fun activities?",
+    "text2xy": [230, 253],
+    "text3": "Click the Start button to try it!",
+    "text3xy": [230, 385],
+    "startButtonXY": [453, 447],
+    "startButtonAnimationDelay": 21000,
+    "sound": "b0100_01"
+  },
+  "game": {
+    "background": "game-bg.png",
+    "lever": {
+      "image": "lever0001.png",
+      "locationXY": [320, 103],
+      "anchorXY": [0.48, 0.85],
+      "leftItem1XY": [-80, 5],
+      "leftItem2XY": [-50, 5],
+      "leftItem3XY": [-65, -27],
+      "rightItem1XY": [86, 5],
+      "rightItem2XY": [56, 5],
+      "rightItem3XY": [71, -27]
+    },
+    "clearAllButtonXY": [320, 48],
+    "gameBackgroundMusic": "cat_5_loop1"
+  },
+  "foods": [
+    {
+      "filenamePrefix": "Soda",
+      "weight": 143,
+      "locationXY": [20, 230],
+      "sound": "soda"
+    },
+    {
+      "filenamePrefix": "Cereal",
+      "weight": 100,
+      "locationXY": [115, 230],
+      "sound": "cereal"
+    },
+    {
+      "filenamePrefix": "Chips",
+      "weight": 155,
+      "locationXY": [20, 305],
+      "sound": "potatochips"
+    },
+    {
+      "filenamePrefix": "Apple",
+      "weight": 65,
+      "locationXY": [115, 305],
+      "sound": "apple"
+    },
+    {
+      "filenamePrefix": "Milk",
+      "weight": 90,
+      "locationXY": [20, 380],
+      "sound": "milk"
+    },
+    {
+      "filenamePrefix": "Cookies",
+      "weight": 160,
+      "locationXY": [115, 380],
+      "sound": "cookies"
+    }
+  ],
+  "activities": [
+    {
+      "filenamePrefix": "JumpRope",
+      "weight": 35,
+      "locationXY": [445, 230],
+      "sound": "jumprope"
+    },
+    {
+      "filenamePrefix": "Soccer",
+      "weight": 73,
+      "locationXY": [539, 230],
+      "sound": "playsoccer"
+    },
+    {
+      "filenamePrefix": "Bike",
+      "weight": 84,
+      "locationXY": [445, 305],
+      "sound": "rideyourbike"
+    },
+    {
+      "filenamePrefix": "Playground",
+      "weight": 60,
+      "locationXY": [539, 305],
+      "sound": "gototheplayground"
+    },
+    {
+      "filenamePrefix": "TV",
+      "weight": 10,
+      "locationXY": [445, 380],
+      "sound": "watchtv"
+    },
+    {
+      "filenamePrefix": "WalkTheDog",
+      "weight": 40,
+      "locationXY": [539, 380],
+      "sound": "walkthedog"
+    }
+  ],
+  "buttons": {
+    "start": {
+      "over": "start-btn0002.png",
+      "out": "start-btn0001.png",
+      "down": "start-btn0002.png",
+      "up": "start-btn0002.png"
+    }
+  },
+  "soundKey": "baSounds",
+  "soundFile": [
+    "media/default/balancing-act.m4a",
+    "media/default/balancing-act.ogg"
+  ],
+  "sounds": {
+    "allright": [
+      0,
+      11.574285714285715,
+      false,
+      "allright"
+    ],
+    "apple": [
+      12,
+      0.641043083900227,
+      false,
+      "apple"
+    ],
+    "b0100_01": [
+      13,
+      22.80650793650794,
+      false,
+      "b0100_01"
+    ],
+    "cereal": [
+      36,
+      0.9056916099773247,
+      false,
+      "cereal"
+    ],
+    "chocolatechipcookie": [
+      37,
+      1.4673469387755134,
+      false,
+      "chocolatechipcookie"
+    ],
+    "clickafood": [
+      39,
+      3.439569160997735,
+      false,
+      "clickafood"
+    ],
+    "clickanactivity": [
+      43,
+      3.6494784580498845,
+      false,
+      "clickanactivity"
+    ],
+    "clicktheclearallbutton": [
+      47,
+      2.7818820861677978,
+      false,
+      "clicktheclearallbutton"
+    ],
+    "cookies": [
+      50,
+      0.8147845804988663,
+      false,
+      "cookies"
+    ],
+    "gototheplayground": [
+      51,
+      1.3889342403628149,
+      false,
+      "gototheplayground"
+    ],
+    "jumprope": [
+      53,
+      0.881315192743763,
+      false,
+      "jumprope"
+    ],
+    "milk": [
+      54,
+      0.6513605442176882,
+      false,
+      "milk"
+    ],
+    "playsoccer": [
+      55,
+      0.9723356009070301,
+      false,
+      "playsoccer"
+    ],
+    "potatochips": [
+      56,
+      1.2661451247165516,
+      false,
+      "potatochips"
+    ],
+    "rideyourbike": [
+      58,
+      1.1535600907029462,
+      false,
+      "rideyourbike"
+    ],
+    "soda": [
+      60,
+      0.7316326530612258,
+      false,
+      "soda"
+    ],
+    "thescalebalances": [
+      61,
+      5.927165532879826,
+      false,
+      "thescalebalances"
+    ],
+    "walkthedog": [
+      67,
+      1.0419047619047603,
+      false,
+      "walkthedog"
+    ],
+    "watchtv": [
+      69,
+      1.241383219954642,
+      false,
+      "watchtv"
+    ],
+    "cat_5_loop1": [
+      71,
+      6.851655328798188,
+      false,
+      "cat_5_loop1"
+    ],
+    "mouseclick03": [
+      78,
+      0.4438775510204067,
+      false,
+      "mouseclick03"
+    ],
+    "orchestraltadastinger01": [
+      79,
+      3.895147392290255,
+      false,
+      "orchestraltadastinger01"
+    ]
+  }
+}

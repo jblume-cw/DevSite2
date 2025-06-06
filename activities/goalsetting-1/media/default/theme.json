@@ -1,0 +1,124 @@
+{
+  "texture": "media/default/texture.png",
+  "textureMap": "media/default/texture.json",
+  "textureKey": "texture",
+  "data": "media/default/sceneData.json",
+  "fonts" : {
+    "title-bar" : {"font": "24px VT323", "fill": "#B7F149", "align": "left", "fontWeight": "400"},
+    "title": { "font": "66px Alegreya Sans", "fill": "#FEFD9A", "align": "left", "fontWeight": "800" },
+    "default-text": { "font": "25px Alegreya Sans", "fill": "#FEFD9A", "align": "left", "fontWeight": "800" }
+  },
+  "images": {
+    "common": {
+      "title-bar": "title-bar.png",
+      "moon": "moon.png",
+      "star-bullet": "star-bullet.png",
+      "mission-health-logo": "mission health logo.png"
+    },
+    "goal-setting": {
+      "sofia": "sofia_btn0001.png",
+      "carly": "carly_btn0001.png",
+      "jack": "jack_btn0001.png",
+      "zach": "zach_btn0001.png"
+    }
+  },
+  "sceneImages": {
+    "bgspace": "sky-background.png"
+  },
+  "buttons": {
+    "home": {
+      "up": "home-btn0001.png",
+      "over": "home-btn0002.png",
+      "out": "home-btn0001.png",
+      "down": "home-btn0002.png"
+    },
+    "next": {
+      "up": "next-btn0001.png",
+      "over": "next-btn0002.png",
+      "out": "next-btn0001.png",
+      "down": "next-btn0002.png"
+    },
+    "back": {
+      "up": "back-btn0001.png",
+      "over": "back-btn0002.png",
+      "out": "back-btn0001.png",
+      "down": "back-btn0002.png"
+    },
+    "replay": {
+      "up": "replay-btn0001.png",
+      "over": "replay-btn0002.png",
+      "out": "replay-btn0001.png",
+      "down": "replay-btn0002.png"
+    },
+    "worksheet": {
+      "up": "worksheet-btn0001.png",
+      "over": "worksheet-btn0002.png",
+      "out": "worksheet-btn0001.png",
+      "down": "worksheet_btn0002.png"
+    },
+    "goal-setting-carly-btn": {
+      "over": "carly_btn0002.png",
+      "out": "carly_btn0001.png"
+    },
+    "goal-setting-sofia-btn": {
+      "over": "sofia_btn0002.png",
+      "out": "sofia_btn0001.png"
+    },
+    "goal-setting-jack-btn": {
+      "over": "jack_btn0002.png",
+      "out": "jack_btn0001.png"
+    },
+    "goal-setting-zach-btn": {
+      "over": "zach_btn0002.png",
+      "out": "zach_btn0001.png"
+    }
+  },
+  "soundKey": "goalsetting",
+  "soundFile": [ "media/default/goal-setting.m4a", "media/default/goal-setting.ogg" ],
+  "sounds": {
+    "slide1": [
+      0,
+      1.116780045351474,
+      false,
+      "slide1"
+    ],
+    "slide2-carly": [
+      2,
+      8.916961451247165,
+      false,
+      "slide2-carly"
+    ],
+    "slide2-jack": [
+      11,
+      7.75297052154195,
+      false,
+      "slide2-jack"
+    ],
+    "slide2-sofia": [
+      19,
+      10.09995464852608,
+      false,
+      "slide2-sofia"
+    ],
+    "slide2-zach": [
+      30,
+      7.8678004535147394,
+      false,
+      "slide2-zach"
+    ],
+    "slide2": [
+      38,
+      50.99863945578231,
+      false,
+      "slide2"
+    ],
+    "slide3": [
+      89,
+      21.70154195011338,
+      false,
+      "slide3"
+    ]
+  }
+  
+}
+

@@ -1,0 +1,610 @@
+{
+  "play": {
+    "start": "resumeFork",
+    "persist": [ "lessonLocation" ],
+    "modelType": "basic",
+    "showPlaythrough": false,
+    "global": {
+      "actors": {
+        "title-bar": {
+          "name": "title-bar",
+          "type": "decoration",
+          "image": "title-bar",
+          "key": "common",
+          "location": [0, 0]
+        },
+        "moon": {
+          "name": "moon",
+          "type": "decoration",
+          "image": "moon",
+          "key": "common",
+          "location": [0, 568]
+        },
+        "title-bar-text":{
+          "name": "title-bar-text",
+          "type": "text",
+          "text": "GOAL SETTING - $scene_title$",
+          "font": "title-bar",
+          "location": [ 25, 4 ]
+        },
+        "home-btn": {
+          "name": "home-btn",
+          "type": "button",
+          "variable": "home-btn",
+          "image": "home",
+          "location": [709, 5]
+        },
+        "back-btn": {
+          "name": "back-btn",
+          "type": "button",
+          "variable": "back-btn",
+          "image": "back",
+          "location": [391, 498]
+        },
+        "replay-btn": {
+          "name": "replay-btn",
+          "type": "button",
+          "variable": "replay-btn",
+          "image": "replay",
+          "location": [548, 493]
+        },
+        "next-btn": {
+          "name": "next-btn",
+          "type": "button",
+          "image": "next",
+          "variable": "next-btn",
+          "location": [629, 498]
+        }
+      },
+      "outcomes": [
+        {
+          "events": { "home-btn": "!reset" },
+          "actions": [ 
+            { "type": "variable", "args": [ "home-btn", "reset" ] },
+            { "type": "scene", "args": [ "empty-replay-scene" ] },
+            { "type": "scene", "args": [ "intro" ] }
+          ]
+        }, {
+          "events": { "replay-btn": "!reset" },
+          "actions": [
+            { "type": "variable", "args": [ "replay-btn", "reset" ] },
+            { "type": "scene", "args": [ "empty-replay-scene" ] },
+            { "type": "scene", "args": [ "$previous_scene_name" ] }
+          ]
+        }, {
+          "events": { "highlight-next-btn": "!reset" },
+          "actions": [
+            { "type": "add-actor", "args": [
+              {
+                "name": "next-btn",
+                "type": "button",
+                "image": "next",
+                "variable": "next-btn",
+                "location": [713, 538],
+                "anchor": [0.5,0.5],
+                "tween": {
+                  "scale": [1.05, 1.05],
+                  "time": 666,
+                  "loop": true,
+                  "chainedTweens": [
+                    {
+                      "scale": [1, 1],
+                      "time": 666
+                    }
+                  ]
+                }
+              }
+            ]},
+            { "type": "variable", "args": [ "highlight-next-btn", "reset" ] }
+          ]
+        }
+      ],
+      "actions": []
+    },
+    "scenes": {
+      "resumeFork": {
+        "id": "resumeFork",
+        "background": "bgspace",
+        "actors": [
+        ],
+        "outcomes": {
+          "no_resume": {
+            "events": { "lessonLocation": "undefined" },
+            "actions": [
+              { "type": "scene", "args": ["intro"] }
+            ]
+          },
+          "resume": {
+            "events": { "lessonLocation": "*" },
+            "actions": [
+              { "type": "scene", "args": [ "$lessonLocation" ] }
+            ]
+          }
+        },
+        "actions": [
+          { "type": "check-outcomes", "args": [ "lessonLocation" ] }
+        ]
+      },
+      "intro": {
+        "id": "intro",
+        "background": "bgspace",
+        "actors": [
+          {
+            "name": "title-bar",
+            "type": "reference"
+          },
+          {
+            "name": "moon",
+            "type": "reference"
+          },
+          {
+            "name": "home-btn",
+            "type": "reference"
+          },
+          {
+            "name": "replay-btn",
+            "type": "reference"
+          },
+          {
+            "name": "next-btn",
+            "type": "reference"
+          },
+          {
+            "name": "audio",
+            "type": "audio",
+            "audio": "slide1",
+            "variable": "audio"
+          }
+        ],
+        "outcomes": {
+          "next-btn" : {
+            "events": { "next-btn": "!reset" },
+            "actions": [ 
+              { "type": "variable", "args": [ "next-btn", "reset" ] },
+              { "type": "scene", "args": [ "what-is-a-goal" ] }
+            ]
+          },
+          "highlight-next-btn": {
+            "events": {
+              "audio": "*"
+            },
+            "actions": [ { "type": "variable", "args": [ "highlight-next-btn", 1, true ] } ]
+          }
+        },
+        "actions": [
+          { "type": "variable", "args": [ "scene_title", "INTRO" ] },
+          { "type": "add-actor", "args": [
+            {
+              "name": "title-bar-text",
+              "type": "reference"
+            }, {
+              "name": "title",
+              "type": "text",
+              "text": "Goal Setting",
+              "font": "title",
+              "location": [ "center", 148 ]
+            }]
+          },
+          { "type": "variable", "args": [ "lessonLocation", "$current_scene_name" ] }
+        ]
+      },
+      "what-is-a-goal": {
+        "id": "what-is-a-goal",
+        "background": "bgspace",
+        "actions": [
+          { "type": "variable", "args": [ "scene_title", "WHAT IS A GOAL?" ] },
+          { "type": "add-actor", "args": [
+            {
+              "name": "title-bar-text",
+              "type": "reference"
+            }]
+          },
+          { "type": "variable", "args": [ "lessonLocation", "$current_scene_name" ] },
+          { "type": "variable", "args": [ "goal-setting-jack-clicked", "reset" ] },
+          { "type": "variable", "args": [ "goal-setting-zach-clicked", "reset" ] },
+          { "type": "variable", "args": [ "goal-setting-carly-clicked", "reset" ] },
+          { "type": "variable", "args": [ "goal-setting-sofia-clicked", "reset" ] }
+        ],
+        "actors": [
+          {
+            "name": "title-bar",
+            "type": "reference"
+          },
+          {
+            "name": "moon",
+            "type": "reference"
+          },
+          {
+            "name": "home-btn",
+            "type": "reference"            
+          },
+          {
+            "name": "back-btn",
+            "type": "reference"
+          },
+          {
+            "name": "replay-btn",
+            "type": "reference"
+          },
+          {
+            "name": "next-btn",
+            "type": "reference"
+          },
+          {
+            "name": "audio",
+            "type": "audio",
+            "audio": ["slide2"],
+            "variable": "audio"
+          },
+          {
+            "name": "star-bullet1",
+            "type": "decoration",
+            "image": "star-bullet",
+            "key": "common",
+            "location": [800, 152],
+            "startDelay": 500,
+            "tween": {
+              "easing": "Quad.easeOut",
+              "time": 1000,
+              "location": [351, 152]
+            }
+          },
+          {
+            "name": "text-line1",
+            "type": "text",
+            "text": "A goal is when you decide what to do, and then you try to do it.",
+            "wordWrapWidth": 394,
+            "font": "default-text",
+            "location": [840, 152],
+            "startDelay": 500,
+            "tween": {
+              "easing": "Quad.easeOut",
+              "time": 1000,
+              "location": [391, 152]
+            }
+          },
+          {
+            "name": "star-bullet2",
+            "type": "decoration",
+            "image": "star-bullet",
+            "key": "common",
+            "location": [800, 235],
+            "startDelay": 23000,
+            "tween": {
+              "easing": "Quad.easeOut",
+              "time": 1000,
+              "location": [351, 235]
+            }
+          },
+          {
+            "name": "text-line2",
+            "type": "text",
+            "text": "Obstacles make it hard to get to a goal.",
+            "font": "default-text",
+            "location": [840, 235],
+            "startDelay": 23000,
+            "tween": {
+              "easing": "Quad.easeOut",
+              "time": 1000,
+              "location": [391, 235]
+            }
+          },
+          {
+            "name": "star-bullet3",
+            "type": "decoration",
+            "image": "star-bullet",
+            "key": "common",
+            "location": [800, 283],
+            "startDelay": 31000,
+            "tween": {
+              "easing": "Quad.easeOut",
+              "time": 1000,
+              "location": [351, 283]
+            }
+          },
+          {
+            "name": "text-line3",
+            "type": "text",
+            "text": "Adults can help you with goals.",
+            "wordWrapWidth": 365,
+            "font": "default-text",
+            "location": [840, 283],
+            "startDelay": 31000,
+            "tween": {
+              "easing": "Quad.easeOut",
+              "time": 1000,
+              "location": [391, 283]
+            }
+          },
+          {
+            "name": "star-bullet4",
+            "type": "decoration",
+            "image": "star-bullet",
+            "key": "common",
+            "location": [800, 331],
+            "startDelay": 42000,
+            "tween": {
+              "easing": "Quad.easeOut",
+              "time": 1000,
+              "location": [351, 331]
+            }
+          },
+          {
+            "name": "text-line4",
+            "type": "text",
+            "text": "Different people have different goals.",
+            "wordWrapWidth": 365,
+            "font": "default-text",
+            "location": [840, 331],
+            "startDelay": 42000,
+            "tween": {
+              "easing": "Quad.easeOut",
+              "time": 1000,
+              "location": [391, 331]
+            }
+          },
+          {
+            "name": "sofia",
+            "type": "decoration",
+            "image": "sofia",
+            "key": "goal-setting",
+            "location": [9, 88]
+          },
+          {
+            "name": "carly",
+            "type": "decoration",
+            "image": "carly",
+            "key": "goal-setting",
+            "location": [155, 94]
+          },
+          {
+            "name": "jack",
+            "type": "decoration",
+            "image": "jack",
+            "key": "goal-setting",
+            "location": [14, 252]
+          },
+          {
+            "name": "zach",
+            "type": "decoration",
+            "image": "zach",
+            "key": "goal-setting",
+            "location": [175, 244]
+          },
+          {
+            "name": "worksheet",
+            "type": "url-button",
+            "image": "worksheet",
+            "url": "Goal-setting-Worksheet.pdf",
+            "variable": "worksheet",
+            "location": [54, 488]
+          }
+        ],
+        "outcomes": {
+          "back-btn" : {
+            "events": { "back-btn": "!reset" },
+            "actions": [ 
+              { "type": "variable", "args": [ "back-btn", "reset" ] },
+              { "type": "scene", "args": [ "intro" ] }
+            ]
+          },
+          "next-btn" : {
+            "events": { "next-btn": "!reset" },
+            "actions": [ 
+              { "type": "variable", "args": [ "next-btn", "reset" ] },
+              { "type": "mh-scene", "args": [ "mission-complete", {"objective_complete":1} ] }
+            ]
+          },
+          "highlight-next-btn": {
+            "events": {
+              "goal-setting-sofia-clicked": "!reset",
+              "goal-setting-carly-clicked": "!reset",
+              "goal-setting-zach-clicked": "!reset",
+              "goal-setting-jack-clicked": "!reset",
+              "button-audio": "played"
+            },
+            "actions": [ { "type": "variable", "args": [ "highlight-next-btn", 1, true ] } ]
+          },
+          "audio-completion" : {
+            "events": { "audio": "*" },
+            "actions": [ 
+              { "type": "remove-actor", "args": [ "sofia", "carly", "jack", "zach" ] },
+              { "type": "add-actor", "args": [ 
+                {
+                  "name": "goal-setting-sofia-btn",
+                  "type": "button",
+                  "image": "goal-setting-sofia-btn",
+                  "location": [9, 88],
+                  "variable": "button-audio"
+                },
+                {
+                  "name": "goal-setting-carly-btn",
+                  "type": "button",
+                  "image": "goal-setting-carly-btn",
+                  "location": [155, 94],
+                  "variable": "button-audio"
+                },
+                {
+                  "name": "goal-setting-jack-btn",
+                  "type": "button",
+                  "image": "goal-setting-jack-btn",
+                  "location": [14, 252],
+                  "variable":"button-audio"
+                },
+                {
+                  "name": "goal-setting-zach-btn",
+                  "type": "button",
+                  "image": "goal-setting-zach-btn",
+                  "location": [175, 244],
+                  "variable": "button-audio"
+                }
+              ]}
+            ]
+          },
+          "jack-speaks": {
+            "events": { "button-audio": "goal-setting-jack-btn" },
+            "actions": [
+              {
+                "type": "remove-actor",
+                "args": [ "button-audio" ]
+              },
+              {
+                "type": "variable",
+                "args": [ "goal-setting-jack-clicked", 1 ]
+              },
+              {
+                "type": "add-actor",
+                "args": [
+                  {
+                    "name": "button-audio",
+                    "type": "audio",
+                    "audio": "slide2-jack",
+                    "variable": "button-audio"
+                  }
+                ]
+              }
+            ]
+          },
+          "sofia-speaks": {
+            "events": { "button-audio": "goal-setting-sofia-btn" },
+            "actions": [
+              {
+                "type": "remove-actor",
+                "args": [ "button-audio" ]
+              },
+              {
+                "type": "variable",
+                "args": [ "goal-setting-sofia-clicked", 1 ]
+              },
+              {
+                "type": "add-actor",
+                "args": [
+                  {
+                    "name": "button-audio",
+                    "type": "audio",
+                    "audio": "slide2-sofia",
+                    "variable": "button-audio"
+                  }
+                ]
+              }
+            ]
+          },
+          "carly-speaks": {
+            "events": { "button-audio": "goal-setting-carly-btn" },
+            "actions": [
+              {
+                "type": "remove-actor",
+                "args": [ "button-audio" ]
+              },
+              {
+                "type": "variable",
+                "args": [ "goal-setting-carly-clicked", 1 ]
+              },
+              {
+                "type": "add-actor",
+                "args": [
+                  {
+                    "name": "button-audio",
+                    "type": "audio",
+                    "audio": "slide2-carly",
+                    "variable": "button-audio"
+                  }
+                ]
+              }
+            ]
+          },
+          "zach-speaks": {
+            "events": { "button-audio": "goal-setting-zach-btn" },
+            "actions": [
+              {
+                "type": "remove-actor",
+                "args": [ "button-audio" ]
+              },
+              {
+                "type": "variable",
+                "args": [ "goal-setting-zach-clicked", 1 ]
+              },
+              {
+                "type": "add-actor",
+                "args": [
+                  {
+                    "name": "button-audio",
+                    "type": "audio",
+                    "audio": "slide2-zach",
+                    "variable": "button-audio"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      },
+      "mission-complete": {
+        "id": "mission-complete",
+        "background": "bgspace",
+        "actions": [
+          { "type": "variable", "args": [ "scene_title", "GOOD JOB!" ] },
+          { "type": "add-actor", "args": [
+            {
+              "name": "title-bar-text",
+              "type": "reference"
+            }]
+          },
+          { "type": "variable", "args": [ "lessonLocation", "$current_scene_name" ] }
+        ],
+        "actors": [
+          {
+            "name": "title-bar",
+            "type": "reference"
+          },
+          {
+            "name": "moon",
+            "type": "reference"
+          },
+          {
+            "name": "home-btn",
+            "type": "reference"            
+          },
+          {
+            "name": "back-btn",
+            "type": "reference"
+          },
+          {
+            "name": "replay-btn",
+            "type": "reference"
+          },
+          {
+            "name": "mission-health-logo",
+            "type": "decoration",
+            "image": "mission-health-logo",
+            "key": "common",
+            "location": [ 115, 153 ]
+          },
+          {
+            "name": "audio",
+            "type": "audio",
+            "audio": ["slide3"],
+            "variable": "audio"
+          }
+        ],
+        "outcomes": {
+          "back-btn": {
+            "events": { "back-btn": "!reset" },
+            "actions": [ 
+              { "type": "variable", "args": [ "back-btn", "reset" ] },
+              { "type": "scene", "args": [ "what-is-a-goal" ] }
+            ]
+          }
+        }
+      },
+      "empty-replay-scene": {
+        "id": "empty-replay-scene",
+        "description": "since a scene change request to the current scene is ignored, first change to this empty scene",
+        "background": "none",
+        "actors": [ ],
+        "outcomes": { },
+        "actions": [ ]
+      }
+    }
+  }
+}

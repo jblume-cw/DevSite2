@@ -1,0 +1,1320 @@
+{
+  "play": {
+    "start": "resumeFork",
+    "persist": [ "lessonLocation" ],
+    "modelType": "basic",
+    "showPlaythrough": false,
+    "global": {
+      "actors": {
+        "title-bar": {
+          "name": "title-bar",
+          "type": "decoration",
+          "image": "title-bar",
+          "key": "common",
+          "location": [0, 0]
+        },
+        "moon": {
+          "name": "moon",
+          "type": "decoration",
+          "image": "moon",
+          "key": "common",
+          "location": [0, 568]
+        },
+        "title-bar-text":{
+          "name": "title-bar-text",
+          "type": "text",
+          "text": "FOOD = FUEL - $scene_title$",
+          "font": "title-bar",
+          "location": [ 25, 4 ]
+        },
+        "home-btn": {
+          "name": "home-btn",
+          "type": "button",
+          "variable": "home-btn",
+          "image": "home",
+          "location": [709, 5]
+        },
+        "back-btn": {
+          "name": "back-btn",
+          "type": "button",
+          "variable": "back-btn",
+          "image": "back",
+          "location": [391, 498]
+        },
+        "replay-btn": {
+          "name": "replay-btn",
+          "type": "button",
+          "variable": "replay-btn",
+          "image": "replay",
+          "location": [548, 493]
+        },
+        "next-btn": {
+          "name": "next-btn",
+          "type": "button",
+          "image": "next",
+          "variable": "next-btn",
+          "location": [629, 498]
+        }
+      },
+      "outcomes": [
+        {
+          "events": { "home-btn": "!reset" },
+          "actions": [ 
+            { "type": "variable", "args": [ "home-btn", "reset" ] },
+            { "type": "scene", "args": [ "empty-replay-scene" ] },
+            { "type": "scene", "args": [ "intro" ] }
+          ]
+        }, {
+          "events": { "replay-btn": "!reset" },
+          "actions": [
+            { "type": "variable", "args": [ "replay-btn", "reset" ] },
+            { "type": "scene", "args": [ "empty-replay-scene" ] },
+            { "type": "scene", "args": [ "$previous_scene_name" ] }
+          ]
+        }, {
+          "events": { "highlight-next-btn": "!reset" },
+          "actions": [
+            { "type": "variable", "args": [ "highlight-next-btn", "reset" ] },
+            { "type": "add-actor", "args": [
+              {
+                "name": "next-btn",
+                "type": "button",
+                "image": "next",
+                "variable": "next-btn",
+                "location": [713, 538],
+                "anchor": [0.5,0.5],
+                "tween": {
+                  "scale": [1.05, 1.05],
+                  "time": 666,
+                  "loop": true,
+                  "chainedTweens": [
+                    {
+                      "scale": [1, 1],
+                      "time": 666
+                    }
+                  ]
+                }
+              }
+            ]}
+          ]
+        }
+      ],
+      "actions": []
+    },
+    "scenes": {
+      "resumeFork": {
+        "id": "resumeFork",
+        "background": "bgspace",
+        "actors": [
+        ],
+        "outcomes": {
+          "no_resume": {
+            "events": { "lessonLocation": "undefined" },
+            "actions": [
+              { "type": "scene", "args": ["intro"] }
+            ]
+          },
+          "resume": {
+            "events": { "lessonLocation": "*" },
+            "actions": [
+              { "type": "scene", "args": [ "$lessonLocation" ] }
+            ]
+          }
+        },
+        "actions": [
+          { "type": "check-outcomes", "args": [ "lessonLocation" ] }
+        ]
+      },
+      "intro": {
+        "id": "intro",
+        "background": "bgspace",
+        "actors": [
+          {
+            "name": "title-bar",
+            "type": "reference"
+          },
+          {
+            "name": "moon",
+            "type": "reference"
+          },
+          {
+            "name": "home-btn",
+            "type": "reference"
+          },
+          {
+            "name": "replay-btn",
+            "type": "reference"
+          },
+          {
+            "name": "next-btn",
+            "type": "reference"
+          }
+        ],
+        "outcomes": {
+          "next-btn" : {
+            "events": { "next-btn": "!reset" },
+            "actions": [ 
+              { "type": "variable", "args": [ "next-btn", "reset" ] },
+              { "type": "scene", "args": [ "what-does-food-do" ] }
+            ]
+          },
+          "highlight-next-btn": {
+            "events": {
+              "audio": "*"
+            },
+            "actions": [ { "type": "variable", "args": [ "highlight-next-btn", 1, true ] } ]
+          }
+        },
+        "actions": [
+          { "type": "variable", "args": [ "scene_title", "INTRO" ] },
+          { "type": "add-actor", "args": [
+            {
+              "name": "title-bar-text",
+              "type": "reference"
+            }, {
+              "name": "title",
+              "type": "text",
+              "text": "Food = Fuel",
+              "font": "title",
+              "location": [ "center", 148 ]
+            }, {
+              "name": "audio",
+              "type": "audio",
+              "audio": "slide1",
+              "variable": "audio"
+            }]
+          },
+          { "type": "variable", "args": [ "lessonLocation", "$current_scene_name" ] }
+        ]
+      },
+      "what-does-food-do": {
+        "id": "what-does-food-do",
+        "background": "bgspace",
+        "actions": [
+          { "type": "variable", "args": [ "scene_title", "WHAT DOES FOOD DO FOR THE BODY?" ] },
+          { "type": "add-actor", "args": [
+            {
+              "name": "title-bar-text",
+              "type": "reference"
+            }]
+          },
+          { "type": "variable", "args": [ "lessonLocation", "$current_scene_name" ] },
+          { "type": "variable", "args": [ "meterNeedleDegrees", "0"]}
+        ],
+        "actors": [
+          {
+            "name": "title-bar",
+            "type": "reference"
+          },
+          {
+            "name": "moon",
+            "type": "reference"
+          },
+          {
+            "name": "home-btn",
+            "type": "reference"            
+          },
+          {
+            "name": "back-btn",
+            "type": "reference"
+          },
+          {
+            "name": "replay-btn",
+            "type": "reference"
+          },
+          {
+            "name": "next-btn",
+            "type": "reference"
+          },
+          {
+            "name": "audio",
+            "type": "audio",
+            "audio": "slide2",
+            "variable": "audio"
+          },
+          {
+            "name": "zach",
+            "type": "decoration",
+            "image": "zach",
+            "key": "food-fuel",
+            "location": [69, 65]
+          },
+          {
+            "name": "meter-background",
+            "type": "decoration",
+            "image": "meter-background",
+            "key": "food-fuel",
+            "location": [102, 384]
+          },
+          {
+            "name": "needle",
+            "type": "decoration",
+            "image": "needle",
+            "key": "food-fuel",
+            "location": [90, 463]
+          },
+          {
+            "name": "meter-empty-text",
+            "type": "text",
+            "text": "Empty",
+            "font": "food-fuel-blue-text",
+            "location": [30, 459]
+          },
+          {
+            "name": "meter-full-text",
+            "type": "text",
+            "text": "Full",
+            "font": "food-fuel-blue-text",
+            "location": [282, 459]
+          },
+          {
+            "name": "meter-text",
+            "type": "text",
+            "text": "Energy Meter",
+            "font": "food-fuel-blue-text",
+            "location": [122, 486]
+          },
+          {
+            "name": "bread",
+            "type": "decoration",
+            "image": "bread",
+            "key": "food-fuel",
+            "location": [404, 117]
+          },
+          {
+            "name": "banana",
+            "type": "decoration",
+            "image": "banana",
+            "key": "food-fuel",
+            "location": [438, 288]
+          },
+          {
+            "name": "milk",
+            "type": "decoration",
+            "image": "milk",
+            "key": "food-fuel",
+            "location": [596, 117]
+          }
+        ],
+        "outcomes": {
+          "back-btn" : {
+            "events": { "back-btn": "!reset" },
+            "actions": [ 
+              { "type": "variable", "args": [ "back-btn", "reset" ] },
+              { "type": "scene", "args": [ "intro" ] }
+            ]
+          },
+          "next-btn" : {
+            "events": { "next-btn": "!reset" },
+            "actions": [ 
+              { "type": "variable", "args": [ "next-btn", "reset" ] },
+              { "type": "scene", "args": [ "what-does-food-do2" ] }
+            ]
+          },
+          "end-of-audio": {
+            "events": { "audio": "*" },
+            "actions": [
+              { "type": "remove-actor", "args": ["bread","banana","milk"] },
+              {
+                "type": "add-actor",
+                "args": [
+                  {
+                    "name": "bread-button",
+                    "type": "button",
+                    "image": "food-bread",
+                    "location": [404, 117],
+                    "variable": "click-food"
+                  },
+                  {
+                    "name": "banana-button",
+                    "type": "button",
+                    "image": "food-banana",
+                    "location": [438, 288],
+                    "variable": "click-food"
+                  },
+                  {
+                    "name": "milk-button",
+                    "type": "button",
+                    "image": "food-milk",
+                    "location": [596, 117],
+                    "variable": "click-food"
+                  }
+                ]
+              }
+            ]
+          },
+          "click-food": {
+            "events": { "click-food": "*" },
+            "actions": [
+              {
+                "type": "remove-actor",
+                "args": [
+                  "needle", 
+                  "$click-food"
+                ]
+              },
+              {
+                "type": "variable-increment",
+                "args": [ "meterNeedleDegrees", "60" ]
+              },
+              {
+                "type": "add-actor",
+                "args": [
+                  {
+                    "name": "bloop-audio",
+                    "type": "audio",
+                    "audio": "slide2-bloop",
+                    "variable": "bloop-audio"
+                  }
+                ]
+              }
+            ]
+          },
+          "needle-at-60-degrees": {
+            "events": { "meterNeedleDegrees": "60"},
+            "actions": [
+              {
+                "type": "add-actor",
+                "args": [
+                  {
+                    "name": "needle",
+                    "type": "decoration",
+                    "image": "needle",
+                    "key": "food-fuel",
+                    "location": [145, 381],
+                    "angle": "60"
+                  }
+                ]
+              }
+            ]
+          },
+          "needle-at-120-degrees": {
+            "events": { "meterNeedleDegrees": "120"},
+            "actions": [
+              {
+                "type": "add-actor",
+                "args": [
+                  {
+                    "name": "needle",
+                    "type": "decoration",
+                    "image": "needle",
+                    "key": "food-fuel",
+                    "location": [243, 387],
+                    "angle": "120"
+                  }
+                ]
+              }
+            ]
+          },
+          "needle-at-180-degrees": {
+            "events": { "meterNeedleDegrees": "180"},
+            "actions": [
+              {
+                "type": "add-actor",
+                "args": [
+                  {
+                    "name": "needle",
+                    "type": "decoration",
+                    "image": "needle",
+                    "key": "food-fuel",
+                    "location": [286, 477],
+                    "angle": "180"
+                  }
+                ]
+              },
+              { "type": "variable", "args": [ "highlight-next-btn", 1, true ] }
+            ]
+          }
+        }
+      },
+      "what-does-food-do2": {
+        "id": "what-does-food-do2",
+        "background": "bgspace",
+        "actions": [
+          { "type": "variable", "args": [ "scene_title", "WHAT DOES FOOD DO FOR THE BODY?" ] },
+          { "type": "add-actor", "args": [
+            {
+              "name": "title-bar-text",
+              "type": "reference"
+            }]
+          },
+          { "type": "variable", "args": [ "lessonLocation", "$current_scene_name" ] }
+        ],
+        "actors": [
+          {
+            "name": "title-bar",
+            "type": "reference"
+          },
+          {
+            "name": "moon",
+            "type": "reference"
+          },
+          {
+            "name": "home-btn",
+            "type": "reference"            
+          },
+          {
+            "name": "back-btn",
+            "type": "reference"
+          },
+          {
+            "name": "replay-btn",
+            "type": "reference"
+          },
+          {
+            "name": "next-btn",
+            "type": "reference"
+          },
+          {
+            "name": "audio",
+            "type": "audio",
+            "audio": "slide3",
+            "variable": "audio"
+          },
+          {
+            "name": "rocket-still",
+            "type": "decoration",
+            "image": "rocket-blast-off-no-flames",
+            "key": "food-fuel",
+            "location": [76, 172]
+          },
+          {
+            "name": "rocket-blastoff",
+            "type": "animation",
+            "images": "rocket-blastoff",
+            "textureKey": "texture_rb",
+            "location": [2, 34],
+            "fps": 30,
+            "loop": false,
+            "startDelay": 6000,
+            "variable": "rocket-blastoff"
+          },
+          {
+            "name": "star-bullet1",
+            "type": "decoration",
+            "image": "star-bullet",
+            "key": "common",
+            "location": [800, 157],
+            "startDelay": 500,
+            "tween": {
+              "easing": "Quad.easeOut",
+              "time": 1000,
+              "location": [332, 157]
+            }
+          },
+          {
+            "name": "text-line1",
+            "type": "text",
+            "text": "A rocket ship needs the right kind of fuel.",
+            "font": "default-text",
+            "location": [842, 158],
+            "startDelay": 500,
+            "tween": {
+              "easing": "Quad.easeOut",
+              "time": 1000,
+              "location": [374, 158]
+            }
+          },
+          {
+            "name": "star-bullet2",
+            "type": "decoration",
+            "image": "star-bullet",
+            "key": "common",
+            "location": [800, 203],
+            "startDelay": 15000,
+            "tween": {
+              "easing": "Quad.easeOut",
+              "time": 1000,
+              "location": [332, 203]
+            }
+          },
+          {
+            "name": "text-line2",
+            "type": "text",
+            "text": "Your body needs healthly food.",
+            "font": "default-text",
+            "location": [842, 204],
+            "startDelay": 15000,
+            "tween": {
+              "easing": "Quad.easeOut",
+              "time": 1000,
+              "location": [374, 204]
+            }
+          },
+          {
+            "name": "star-bullet3",
+            "type": "decoration",
+            "image": "star-bullet",
+            "key": "common",
+            "location": [800, 249],
+            "startDelay": 18000,
+            "tween": {
+              "easing": "Quad.easeOut",
+              "time": 1000,
+              "location": [332, 249]
+            }
+          },
+          {
+            "name": "text-line3",
+            "type": "text",
+            "text": "Healthy food gives you lots of energy.",
+            "font": "default-text",
+            "location": [842, 250],
+            "startDelay": 18000,
+            "tween": {
+              "easing": "Quad.easeOut",
+              "time": 1000,
+              "location": [374, 250]
+            }
+          },
+          {
+            "name": "star-bullet4",
+            "type": "decoration",
+            "image": "star-bullet",
+            "key": "common",
+            "location": [800, 295],
+            "startDelay": 22000,
+            "tween": {
+              "easing": "Quad.easeOut",
+              "time": 1000,
+              "location": [332, 295]
+            }
+          },
+          {
+            "name": "text-line4",
+            "type": "text",
+            "text": "Unhealthy food gives you less energy.",
+            "font": "default-text",
+            "location": [842, 296],
+            "startDelay": 22000,
+            "tween": {
+              "easing": "Quad.easeOut",
+              "time": 1000,
+              "location": [374, 296]
+            }
+          }
+        ],
+        "outcomes": {
+          "back-btn" : {
+            "events": { "back-btn": "!reset" },
+            "actions": [ 
+              { "type": "variable", "args": [ "back-btn", "reset" ] },
+              { "type": "scene", "args": [ "what-does-food-do" ] }
+            ]
+          },
+          "next-btn" : {
+            "events": { "next-btn": "!reset" },
+            "actions": [ 
+              { "type": "variable", "args": [ "next-btn", "reset" ] },
+              { "type": "scene", "args": [ "three-meals-a-day" ] }
+            ]
+          },
+          "highlight-next-btn": {
+            "events": {
+              "audio": "*"
+            },
+            "actions": [ { "type": "variable", "args": [ "highlight-next-btn", 1, true ] } ]
+          },
+          "rocket-blastoff_playing" : {
+            "events": { "rocket-blastoff_playing": "*" },
+            "actions": [
+              { "type": "remove-actor", "args": [ "rocket-still" ] }
+            ]
+          },
+          "rocket-blastoff_finished" : {
+            "events": { "rocket-blastoff_finished": "*" },
+            "actions": [
+              { "type": "variable", "args": [ "rocket-left-to-right-tween", "complete", true ] }
+            ]
+          },
+          "rocket-left-to-right-finished" : {
+            "events": { "rocket-left-to-right-tween": "complete" },
+            "actions": [
+              {
+                "type": "remove-actor", "args": [ "rocket-left-to-right" ]
+              },
+              {
+                "type": "variable", "args": [ "rocket-left-to-right-tween", 0, true ]
+              },
+              {
+                "type": "add-actor",
+                "args": [
+                  {
+                    "name": "rocket-right-to-left",
+                    "type": "animation",
+                    "images": "rocket-right-to-left",
+                    "textureKey": "texture",
+                    "fps": 30,
+                    "loop": true,
+                    "location": [800, 430],
+                    "startDelay": 4000,
+                    "tween": {
+                      "time": 649,
+                      "location": [644, 425],
+                      "scale": [1, 1],
+                      "variable": "rocket-right-to-left-tween",
+                      "chainedTweens": [
+                        {
+                          "time": 1335,
+                          "location": [330, 373],
+                          "angle": 15,
+                          "scale": [0.9, 0.9]
+                        },
+                        {
+                          "time": 1527,
+                          "location": [79, 188],
+                          "angle": 40,
+                          "scale": [0.65, 0.65]
+                        },
+                        {
+                          "time": 989,
+                          "location": [-150, 160],
+                          "angle": -20
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          "rocket-right-to-left-finished" : {
+            "events": { "rocket-right-to-left-tween": "complete" },
+            "actions": [
+              {
+                "type": "remove-actor", "args": [ "rocket-right-to-left" ]
+              },
+              {
+                "type": "variable", "args": [ "rocket-right-to-left-tween", 0, true ]
+              },
+              {
+                "type": "add-actor",
+                "args": [
+                  {
+                    "name": "rocket-left-to-right",
+                    "type": "animation",
+                    "images": "rocket-left-to-right",
+                    "textureKey": "texture",
+                    "fps": 30,
+                    "loop": true,
+                    "location": [-150, 257],
+                    "startDelay": 6000,
+                    "tween": {
+                      "time": 10,
+                      "location": [-149, 257],
+                      "angle": 50,
+                      "scale": [0.65, 0.65],
+                      "variable": "rocket-left-to-right-tween",
+                      "chainedTweens": [
+                        {
+                          "time": 1990,
+                          "location": [263, 353],
+                          "angle": 15,
+                          "scale": [0.9, 0.9]
+                        },
+                        {
+                          "time": 3000,
+                          "location": [820, 415],
+                          "angle": 0,
+                          "scale": [1, 1]
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      },
+      "three-meals-a-day": {
+        "id": "three-meals-a-day",
+        "background": "bgspace",
+        "actions": [
+          { "type": "variable", "args": [ "scene_title", "THREE MEALS A DAY" ] },
+          { "type": "add-actor", "args": [
+            {
+              "name": "title-bar-text",
+              "type": "reference"
+            }]
+          },
+          { "type": "variable", "args": [ "lessonLocation", "$current_scene_name" ] }
+        ],
+        "actors": [
+          {
+            "name": "title-bar",
+            "type": "reference"
+          },
+          {
+            "name": "moon",
+            "type": "reference"
+          },
+          {
+            "name": "home-btn",
+            "type": "reference"            
+          },
+          {
+            "name": "back-btn",
+            "type": "reference"
+          },
+          {
+            "name": "replay-btn",
+            "type": "reference"
+          },
+          {
+            "name": "next-btn",
+            "type": "reference"
+          },
+          {
+            "name": "audio",
+            "type": "audio",
+            "audio": "slide4",
+            "variable": "audio"
+          },
+          {
+            "name": "star-bullet1",
+            "type": "decoration",
+            "image": "star-bullet",
+            "key": "common",
+            "location": [800, 157],
+            "startDelay": 500,
+            "tween": {
+              "easing": "Quad.easeOut",
+              "time": 1000,
+              "location": [352, 157]
+            }
+          },
+          {
+            "name": "text-line1",
+            "type": "text",
+            "text": "Eat three meals a day.",
+            "font": "default-text",
+            "location": [842, 158],
+            "startDelay": 500,
+            "tween": {
+              "easing": "Quad.easeOut",
+              "time": 1000,
+              "location": [394, 158]
+            }
+          },
+          {
+            "name": "star-bullet2",
+            "type": "decoration",
+            "image": "star-bullet",
+            "key": "common",
+            "location": [800, 203],
+            "startDelay": 20000,
+            "tween": {
+              "easing": "Quad.easeOut",
+              "time": 1000,
+              "location": [352, 203]
+            }
+          },
+          {
+            "name": "text-line2",
+            "type": "text",
+            "text": "Breakfast is the most important.",
+            "font": "default-text",
+            "location": [842, 204],
+            "startDelay": 20000,
+            "tween": {
+              "easing": "Quad.easeOut",
+              "time": 1000,
+              "location": [394, 204]
+            }
+          },
+          {
+            "name": "star-bullet3",
+            "type": "decoration",
+            "image": "star-bullet",
+            "key": "common",
+            "location": [800, 249],
+            "startDelay": 26000,
+            "tween": {
+              "easing": "Quad.easeOut",
+              "time": 1000,
+              "location": [352, 249]
+            }
+          },
+          {
+            "name": "text-line3",
+            "type": "text",
+            "text": "Choose foods that give you energy.",
+            "font": "default-text",
+            "location": [842, 250],
+            "startDelay": 26000,
+            "tween": {
+              "easing": "Quad.easeOut",
+              "time": 1000,
+              "location": [394, 250]
+            }
+          },
+          {
+            "name": "star-bullet4",
+            "type": "decoration",
+            "image": "star-bullet",
+            "key": "common",
+            "location": [800, 295],
+            "startDelay": 32000,
+            "tween": {
+              "easing": "Quad.easeOut",
+              "time": 1000,
+              "location": [352, 295]
+            }
+          },
+          {
+            "name": "text-line4",
+            "type": "text",
+            "text": "Choose foods that you like.",
+            "font": "default-text",
+            "location": [842, 296],
+            "startDelay": 32000,
+            "tween": {
+              "easing": "Quad.easeOut",
+              "time": 1000,
+              "location": [394, 296]
+            }
+          },
+          {
+            "name": "sofia",
+            "type": "decoration",
+            "image": "sofia",
+            "key": "food-fuel",
+            "location": [31, 70]
+          }
+        ],
+        "outcomes": {
+          "back-btn" : {
+            "events": { "back-btn": "!reset" },
+            "actions": [ 
+              { "type": "variable", "args": [ "back-btn", "reset" ] },
+              { "type": "scene", "args": [ "what-does-food-do2" ] }
+            ]
+          },
+          "next-btn" : {
+            "events": { "next-btn": "!reset" },
+            "actions": [ 
+              { "type": "variable", "args": [ "next-btn", "reset" ] },
+              { "type": "scene", "args": [ "three-meals-a-day2" ] }
+            ]
+          },
+          "highlight-next-btn": {
+            "events": {
+              "audio": "*"
+            },
+            "actions": [ { "type": "variable", "args": [ "highlight-next-btn", 1, true ] } ]
+          }
+        }
+      },
+      "three-meals-a-day2": {
+        "id": "three-meals-a-day2",
+        "background": "bgspace",
+        "actions": [
+          { "type": "variable", "args": [ "scene_title", "THREE MEALS A DAY" ] },
+          { "type": "add-actor", "args": [
+            {
+              "name": "title-bar-text",
+              "type": "reference"
+            }]
+          },
+          { "type": "variable", "args": [ "lessonLocation", "$current_scene_name" ] }
+        ],
+        "actors": [
+          {
+            "name": "title-bar",
+            "type": "reference"
+          },
+          {
+            "name": "moon",
+            "type": "reference"
+          },
+          {
+            "name": "home-btn",
+            "type": "reference"            
+          },
+          {
+            "name": "back-btn",
+            "type": "reference"
+          },
+          {
+            "name": "replay-btn",
+            "type": "reference"
+          },
+          {
+            "name": "next-btn",
+            "type": "reference"
+          },
+          {
+            "name": "audio",
+            "type": "audio",
+            "audio": "slide5",
+            "variable": "audio"
+          },
+          {
+            "name": "text-line1",
+            "type": "text",
+            "text": "Which meal is most important?",
+            "font": "default-text",
+            "location": [259, 90]
+          },
+          {
+            "name": "meal-breakfast",
+            "type": "button",
+            "image": "meal-breakfast",
+            "location": [37, 236],
+            "variable": "meal-breakfast"
+          },
+          {
+            "name": "meal-lunch",
+            "type": "button",
+            "image": "meal-lunch",
+            "location": [280, 215],
+            "variable": "meal-lunch"
+          },
+          {
+            "name": "meal-dinner",
+            "type": "button",
+            "image": "meal-dinner",
+            "location": [546, 220],
+            "variable": "meal-dinner"
+          },
+          {
+            "name": "meal-breakfast-text",
+            "type": "text",
+            "text": "Breakfast",
+            "location": [87, 369],
+            "font": "food-fuel-yellow-text"
+          },
+          {
+            "name": "meal-lunch-text",
+            "type": "text",
+            "text": "Lunch",
+            "location": [378, 369],
+            "font": "food-fuel-yellow-text"
+          },
+          {
+            "name": "meal-dinner-text",
+            "type": "text",
+            "text": "Dinner",
+            "location": [636, 369],
+            "font": "food-fuel-yellow-text"
+          }
+        ],
+        "outcomes": {
+          "back-btn" : {
+            "events": { "back-btn": "!reset" },
+            "actions": [ 
+              { "type": "variable", "args": [ "back-btn", "reset" ] },
+              { "type": "scene", "args": [ "three-meals-a-day" ] }
+            ]
+          },
+          "next-btn" : {
+            "events": { "next-btn": "!reset" },
+            "actions": [ 
+              { "type": "variable", "args": [ "next-btn", "reset" ] },
+              { "type": "scene", "args": [ "breakfast" ] }
+            ]
+          },
+          "highlight-next-btn": {
+            "events": {
+              "meal-breakfast-audio": "*"
+            },
+            "actions": [ { "type": "variable", "args": [ "highlight-next-btn", 1, true ] } ]
+          },
+          "meal-breakfast" : {
+            "events": { "meal-breakfast": "!reset" },
+            "actions": [
+              { "type": "variable", "args": [ "meal-breakfast", "reset" ]},
+              { "type": "remove-actor", "args": [ "meal-breakfast-audio", "meal-lunch-audio", "meal-dinner-audio"] },
+              {
+                "type": "add-actor",
+                "args": [
+                  {
+                    "name": "meal-breakfast-audio",
+                    "type": "audio",
+                    "audio": "slide5-breakfast",
+                    "variable": "meal-breakfast-audio"
+                  }
+                ]
+              }
+            ]
+          },
+          "meal-lunch" : {
+            "events": { "meal-lunch": "!reset" },
+            "actions": [
+              { "type": "variable", "args": [ "meal-lunch", "reset" ]},
+              { "type": "remove-actor", "args": [ "meal-breakfast-audio", "meal-lunch-audio", "meal-dinner-audio"] },
+              {
+                "type": "add-actor",
+                "args": [
+                  {
+                    "name": "meal-lunch-audio",
+                    "type": "audio",
+                    "audio": "slide5-lunch",
+                    "variable": "meal-lunch-audio"
+                  }
+                ]
+              }
+            ]
+          },
+          "meal-dinner" : {
+            "events": { "meal-dinner": "!reset" },
+            "actions": [
+              { "type": "variable", "args": [ "meal-dinner", "reset" ]},
+              { "type": "remove-actor", "args": [ "meal-breakfast-audio", "meal-lunch-audio", "meal-dinner-audio"] },
+              {
+                "type": "add-actor",
+                "args": [
+                  {
+                    "name": "meal-dinner-audio",
+                    "type": "audio",
+                    "audio": "slide5-dinner",
+                    "variable": "meal-dinner-audio"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      },
+      "breakfast": {
+        "id": "three-meals-a-day3",
+        "background": "bgspace",
+        "actions": [
+          { "type": "variable", "args": [ "scene_title", "BREAKFAST" ] },
+          { "type": "add-actor", "args": [
+            {
+              "name": "title-bar-text",
+              "type": "reference"
+            }]
+          },
+          { "type": "variable", "args": [ "lessonLocation", "$current_scene_name" ] }
+        ],
+        "actors": [
+          {
+            "name": "title-bar",
+            "type": "reference"
+          },
+          {
+            "name": "moon",
+            "type": "reference"
+          },
+          {
+            "name": "home-btn",
+            "type": "reference"            
+          },
+          {
+            "name": "back-btn",
+            "type": "reference"
+          },
+          {
+            "name": "replay-btn",
+            "type": "reference"
+          },
+          {
+            "name": "next-btn",
+            "type": "reference"
+          },
+          {
+            "name": "audio",
+            "type": "audio",
+            "audio": "slide6",
+            "variable": "audio"
+          },
+          {
+            "name": "text-line1",
+            "type": "text",
+            "text": "Which breakfast choice is most healthy?",
+            "font": "default-text",
+            "location": ["center", 90]
+          },
+          {
+            "name": "cereal-milk-fruit",
+            "type": "button",
+            "image": "food-cereal-milk-fruit",
+            "location": [25, 226],
+            "variable": "cereal-milk-fruit"
+          },
+          {
+            "name": "cookies",
+            "type": "button",
+            "image": "food-cookies",
+            "location": [315, 256],
+            "variable": "cookies"
+          },
+          {
+            "name": "donuts",
+            "type": "button",
+            "image": "food-donuts",
+            "location": [555, 264],
+            "variable": "donuts"
+          },
+          {
+            "name": "cereal-milk-fruit-text",
+            "type": "text",
+            "text": "Cereal with milk and fruit",
+            "wordWrapWidth": 205,
+            "location": [59, 375],
+            "font": "food-fuel-yellow-text"
+          },
+          {
+            "name": "cookies-text",
+            "type": "text",
+            "text": "Cookies",
+            "location": [372, 375],
+            "font": "food-fuel-yellow-text"
+          },
+          {
+            "name": "donuts-text",
+            "type": "text",
+            "text": "Donuts",
+            "location": [624, 375],
+            "font": "food-fuel-yellow-text"
+          }
+        ],
+        "outcomes": {
+          "back-btn" : {
+            "events": { "back-btn": "!reset" },
+            "actions": [ 
+              { "type": "variable", "args": [ "back-btn", "reset" ] },
+              { "type": "scene", "args": [ "three-meals-a-day2" ] }
+            ]
+          },
+          "next-btn" : {
+            "events": { "next-btn": "!reset" },
+            "actions": [ 
+              { "type": "variable", "args": [ "next-btn", "reset" ] },
+              { "type": "mh-scene", "args": [ "mission-complete", {"objective_complete":1} ] }
+            ]
+          },
+          "highlight-next-btn": {
+            "events": {
+              "cereal-milk-fruit-audio": "*"
+            },
+            "actions": [ { "type": "variable", "args": [ "highlight-next-btn", 1, true ] } ]
+          },
+          "cereal-milk-fruit" : {
+            "events": { "cereal-milk-fruit": "!reset" },
+            "actions": [
+              { "type": "variable", "args": [ "cereal-milk-fruit", "reset" ]},
+              { "type": "remove-actor", "args": [ "cereal-milk-fruit-audio", "cookies-audio", "donuts-audio"] },
+              {
+                "type": "add-actor",
+                "args": [
+                  {
+                    "name": "cereal-milk-fruit-audio",
+                    "type": "audio",
+                    "audio": "slide6-cereal-milk-fruit",
+                    "variable": "cereal-milk-fruit-audio"
+                  }
+                ]
+              }
+            ]
+          },
+          "cookies" : {
+            "events": { "cookies": "!reset" },
+            "actions": [
+              { "type": "variable", "args": [ "cookies", "reset" ]},
+              { "type": "remove-actor", "args": [ "cereal-milk-fruit-audio", "cookies-audio", "donuts-audio"] },
+              {
+                "type": "add-actor",
+                "args": [
+                  {
+                    "name": "cookies-audio",
+                    "type": "audio",
+                    "audio": "slide6-cookies",
+                    "variable": "cookies-audio"
+                  }
+                ]
+              }
+            ]
+          },
+          "donuts" : {
+            "events": { "donuts": "!reset" },
+            "actions": [
+              { "type": "variable", "args": [ "donuts", "reset" ]},
+              { "type": "remove-actor", "args": [ "cereal-milk-fruit-audio", "cookies-audio", "donuts-audio"] },
+              {
+                "type": "add-actor",
+                "args": [
+                  {
+                    "name": "donuts-audio",
+                    "type": "audio",
+                    "audio": "slide6-donuts",
+                    "variable": "donuts-audio"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      },
+      "mission-complete": {
+        "id": "mission-complete",
+        "background": "bgspace",
+        "actions": [
+          { "type": "variable", "args": [ "scene_title", "GOOD JOB!" ] },
+          { "type": "add-actor", "args": [
+            {
+              "name": "title-bar-text",
+              "type": "reference"
+            }]
+          },
+          { "type": "variable", "args": [ "lessonLocation", "$current_scene_name" ] }
+        ],
+        "actors": [
+          {
+            "name": "title-bar",
+            "type": "reference"
+          },
+          {
+            "name": "moon",
+            "type": "reference"
+          },
+          {
+            "name": "home-btn",
+            "type": "reference"            
+          },
+          {
+            "name": "back-btn",
+            "type": "reference"
+          },
+          {
+            "name": "replay-btn",
+            "type": "reference"
+          },
+          {
+            "name": "mission-health-logo",
+            "type": "decoration",
+            "image": "mission-health-logo",
+            "key": "common",
+            "location": [ 115, 153 ]
+          },
+          {
+            "name": "audio",
+            "type": "audio",
+            "audio": "slide7",
+            "variable": "audio"
+          }
+        ],
+        "outcomes": {
+          "back-btn": {
+            "events": { "back-btn": "!reset" },
+            "actions": [ 
+              { "type": "variable", "args": [ "back-btn", "reset" ] },
+              { "type": "scene", "args": [ "breakfast" ] }
+            ]
+          }
+        }
+      },
+      "empty-replay-scene": {
+        "id": "empty-replay-scene",
+        "description": "since a scene change request to the current scene is ignored, first change to this empty scene",
+        "background": "none",
+        "actors": [ ],
+        "outcomes": { },
+        "actions": [ ]
+      }
+    }
+  }
+}

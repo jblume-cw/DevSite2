@@ -1,0 +1,1133 @@
+{
+  "play": {
+    "start": "resumeFork",
+    "persist": [ "lessonLocation" ],
+    "modelType": "basic",
+    "showPlaythrough": false,
+    "global": {
+      "actors": {
+        "title-bar": {
+          "name": "title-bar",
+          "type": "decoration",
+          "image": "title-bar",
+          "key": "common",
+          "location": [0, 0]
+        },
+        "moon": {
+          "name": "moon",
+          "type": "decoration",
+          "image": "moon",
+          "key": "common",
+          "location": [0, 568]
+        },
+        "title-bar-text":{
+          "name": "title-bar-text",
+          "type": "text",
+          "text": "GO & WHOA FOODS - $scene_title$",
+          "font": "title-bar",
+          "location": [ 25, 4 ]
+        },
+        "home-btn": {
+          "name": "home-btn",
+          "type": "button",
+          "variable": "home-btn",
+          "image": "home",
+          "location": [709, 5]
+        },
+        "back-btn": {
+          "name": "back-btn",
+          "type": "button",
+          "variable": "back-btn",
+          "image": "back",
+          "location": [391, 498]
+        },
+        "replay-btn": {
+          "name": "replay-btn",
+          "type": "button",
+          "variable": "replay-btn",
+          "image": "replay",
+          "location": [548, 493]
+        },
+        "next-btn": {
+          "name": "next-btn",
+          "type": "button",
+          "image": "next",
+          "variable": "next-btn",
+          "location": [629, 498]
+        }
+      },
+      "outcomes": [
+        {
+          "events": { "home-btn": "!reset" },
+          "actions": [ 
+            { "type": "variable", "args": [ "home-btn", "reset" ] },
+            { "type": "scene", "args": [ "empty-replay-scene" ] },
+            { "type": "scene", "args": [ "intro" ] }
+          ]
+        }, {
+          "events": { "replay-btn": "!reset" },
+          "actions": [
+            { "type": "variable", "args": [ "replay-btn", "reset" ] },
+            { "type": "scene", "args": [ "empty-replay-scene" ] },
+            { "type": "scene", "args": [ "$previous_scene_name" ] }
+          ]
+        }, {
+          "events": { "highlight-next-btn": "!reset" },
+          "actions": [
+            { "type": "variable", "args": [ "highlight-next-btn", "reset" ] },
+            { "type": "add-actor", "args": [
+              {
+                "name": "next-btn",
+                "type": "button",
+                "image": "next",
+                "variable": "next-btn",
+                "location": [713, 538],
+                "anchor": [0.5,0.5],
+                "tween": {
+                  "scale": [1.05, 1.05],
+                  "time": 666,
+                  "loop": true,
+                  "chainedTweens": [
+                    {
+                      "scale": [1, 1],
+                      "time": 666
+                    }
+                  ]
+                }
+              }
+            ]}
+          ]
+        }
+      ],
+      "actions": []
+    },
+    "scenes": {
+      "resumeFork": {
+        "id": "resumeFork",
+        "background": "bgspace",
+        "actors": [
+        ],
+        "outcomes": {
+          "no_resume": {
+            "events": { "lessonLocation": "undefined" },
+            "actions": [
+              { "type": "scene", "args": ["intro"] }
+            ]
+          },
+          "resume": {
+            "events": { "lessonLocation": "*" },
+            "actions": [
+              { "type": "scene", "args": [ "$lessonLocation" ] }
+            ]
+          }
+        },
+        "actions": [
+          { "type": "check-outcomes", "args": [ "lessonLocation" ] }
+        ]
+      },
+      "intro": {
+        "id": "intro",
+        "background": "bgspace",
+        "actors": [
+          {
+            "name": "title-bar",
+            "type": "reference"
+          },
+          {
+            "name": "moon",
+            "type": "reference"
+          },
+          {
+            "name": "home-btn",
+            "type": "reference"
+          },
+          {
+            "name": "replay-btn",
+            "type": "reference"
+          },
+          {
+            "name": "next-btn",
+            "type": "reference"
+          },
+          {
+            "name": "audio",
+            "type": "audio",
+            "audio": "slide1",
+            "variable": "audio"
+          }
+        ],
+        "outcomes": {
+          "next-btn" : {
+            "events": { "next-btn": "!reset" },
+            "actions": [ 
+              { "type": "variable", "args": [ "next-btn", "reset" ] },
+              { "type": "scene", "args": [ "bananas" ] }
+            ]
+          },
+          "highlight-next-btn": {
+            "events": {
+              "audio": "*"
+            },
+            "actions": [ { "type": "variable", "args": [ "highlight-next-btn", 1, true ] } ]
+          }
+        },
+        "actions": [
+          { "type": "variable", "args": [ "scene_title", "INTRO" ] },
+          { "type": "add-actor", "args": [
+            {
+              "name": "title-bar-text",
+              "type": "reference"
+            }, {
+              "name": "title",
+              "type": "text",
+              "text": "Go & Whoa Foods",
+              "font": "title",
+              "location": [ "center", 148 ]
+            }]
+          },
+          { "type": "variable", "args": [ "lessonLocation", "$current_scene_name" ] }
+        ]
+      },
+      "bananas": {
+        "id": "bananas",
+        "background": "bgspace",
+        "actions": [
+          { "type": "variable", "args": [ "scene_title", "FOODS" ] },
+          { "type": "add-actor", "args": [
+            {
+              "name": "title-bar-text",
+              "type": "reference"
+            }]
+          },
+          { "type": "variable", "args": [ "lessonLocation", "$current_scene_name" ] }
+        ],
+        "actors": [
+          {
+            "name": "title-bar",
+            "type": "reference"
+          },
+          {
+            "name": "moon",
+            "type": "reference"
+          },
+          {
+            "name": "home-btn",
+            "type": "reference"            
+          },
+          {
+            "name": "back-btn",
+            "type": "reference"
+          },
+          {
+            "name": "replay-btn",
+            "type": "reference"
+          },
+          {
+            "name": "next-btn",
+            "type": "reference"
+          },
+          {
+            "name": "bananas",
+            "type": "decoration",
+            "image": "bananas",
+            "key":"go-whoa-foods",
+            "location": [ 100, 80 ]
+          },
+          {
+            "name": "text1",
+            "type": "text",
+            "text": "Can you decide if foods are Go Foods or Whoa Foods?",
+            "wordWrapWidth": 285,
+            "font": "go-whoa-orange",
+            "location": [ 450, 137 ]
+          },
+          {
+            "name": "audio",
+            "type": "audio",
+            "audio": "slide2",
+            "variable": "audio"
+          },
+          {
+            "name": "change-text-delay",
+            "type": "timeline",
+            "period": "29000",
+            "variable": "change-text-delay-timeline"
+          },
+          {
+            "name": "planet-go-food",
+            "type": "button",
+            "variable": "planet-go-food-btn",
+            "image": "planet-go-food",
+            "location": [460, 239]
+          },
+          {
+            "name": "planet-whoa-food",
+            "type": "button",
+            "variable": "planet-whoa-food-btn",
+            "image": "planet-whoa-food",
+            "location": [623, 239]
+          }
+        ],
+        "outcomes": {
+          "back-btn": {
+            "events": { "back-btn": "!reset" },
+            "actions": [ 
+              { "type": "variable", "args": [ "back-btn", "reset" ] },
+              { "type": "scene", "args": [ "intro" ] }
+            ]
+          },
+          "next-btn" : {
+            "events": { "next-btn": "!reset" },
+            "actions": [ 
+              { "type": "variable", "args": [ "next-btn", "reset" ] },
+              { "type": "scene", "args": [ "potato-chips" ] }
+            ]
+          },
+          "highlight-next-btn": {
+            "events": {
+              "correct-answer-audio": "*"
+            },
+            "actions": [ { "type": "variable", "args": [ "highlight-next-btn", 1, true ] } ]
+          },
+          "change-text-delay-timeline": {
+            "events": { "change-text-delay-timeline": "*" },
+            "actions": [
+              { "type": "remove-actor", "args": ["text1"] },
+              {
+                "type": "add-actor", 
+                "args": [{
+                  "name": "text2",
+                  "type": "text",
+                  "text": "Is this a Go Food or a Whoa Food?",
+                  "wordWrapWidth": 285,
+                  "font": "go-whoa-orange",
+                  "location": [450, 137]
+                }]
+              }
+            ]
+          },
+          "planet-go-food-btn": {
+            "events": {"planet-go-food-btn": "*"},
+            "actions": [
+              {
+                "type": "variable",
+                "args": [ "planet-go-food-btn", 0, true ]
+              },
+              {
+                "type": "remove-actor",
+                "args": [ "correct-answer", "incorrect-answer", "change-text-delay", "audio" ]
+              },
+              {
+                "type": "add-actor", 
+                "args": [{
+                  "name": "correct-answer",
+                  "type": "text",
+                  "text": "Bananas are a Go Food.",
+                  "font": "go-whoa-orange",
+                  "location": [450, 334]
+                  }, {
+                    "name": "audio",
+                    "type": "audio",
+                    "audio": "slide2-correct",
+                    "variable": "correct-answer-audio"
+                  }]
+                }
+            ]
+          },
+          "planet-whoa-food-btn": {
+            "events": {"planet-whoa-food-btn": "*"},
+            "actions": [
+              {
+                "type": "variable",
+                "args": [ "planet-whoa-food-btn", 0, true ]
+              },
+              {
+                "type": "remove-actor",
+                "args": [ "correct-answer", "incorrect-answer", "change-text-delay", "audio" ]
+              },
+              {
+                "type": "add-actor", 
+                "args": [{
+                  "name": "incorrect-answer",
+                  "type": "audio",
+                  "audio": ["slide2-incorrect"],
+                  "variable": "incorrect-answer-audio"
+                }]
+              }
+            ]
+          }
+        }
+      },
+      "potato-chips": {
+        "id": "potato-chips",
+        "background": "bgspace",
+        "actions": [
+          { "type": "variable", "args": [ "scene_title", "FOODS" ] },
+          { "type": "add-actor", "args": [
+            {
+              "name": "title-bar-text",
+              "type": "reference"
+            }]
+          },
+          { "type": "variable", "args": [ "lessonLocation", "$current_scene_name" ] }
+        ],
+        "actors": [
+          {
+            "name": "title-bar",
+            "type": "reference"
+          },
+          {
+            "name": "moon",
+            "type": "reference"
+          },
+          {
+            "name": "home-btn",
+            "type": "reference"            
+          },
+          {
+            "name": "back-btn",
+            "type": "reference"
+          },
+          {
+            "name": "replay-btn",
+            "type": "reference"
+          },
+          {
+            "name": "next-btn",
+            "type": "reference"
+          },
+          {
+            "name": "potato-chips",
+            "type": "decoration",
+            "image": "potato-chips",
+            "key": "go-whoa-foods",
+            "location": [ 101, 79 ]
+          },
+          {
+            "name": "text",
+            "type": "text",
+            "text": "Is this a Go Food or a Whoa Food?",
+            "wordWrapWidth": 285,
+            "font": "go-whoa-orange",
+            "location": [ 454, 138 ],
+            "audio": "slide3"
+          },
+          {
+            "name": "planet-go-food",
+            "type": "button",
+            "variable": "planet-go-food-btn",
+            "image": "planet-go-food",
+            "location": [460, 239]
+          },
+          {
+            "name": "planet-whoa-food",
+            "type": "button",
+            "variable": "planet-whoa-food-btn",
+            "image": "planet-whoa-food",
+            "location": [623, 239]
+          }
+        ],
+        "outcomes": {
+          "back-btn": {
+            "events": { "back-btn": "!reset" },
+            "actions": [ 
+              { "type": "variable", "args": [ "back-btn", "reset" ] },
+              { "type": "scene", "args": [ "bananas" ] }
+            ]
+          },
+          "next-btn" : {
+            "events": { "next-btn": "!reset" },
+            "actions": [ 
+              { "type": "variable", "args": [ "next-btn", "reset" ] },
+              { "type": "scene", "args": [ "foods" ] }
+            ]
+          },
+          "highlight-next-btn": {
+            "events": {
+              "correct-answer-audio": "*"
+            },
+            "actions": [ { "type": "variable", "args": [ "highlight-next-btn", 1, true ] } ]
+          },
+          "planet-whoa-food-btn": {
+            "events": {"planet-whoa-food-btn": "*"},
+            "actions": [
+              {
+                "type": "variable",
+                "args": [ "planet-whoa-food-btn", 0, true ]
+              },
+              {
+                "type": "remove-actor",
+                "args": [ "correct-answer", "incorrect-answer", "audio" ]
+              },
+              {
+                "type": "add-actor", 
+                "args": [{
+                  "name": "correct-answer",
+                  "type": "text",
+                  "text": "Potato chips are a Whoa Food.",
+                  "wordWrapWidth": 285,
+                  "font": "go-whoa-orange",
+                  "location": [450, 334]
+                }, {
+                  "name": "audio",
+                  "type": "audio",
+                  "audio": "slide3-correct",
+                  "variable": "correct-answer-audio"
+                }]
+              }
+            ]
+          },
+          "planet-go-food-btn": {
+            "events": {"planet-go-food-btn": "*"},
+            "actions": [
+              {
+                "type": "variable",
+                "args": [ "planet-go-food-btn", 0, true ]
+              },
+              {
+                "type": "remove-actor",
+                "args": [ "correct-answer", "incorrect-answer", "audio" ]
+              },
+              {
+                "type": "add-actor", 
+                "args": [{
+                  "name": "incorrect-answer",
+                  "type": "audio",
+                  "audio": ["slide3-incorrect"],
+                  "variable": "incorrect-answer-audio"
+                }]
+              }
+            ]
+          }
+        }
+      },
+      "foods": {
+        "id": "foods",
+        "background": "bgspace",
+        "actions": [
+          { "type": "variable", "args": [ "scene_title", "FOODS" ] },
+          { "type": "add-actor", "args": [
+            {
+              "name": "title-bar-text",
+              "type": "reference"
+            }]
+          },
+          { "type": "variable", "args": [ "lessonLocation", "$current_scene_name" ] }
+        ],
+        "actors": [
+          {
+            "name": "title-bar",
+            "type": "reference"
+          },
+          {
+            "name": "moon",
+            "type": "reference"
+          },
+          {
+            "name": "home-btn",
+            "type": "reference"            
+          },
+          {
+            "name": "back-btn",
+            "type": "reference"
+          },
+          {
+            "name": "replay-btn",
+            "type": "reference"
+          },
+          {
+            "name": "next-btn",
+            "type": "reference"
+          },
+          {
+            "name": "audio",
+            "type": "audio",
+            "audio": "slide4",
+            "variable": "audio"
+          },
+          {
+            "name": "star-bullet1",
+            "type": "decoration",
+            "image": "star-bullet",
+            "key": "common",
+            "location": [800, 147],
+            "startDelay": 500,
+            "tween": {
+              "easing": "Quad.easeOut",
+              "time": 1000,
+              "location": [351, 147]
+            }
+          },
+          {
+            "name": "text-line1",
+            "type": "text",
+            "text": "Eat Go Foods any time.",
+            "wordWrapWidth": 394,
+            "font": "default-text",
+            "location": [840, 150],
+            "startDelay": 500,
+            "tween": {
+              "easing": "Quad.easeOut",
+              "time": 1000,
+              "location": [391, 150]
+            }
+          },
+          {
+            "name": "star-bullet2",
+            "type": "decoration",
+            "image": "star-bullet",
+            "key": "common",
+            "location": [800, 191],
+            "startDelay": 23000,
+            "tween": {
+              "easing": "Quad.easeOut",
+              "time": 1000,
+              "location": [351, 191]
+            }
+          },
+          {
+            "name": "text-line2",
+            "type": "text",
+            "text": "Eat Whoa Foods once in a while.",
+            "wordWrapWidth": 365,
+            "font": "default-text",
+            "location": [840, 194],
+            "startDelay": 23000,
+            "tween": {
+              "easing": "Quad.easeOut",
+              "time": 1000,
+              "location": [391, 194]
+            }
+          },
+          {
+            "name": "star-bullet3",
+            "type": "decoration",
+            "image": "star-bullet",
+            "key": "common",
+            "location": [800, 236],
+            "startDelay": 35000,
+            "tween": {
+              "easing": "Quad.easeOut",
+              "time": 1000,
+              "location": [351, 236]
+            }
+          },
+          {
+            "name": "text-line3",
+            "type": "text",
+            "text": "Go Foods: Vegetables, fruits, bread, cheese, and milk.",
+            "wordWrapWidth": 365,
+            "font": "default-text",
+            "location": [840, 239],
+            "startDelay": 35000,
+            "tween": {
+              "easing": "Quad.easeOut",
+              "time": 1000,
+              "location": [391, 239]
+            }
+          },
+          {
+            "name": "star-bullet4",
+            "type": "decoration",
+            "image": "star-bullet",
+            "key": "common",
+            "location": [800, 317],
+            "startDelay": 50000,
+            "tween": {
+              "easing": "Quad.easeOut",
+              "time": 1000,
+              "location": [351, 317]
+            }
+          },
+          {
+            "name": "text-line4",
+            "type": "text",
+            "text": "Whoa Foods: Donuts, potato chips, candy, soda, cookies, ice cream, and cakes.",
+            "wordWrapWidth": 365,
+            "font": "default-text",
+            "location": [840, 320],
+            "startDelay": 50000,
+            "tween": {
+              "easing": "Quad.easeOut",
+              "time": 1000,
+              "location": [391, 320]
+            }
+          },
+          {
+            "name": "go-whoa",
+            "type": "decoration",
+            "image": "go-whoa",
+            "key": "go-whoa-foods",
+            "location": [30, 69]
+          }
+        ],
+        "outcomes": {
+          "back-btn" : {
+            "events": { "back-btn": "!reset" },
+            "actions": [ 
+              { "type": "variable", "args": [ "back-btn", "reset" ] },
+              { "type": "scene", "args": [ "potato-chips" ] }
+            ]
+          },
+          "next-btn" : {
+            "events": { "next-btn": "!reset" },
+            "actions": [ 
+              { "type": "variable", "args": [ "next-btn", "reset" ] },
+              { "type": "scene", "args": [ "flying-foods" ] }
+            ]
+          },
+          "highlight-next-btn": {
+            "events": {
+              "audio": "*"
+            },
+            "actions": [ { "type": "variable", "args": [ "highlight-next-btn", 1, true ] } ]
+          }
+        }
+      },
+      "flying-foods": {
+        "id": "flying-foods",
+        "background": "bgspace",
+        "actions": [
+          { "type": "variable", "args": [ "scene_title", "FOODS" ] },
+          { "type": "add-actor", "args": [
+            {
+              "name": "title-bar-text",
+              "type": "reference"
+            }]
+          },
+          { "type": "variable", "args": [ "lessonLocation", "$current_scene_name" ] }
+        ],
+        "actors": [
+          {
+            "name": "title-bar",
+            "type": "reference"
+          },
+          {
+            "name": "moon",
+            "type": "reference"
+          },
+          {
+            "name": "home-btn",
+            "type": "reference"            
+          },
+          {
+            "name": "back-btn",
+            "type": "reference"
+          },
+          {
+            "name": "replay-btn",
+            "type": "reference"
+          },
+          {
+            "name": "next-btn",
+            "type": "reference"
+          },
+          {
+            "name": "audio",
+            "type": "audio",
+            "audio": "slide5",
+            "variable": "audio"
+          },
+          {
+            "name": "potato-chips",
+            "type": "button",
+            "image": "food-chips",
+            "variable": "potato-chips-btn",
+            "location": [617, 179],
+            "tween": {
+              "loop": true,
+              "location": [200, 410],
+              "time": 5000,
+              "chainedTweens": [
+                {
+                  "location": [20, 148],
+                  "time": 5000
+                },
+                {
+                  "location": [243, 56],
+                  "time": 5000
+                },
+                {
+                  "location": [617, 179],
+                  "time": 5000
+                }
+              ]
+            }
+          },
+          {
+            "name": "milk",
+            "type": "button",
+            "image": "food-milk",
+            "variable": "milk-btn",
+            "location": [241, 246],
+            "tween": {
+              "loop": true,
+              "location": [216, 456],
+              "time": 5000,
+              "chainedTweens": [
+                {
+                  "location": [338, 220],
+                  "time": 5000
+                },
+                {
+                  "location": [670, 220],
+                  "time": 5000
+                },
+                {
+                  "location": [635, 62],
+                  "time": 5000
+                },
+                {
+                  "location": [241, 246],
+                  "time": 5000
+                }
+              ]
+            }
+          },
+          {
+            "name": "broccoli",
+            "type": "button",
+            "image": "food-broccoli",
+            "variable": "broccoli-btn",
+            "location": [40, 60],
+            "tween": {
+              "loop": true,
+              "location": [670, 370],
+              "time": 5000,
+              "chainedTweens": [
+                {
+                  "location": [372, 56],
+                  "time": 5000
+                },
+                {
+                  "location": [13, 450],
+                  "time": 5000
+                },
+                {
+                  "location": [40, 60],
+                  "time": 5000
+                }
+              ]
+            }
+          },
+          {
+            "name": "snacks",
+            "type": "button",
+            "image": "food-snacks",
+            "variable": "snacks-btn",
+            "location": [343, 393],
+            "tween": {
+              "loop": true,
+              "location": [585, 393],
+              "time": 5000,
+              "chainedTweens": [
+                {
+                  "location": [535, 52],
+                  "time": 5000
+                },
+                {
+                  "location": [343, 393],
+                  "time": 5000
+                }
+              ]
+            }
+          }
+        ],
+        "outcomes": {
+          "back-btn": {
+            "events": { "back-btn": "!reset" },
+            "actions": [ 
+              { "type": "variable", "args": [ "back-btn", "reset" ] },
+              { "type": "scene", "args": [ "foods" ] }
+            ]
+          },
+          "next-btn" : {
+            "events": { "next-btn": "!reset" },
+            "actions": [ 
+              { "type": "variable", "args": [ "next-btn", "reset" ] },
+              { "type": "scene", "args": [ "buzz-the-alien" ] }
+            ]
+          },
+          "highlight-next-btn": {
+            "events": {
+              "potato-chips-btn": "*",
+              "milk-btn": "*",
+              "broccoli-btn": "*",
+              "snacks-btn": "*",
+              "audio": "*"
+            },
+            "actions": [ { "type": "variable", "args": [ "highlight-next-btn", 1, true ] } ]
+          },
+          "potato-chips-btn": {
+            "events": { "potato-chips-btn": "!reset" },
+            "actions": [ 
+              { "type": "remove-actor", "args": [ "audio" ] },
+              { "type": "variable", "args": [ "potato-chips-btn", "reset" ] },
+              {
+                "type": "add-actor",
+                "args": [{
+                  "name": "audio",
+                  "type": "audio",
+                  "audio": "slide5-whoa",
+                  "variable": "audio"
+                }]
+              }
+            ]
+          },
+          "milk-btn": {
+            "events": { "milk-btn": "!reset" },
+            "actions": [ 
+              { "type": "remove-actor", "args": [ "audio" ] },
+              { "type": "variable", "args": [ "milk-btn", "reset" ] },
+              {
+                "type": "add-actor",
+                "args": [{
+                  "name": "audio",
+                  "type": "audio",
+                  "audio": "slide5-go",
+                  "variable": "audio"
+                }]
+              }
+            ]
+          },
+          "broccoli-btn": {
+            "events": { "broccoli-btn": "!reset" },
+            "actions": [ 
+              { "type": "remove-actor", "args": [ "audio" ] },
+              { "type": "variable", "args": [ "broccoli-btn", "reset" ] },
+              {
+                "type": "add-actor",
+                "args": [{
+                  "name": "audio",
+                  "type": "audio",
+                  "audio": "slide5-go",
+                  "variable": "audio"
+                }]
+              }
+            ]
+          },
+          "snacks-btn": {
+            "events": { "snacks-btn": "!reset" },
+            "actions": [ 
+              { "type": "remove-actor", "args": [ "audio" ] },
+              { "type": "variable", "args": [ "snacks-btn", "reset" ] },
+              {
+                "type": "add-actor",
+                "args": [{
+                  "name": "audio",
+                  "type": "audio",
+                  "audio": "slide5-whoa",
+                  "variable": "audio"
+                }]
+              }
+            ]
+          }
+        }
+      },
+      "buzz-the-alien": {
+        "id": "buzz-the-alien",
+        "background": "bgspace",
+        "actions": [
+          { "type": "variable", "args": [ "scene_title", "SUGARY DRINKS" ] },
+          { "type": "add-actor", "args": [
+            {
+              "name": "title-bar-text",
+              "type": "reference"
+            }]
+          },
+          { "type": "variable", "args": [ "lessonLocation", "$current_scene_name" ] }
+        ],
+        "actors": [
+          {
+            "name": "title-bar",
+            "type": "reference"
+          },
+          {
+            "name": "moon",
+            "type": "reference"
+          },
+          {
+            "name": "home-btn",
+            "type": "reference"            
+          },
+          {
+            "name": "back-btn",
+            "type": "reference"
+          },
+          {
+            "name": "replay-btn",
+            "type": "reference"
+          },
+          {
+            "name": "next-btn",
+            "type": "reference"
+          },
+          {
+            "name": "audio",
+            "type": "audio",
+            "audio": "slide6",
+            "variable": "audio"
+          },
+          {
+            "name": "text1",
+            "type": "text",
+            "text": "Drinks with lots of sugar:",
+            "font": "default-text",
+            "location": [ 800, 105 ],
+            "tween": {
+              "easing": "Quad.easeOut",
+              "time": 1000,
+              "location": [385, 105]
+            }
+          },
+          {
+            "name": "buzz-the-alien",
+            "type": "decoration",
+            "image": "buzz",
+            "key": "go-whoa-foods",
+            "location": [ 29, 69 ]
+          },
+          {
+            "name": "text2",
+            "type": "text",
+            "text": "Are Whoa Foods",
+            "font": "default-text",
+            "location": [842, 148],
+            "startDelay": 11000,
+            "tween": {
+              "easing": "Quad.easeOut",
+              "time": 1000,
+              "location": [438, 148]
+            }
+          },
+          {
+            "name": "text2-star",
+            "type": "decoration",
+            "image": "star-bullet",
+            "key": "common",
+            "location": [800, 148],
+            "startDelay": 11000,
+            "tween": {
+              "easing": "Quad.easeOut",
+              "time": 1000,
+              "location": [396, 148]
+            }
+          },
+          {
+            "name": "text3",
+            "type": "text",
+            "text": "Can give you cavities",
+            "font": "default-text",
+            "location": [842, 191],
+            "startDelay": 30000,
+            "tween": {
+              "easing": "Quad.easeOut",
+              "time": 1000,
+              "location": [438, 191]
+            }
+          },
+          {
+            "name": "text3-star",
+            "type": "decoration",
+            "image": "star-bullet",
+            "key": "common",
+            "location": [800, 191],
+            "startDelay": 30000,
+            "tween": {
+              "easing": "Quad.easeOut",
+              "time": 1000,
+              "location": [396, 191]
+            }
+          }        ],
+        "outcomes": {
+          "back-btn": {
+            "events": { "back-btn": "!reset" },
+            "actions": [ 
+              { "type": "variable", "args": [ "back-btn", "reset" ] },
+              { "type": "scene", "args": [ "flying-foods" ] }
+            ]
+          },
+          "next-btn" : {
+            "events": { "next-btn": "!reset" },
+            "actions": [ 
+              { "type": "variable", "args": [ "next-btn", "reset" ] },
+              { "type": "mh-scene", "args": [ "mission-complete", {"objective_complete":1} ] }
+            ]
+          },
+          "highlight-next-btn": {
+            "events": {
+              "audio": "*"
+            },
+            "actions": [ { "type": "variable", "args": [ "highlight-next-btn", 1, true ] } ]
+          }
+        }
+      },
+      "mission-complete": {
+        "id": "mission-complete",
+        "background": "bgspace",
+        "actions": [
+          { "type": "variable", "args": [ "scene_title", "GOOD JOB!" ] },
+          { "type": "add-actor", "args": [
+            {
+              "name": "title-bar-text",
+              "type": "reference"
+            }]
+          },
+          { "type": "variable", "args": [ "lessonLocation", "$current_scene_name" ] }
+        ],
+        "actors": [
+          {
+            "name": "title-bar",
+            "type": "reference"
+          },
+          {
+            "name": "moon",
+            "type": "reference"
+          },
+          {
+            "name": "home-btn",
+            "type": "reference"            
+          },
+          {
+            "name": "back-btn",
+            "type": "reference"
+          },
+          {
+            "name": "replay-btn",
+            "type": "reference"
+          },
+          {
+            "name": "mission-health-logo",
+            "type": "decoration",
+            "image": "mission-health-logo",
+            "key": "common",
+            "location": [ 115, 153 ]
+          },
+          {
+            "name": "audio",
+            "type": "audio",
+            "audio": "slide7",
+            "variable": "audio"
+          }
+        ],
+        "outcomes": {
+          "back-btn": {
+            "events": { "back-btn": "!reset" },
+            "actions": [ 
+              { "type": "variable", "args": [ "back-btn", "reset" ] },
+              { "type": "scene", "args": [ "buzz-the-alien" ] }
+            ]
+          }
+        }
+      },
+      "empty-replay-scene": {
+        "id": "empty-replay-scene",
+        "description": "since a scene change request to the current scene is ignored, first change to this empty scene",
+        "background": "none",
+        "actors": [ ],
+        "outcomes": { },
+        "actions": [ ]
+      }
+    }
+  }
+}

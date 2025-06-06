@@ -1,0 +1,2167 @@
+{
+  "play": {
+    "start": "resumeFork",
+    "persist": [ "lessonLocation" ],
+    "modelType": "basic",
+    "showPlaythrough": false,
+    "global": {
+      "actors": {
+        "title-bar": {
+          "name": "title-bar",
+          "type": "decoration",
+          "image": "title-bar",
+          "key": "common",
+          "location": [0, 0]
+        },
+        "moon": {
+          "name": "moon",
+          "type": "decoration",
+          "image": "moon",
+          "key": "common",
+          "location": [0, 568]
+        },
+        "title-bar-text":{
+          "name": "title-bar-text",
+          "type": "text",
+          "text": "ACTIVITY PYRAMID - $scene_title$",
+          "font": "title-bar",
+          "location": [ 25, 4 ]
+        },
+        "home-btn": {
+          "name": "home-btn",
+          "type": "button",
+          "variable": "home-btn",
+          "image": "home",
+          "location": [709, 5]
+        },
+        "back-btn": {
+          "name": "back-btn",
+          "type": "button",
+          "variable": "back-btn",
+          "image": "back",
+          "location": [391, 498]
+        },
+        "replay-btn": {
+          "name": "replay-btn",
+          "type": "button",
+          "variable": "replay-btn",
+          "image": "replay",
+          "location": [548, 493]
+        },
+        "next-btn": {
+          "name": "next-btn",
+          "type": "button",
+          "image": "next",
+          "variable": "next-btn",
+          "location": [629, 498]
+        }
+      },
+      "outcomes": [
+        {
+          "events": { "home-btn": "!reset" },
+          "actions": [ 
+            { "type": "variable", "args": [ "home-btn", "reset" ] },
+            { "type": "scene", "args": [ "empty-replay-scene" ] },
+            { "type": "scene", "args": [ "intro" ] }
+          ]
+        }, {
+          "events": { "replay-btn": "!reset" },
+          "actions": [
+            { "type": "variable", "args": [ "replay-btn", "reset" ] },
+            { "type": "scene", "args": [ "empty-replay-scene" ] },
+            { "type": "scene", "args": [ "$previous_scene_name" ] }
+          ]
+        }, {
+          "events": { "highlight-next-btn": "!reset" },
+          "actions": [
+            { "type": "add-actor", "args": [
+              {
+                "name": "next-btn",
+                "type": "button",
+                "image": "next",
+                "variable": "next-btn",
+                "location": [713, 538],
+                "anchor": [0.5,0.5],
+                "tween": {
+                  "scale": [1.05, 1.05],
+                  "time": 666,
+                  "loop": true,
+                  "chainedTweens": [
+                    {
+                      "scale": [1, 1],
+                      "time": 666
+                    }
+                  ]
+                }
+              }
+            ]},
+            { "type": "variable", "args": [ "highlight-next-btn", "reset" ] }
+          ]
+        }
+      ],
+      "actions": []
+    },
+    "scenes": {
+      "resumeFork": {
+        "id": "resumeFork",
+        "background": "bgspace",
+        "actors": [
+        ],
+        "outcomes": {
+          "no_resume": {
+            "events": { "lessonLocation": "undefined" },
+            "actions": [
+              { "type": "scene", "args": ["intro"] }
+            ]
+          },
+          "resume": {
+            "events": { "lessonLocation": "*" },
+            "actions": [
+              { "type": "scene", "args": [ "$lessonLocation" ] }
+            ]
+          }
+        },
+        "actions": [
+          { "type": "check-outcomes", "args": [ "lessonLocation" ] }
+        ]
+      },
+      "intro": {
+        "id": "intro",
+        "background": "bgspace",
+        "actors": [
+          {
+            "name": "title-bar",
+            "type": "reference"
+          },
+          {
+            "name": "moon",
+            "type": "reference"
+          },
+          {
+            "name": "home-btn",
+            "type": "reference"
+          },
+          {
+            "name": "replay-btn",
+            "type": "reference"
+          },
+          {
+            "name": "next-btn",
+            "type": "reference"
+          },
+          {
+            "name": "audio",
+            "type": "audio",
+            "audio": "slide1",
+            "variable": "audio"
+          }
+        ],
+        "outcomes": {
+          "next-btn" : {
+            "events": { "next-btn": "!reset" },
+            "actions": [ 
+              { "type": "variable", "args": [ "next-btn", "reset" ] },
+              { "type": "scene", "args": [ "walking-the-dog" ] }
+            ]
+          },
+          "highlight-next-btn": {
+            "events": {
+              "audio": "*"
+            },
+            "actions": [ { "type": "variable", "args": [ "highlight-next-btn", 1, true ] } ]
+          }
+        },
+        "actions": [
+          { "type": "variable", "args": [ "scene_title", "INTRO" ] },
+          { "type": "add-actor", "args": [
+            {
+              "name": "title-bar-text",
+              "type": "reference"
+            }, {
+              "name": "title",
+              "type": "text",
+              "text": "Activity Pyramid",
+              "font": "title",
+              "location": [ "center", 148 ]
+            }]
+          },
+          { "type": "variable", "args": [ "lessonLocation", "$current_scene_name" ] }
+        ]
+      },
+      "walking-the-dog": {
+        "id": "walking-the-dog",
+        "background": "bgspace",
+        "actions": [
+          { "type": "variable", "args": [ "scene_title", "KINDS OF ACTIVITIES" ] },
+          { "type": "add-actor", "args": [
+            {
+              "name": "title-bar-text",
+              "type": "reference"
+            }]
+          },
+          { "type": "variable", "args": [ "lessonLocation", "$current_scene_name" ] },
+          { "type": "variable", "args": [ "correct-answer-audio", "reset" ] }
+        ],
+        "actors": [
+          {
+            "name": "title-bar",
+            "type": "reference"
+          },
+          {
+            "name": "moon",
+            "type": "reference"
+          },
+          {
+            "name": "home-btn",
+            "type": "reference"            
+          },
+          {
+            "name": "back-btn",
+            "type": "reference"
+          },
+          {
+            "name": "replay-btn",
+            "type": "reference"
+          },
+          {
+            "name": "next-btn",
+            "type": "reference"
+          },
+          {
+            "name": "text1",
+            "type": "text",
+            "text": "Can you decide if an activity is physical or sitting still?",
+            "wordWrapWidth": 285,
+            "font": "question-text",
+            "location": [ 450, 109 ]
+          },
+          {
+            "name": "audio",
+            "type": "audio",
+            "audio": "slide2",
+            "variable": "audio"
+          },
+          {
+            "name": "change-text-delay",
+            "type": "timeline",
+            "period": "30000",
+            "variable": "change-text-delay-timeline"
+          },
+          {
+            "name": "planet-physical",
+            "type": "button",
+            "variable": "planet-physical-btn",
+            "image": "planet-physical",
+            "location": [515, 239]
+          },
+          {
+            "name": "planet-sitting-still",
+            "type": "button",
+            "variable": "planet-sitting-still-btn",
+            "image": "planet-sitting-still",
+            "location": [633, 239]
+          },
+          {
+            "name": "sofia-dog",
+            "type": "animation",
+            "images": "sofia-dog",
+            "textureKey": "texture_sd",
+            "fps": 30,
+            "loop": true,
+            "location": [101, 80]
+          }
+        ],
+        "outcomes": {
+          "back-btn": {
+            "events": { "back-btn": "!reset" },
+            "actions": [ 
+              { "type": "variable", "args": [ "back-btn", "reset" ] },
+              { "type": "scene", "args": [ "intro" ] }
+            ]
+          },
+          "next-btn" : {
+            "events": { "next-btn": "!reset" },
+            "actions": [ 
+              { "type": "variable", "args": [ "next-btn", "reset" ] },
+              { "type": "scene", "args": [ "using-the-computer" ] }
+            ]
+          },
+          "highlight-next-btn": {
+            "events": {
+              "correct-answer-audio": "played"
+            },
+            "actions": [ { "type": "variable", "args": [ "highlight-next-btn", 1, true ] } ]
+          },
+          "change-text-delay-timeline": {
+            "events": { "change-text-delay-timeline": "*" },
+            "actions": [
+              { "type": "remove-actor", "args": ["text1"] },
+              {
+                "type": "add-actor", 
+                "args": [{
+                  "name": "text2",
+                  "type": "text",
+                  "text": "Is this a physical or a sitting-still activity?",
+                  "wordWrapWidth": 285,
+                  "font": "question-text",
+                  "location": [450, 109]
+                }]
+              }
+            ]
+          },
+          "planet-physical-btn": {
+            "events": {"planet-physical-btn": "*"},
+            "actions": [
+              {
+                "type": "variable",
+                "args": [ "planet-physical-btn", 0, true ]
+              },
+              {
+                "type": "remove-actor",
+                "args": [ "correct-answer", "change-text-delay", "audio" ]
+              },
+              {
+                "type": "add-actor", 
+                "args": [{
+                  "name": "correct-answer",
+                  "type": "text",
+                  "text": "Walking the dog is a physical activity.",
+                  "wordWrapWidth": 300,
+                  "font": "question-text",
+                  "location": [450, 334]
+                }, {
+                  "name": "audio",
+                  "type": "audio",
+                  "audio": "slide2-correct",
+                  "variable": "correct-answer-audio"
+                }]
+              }
+            ]
+          },
+          "planet-sitting-still-btn": {
+            "events": {"planet-sitting-still-btn": "*"},
+            "actions": [
+              {
+                "type": "variable",
+                "args": [ "planet-sitting-still-btn", 0, true ]
+              },
+              {
+                "type": "remove-actor",
+                "args": [ "correct-answer", "change-text-delay", "audio" ]
+              },
+              {
+                "type": "add-actor", 
+                "args": [{
+                  "name": "incorrect-answer",
+                  "type": "audio",
+                  "audio": ["slide2-incorrect"],
+                  "variable": "incorrect-answer-audio"
+                }]
+              }
+            ]
+          }
+        }
+      },
+      "using-the-computer": {
+        "id": "using-the-computer",
+        "background": "bgspace",
+        "actions": [
+          { "type": "variable", "args": [ "scene_title", "KINDS OF ACTIVITIES" ] },
+          { "type": "add-actor", "args": [
+            {
+              "name": "title-bar-text",
+              "type": "reference"
+            }]
+          },
+          { "type": "variable", "args": [ "lessonLocation", "$current_scene_name" ] },
+          { "type": "variable", "args": [ "correct-answer-audio", "reset" ] }
+        ],
+        "actors": [
+          {
+            "name": "title-bar",
+            "type": "reference"
+          },
+          {
+            "name": "moon",
+            "type": "reference"
+          },
+          {
+            "name": "home-btn",
+            "type": "reference"            
+          },
+          {
+            "name": "back-btn",
+            "type": "reference"
+          },
+          {
+            "name": "replay-btn",
+            "type": "reference"
+          },
+          {
+            "name": "next-btn",
+            "type": "reference"
+          },
+          {
+            "name": "text",
+            "type": "text",
+            "text": "Is this a physical or a sitting-still activity?",
+            "wordWrapWidth": 285,
+            "font": "question-text",
+            "location": [ 450, 109 ],
+            "audio": "slide3"
+          },
+          {
+            "name": "planet-physical",
+            "type": "button",
+            "variable": "planet-physical-btn",
+            "image": "planet-physical",
+            "location": [515, 239]
+          },
+          {
+            "name": "planet-sitting-still",
+            "type": "button",
+            "variable": "planet-sitting-still-btn",
+            "image": "planet-sitting-still",
+            "location": [633, 239]
+          },
+          {
+            "name": "using-computer",
+            "type": "animation",
+            "images": "using-computer",
+            "textureKey": "texture_uc",
+            "fps": 30,
+            "loop": true,
+            "location": [101, 80]
+          }
+        ],
+        "outcomes": {
+          "back-btn": {
+            "events": { "back-btn": "!reset" },
+            "actions": [ 
+              { "type": "variable", "args": [ "back-btn", "reset" ] },
+              { "type": "scene", "args": [ "walking-the-dog" ] }
+            ]
+          },
+          "next-btn" : {
+            "events": { "next-btn": "!reset" },
+            "actions": [ 
+              { "type": "variable", "args": [ "next-btn", "reset" ] },
+              { "type": "scene", "args": [ "kinds-of-activities" ] }
+            ]
+          },
+          "highlight-next-btn": {
+            "events": {
+              "correct-answer-audio": "played"
+            },
+            "actions": [ { "type": "variable", "args": [ "highlight-next-btn", 1, true ] } ]
+          },
+          "planet-sitting-still-btn": {
+            "events": {"planet-sitting-still-btn": "*"},
+            "actions": [
+              {
+                "type": "variable",
+                "args": [ "planet-sitting-still-btn", 0, true ]
+              },
+              {
+                "type": "remove-actor",
+                "args": [ "correct-answer", "audio" ]
+              },
+              {
+                "type": "add-actor", 
+                "args": [{
+                  "name": "correct-answer",
+                  "type": "text",
+                  "text": "Using the computer is a sitting-still activity.",
+                  "wordWrapWidth": 285,
+                  "font": "question-text",
+                  "location": [450, 334]
+                }, {
+                  "name": "audio",
+                  "type": "audio",
+                  "audio": "slide3-correct",
+                  "variable": "correct-answer-audio"
+                }]
+              }
+            ]
+          },
+          "planet-physical-btn": {
+            "events": {"planet-physical-btn": "*"},
+            "actions": [
+              {
+                "type": "variable",
+                "args": [ "planet-physical-btn", 0, true ]
+              },
+              {
+                "type": "remove-actor",
+                "args": [ "correct-answer", "audio" ]
+              },
+              {
+                "type": "add-actor", 
+                "args": [{
+                  "name": "incorrect-answer",
+                  "type": "audio",
+                  "audio": ["slide3-incorrect"],
+                  "variable": "incorrect-answer-audio"
+                }]
+              }
+            ]
+          }
+        }
+      },
+      "kinds-of-activities": {
+        "id": "kinds-of-activities",
+        "background": "bgspace",
+        "actions": [
+          { "type": "variable", "args": [ "scene_title", "KINDS OF ACTIVITIES" ] },
+          { "type": "add-actor", "args": [
+            {
+              "name": "title-bar-text",
+              "type": "reference"
+            }]
+          },
+          { "type": "variable", "args": [ "lessonLocation", "$current_scene_name" ] }
+        ],
+        "actors": [
+          {
+            "name": "title-bar",
+            "type": "reference"
+          },
+          {
+            "name": "moon",
+            "type": "reference"
+          },
+          {
+            "name": "home-btn",
+            "type": "reference"            
+          },
+          {
+            "name": "back-btn",
+            "type": "reference"
+          },
+          {
+            "name": "replay-btn",
+            "type": "reference"
+          },
+          {
+            "name": "next-btn",
+            "type": "reference"
+          },
+          {
+            "name": "activity-pyramid",
+            "type": "decoration",
+            "image": "activity-pyramid",
+            "key": "activity-pyramid",
+            "location": [8, 69]
+          },
+          {
+            "name": "audio",
+            "type": "audio",
+            "audio": "slide4-split-part1",
+            "variable": "audio"
+          },
+          {
+            "name": "text-line1",
+            "type": "text",
+            "text": "Activity Pyramid",
+            "font": "default-text",
+            "location": [800, 103],
+            "tween": {
+              "easing": "Quad.easeOut",
+              "time": 1000,
+              "location": [339, 103]
+            }
+          },
+          {
+            "name": "star-bullet2",
+            "type": "decoration",
+            "image": "star-bullet",
+            "key": "common",
+            "location": [800, 147],
+            "startDelay": 20500,
+            "tween": {
+              "easing": "Quad.easeOut",
+              "time": 1000,
+              "location": [350, 147]
+            }
+          },
+          {
+            "name": "text-line2",
+            "type": "text",
+            "text": "No more than two hours of sitting-still activities a day",
+            "wordWrapWidth": 365,
+            "font": "default-text",
+            "location": [844, 147],
+            "startDelay": 20500,
+            "tween": {
+              "easing": "Quad.easeOut",
+              "time": 1000,
+              "location": [394, 147]
+            }
+          },
+          {
+            "name": "star-bullet3",
+            "type": "decoration",
+            "image": "star-bullet",
+            "key": "common",
+            "location": [800, 228],
+            "startDelay": 34000,
+            "tween": {
+              "easing": "Quad.easeOut",
+              "time": 1000,
+              "location": [350, 228]
+            }
+          },
+          {
+            "name": "text-line3",
+            "type": "text",
+            "text": "At least one hour of physical activity a day",
+            "wordWrapWidth": 365,
+            "font": "default-text",
+            "location": [844, 228],
+            "startDelay": 34000,
+            "tween": {
+              "easing": "Quad.easeOut",
+              "time": 1000,
+              "location": [394, 228]
+            }
+          }
+        ],
+        "outcomes": {
+          "back-btn" : {
+            "events": { "back-btn": "!reset" },
+            "actions": [ 
+              { "type": "variable", "args": [ "back-btn", "reset" ] },
+              { "type": "scene", "args": [ "using-the-computer" ] }
+            ]
+          },
+          "next-btn" : {
+            "events": { "next-btn": "!reset" },
+            "actions": [ 
+              { "type": "variable", "args": [ "next-btn", "reset" ] },
+              { "type": "scene", "args": [ "kinds-of-activities2" ] }
+            ]
+          },
+          "highlight-next-btn": {
+            "events": {
+              "audio": "*"
+            },
+            "actions": [ { "type": "variable", "args": [ "highlight-next-btn", 1, true ] } ]
+          }
+        }
+      },
+      "kinds-of-activities2": {
+        "id": "kinds-of-activities2",
+        "background": "bgspace",
+        "actions": [
+          { "type": "variable", "args": [ "scene_title", "KINDS OF ACTIVITIES" ] },
+          { "type": "add-actor", "args": [
+            {
+              "name": "title-bar-text",
+              "type": "reference"
+            }]
+          },
+          { "type": "variable", "args": [ "lessonLocation", "$current_scene_name" ] },
+          { "type": "variable", "args": [ "sedentary-clicked", "reset" ] },
+          { "type": "variable", "args": [ "strength-clicked", "reset" ] },
+          { "type": "variable", "args": [ "aerobic-clicked", "reset" ] },
+          { "type": "variable", "args": [ "everyday-clicked", "reset" ] }
+        ],
+        "actors": [
+          {
+            "name": "title-bar",
+            "type": "reference"
+          },
+          {
+            "name": "moon",
+            "type": "reference"
+          },
+          {
+            "name": "home-btn",
+            "type": "reference"            
+          },
+          {
+            "name": "back-btn",
+            "type": "reference"
+          },
+          {
+            "name": "replay-btn",
+            "type": "reference"
+          },
+          {
+            "name": "next-btn",
+            "type": "reference"
+          },
+          {
+            "name": "audio",
+            "type": "audio",
+            "audio": "slide4-split-part2",
+            "variable": "audio"
+          },
+          {
+            "name": "activity-pyramid-sedentary",
+            "type": "button",
+            "variable": "button-audio",
+            "image": "activity-pyramid-sedentary",
+            "location": [131, 140]
+          },
+          {
+            "name": "activity-pyramid-strength",
+            "type": "button",
+            "variable": "button-audio",
+            "image": "activity-pyramid-strength",
+            "location": [86, 233]
+          },
+          {
+            "name": "activity-pyramid-aerobic",
+            "type": "button",
+            "variable": "button-audio",
+            "image": "activity-pyramid-aerobic",
+            "location": [47, 301]
+          },
+          {
+            "name": "activity-pyramid-everyday",
+            "type": "button",
+            "variable": "button-audio",
+            "image": "activity-pyramid-everyday",
+            "location": [8, 363]
+          }
+        ],
+        "outcomes": {
+          "back-btn": {
+            "events": { "back-btn": "!reset" },
+            "actions": [ 
+              { "type": "variable", "args": [ "back-btn", "reset" ] },
+              { "type": "scene", "args": [ "kinds-of-activities" ] }
+            ]
+          },
+          "next-btn" : {
+            "events": { "next-btn": "!reset" },
+            "actions": [ 
+              { "type": "variable", "args": [ "next-btn", "reset" ] },
+              { "type": "scene", "args": [ "flying-activities" ] }
+            ]
+          },
+          "highlight-next-btn": {
+            "events": {
+              "sedentary-clicked": "!reset",
+              "everyday-clicked": "!reset",
+              "strength-clicked": "!reset",
+              "aerobic-clicked": "!reset",
+              "button-audio": "played"
+            },
+            "actions": [ { "type": "variable", "args": [ "highlight-next-btn", 1, true ] } ]
+          },
+          "activity-pyramid-sedentary-btn": {
+            "events": {"button-audio": "activity-pyramid-sedentary"},
+            "actions": [
+              {
+                "type": "variable",
+                "args": [ "sedentary-clicked", 1 ]
+              },
+              {
+                "type": "remove-actor",
+                "args": [ "zach-sitting-still", "sitting-still-activities", "audio" ]
+              },
+              {
+                "type": "add-actor", 
+                "args": [{
+                  "name": "zach-sitting-still",
+                  "type": "decoration",
+                  "image": "zach-sitting-still",
+                  "key": "activity-pyramid",
+                  "location": [315, 135]
+                }, {
+                  "name": "sitting-still-activities",
+                  "type": "text",
+                  "text": "Sitting-still activities",
+                  "font": "activity-pyramid-orange",
+                  "location": [390, 172]
+                } , {
+                  "name": "audio",
+                  "type": "audio",
+                  "audio": "slide4-sittingstill",
+                  "variable": "button-audio"
+                }]
+              }
+            ]
+          },
+          "activity-pyramid-strength-btn": {
+            "events": {"button-audio": "activity-pyramid-strength"},
+            "actions": [
+              {
+                "type": "variable",
+                "args": [ "strength-clicked", 1 ]
+              },
+              {
+                "type": "remove-actor",
+                "args": [ "sofia-flexibility", "strength-activities", "audio" ]
+              },
+              {
+                "type": "add-actor", 
+                "args": [{
+                  "name": "sofia-flexibility",
+                  "type": "decoration",
+                  "image": "sofia-flexibility",
+                  "key": "activity-pyramid",
+                  "location": [648, 203]
+                }, {
+                  "name": "strength-activities",
+                  "type": "text",
+                  "text": "Strength and flexibility activities",
+                  "font": "activity-pyramid-yellow",
+                  "location": [315, 253],
+                  "audio": "slide4-strength"
+                } , {
+                  "name": "audio",
+                  "type": "audio",
+                  "audio": "slide4-strength",
+                  "variable": "button-audio"
+                }]
+              }
+            ]
+          },
+          "activity-pyramid-aerobic-btn": {
+            "events": {"button-audio": "activity-pyramid-aerobic"},
+            "actions": [
+              {
+                "type": "variable",
+                "args": [ "aerobic-clicked", 1 ]
+              },
+              {
+                "type": "remove-actor",
+                "args": [ "jack-aerobic", "aerobic-activities", "audio" ]
+              },
+              {
+                "type": "add-actor", 
+                "args": [{
+                  "name": "jack-aerobic",
+                  "type": "decoration",
+                  "image": "jack-aerobic",
+                  "key": "activity-pyramid",
+                  "location": [372, 299]
+                }, {
+                  "name": "aerobic-activities",
+                  "type": "text",
+                  "text": "Aerobic activities",
+                  "font": "activity-pyramid-blue",
+                  "location": [482, 319]
+                } , {
+                  "name": "audio",
+                  "type": "audio",
+                  "audio": "slide4-aerobic",
+                  "variable": "button-audio"
+                }]
+              }
+            ]
+          },
+          "activity-pyramid-everyday-btn": {
+            "events": { "button-audio": "activity-pyramid-everyday"},
+            "actions": [
+              {
+                "type": "variable",
+                "args": [ "everyday-clicked", 1 ]
+              },
+              {
+                "type": "remove-actor",
+                "args": [ "carly-everyday", "everyday-activities", "audio" ]
+              },
+              {
+                "type": "add-actor", 
+                "args": [{
+                  "name": "carly-everyday",
+                  "type": "decoration",
+                  "image": "carly-everyday",
+                  "key": "activity-pyramid",
+                  "location": [625, 352]
+                }, {
+                  "name": "everyday-activities",
+                  "type": "text",
+                  "text": "Everyday activities",
+                  "font": "activity-pyramid-green",
+                  "location": [420, 390]
+                } , {
+                  "name": "audio",
+                  "type": "audio",
+                  "audio": "slide4-everyday",
+                  "variable": "button-audio"
+                }]
+              }
+            ]
+          }
+        }
+      },
+      "flying-activities": {
+        "id": "flying-activities",
+        "background": "bgspace",
+        "actions": [
+          { "type": "variable", "args": [ "scene_title", "KINDS OF ACTIVITIES" ] },
+          { "type": "add-actor", "args": [
+            {
+              "name": "title-bar-text",
+              "type": "reference"
+            }]
+          },
+          { "type": "variable", "args": [ "lessonLocation", "$current_scene_name" ] },
+          { "type": "variable", "args": [ "sofia-clicked", "reset" ] },
+          { "type": "variable", "args": [ "carly-clicked", "reset" ] },
+          { "type": "variable", "args": [ "tv-clicked", "reset" ] },
+          { "type": "variable", "args": [ "baseball-clicked", "reset" ] }
+        ],
+        "actors": [
+          {
+            "name": "title-bar",
+            "type": "reference"
+          },
+          {
+            "name": "moon",
+            "type": "reference"
+          },
+          {
+            "name": "home-btn",
+            "type": "reference"            
+          },
+          {
+            "name": "back-btn",
+            "type": "reference"
+          },
+          {
+            "name": "replay-btn",
+            "type": "reference"
+          },
+          {
+            "name": "next-btn",
+            "type": "reference"
+          },
+          {
+            "name": "audio",
+            "type": "audio",
+            "audio": "slide5",
+            "variable": "audio"
+          },
+          {
+            "name": "sofia-dance",
+            "type": "button",
+            "image": "sofia-dance",
+            "location": [90, 160],
+            "anchor": [0.5, 0.5],
+            "variable": "button-audio",
+            "tween": {
+              "angle": 20,
+              "loop": true,
+              "chainedTweens": [
+                {
+                  "angle": 0
+                }
+              ]
+            }
+          },
+          {
+            "name": "tv",
+            "type": "button",
+            "image": "tv",
+            "location": [200, 280],
+            "variable": "button-audio",
+            "tween": {
+              "location": [300, 60],
+              "time": 3000,
+              "loop": true,
+              "chainedTweens": [
+                {
+                  "location": [200, 280],
+                  "time": 3000
+                }
+              ]
+            }
+          },
+          {
+            "name": "carly-mat",
+            "type": "decoration",
+            "image": "carly-mat",
+            "key": "activity-pyramid",
+            "location": [217, 454]
+          },
+          {
+            "name": "carly",
+            "type": "button",
+            "image": "carly",
+            "location": [520, 409],
+            "anchor": [0.5, 0.5],
+            "variable": "button-audio",
+            "tween": [
+              {
+                "loop": true,
+                "time": 1500,
+                "delay": 1000,
+                "angle": -180,
+                "location": [395, 300],
+                "chainedTweens": [
+                  {
+                    "angle": -360,
+                    "location": [270, 409],
+                    "time": 1500
+                  },
+                  {
+                    "angle": -180,
+                    "location": [395, 300],
+                    "time": 1500
+                  },
+                  {
+                    "angle": 0,
+                    "location": [520, 409],
+                    "time": 1500
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "baseball",
+            "type": "button",
+            "image": "baseball",
+            "location": [86, 353],
+            "variable": "button-audio",
+            "tween": [
+              {
+                "loop": true,
+                "time": 6000,
+                "location": [655, 353],
+                "chainedTweens": [
+                  {
+                    "location": [655, 139],
+                    "time": 5000
+                  },
+                  {
+                    "location": [86, 139],
+                    "time": 6000
+                  },
+                  {
+                    "location": [86, 353],
+                    "time": 5000
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "outcomes": {
+          "back-btn": {
+            "events": { "back-btn": "!reset" },
+            "actions": [ 
+              { "type": "variable", "args": [ "back-btn", "reset" ] },
+              { "type": "scene", "args": [ "kinds-of-activities2" ] }
+            ]
+          },
+          "next-btn" : {
+            "events": { "next-btn": "!reset" },
+            "actions": [ 
+              { "type": "variable", "args": [ "next-btn", "reset" ] },
+              { "type": "scene", "args": [ "benefits" ] }
+            ]
+          },
+          "highlight-next-btn": {
+            "events": {
+              "baseball-clicked": "!reset",
+              "tv-clicked": "!reset",
+              "sofia-clicked": "!reset",
+              "carly-clicked": "!reset",
+              "button-audio": "played"
+            },
+            "actions": [ { "type": "variable", "args": [ "highlight-next-btn", 1, true ] } ]
+          },
+          "tv": {
+            "events": { "button-audio": "tv" },
+            "actions": [ 
+              { "type": "variable", "args": [ "tv-clicked", 1 ] },
+              { "type": "remove-actor", "args": [ "audio" ] },
+              { 
+                "type": "add-actor", 
+                "args": [
+                  {
+                    "name": "audio",
+                    "type": "audio",
+                    "audio": "slide5-tv",
+                    "variable": "button-audio"
+                  }
+                ]
+              }
+            ]
+          },
+          "baseball": {
+            "events": { "button-audio": "baseball" },
+            "actions": [ 
+              { "type": "variable", "args": [ "baseball-clicked", 1 ] },
+              { "type": "remove-actor", "args": [ "audio" ] },
+              { 
+                "type": "add-actor", 
+                "args": [
+                  {
+                    "name": "audio",
+                    "type": "audio",
+                    "audio": "slide5-baseball",
+                    "variable": "button-audio"
+                  }
+                ]
+              }
+            ]
+          },
+          "sofia-dance": {
+            "events": { "button-audio": "sofia-dance" },
+            "actions": [ 
+              { "type": "variable", "args": [ "sofia-clicked", 1 ] },
+              { "type": "remove-actor", "args": [ "audio" ] },
+              { 
+                "type": "add-actor", 
+                "args": [
+                  {
+                    "name": "audio",
+                    "type": "audio",
+                    "audio": "slide5-dancing",
+                    "variable": "button-audio"
+                  }
+                ]
+              }
+            ]
+          },
+          "carly": {
+            "events": { "button-audio": "carly" },
+            "actions": [ 
+              { "type": "variable", "args": [ "carly-clicked", 1 ] },
+              { "type": "remove-actor", "args": [ "audio" ] },
+              { 
+                "type": "add-actor", 
+                "args": [
+                  {
+                    "name": "audio",
+                    "type": "audio",
+                    "audio": "slide5-gymnastics",
+                    "variable": "button-audio"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      },
+      "benefits": {
+        "id": "benefits",
+        "background": "bgspace",
+        "actions": [
+          { "type": "variable", "args": [ "scene_title", "BENEFITS OF PHYSICAL ACTIVITY" ] },
+          { "type": "add-actor", "args": [
+            {
+              "name": "title-bar-text",
+              "type": "reference"
+            }]
+          },
+          { "type": "variable", "args": [ "lessonLocation", "$current_scene_name" ] }
+        ],
+        "actors": [
+          {
+            "name": "title-bar",
+            "type": "reference"
+          },
+          {
+            "name": "moon",
+            "type": "reference"
+          },
+          {
+            "name": "home-btn",
+            "type": "reference"            
+          },
+          {
+            "name": "back-btn",
+            "type": "reference"
+          },
+          {
+            "name": "replay-btn",
+            "type": "reference"
+          },
+          {
+            "name": "next-btn",
+            "type": "reference"
+          },
+          {
+            "name": "audio",
+            "type": "audio",
+            "audio": "slide6",
+            "variable": "audio"
+          },
+          {
+            "name": "text1",
+            "type": "text",
+            "text": "Physical activity helps you:",
+            "font": "default-text",
+            "location": [ 800, 105 ],
+            "tween": {
+              "easing": "Quad.easeOut",
+              "time": 1000,
+              "location": [339, 105]
+            }
+          },
+          {
+            "name": "carly",
+            "type": "decoration",
+            "image": "carly",
+            "key": "activity-pyramid",
+            "location": [ 29, 69 ]
+          },
+          {
+            "name": "text2",
+            "type": "text",
+            "text": "Think clearly",
+            "font": "default-text",
+            "location": [842, 148],
+            "startDelay": 3500,
+            "tween": {
+              "easing": "Quad.easeOut",
+              "time": 1000,
+              "location": [392, 148]
+            }
+          },
+          {
+            "name": "text2-star",
+            "type": "decoration",
+            "image": "star-bullet",
+            "key": "common",
+            "location": [800, 148],
+            "startDelay": 3500,
+            "tween": {
+              "easing": "Quad.easeOut",
+              "time": 1000,
+              "location": [350, 148]
+            }
+          },
+          {
+            "name": "text2",
+            "type": "text",
+            "text": "Have a strong heart",
+            "font": "default-text",
+            "location": [842, 194],
+            "startDelay": 5000,
+            "tween": {
+              "easing": "Quad.easeOut",
+              "time": 1000,
+              "location": [392, 194]
+            }
+          },
+          {
+            "name": "text2-star",
+            "type": "decoration",
+            "image": "star-bullet",
+            "key": "common",
+            "location": [800, 194],
+            "startDelay": 5000,
+            "tween": {
+              "easing": "Quad.easeOut",
+              "time": 1000,
+              "location": [350, 194]
+            }
+          },
+          {
+            "name": "text2",
+            "type": "text",
+            "text": "Have strong muscles and bones",
+            "font": "default-text",
+            "location": [842, 240],
+            "startDelay": 7000,
+            "tween": {
+              "easing": "Quad.easeOut",
+              "time": 1000,
+              "location": [392, 240]
+            }
+          },
+          {
+            "name": "text2-star",
+            "type": "decoration",
+            "image": "star-bullet",
+            "key": "common",
+            "location": [800, 240],
+            "startDelay": 7000,
+            "tween": {
+              "easing": "Quad.easeOut",
+              "time": 1000,
+              "location": [350, 240]
+            }
+          }
+        ],
+        "outcomes": {
+          "back-btn": {
+            "events": { "back-btn": "!reset" },
+            "actions": [ 
+              { "type": "variable", "args": [ "back-btn", "reset" ] },
+              { "type": "scene", "args": [ "flying-activities" ] }
+            ]
+          },
+          "next-btn" : {
+            "events": { "next-btn": "!reset" },
+            "actions": [ 
+              { "type": "variable", "args": [ "next-btn", "reset" ] },
+              { "type": "scene", "args": [ "during-physical-activity" ] }
+            ]
+          },
+          "highlight-next-btn": {
+            "events": {
+              "audio": "*"
+            },
+            "actions": [ { "type": "variable", "args": [ "highlight-next-btn", 1, true ] } ]
+          }
+        }
+      },
+      "during-physical-activity": {
+        "id": "during-physical-activity",
+        "background": "bgspace",
+        "actions": [
+          { "type": "variable", "args": [ "scene_title", "WHAT HAPPENS DURING PHYSICAL ACTIVITY" ] },
+          { "type": "add-actor", "args": [
+            {
+              "name": "title-bar-text",
+              "type": "reference"
+            }]
+          },
+          { "type": "variable", "args": [ "lessonLocation", "$current_scene_name" ] }
+        ],
+        "actors": [
+          {
+            "name": "title-bar",
+            "type": "reference"
+          },
+          {
+            "name": "moon",
+            "type": "reference"
+          },
+          {
+            "name": "home-btn",
+            "type": "reference"            
+          },
+          {
+            "name": "back-btn",
+            "type": "reference"
+          },
+          {
+            "name": "replay-btn",
+            "type": "reference"
+          },
+          {
+            "name": "next-btn",
+            "type": "reference"
+          },
+          {
+            "name": "audio",
+            "type": "audio",
+            "audio": "slide7-split-part1",
+            "variable": "audio"
+          },
+          {
+            "name": "text1",
+            "type": "text",
+            "text": "During physical activity:",
+            "font": "default-text",
+            "location": [ 800, 105 ],
+            "tween": {
+              "easing": "Quad.easeOut",
+              "time": 1000,
+              "location": [385, 105]
+            }
+          },
+          {
+            "name": "carly-running",
+            "type": "decoration",
+            "image": "carly-running",
+            "key": "activity-pyramid",
+            "location": [ 29, 69 ]
+          },
+          {
+            "name": "text2",
+            "type": "text",
+            "text": "You breathe heavier.",
+            "font": "default-text",
+            "location": [842, 148],
+            "startDelay": 7000,
+            "tween": {
+              "easing": "Quad.easeOut",
+              "time": 1000,
+              "location": [438, 148]
+            }
+          },
+          {
+            "name": "text2-star",
+            "type": "decoration",
+            "image": "star-bullet",
+            "key": "common",
+            "location": [800, 148],
+            "startDelay": 7000,
+            "tween": {
+              "easing": "Quad.easeOut",
+              "time": 1000,
+              "location": [396, 148]
+            }
+          },
+          {
+            "name": "text3",
+            "type": "text",
+            "text": "Your heart beats faster.",
+            "font": "default-text",
+            "location": [842, 194],
+            "startDelay": 9000,
+            "tween": {
+              "easing": "Quad.easeOut",
+              "time": 1000,
+              "location": [438, 194]
+            }
+          },
+          {
+            "name": "text3-star",
+            "type": "decoration",
+            "image": "star-bullet",
+            "key": "common",
+            "location": [800, 194],
+            "startDelay": 9000,
+            "tween": {
+              "easing": "Quad.easeOut",
+              "time": 1000,
+              "location": [396, 194]
+            }
+          }
+        ],
+        "outcomes": {
+          "back-btn": {
+            "events": { "back-btn": "!reset" },
+            "actions": [ 
+              { "type": "variable", "args": [ "back-btn", "reset" ] },
+              { "type": "scene", "args": [ "benefits" ] }
+            ]
+          },
+          "next-btn" : {
+            "events": { "next-btn": "!reset" },
+            "actions": [ 
+              { "type": "variable", "args": [ "next-btn", "reset" ] },
+              { "type": "scene", "args": [ "run-in-place" ] }
+            ]
+          },
+          "highlight-next-btn": {
+            "events": {
+              "audio": "*"
+            },
+            "actions": [ { "type": "variable", "args": [ "highlight-next-btn", 1, true ] } ]
+          }
+        }
+      },
+      "run-in-place": {
+        "id": "run-in-place",
+        "background": "bgspace",
+        "actions": [
+          { "type": "variable", "args": [ "scene_title", "WHAT HAPPENS DURING PHYSICAL ACTIVITY" ] },
+          { "type": "add-actor", "args": [
+            {
+              "name": "title-bar-text",
+              "type": "reference"
+            }]
+          },
+          { "type": "variable", "args": [ "lessonLocation", "$current_scene_name" ] }
+        ],
+        "actors": [
+          {
+            "name": "title-bar",
+            "type": "reference"
+          },
+          {
+            "name": "moon",
+            "type": "reference"
+          },
+          {
+            "name": "home-btn",
+            "type": "reference"            
+          },
+          {
+            "name": "back-btn",
+            "type": "reference"
+          },
+          {
+            "name": "replay-btn",
+            "type": "reference"
+          },
+          {
+            "name": "next-btn",
+            "type": "reference"
+          },
+          {
+            "name": "carly-running-bg",
+            "type": "decoration",
+            "image": "carly-running-bg",
+            "key": "activity-pyramid",
+            "location": [45, 82]
+          },
+          {
+            "name": "carly-blinking",
+            "type": "animation",
+            "images": "carly-blinking",
+            "textureKey": "texture_cb",
+            "location": [100, 100],
+            "fps": 30,
+            "loop": true
+          },
+          {
+            "name": "carly-running",
+            "type": "animation",
+            "images": "carly-running",
+            "textureKey": "texture_cr",
+            "location": [100, 100],
+            "startDelay": 15000,
+            "fps": 30,
+            "loop": 7,
+            "variable": "carly-running"
+          },
+          {
+            "name": "text1",
+            "type": "text",
+            "text": "During physical activity:",
+            "font": "default-text",
+            "location": [ 385, 105 ]
+          },
+          {
+            "name": "text2-star",
+            "type": "decoration",
+            "image": "star-bullet",
+            "key": "common",
+            "location": [396, 194]
+          },
+          {
+            "name": "text2",
+            "type": "text",
+            "text": "You breathe heavier.",
+            "font": "default-text",
+            "location": [438, 148]
+          },
+          {
+            "name": "text3-star",
+            "type": "decoration",
+            "image": "star-bullet",
+            "key": "common",
+            "location": [396, 148]
+          },
+          {
+            "name": "text3",
+            "type": "text",
+            "text": "Your heart beats faster.",
+            "font": "default-text",
+            "location": [438, 194]
+          },
+          {
+            "name": "audio",
+            "type": "audio",
+            "audio": "slide7-split-part2",
+            "variable": "audio"
+          }
+        ],
+        "outcomes": {
+          "back-btn": {
+            "events": { "back-btn": "!reset" },
+            "actions": [ 
+              { "type": "variable", "args": [ "back-btn", "reset" ] },
+              { "type": "scene", "args": [ "during-physical-activity" ] }
+            ]
+          },
+          "next-btn" : {
+            "events": { "next-btn": "!reset" },
+            "actions": [ 
+              { "type": "variable", "args": [ "next-btn", "reset" ] },
+              { "type": "scene", "args": [ "where-can-you-be-active" ] }
+            ]
+          },
+          "highlight-next-btn": {
+            "events": {
+              "audio": "*"
+            },
+            "actions": [ { "type": "variable", "args": [ "highlight-next-btn", 1, true ] } ]
+          },
+          "carly-starts-running" : {
+            "events": { "carly-running_playing": "*"},
+            "actions": [
+              {
+                "type": "remove-actor", "args": ["carly-blinking"]
+              }
+            ]
+          },
+          "carly-stops-running" : {
+            "events": { "carly-running_finished": "*"},
+            "actions": [
+              {
+                "type": "remove-actor", "args": ["carly-running"]
+              },
+              {
+                "type": "add-actor", "args": [
+                  {
+                    "name": "carly-blinking",
+                    "type": "animation",
+                    "images": "carly-blinking",
+                    "textureKey": "texture_cb",
+                    "location": [100, 100],
+                    "fps": 30,
+                    "loop": true
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      },
+      "where-can-you-be-active": {
+        "id": "where-can-you-be-active",
+        "background": "bgspace",
+        "actions": [
+          { "type": "variable", "args": [ "scene_title", "WHERE CAN YOU BE ACTIVE?" ] },
+          { "type": "add-actor", "args": [
+            {
+              "name": "title-bar-text",
+              "type": "reference"
+            }]
+          },
+          { "type": "variable", "args": [ "lessonLocation", "$current_scene_name" ] },
+          { "type": "variable", "args": [ "home-clicked", "reset" ] },
+          { "type": "variable", "args": [ "yard-clicked", "reset" ] },
+          { "type": "variable", "args": [ "snow-clicked", "reset" ] },
+          { "type": "variable", "args": [ "swim-clicked", "reset" ] },
+          { "type": "variable", "args": [ "playground-clicked", "reset" ] },
+          { "type": "variable", "args": [ "communitycenter-clicked", "reset" ] }
+        ],
+        "actors": [
+          {
+            "name": "title-bar",
+            "type": "reference"
+          },
+          {
+            "name": "moon",
+            "type": "reference"
+          },
+          {
+            "name": "home-btn",
+            "type": "reference"            
+          },
+          {
+            "name": "back-btn",
+            "type": "reference"
+          },
+          {
+            "name": "replay-btn",
+            "type": "reference"
+          },
+          {
+            "name": "next-btn",
+            "type": "reference"
+          },
+          {
+            "name": "audio",
+            "type": "audio",
+            "audio": "slide8",
+            "variable": "audio"
+          },
+          {
+            "name": "slide8-swimming",
+            "type": "button",
+            "image": "activity-place-swim",
+            "variable": "button-audio",
+            "location": [44, 88]
+          },
+          {
+            "name": "slide8-playground",
+            "type": "button",
+            "image": "activity-place-playground",
+            "variable": "button-audio",
+            "location": [283, 88]
+          },
+          {
+            "name": "slide8-home",
+            "type": "button",
+            "image": "activity-place-bedroom",
+            "variable": "button-audio",
+            "location": [520, 88]
+          },
+          {
+            "name": "slide8-yard",
+            "type": "button",
+            "image": "activity-place-yard",
+            "variable": "button-audio",
+            "location": [44, 271]
+          },
+          {
+            "name": "slide8-snow",
+            "type": "button",
+            "image": "activity-place-snow",
+            "variable": "button-audio",
+            "location": [283, 271]
+          },
+          {
+            "name": "slide8-communitycenter",
+            "type": "button",
+            "image": "activity-place-outside",
+            "variable": "button-audio",
+            "location": [520, 271]
+          }
+        ],
+        "outcomes": {
+          "back-btn": {
+            "events": { "back-btn": "!reset" },
+            "actions": [ 
+              { "type": "variable", "args": [ "back-btn", "reset" ] },
+              { "type": "scene", "args": [ "run-in-place" ] }
+            ]
+          },
+          "next-btn" : {
+            "events": { "next-btn": "!reset" },
+            "actions": [ 
+              { "type": "variable", "args": [ "next-btn", "reset" ] },
+              { "type": "scene", "args": [ "what-do-your-friends-do" ] }
+            ]
+          },
+          "highlight-next-btn": {
+            "events": {
+              "communitycenter-clicked": "!reset",
+              "home-clicked": "!reset",
+              "yard-clicked": "!reset",
+              "snow-clicked": "!reset",
+              "playground-clicked": "!reset",
+              "swim-clicked": "!reset",
+              "button-audio": "played"
+            },
+            "actions": [ { "type": "variable", "args": [ "highlight-next-btn", 1, true ] } ]
+          },
+          "activity-communitycenter-button": {
+            "events": { "button-audio": "slide8-communitycenter" },
+            "actions": [
+              { "type": "remove-actor", "args": [ "audio" ] },
+              { "type": "variable", "args": [ "communitycenter-clicked" ] },
+              {
+                "type": "add-actor",
+                "args": [
+                  {
+                    "name": "audio",
+                    "type": "audio",
+                    "audio": "slide8-communitycenter",
+                    "variable": "button-audio"
+                  }
+                ]
+              }
+            ]
+          },
+          "activity-home-button": {
+            "events": { "button-audio": "slide8-home" },
+            "actions": [
+              { "type": "remove-actor", "args": [ "audio" ] },
+              { "type": "variable", "args": [ "home-clicked" ] },
+              {
+                "type": "add-actor",
+                "args": [
+                  {
+                    "name": "audio",
+                    "type": "audio",
+                    "audio": "slide8-home",
+                    "variable": "button-audio"
+                  }
+                ]
+              }
+            ]
+          },
+          "activity-yard-button": {
+            "events": { "button-audio": "slide8-yard" },
+            "actions": [
+              { "type": "remove-actor", "args": [ "audio" ] },
+              { "type": "variable", "args": [ "yard-clicked" ] },
+              {
+                "type": "add-actor",
+                "args": [
+                  {
+                    "name": "audio",
+                    "type": "audio",
+                    "audio": "slide8-yard",
+                    "variable": "button-audio"
+                  }
+                ]
+              }
+            ]
+          },
+          "activity-snow-button": {
+            "events": { "button-audio": "slide8-snow" },
+            "actions": [
+              { "type": "remove-actor", "args": [ "audio" ] },
+              { "type": "variable", "args": [ "snow-clicked" ] },
+              {
+                "type": "add-actor",
+                "args": [
+                  {
+                    "name": "audio",
+                    "type": "audio",
+                    "audio": "slide8-snow",
+                    "variable": "button-audio"
+                  }
+                ]
+              }
+            ]
+          },
+          "activity-playground-button": {
+            "events": { "button-audio": "slide8-playground" },
+            "actions": [
+              { "type": "remove-actor", "args": [ "audio" ] },
+              { "type": "variable", "args": [ "playground-clicked" ] },
+              {
+                "type": "add-actor",
+                "args": [
+                  {
+                    "name": "audio",
+                    "type": "audio",
+                    "audio": "slide8-playground",
+                    "variable": "button-audio"
+                  }
+                ]
+              }
+            ]
+          },
+          "activity-swim-button": {
+            "events": { "button-audio": "slide8-swimming" },
+            "actions": [
+              { "type": "remove-actor", "args": [ "audio" ] },
+              { "type": "variable", "args": [ "swim-clicked" ] },
+              {
+                "type": "add-actor",
+                "args": [
+                  {
+                    "name": "audio",
+                    "type": "audio",
+                    "audio": "slide8-swimming",
+                    "variable": "button-audio"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      },
+      "what-do-your-friends-do": {
+        "id": "what-do-your-friends-do",
+        "background": "bgspace",
+        "actions": [
+          { "type": "variable", "args": [ "scene_title", "WHAT DO YOUR FRIENDS DO?" ] },
+          { "type": "add-actor", "args": [
+            {
+              "name": "title-bar-text",
+              "type": "reference"
+            }]
+          },
+          { "type": "variable", "args": [ "lessonLocation", "$current_scene_name" ] },
+          { "type": "variable", "args": [ "sofia-head-clicked", "reset" ] },
+          { "type": "variable", "args": [ "carly-head-clicked", "reset" ] },
+          { "type": "variable", "args": [ "jack-head-clicked", "reset" ] },
+          { "type": "variable", "args": [ "zach-head-clicked", "reset" ] }
+        ],
+        "actors": [
+          {
+            "name": "title-bar",
+            "type": "reference"
+          },
+          {
+            "name": "moon",
+            "type": "reference"
+          },
+          {
+            "name": "home-btn",
+            "type": "reference"            
+          },
+          {
+            "name": "back-btn",
+            "type": "reference"
+          },
+          {
+            "name": "replay-btn",
+            "type": "reference"
+          },
+          {
+            "name": "next-btn",
+            "type": "reference"
+          },
+          {
+            "name": "audio",
+            "type": "audio",
+            "audio": "slide9",
+            "variable": "audio"
+          },
+          {
+            "name": "star-bullet1",
+            "type": "decoration",
+            "image": "star-bullet",
+            "key": "common",
+            "location": [800, 152],
+            "startDelay": 500,
+            "tween": {
+              "easing": "Quad.easeOut",
+              "time": 1000,
+              "location": [351, 152]
+            }
+          },
+          {
+            "name": "text-line1",
+            "type": "text",
+            "text": "Everybody chooses a different activity.",
+            "wordWrapWidth": 394,
+            "font": "default-text",
+            "location": [840, 152],
+            "startDelay": 500,
+            "tween": {
+              "easing": "Quad.easeOut",
+              "time": 1000,
+              "location": [391, 152]
+            }
+          },
+          {
+            "name": "star-bullet2",
+            "type": "decoration",
+            "image": "star-bullet",
+            "key": "common",
+            "location": [800, 195],
+            "startDelay": 7000,
+            "tween": {
+              "easing": "Quad.easeOut",
+              "time": 1000,
+              "location": [351, 195]
+            }
+          },
+          {
+            "name": "text-line2",
+            "type": "text",
+            "text": "Click to hear what your friends do!",
+            "wordWrapWidth": 365,
+            "font": "default-text",
+            "location": [840, 195],
+            "startDelay": 7000,
+            "tween": {
+              "easing": "Quad.easeOut",
+              "time": 1000,
+              "location": [391, 195]
+            }
+          },
+          {
+            "name": "sofia-head",
+            "type": "decoration",
+            "image": "sofia-head",
+            "key": "activity-pyramid",
+            "location": [27, 107]
+          },
+          {
+            "name": "carly-head",
+            "type": "decoration",
+            "image": "carly-head",
+            "key": "activity-pyramid",
+            "location": [193, 107]
+          },
+          {
+            "name": "jack-head",
+            "type": "decoration",
+            "image": "jack-head",
+            "key": "activity-pyramid",
+            "location": [27, 281]
+          },
+          {
+            "name": "zach-head",
+            "type": "decoration",
+            "image": "zach-head",
+            "key": "activity-pyramid",
+            "location": [193, 281]
+          }
+        ],
+        "outcomes": {
+          "back-btn": {
+            "events": { "back-btn": "!reset" },
+            "actions": [ 
+              { "type": "variable", "args": [ "back-btn", "reset" ] },
+              { "type": "scene", "args": [ "where-can-you-be-active" ] }
+            ]
+          },
+          "next-btn" : {
+            "events": { "next-btn": "!reset" },
+            "actions": [ 
+              { "type": "variable", "args": [ "next-btn", "reset" ] },
+              { "type": "mh-scene", "args": [ "mission-complete", {"objective_complete":1} ] }
+            ]
+          },
+          "highlight-next-btn": {
+            "events": {
+              "sofia-head-clicked": "!reset",
+              "carly-head-clicked": "!reset",
+              "jack-head-clicked": "!reset",
+              "zach-head-clicked": "!reset",
+              "button-audio": "played"
+            },
+            "actions": [ { "type": "variable", "args": [ "highlight-next-btn", 1, true ] } ]
+          },
+          "sofia-head": {
+            "events": { "button-audio": "sofia-head" },
+            "actions": [ 
+              { "type": "remove-actor", "args": [ "button-audio" ] },
+              { "type": "variable", "args": [ "sofia-head-clicked" ] },
+              {
+                "type": "add-actor", 
+                "args": [{
+                  "name": "button-audio",
+                  "type": "audio",
+                  "audio": "slide9-sofia",
+                  "variable": "button-audio"
+                }]
+              }
+            ]
+          },
+          "carly-head": {
+            "events": { "button-audio": "carly-head" },
+            "actions": [ 
+              { "type": "remove-actor", "args": [ "button-audio" ] },
+              { "type": "variable", "args": [ "carly-head-clicked" ] },
+              {
+                "type": "add-actor", 
+                "args": [{
+                  "name": "button-audio",
+                  "type": "audio",
+                  "audio": "slide9-carly",
+                  "variable": "button-audio"
+                }]
+              }
+            ]
+          },
+          "jack-head": {
+            "events": { "button-audio": "jack-head" },
+            "actions": [ 
+              { "type": "remove-actor", "args": [ "button-audio" ] },
+              { "type": "variable", "args": [ "jack-head-clicked" ] },
+              {
+                "type": "add-actor", 
+                "args": [{
+                  "name": "button-audio",
+                  "type": "audio",
+                  "audio": "slide9-jack",
+                  "variable": "button-audio"
+                }]
+              }
+            ]
+          },
+          "zach-head": {
+            "events": { "button-audio": "zach-head" },
+            "actions": [ 
+              { "type": "remove-actor", "args": [ "button-audio" ] },
+              { "type": "variable", "args": [ "zach-head-clicked" ] },
+              {
+                "type": "add-actor", 
+                "args": [{
+                  "name": "button-audio",
+                  "type": "audio",
+                  "audio": "slide9-zach",
+                  "variable": "button-audio"
+                }]
+              }
+            ]
+          },
+          "audio-completion" : {
+            "events": { "audio": "*" },
+            "actions": [ 
+              { "type": "remove-actor", "args": [ "sofia-head", "carly-head", "jack-head", "zach-head" ] },
+              { "type": "add-actor", "args": [ 
+                {
+                  "name": "sofia-head",
+                  "type": "button",
+                  "image": "sofia-head",
+                  "location": [27, 107],
+                  "variable": "button-audio"
+                },
+                {
+                  "name": "carly-head",
+                  "type": "button",
+                  "image": "carly-head",
+                  "location": [193, 107],
+                  "variable": "button-audio"
+                },
+                {
+                  "name": "jack-head",
+                  "type": "button",
+                  "image": "jack-head",
+                  "location": [27, 281],
+                  "variable":"button-audio"
+                },
+                {
+                  "name": "zach-head",
+                  "type": "button",
+                  "image": "zach-head",
+                  "location": [193, 281],
+                  "variable": "button-audio"
+                }
+              ]}
+            ]
+          }
+        }
+      },
+      "mission-complete": {
+        "id": "mission-complete",
+        "background": "bgspace",
+        "actions": [
+          { "type": "variable", "args": [ "scene_title", "GOOD JOB!" ] },
+          { "type": "add-actor", "args": [
+            {
+              "name": "title-bar-text",
+              "type": "reference"
+            }]
+          },
+          { "type": "variable", "args": [ "lessonLocation", "$current_scene_name" ] }
+        ],
+        "actors": [
+          {
+            "name": "title-bar",
+            "type": "reference"
+          },
+          {
+            "name": "moon",
+            "type": "reference"
+          },
+          {
+            "name": "home-btn",
+            "type": "reference"            
+          },
+          {
+            "name": "back-btn",
+            "type": "reference"
+          },
+          {
+            "name": "replay-btn",
+            "type": "reference"
+          },
+          {
+            "name": "mission-health-logo",
+            "type": "decoration",
+            "image": "mission-health-logo",
+            "key": "common",
+            "location": [ 115, 153 ]
+          },
+          {
+            "name": "audio",
+            "type": "audio",
+            "audio": "slide10",
+            "variable": "audio"
+          }
+        ],
+        "outcomes": {
+          "back-btn": {
+            "events": { "back-btn": "!reset" },
+            "actions": [ 
+              { "type": "variable", "args": [ "back-btn", "reset" ] },
+              { "type": "scene", "args": [ "what-do-your-friends-do" ] }
+            ]
+          }
+        }
+      },
+      "empty-replay-scene": {
+        "id": "empty-replay-scene",
+        "description": "since a scene change request to the current scene is ignored, first change to this empty scene",
+        "background": "none",
+        "actors": [ ],
+        "outcomes": { },
+        "actions": [ ]
+      }
+    }
+  }
+}
+
+
+ 

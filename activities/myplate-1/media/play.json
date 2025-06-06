@@ -1,0 +1,16 @@
+{
+  "name": "MH MyPlate",
+  "description": "MyPlate lesson",
+  "scorm": true,
+  "logging": false,
+  "autoScale": true, 
+  "acts": {
+    "default": {
+      "id": "default",
+      "description": "Wellness and obesity prevention through nutrition and physical activity for first grade",
+      "name": "MH MyPlate",
+      "theme": "media/default/theme.json",
+      "objectives": []
+    }
+  }
+}

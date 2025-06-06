@@ -1,0 +1,16 @@
+{
+  "name": "MH Goal Setting",
+  "description": "Goal Setting lesson",
+  "scorm": true,
+  "logging": false,
+  "autoScale": true, 
+  "acts": {
+    "default": {
+      "id": "default",
+      "description": "Wellness and obesity prevention through nutrition and physical activity for first grade.",
+      "name": "MH Goal Setting",
+      "theme": "media/default/theme.json",
+      "objectives": []
+    }
+  }
+}

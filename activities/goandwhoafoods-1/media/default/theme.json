@@ -1,0 +1,181 @@
+{
+  "texture": "media/default/texture.png",
+  "textureMap": "media/default/texture.json",
+  "textureKey": "texture",
+  "data": "media/default/sceneData.json",
+  "fonts" : {
+    "title-bar" : {"font": "24px VT323", "fill": "#B7F149", "align": "left", "fontWeight": "400"},
+    "title": { "font": "66px Alegreya Sans", "fill": "#FEFD9A", "align": "left", "fontWeight": "800" },
+    "default-text": { "font": "25px Alegreya Sans", "fill": "#FEFD9A", "align": "left", "fontWeight": "800" },
+    "go-whoa-orange": { "font": "25px Alegreya Sans", "fill": "#FF9900", "align": "left", "fontWeight": "800" }
+  },
+  "images": {
+    "common": {
+      "title-bar": "title-bar.png",
+      "moon": "moon.png",
+      "star-bullet": "star-bullet.png",
+      "mission-health-logo": "mission health logo.png"
+    },
+    "go-whoa-foods": {
+      "bananas": "bananas.png",
+      "potato-chips": "potato-chips.png",
+      "go-whoa": "go_whoa.jpg",
+      "buzz": "buzz.jpg"
+    }
+  },
+  "sceneImages": {
+    "bgspace": "sky-background.png"
+  },
+  "buttons": {
+    "home": {
+      "up": "home-btn0001.png",
+      "over": "home-btn0002.png",
+      "out": "home-btn0001.png",
+      "down": "home-btn0002.png"
+    },
+    "next": {
+      "up": "next-btn0001.png",
+      "over": "next-btn0002.png",
+      "out": "next-btn0001.png",
+      "down": "next-btn0002.png"
+    },
+    "back": {
+      "up": "back-btn0001.png",
+      "over": "back-btn0002.png",
+      "out": "back-btn0001.png",
+      "down": "back-btn0002.png"
+    },
+    "replay": {
+      "up": "replay-btn0001.png",
+      "over": "replay-btn0002.png",
+      "out": "replay-btn0001.png",
+      "down": "replay-btn0002.png"
+    },
+    "worksheet": {
+      "up": "worksheet-btn0001.png",
+      "over": "worksheet-btn0002.png",
+      "out": "worksheet-btn0001.png",
+      "down": "worksheet_btn0002.png"
+    },
+    "planet-go-food": {
+      "up": "go-food0001.png",
+      "over": "go-food0002.png",
+      "out": "go-food0001.png",
+      "down": "go-food0002.png"
+    },
+    "planet-whoa-food": {
+      "up": "whoa-food0001.png",
+      "over": "whoa-food0002.png",
+      "out": "whoa-food0001.png",
+      "down": "whoa-food0002.png"
+    },
+    "food-broccoli": {
+      "up": "brocbtn0001.png",
+      "over": "brocbtn0002.png",
+      "out": "brocbtn0001.png",
+      "down": "brocbtn0002.png"
+    },
+    "food-chips": {
+      "up": "chips_btn0001.png",
+      "over": "chips_btn0002.png",
+      "out": "chips_btn0001.png",
+      "down": "chips_btn0002.png"
+    },
+    "food-milk": {
+      "up": "milk_btn0001.png",
+      "over": "milk_btn0002.png",
+      "out": "milk_btn0001.png",
+      "down": "milk_btn0002.png"
+    },
+    "food-snacks": {
+      "up": "snaks_btn0001.png",
+      "over": "snaks_btn0002.png",
+      "out": "snaks_btn0001.png",
+      "down": "snaks_btn0002.png"
+    }
+  },
+  "soundKey": "gowhoafoods",
+  "soundFile": [ "media/default/go-whoa-foods.m4a", "media/default/go-whoa-foods.ogg" ],
+  "sounds": {
+    "slide1": [
+      0,
+      2.864875283446712,
+      false,
+      "slide1"
+    ],
+    "slide2-correct": [
+      3,
+      7.417278911564626,
+      false,
+      "slide2-correct"
+    ],
+    "slide2-incorrect": [
+      11,
+      7.064058956916099,
+      false,
+      "slide2-incorrect"
+    ],
+    "slide2": [
+      19,
+      33.14147392290249,
+      false,
+      "slide2"
+    ],
+    "slide3-correct": [
+      53,
+      7.73122448979592,
+      false,
+      "slide3-correct"
+    ],
+    "slide3-incorrect": [
+      61,
+      7.378027210884355,
+      false,
+      "slide3-incorrect"
+    ],
+    "slide3": [
+      69,
+      3.218072562358273,
+      false,
+      "slide3"
+    ],
+    "slide4": [
+      73,
+      63.81201814058957,
+      false,
+      "slide4"
+    ],
+    "slide5-go": [
+      137,
+      0.9997052154195103,
+      false,
+      "slide5-go"
+    ],
+    "slide5-whoa": [
+      138,
+      1.8621995464852716,
+      false,
+      "slide5-whoa"
+    ],
+    "slide5": [
+      140,
+      14.834535147392302,
+      false,
+      "slide5"
+    ],
+    "slide6": [
+      155,
+      47.87934240362813,
+      false,
+      "slide6"
+    ],
+    "slide7": [
+      203,
+      3.7564399092970575,
+      false,
+      "slide7"
+    ]
+  }
+  
+}
+

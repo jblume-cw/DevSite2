@@ -1,0 +1,1039 @@
+{
+  "play": {
+    "start": "resumeFork",
+    "persist": [ "lessonLocation" ],
+    "modelType": "basic",
+    "showPlaythrough": false,
+    "global": {
+      "actors": {
+        "title-bar": {
+          "name": "title-bar",
+          "type": "decoration",
+          "image": "title-bar",
+          "key": "common",
+          "location": [0, 0]
+        },
+        "moon": {
+          "name": "moon",
+          "type": "decoration",
+          "image": "moon",
+          "key": "common",
+          "location": [0, 568]
+        },
+        "title-bar-text":{
+          "name": "title-bar-text",
+          "type": "text",
+          "text": "MYPLATE - $scene_title$",
+          "font": "title-bar",
+          "location": [ 25, 4 ]
+        },
+        "home-btn": {
+          "name": "home-btn",
+          "type": "button",
+          "variable": "home-btn",
+          "image": "home",
+          "location": [709, 5]
+        },
+        "back-btn": {
+          "name": "back-btn",
+          "type": "button",
+          "variable": "back-btn",
+          "image": "back",
+          "location": [391, 498]
+        },
+        "replay-btn": {
+          "name": "replay-btn",
+          "type": "button",
+          "variable": "replay-btn",
+          "image": "replay",
+          "location": [548, 493]
+        },
+        "next-btn": {
+          "name": "next-btn",
+          "type": "button",
+          "image": "next",
+          "variable": "next-btn",
+          "location": [629, 498]
+        }
+      },
+      "outcomes": [
+        {
+          "events": { "home-btn": "!reset" },
+          "actions": [ 
+            { "type": "variable", "args": [ "home-btn", "reset" ] },
+            { "type": "scene", "args": [ "empty-replay-scene" ] },
+            { "type": "scene", "args": [ "intro" ] }
+          ]
+        }, {
+          "events": { "replay-btn": "!reset" },
+          "actions": [
+            { "type": "variable", "args": [ "replay-btn", "reset" ] },
+            { "type": "scene", "args": [ "empty-replay-scene" ] },
+            { "type": "scene", "args": [ "$previous_scene_name" ] }
+          ]
+        }, {
+          "events": { "highlight-next-btn": "!reset" },
+          "actions": [
+            { "type": "variable", "args": [ "highlight-next-btn", "reset" ] },
+            { "type": "add-actor", "args": [
+              {
+                "name": "next-btn",
+                "type": "button",
+                "image": "next",
+                "variable": "next-btn",
+                "location": [713, 538],
+                "anchor": [0.5,0.5],
+                "tween": {
+                  "scale": [1.05, 1.05],
+                  "time": 666,
+                  "loop": true,
+                  "chainedTweens": [
+                    {
+                      "scale": [1, 1],
+                      "time": 666
+                    }
+                  ]
+                }
+              }
+            ]}
+          ]
+        }
+      ],
+      "actions": []
+    },
+    "scenes": {
+      "resumeFork": {
+        "id": "resumeFork",
+        "background": "bgspace",
+        "actors": [
+        ],
+        "outcomes": {
+          "no_resume": {
+            "events": { "lessonLocation": "undefined" },
+            "actions": [
+              { "type": "scene", "args": ["intro"] }
+            ]
+          },
+          "resume": {
+            "events": { "lessonLocation": "*" },
+            "actions": [
+              { "type": "scene", "args": [ "$lessonLocation" ] }
+            ]
+          }
+        },
+        "actions": [
+          { "type": "check-outcomes", "args": [ "lessonLocation" ] }
+        ]
+      },
+      "intro": {
+        "id": "intro",
+        "background": "bgspace",
+        "actors": [
+          {
+            "name": "title-bar",
+            "type": "reference"
+          },
+          {
+            "name": "moon",
+            "type": "reference"
+          },
+          {
+            "name": "home-btn",
+            "type": "reference"
+          },
+          {
+            "name": "replay-btn",
+            "type": "reference"
+          },
+          {
+            "name": "next-btn",
+            "type": "reference"
+          },
+          {
+            "name": "audio",
+            "type": "audio",
+            "audio": "slide1",
+            "variable": "audio"
+          }
+        ],
+        "outcomes": {
+          "next-btn" : {
+            "events": { "next-btn": "!reset" },
+            "actions": [ 
+              { "type": "variable", "args": [ "next-btn", "reset" ] },
+              { "type": "scene", "args": [ "food" ] }
+            ]
+          },
+          "highlight-next-btn": {
+            "events": {
+              "audio": "*"
+            },
+            "actions": [ { "type": "variable", "args": [ "highlight-next-btn", 1, true ] } ]
+          }
+        },
+        "actions": [
+          { "type": "variable", "args": [ "scene_title", "INTRO" ] },
+          { "type": "add-actor", "args": [
+            {
+              "name": "title-bar-text",
+              "type": "reference"
+            }, {
+              "name": "title",
+              "type": "text",
+              "text": "MyPlate",
+              "font": "title",
+              "location": [ "center", 148 ]
+            }]
+          },
+          { "type": "variable", "args": [ "lessonLocation", "$current_scene_name" ] }
+        ]
+      },
+      "food": {
+        "id": "food",
+        "background": "bgspace",
+        "actions": [
+          { "type": "variable", "args": [ "scene_title", "FOOD" ] },
+          { "type": "add-actor", "args": [
+            {
+              "name": "title-bar-text",
+              "type": "reference"
+            }]
+          },
+          { "type": "variable", "args": [ "lessonLocation", "$current_scene_name" ] }
+        ],
+        "actors": [
+          {
+            "name": "title-bar",
+            "type": "reference"
+          },
+          {
+            "name": "moon",
+            "type": "reference"
+          },
+          {
+            "name": "home-btn",
+            "type": "reference"            
+          },
+          {
+            "name": "back-btn",
+            "type": "reference"
+          },
+          {
+            "name": "replay-btn",
+            "type": "reference"
+          },
+          {
+            "name": "next-btn",
+            "type": "reference"
+          },
+          {
+            "name": "myplate-bg",
+            "type": "decoration",
+            "image": "myplate-bg",
+            "key": "my-plate",
+            "location": [14, 81]
+          },
+          {
+            "name": "grains-btn",
+            "type": "button",
+            "image": "myplate-grains-block",
+            "location": [420, 204],
+            "variable": "grains-btn"
+          },
+          {
+            "name": "fruits-btn",
+            "type": "button",
+            "image": "myplate-fruits-block",
+            "location": [426, 58],
+            "variable": "fruits-btn"
+          },
+          {
+            "name": "vegetables-btn",
+            "type": "button",
+            "image": "myplate-vegetables-block",
+            "location": [451, 347],
+            "variable": "vegetables-btn"
+          },
+          {
+            "name": "protein-btn",
+            "type": "button",
+            "image": "myplate-protein-block",
+            "location": [607, 258],
+            "variable": "protein-btn"
+          },
+          {
+            "name": "dairy-btn",
+            "type": "button",
+            "image": "myplate-dairy-block",
+            "location": [610, 108],
+            "variable": "dairy-btn"
+          },
+          {
+            "name": "audio",
+            "type": "audio",
+            "audio": "slide2",
+            "variable": "audio"
+          }
+        ],
+        "outcomes": {
+          "back-btn" : {
+            "events": { "back-btn": "!reset" },
+            "actions": [ 
+              { "type": "variable", "args": [ "back-btn", "reset" ] },
+              { "type": "scene", "args": [ "intro" ] }
+            ]
+          },
+          "next-btn" : {
+            "events": { "next-btn": "!reset" },
+            "actions": [ 
+              { "type": "variable", "args": [ "next-btn", "reset" ] },
+              { "type": "scene", "args": [ "food-groups" ] }
+            ]
+          },
+          "highlight-next-btn": {
+            "events": {
+              "grains-btn": "*",
+              "dairy-btn": "*",
+              "protein-btn": "*",
+              "fruits-btn": "*",
+              "vegetables-btn": "*"
+            },
+            "actions": [ { "type": "variable", "args": [ "highlight-next-btn", 1, true ] } ]
+          },
+          "grains-btn": {
+            "events": {"grains-btn": "*"},
+            "actions": [
+              { "type": "remove-actor", "args": [ "grains-btn" ] },
+              {
+                "type": "add-actor", 
+                "args": [{
+                  "name": "grains",
+                  "type": "decoration",
+                  "image": "grains",
+                  "location": [209, 118],
+                  "key": "my-plate"
+                  }, {
+                    "name": "bloop-audio",
+                    "type": "audio",
+                    "audio": "slide2-bloop",
+                    "variable": "bloop-audio"
+                  }
+                ]
+              }
+            ]
+          },
+          "dairy-btn": {
+            "events": {"dairy-btn": "*"},
+            "actions": [
+              { "type": "remove-actor", "args": [ "dairy-btn" ] },
+              {
+                "type": "add-actor", 
+                "args": [{
+                  "name": "dairy",
+                  "type": "decoration",
+                  "image": "dairy",
+                  "location": [315, 118],
+                  "key": "my-plate"
+                  }, {
+                    "name": "bloop-audio",
+                    "type": "audio",
+                    "audio": "slide2-bloop",
+                    "variable": "bloop-audio"
+                  }
+                ]
+              }
+            ]
+          },
+          "vegetables-btn": {
+            "events": {"vegetables-btn": "*"},
+            "actions": [
+              { "type": "remove-actor", "args": [ "vegetables-btn" ] },
+              {
+                "type": "add-actor", 
+                "args": [{
+                  "name": "vegetables",
+                  "type": "decoration",
+                  "image": "vegetables",
+                  "location": [91, 228],
+                  "key": "my-plate"
+                  }, {
+                    "name": "bloop-audio",
+                    "type": "audio",
+                    "audio": "slide2-bloop",
+                    "variable": "bloop-audio"
+                  }
+                ]
+              }
+            ]
+          },
+          "protein-btn": {
+            "events": {"protein-btn": "*"},
+            "actions": [
+              { "type": "remove-actor", "args": [ "protein-btn" ] },
+              {
+                "type": "add-actor", 
+                "args": [{
+                  "name": "protein",
+                  "type": "decoration",
+                  "image": "protein",
+                  "location": [209, 247],
+                  "key": "my-plate"
+                  }, {
+                    "name": "bloop-audio",
+                    "type": "audio",
+                    "audio": "slide2-bloop",
+                    "variable": "bloop-audio"
+                  }
+                ]
+              }
+            ]
+          },
+          "fruits-btn": {
+            "events": {"fruits-btn": "*"},
+            "actions": [
+              { "type": "remove-actor", "args": [ "fruits-btn" ] },
+              {
+                "type": "add-actor", 
+                "args": [
+                  {
+                    "name": "fruits",
+                    "type": "decoration",
+                    "image": "fruits",
+                    "location": [91, 118],
+                    "key": "my-plate"
+                  }, {
+                    "name": "bloop-audio",
+                    "type": "audio",
+                    "audio": "slide2-bloop",
+                    "variable": "bloop-audio"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      },
+      "food-groups": {
+        "id": "food-groups",
+        "background": "bgspace",
+        "actions": [
+          { "type": "variable", "args": [ "scene_title", "FOOD GROUPS" ] },
+          { "type": "add-actor", "args": [
+            {
+              "name": "title-bar-text",
+              "type": "reference"
+            }]
+          },
+          { "type": "variable", "args": [ "lessonLocation", "$current_scene_name" ] },
+          { "type": "variable", "args": [ "grains-clicked", "reset" ] },
+          { "type": "variable", "args": [ "dairy-clicked", "reset" ] },
+          { "type": "variable", "args": [ "vegetables-clicked", "reset" ] },
+          { "type": "variable", "args": [ "protein-clicked", "reset" ] },
+          { "type": "variable", "args": [ "fruits-clicked", "reset" ] }
+        ],
+        "actors": [
+          {
+            "name": "title-bar",
+            "type": "reference"
+          },
+          {
+            "name": "moon",
+            "type": "reference"
+          },
+          {
+            "name": "home-btn",
+            "type": "reference"            
+          },
+          {
+            "name": "back-btn",
+            "type": "reference"
+          },
+          {
+            "name": "replay-btn",
+            "type": "reference"
+          },
+          {
+            "name": "next-btn",
+            "type": "reference"
+          },
+          {
+            "name": "text-line1",
+            "type": "text",
+            "text": "MyPlate food groups:",
+            "font": "default-text",
+            "location": [439, 92],
+            "audio": "slide3"
+          },
+          {
+            "name": "myplate-bg",
+            "type": "decoration",
+            "image": "myplate-bg",
+            "key": "my-plate",
+            "location": [14, 81]
+          },
+          {
+            "name": "grains-btn",
+            "type": "button",
+            "image": "myplate-grains",
+            "location": [209, 118],
+            "variable": "button-audio"
+          },
+          {
+            "name": "fruits-btn",
+            "type": "button",
+            "image": "myplate-fruits",
+            "location": [91, 118],
+            "variable": "button-audio"
+          },
+          {
+            "name": "vegetables-btn",
+            "type": "button",
+            "image": "myplate-vegetables",
+            "location": [91, 228],
+            "variable": "button-audio"
+          },
+          {
+            "name": "protein-btn",
+            "type": "button",
+            "image": "myplate-protein",
+            "location": [209, 247],
+            "variable": "button-audio"
+          },
+          {
+            "name": "dairy-btn",
+            "type": "button",
+            "image": "myplate-dairy",
+            "location": [315, 118],
+            "variable": "button-audio"
+          }
+        ],
+        "outcomes": {
+          "back-btn" : {
+            "events": { "back-btn": "!reset" },
+            "actions": [ 
+              { "type": "variable", "args": [ "back-btn", "reset" ] },
+              { "type": "scene", "args": [ "food" ] }
+            ]
+          },
+          "next-btn" : {
+            "events": { "next-btn": "!reset" },
+            "actions": [ 
+              { "type": "variable", "args": [ "next-btn", "reset" ] },
+              { "type": "scene", "args": [ "physical-activity" ] }
+            ]
+          },
+          "highlight-next-btn": {
+            "events": {
+              "grains-clicked": "!reset",
+              "dairy-clicked": "!reset",
+              "vegetables-clicked": "!reset",
+              "protein-clicked": "!reset",
+              "fruits-clicked": "!reset",
+              "button-audio": "played"
+            },
+            "actions": [ { "type": "variable", "args": [ "highlight-next-btn", 1, true ] } ]
+          },
+          "grains-btn": {
+            "events": {"button-audio": "grains-btn"},
+            "actions": [
+              { "type": "variable", "args": [ "grains-clicked", 1 ] },
+              { "type": "remove-actor", "args": [ "button-audio", "grains-examples", "grains-text", "grains-star" ] },
+              {
+                "type": "add-actor", 
+                "args": [{
+                  "name": "grains-examples",
+                  "type": "decoration",
+                  "image": "grains-examples",
+                  "key": "my-plate",
+                  "location": [206, 119]
+                }, {
+                  "name": "grains-text",
+                  "type": "text",
+                  "text": "Orange for Grains Group",
+                  "font": "myplate-orange",
+                  "location": [485, 181]
+                }, {
+                  "name": "grains-star",
+                  "type": "decoration",
+                  "image": "star-orange",
+                  "key": "my-plate",
+                  "location": [448, 178]
+                }, {
+                  "name": "button-audio",
+                  "type": "audio",
+                  "audio": "slide3-grains",
+                  "variable": "button-audio"
+                }]
+              }
+            ]
+          },
+          "dairy-btn": {
+            "events": {"button-audio": "dairy-btn"},
+            "actions": [
+              { "type": "variable", "args": [ "dairy-clicked", 1 ] },
+              { "type": "remove-actor", "args": [ "button-audio", "dairy-examples", "dairy-text", "dairy-star" ] },
+              {
+                "type": "add-actor", 
+                "args": [{
+                  "name": "dairy-examples",
+                  "type": "decoration",
+                  "image": "dairy-examples",
+                  "key": "my-plate",
+                  "location": [317, 119]
+                }, {
+                  "name": "dairy-text",
+                  "type": "text",
+                  "text": "Blue for Dairy Group",
+                  "font": "myplate-blue",
+                  "location": [485, 310]
+                }, {
+                  "name": "dairy-star",
+                  "type": "decoration",
+                  "image": "star-blue",
+                  "key": "my-plate",
+                  "location": [448, 307]
+                }, {
+                  "name": "button-audio",
+                  "type": "audio",
+                  "audio": "slide3-dairy",
+                  "variable": "button-audio"
+                }]
+              }
+            ]
+          },
+          "vegetables-btn": {
+            "events": {"button-audio": "vegetables-btn"},
+            "actions": [
+              { "type": "variable", "args": [ "vegetables-clicked", 1 ] },
+              { "type": "remove-actor", "args": [ "button-audio", "vegetables-examples", "vegetables-text", "vegetables-star" ] },
+              {
+                "type": "add-actor", 
+                "args": [{
+                  "name": "vegetables-examples",
+                  "type": "decoration",
+                  "image": "vegetables-examples",
+                  "key": "my-plate",
+                  "location": [110, 271]
+                }, {
+                  "name": "vegetables-text",
+                  "type": "text",
+                  "text": "Green for Vegetable Group",
+                  "font": "myplate-green",
+                  "location": [485, 224]
+                }, {
+                  "name": "vegetables-star",
+                  "type": "decoration",
+                  "image": "star-green",
+                  "key": "my-plate",
+                  "location": [448, 221]
+                }, {
+                  "name": "button-audio",
+                  "type": "audio",
+                  "audio": "slide3-vegetables",
+                  "variable": "button-audio"
+                }]
+              }
+            ]
+          },
+          "protein-btn": {
+            "events": {"button-audio": "protein-btn"},
+            "actions": [
+              { "type": "variable", "args": [ "protein-clicked", 1 ] },
+              { "type": "remove-actor", "args": [ "button-audio", "protein-examples", "protein-text", "protein-star" ] },
+              {
+                "type": "add-actor", 
+                "args": [{
+                  "name": "protein-examples",
+                  "type": "decoration",
+                  "image": "protein-examples",
+                  "key": "my-plate",
+                  "location": [208, 246]
+                }, {
+                  "name": "protein-text",
+                  "type": "text",
+                  "text": "Purple for Protein Group",
+                  "font": "myplate-purple",
+                  "location": [485, 267]
+                }, {
+                  "name": "protein-star",
+                  "type": "decoration",
+                  "image": "star-purple",
+                  "key": "my-plate",
+                  "location": [448, 264]
+                }, {
+                  "name": "button-audio",
+                  "type": "audio",
+                  "audio": "slide3-protein",
+                  "variable": "button-audio"
+                }]
+              }
+            ]
+          },
+          "fruits-btn": {
+            "events": {"button-audio": "fruits-btn"},
+            "actions": [
+              { "type": "variable", "args": [ "fruits-clicked", 1 ] },
+              { "type": "remove-actor", "args": [ "button-audio", "fruits-examples", "fruits-text", "fruits-star" ] },
+              {
+                "type": "add-actor", 
+                "args": [{
+                  "name": "fruits-examples",
+                  "type": "decoration",
+                  "image": "fruits-examples",
+                  "key": "my-plate",
+                  "location": [97, 126]
+                }, {
+                  "name": "fruits-text",
+                  "type": "text",
+                  "text": "Red for Fruit Group",
+                  "font": "myplate-red",
+                  "location": [485, 138]
+                }, {
+                  "name": "fruits-star",
+                  "type": "decoration",
+                  "image": "star-red",
+                  "key": "my-plate",
+                  "location": [448, 135]
+                }, {
+                  "name": "button-audio",
+                  "type": "audio",
+                  "audio": "slide3-fruits",
+                  "variable": "button-audio"
+                }]
+              }
+            ]
+          }
+        }
+      },
+      "physical-activity": {
+        "id": "physical-activity",
+        "background": "bgspace",
+        "actions": [
+          { "type": "variable", "args": [ "scene_title", "PHYSICAL ACTIVITY" ] },
+          { "type": "add-actor", "args": [
+            {
+              "name": "title-bar-text",
+              "type": "reference"
+            }]
+          },
+          { "type": "variable", "args": [ "lessonLocation", "$current_scene_name" ] }
+        ],
+        "actors": [
+          {
+            "name": "title-bar",
+            "type": "reference"
+          },
+          {
+            "name": "moon",
+            "type": "reference"
+          },
+          {
+            "name": "home-btn",
+            "type": "reference"            
+          },
+          {
+            "name": "back-btn",
+            "type": "reference"
+          },
+          {
+            "name": "replay-btn",
+            "type": "reference"
+          },
+          {
+            "name": "next-btn",
+            "type": "reference"
+          },
+          {
+            "name": "myplate-sm",
+            "type": "decoration",
+            "image": "myplate-sm",
+            "key": "my-plate",
+            "location": [ 29, 85 ]
+          },
+          {
+            "name": "audio",
+            "type": "audio",
+            "audio": "slide4",
+            "variable": "audio"
+          },
+          {
+            "name": "text1",
+            "type": "text",
+            "text": "Eat more from bigger food groups.",
+            "font": "default-text",
+            "location": [842, 148],
+            "startDelay": 500,
+            "tween": {
+              "easing": "Quad.easeOut",
+              "time": 1000,
+              "location": [392, 148]
+            }
+          },
+          {
+            "name": "text1-star",
+            "type": "decoration",
+            "image": "star-bullet",
+            "key": "common",
+            "location": [800, 148],
+            "startDelay": 500,
+            "tween": {
+              "easing": "Quad.easeOut",
+              "time": 1000,
+              "location": [350, 148]
+            }
+          },
+          {
+            "name": "text2",
+            "type": "text",
+            "text": "Eat a variety of foods from every food group each day.",
+            "wordWrapWidth": 360,
+            "font": "default-text",
+            "location": [842, 194],
+            "startDelay": 16000,
+            "tween": {
+              "easing": "Quad.easeOut",
+              "time": 1000,
+              "location": [392, 194]
+            }
+          },
+          {
+            "name": "text2-star",
+            "type": "decoration",
+            "image": "star-bullet",
+            "key": "common",
+            "location": [800, 194],
+            "startDelay": 16000,
+            "tween": {
+              "easing": "Quad.easeOut",
+              "time": 1000,
+              "location": [350, 194]
+            }
+          },
+          {
+            "name": "text3",
+            "type": "text",
+            "text": "Be active every day.",
+            "font": "default-text",
+            "location": [842, 273],
+            "startDelay": 26000,
+            "tween": {
+              "easing": "Quad.easeOut",
+              "time": 1000,
+              "location": [392, 273]
+            }
+          },
+          {
+            "name": "text3-star",
+            "type": "decoration",
+            "image": "star-bullet",
+            "key": "common",
+            "location": [800, 273],
+            "startDelay": 26000,
+            "tween": {
+              "easing": "Quad.easeOut",
+              "time": 1000,
+              "location": [350, 273]
+            }
+          }
+        ],
+        "outcomes": {
+          "back-btn": {
+            "events": { "back-btn": "!reset" },
+            "actions": [ 
+              { "type": "variable", "args": [ "back-btn", "reset" ] },
+              { "type": "scene", "args": [ "food-groups" ] }
+            ]
+          },
+          "next-btn" : {
+            "events": { "next-btn": "!reset" },
+            "actions": [ 
+              { "type": "variable", "args": [ "next-btn", "reset" ] },
+              { "type": "scene", "args": [ "balance-and-variety" ] }
+            ]
+          },
+          "highlight-next-btn": {
+            "events": {
+              "audio": "*"
+            },
+            "actions": [ { "type": "variable", "args": [ "highlight-next-btn", 1, true ] } ]
+          }
+        }
+      },
+      "balance-and-variety": {
+        "id": "balance-and-variety",
+        "background": "bgspace",
+        "actions": [
+          { "type": "variable", "args": [ "scene_title", "BALANCE & VARIETY" ] },
+          { "type": "add-actor", "args": [
+            {
+              "name": "title-bar-text",
+              "type": "reference"
+            }]
+          },
+          { "type": "variable", "args": [ "lessonLocation", "$current_scene_name" ] }
+        ],
+        "actors": [
+          {
+            "name": "title-bar",
+            "type": "reference"
+          },
+          {
+            "name": "moon",
+            "type": "reference"
+          },
+          {
+            "name": "home-btn",
+            "type": "reference"            
+          },
+          {
+            "name": "back-btn",
+            "type": "reference"
+          },
+          {
+            "name": "replay-btn",
+            "type": "reference"
+          },
+          {
+            "name": "next-btn",
+            "type": "reference"
+          },
+          {
+            "name": "audio",
+            "type": "audio",
+            "audio": "slide5",
+            "variable": "audio"
+          },
+          {
+            "name": "myplate-sm",
+            "type": "decoration",
+            "image": "myplate-sm",
+            "key": "my-plate",
+            "location": [ 29, 85 ]
+          },
+          {
+            "name": "text1",
+            "type": "text",
+            "text": "Balance: Being active and eating healthy foods",
+            "wordWrapWidth": 363,
+            "font": "default-text",
+            "location": [842, 148],
+            "startDelay": 500,
+            "tween": {
+              "easing": "Quad.easeOut",
+              "time": 1000,
+              "location": [392, 148]
+            }
+          },
+          {
+            "name": "text1-star",
+            "type": "decoration",
+            "image": "star-bullet",
+            "key": "common",
+            "location": [800, 148],
+            "startDelay": 500,
+            "tween": {
+              "easing": "Quad.easeOut",
+              "time": 1000,
+              "location": [350, 148]
+            }
+          },
+          {
+            "name": "felicia-soccer",
+            "type": "decoration",
+            "image": "felicia-soccer",
+            "key": "my-plate",
+            "location": [565, 216]
+          }
+        ],
+        "outcomes": {
+          "back-btn" : {
+            "events": { "back-btn": "!reset" },
+            "actions": [ 
+              { "type": "variable", "args": [ "back-btn", "reset" ] },
+              { "type": "scene", "args": [ "physical-activity" ] }
+            ]
+          },
+          "next-btn" : {
+            "events": { "next-btn": "!reset" },
+            "actions": [ 
+              { "type": "variable", "args": [ "next-btn", "reset" ] },
+              { "type": "mh-scene", "args": [ "mission-complete", {"objective_complete":1} ] }
+            ]
+          },
+          "highlight-next-btn": {
+            "events": {
+              "audio": "*"
+            },
+            "actions": [ { "type": "variable", "args": [ "highlight-next-btn", 1, true ] } ]
+          }
+        }
+      },
+      "mission-complete": {
+        "id": "mission-complete",
+        "background": "bgspace",
+        "actions": [
+          { "type": "variable", "args": [ "scene_title", "GOOD JOB!" ] },
+          { "type": "add-actor", "args": [
+            {
+              "name": "title-bar-text",
+              "type": "reference"
+            }]
+          },
+          { "type": "variable", "args": [ "lessonLocation", "$current_scene_name" ] }
+        ],
+        "actors": [
+          {
+            "name": "title-bar",
+            "type": "reference"
+          },
+          {
+            "name": "moon",
+            "type": "reference"
+          },
+          {
+            "name": "home-btn",
+            "type": "reference"            
+          },
+          {
+            "name": "back-btn",
+            "type": "reference"
+          },
+          {
+            "name": "replay-btn",
+            "type": "reference"
+          },
+          {
+            "name": "mission-health-logo",
+            "type": "decoration",
+            "image": "mission-health-logo",
+            "key": "common",
+            "location": [ 115, 153 ]
+          },
+          {
+            "name": "audio",
+            "type": "audio",
+            "audio": ["slide6"],
+            "variable": "audio"
+          }
+        ],
+        "outcomes": {
+          "back-btn": {
+            "events": { "back-btn": "!reset" },
+            "actions": [ 
+              { "type": "variable", "args": [ "back-btn", "reset" ] },
+              { "type": "scene", "args": [ "balance-and-variety" ] }
+            ]
+          }
+        }
+      },
+      "empty-replay-scene": {
+        "id": "empty-replay-scene",
+        "description": "since a scene change request to the current scene is ignored, first change to this empty scene",
+        "background": "none",
+        "actors": [ ],
+        "outcomes": { },
+        "actions": [ ]
+      }
+    }
+  }
+}

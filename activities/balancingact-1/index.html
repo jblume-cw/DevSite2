@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:title" content="Children's Hospital Grade 1 Balancing Act">
+    <title>Balancing Act</title>
+    <script src="engine/APIWrapper.js"></script>
+    <script src="engine/phaser.js"></script>
+    <script src="engine/balancing-act.min.js"></script>
+    <script src="engine/balancing-act.act.min.js"></script>
+
+    <link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans:800" rel="stylesheet">
+    
+    <style type="text/css">
+        .vt323 {
+            font-family: 'VT323', monospace;
+        }
+        .aleygreya {
+            font-family: 'Alegreya Sans', sans-serif;
+        }
+    </style>
+
+    <style>
+        body {
+            margin: 0px;
+            padding: 0px;
+        }
+        .container {
+            position: relative;
+        }
+        .gameItem {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+        }
+    </style>
+</head>
+<body>
+
+<div id="preloadFont1" style="position: absolute; left: -1000em; font-family: 'VT323', monospace;">.</div>
+<div id="preloadFont2" style="position: absolute; left: -1000em; font-family: 'Alegreya Sans', sans-serif;">.</div>
+
+<div id="gameContainer" class="container">
+    <div id="game" class="gameItem" style="z-index: 100;"></div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html></html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=800, initial-scale=1">
+    <meta property="og:title" content="Children's Hospital Match the Stars">
+    <title>Match The Stars</title>
+	<script>
+		const _environmentSettings = {
+			assetPath: "",
+			scormEnabled: false,
+		};
+	</script>
+    <script src="engine/APIWrapper.js"></script>
+    <script src="engine/phaser.js"></script>
+    <script src="engine/match.min.js"></script>
+    <script src="engine/match.act.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans:900|Alegreya+Sans:800" rel="stylesheet">
+    <style type="text/css">
+		.gameItem {
+			width: 100%;
+			height: 100%;
+		}
+		.gameItem canvas {
+			margin-left: auto;
+			margin-right: auto;
+		}
+		#gameContainer {
+			width: 100%;
+			height: 100%;
+			position: relative;
+			background-color: white;
+		}
+		#fullscreen-container {
+			background-color: white;
+			width: 100%;
+			height: 100%;
+		}
+	</style>
+
+</head>
+<body>
+    <div id="preloadFont1" style="position: absolute; left: -1000em; font-family: 'Alegreya Sans', sans-serif; font-weight: 800">.</div>
+    <div id="preloadFont2" style="position: absolute; left: -1000em; font-family: 'Alegreya Sans', sans-serif; font-weight: 900">.</div>
+
+    <div id="fullscreen-container">
+		<div id="gameContainer">
+			<div id="game" class="gameItem" style="z-index: 100">
+				<span style="display: none"></span>
+			</div>
+		</div>
+	</div>
+</body>

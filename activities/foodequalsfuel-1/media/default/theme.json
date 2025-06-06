@@ -1,0 +1,209 @@
+{
+  "texture": "media/default/texture.png",
+  "textureMap": "media/default/texture.json",
+  "textureKey": "texture",
+  "commentOtherAnimations": "Other animations are packed with the normal texture",
+  "animations": [
+    {
+      "texture": "media/default/rocket_blastoff.png",
+      "textureMap": "media/default/rocket_blastoff.json",
+      "textureKey": "texture_rb"
+    }
+  ],
+  "data": "media/default/sceneData.json",
+  "fonts" : {
+    "title-bar" : {"font": "24px VT323", "fill": "#B7F149", "align": "left", "fontWeight": "400"},
+    "title": { "font": "66px Alegreya Sans", "fill": "#FEFD9A", "align": "left", "fontWeight": "800" },
+    "default-text": { "font": "25px Alegreya Sans", "fill": "#FEFD9A", "align": "left", "fontWeight": "800" },
+    "food-fuel-blue-text": { "font": "25px Alegreya Sans", "fill": "#45FEEB", "align": "left", "fontWeight": "800" },
+    "food-fuel-yellow-text": { "font": "25px Alegreya Sans", "fill": "#FEFD9A", "align": "center", "fontWeight": "800"}
+  },
+  "images": {
+    "common": {
+      "title-bar": "title-bar.png",
+      "moon": "moon.png",
+      "star-bullet": "star-bullet.png",
+      "mission-health-logo": "mission health logo.png"
+    },
+    "food-fuel": {
+      "zach": "zach1.png",
+      "sofia": "sofia.jpg",
+      "meter-background": "meter_back.png",
+      "needle": "needle.png",
+      "bread": "bread0001.png",
+      "milk": "milk0001.png",
+      "banana": "banana0001.png",
+      "rocket-blast-off-no-flames": "rocket-blast-off-no-flames.png"
+    },
+    "rocket-blastoff": {
+      "filenamePrefix": "blast off short",
+      "startIndex": 1,
+      "endIndex": 55
+    },
+    "rocket-left-to-right": {
+      "filenamePrefix": "rocketLtoR",
+      "startIndex": 1,
+      "endIndex": 7
+    },
+    "rocket-right-to-left": {
+      "filenamePrefix": "rocketRtoL",
+      "startIndex": 1,
+      "endIndex": 7
+    }
+  },
+  "sceneImages": {
+    "bgspace": "sky-background.png"
+  },
+  "buttons": {
+    "home": {
+      "up": "home-btn0001.png",
+      "over": "home-btn0002.png",
+      "out": "home-btn0001.png",
+      "down": "home-btn0002.png"
+    },
+    "next": {
+      "up": "next-btn0001.png",
+      "over": "next-btn0002.png",
+      "out": "next-btn0001.png",
+      "down": "next-btn0002.png"
+    },
+    "back": {
+      "up": "back-btn0001.png",
+      "over": "back-btn0002.png",
+      "out": "back-btn0001.png",
+      "down": "back-btn0002.png"
+    },
+    "replay": {
+      "up": "replay-btn0001.png",
+      "over": "replay-btn0002.png",
+      "out": "replay-btn0001.png",
+      "down": "replay-btn0002.png"
+    },
+    "food-banana": {
+      "over": "banana0002.png",
+      "out": "banana0001.png"
+    },
+    "food-bread": {
+      "over": "bread0002.png",
+      "out": "bread0001.png"
+    },
+    "food-cookies": {
+      "over": "cookies0002.png",
+      "out": "cookies0001.png"
+    },
+    "food-cereal-milk-fruit": {
+      "over": "cereal-milk-fruit0002.png",
+      "out": "cereal-milk-fruit0001.png"
+    },
+    "food-donuts": {
+      "over": "donuts0002.png",
+      "out": "donuts0001.png"
+    },
+    "food-milk": {
+      "over": "milk0002.png",
+      "out": "milk0001.png"
+    },
+    "meal-breakfast": {
+      "over": "breakfast0002.png",
+      "out": "breakfast0001.png"
+    },
+    "meal-lunch": {
+      "over": "lunch0002.png",
+      "out": "lunch0001.png"
+    },
+    "meal-dinner": {
+      "over": "dinner0002.png",
+      "out": "dinner0001.png"
+    }
+  },
+  "soundKey": "foodfuel",
+  "soundFile": [ "media/default/food-fuel.m4a", "media/default/food-fuel.ogg" ],
+  "sounds": {
+    "slide1": [
+      0,
+      2.4724263038548755,
+      false,
+      "slide1"
+    ],
+    "slide2-bloop": [
+      3,
+      0.7199546485260768,
+      false,
+      "slide2-bloop"
+    ],
+    "slide2": [
+      4,
+      30.019909297052152,
+      false,
+      "slide2"
+    ],
+    "slide3": [
+      35,
+      40.437868480725626,
+      false,
+      "slide3"
+    ],
+    "slide4": [
+      76,
+      60.074716553288,
+      false,
+      "slide4"
+    ],
+    "slide5-breakfast": [
+      137,
+      7.84895691609978,
+      false,
+      "slide5-breakfast"
+    ],
+    "slide5-dinner": [
+      145,
+      6.161428571428559,
+      false,
+      "slide5-dinner"
+    ],
+    "slide5-lunch": [
+      152,
+      6.553900226757378,
+      false,
+      "slide5-lunch"
+    ],
+    "slide5": [
+      159,
+      4.670136054421761,
+      false,
+      "slide5"
+    ],
+    "slide6-cereal-milk-fruit": [
+      164,
+      6.318390022675743,
+      false,
+      "slide6-cereal-milk-fruit"
+    ],
+    "slide6-cookies": [
+      171,
+      5.886712018140599,
+      false,
+      "slide6-cookies"
+    ],
+    "slide6-donuts": [
+      177,
+      7.10328798185941,
+      false,
+      "slide6-donuts"
+    ],
+    "slide6": [
+      185,
+      9.418752834467114,
+      false,
+      "slide6"
+    ],
+    "slide7": [
+      195,
+      3.649750566893431,
+      false,
+      "slide7"
+    ]
+  }
+  
+}
+

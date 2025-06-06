@@ -1,0 +1,450 @@
+{
+  "autoScale": true,
+  "texture": "media/default/texture.png",
+  "textureMap": "media/default/texture.json",
+  "textureKey": "fcTextureKey",
+  "menuColor": "#ffffff",
+  "fonts": {
+    "default": {
+      "font": "60pt 'Alegreya Sans', sans-serif",
+      "fill": "#750B56",
+      "align": "left",
+      "fontWeight": 800,
+      "wordWrap": false
+    },
+    "gameOver": {
+      "font": "77pt 'Alegreya Sans', sans-serif",
+      "fill": "#EFCA3A",
+      "align": "left",
+      "fontWeight": 900,
+      "wordWrap": false
+    }
+  },
+  "soundsCommon": {
+    "introduction": "rememberwhat",
+    "introductionDelay": 15000,
+    "playAgainDelay": 15500,
+    "launchGame": "blastoff",
+    "gameStart": "clickthestars",
+    "backgroundMusic": "sugarplumfairyintro",
+    "correctSound": "dinger",
+    "winFanfare": "orchestraltadastinger01",
+    "gameOver": "goodjob"
+  },
+  "gameOver": {
+    "x": 230,
+    "y": 50
+  },
+  "images": {
+    "title": {
+      "logo": "match-the-stars-title.png",
+      "title_rocketship": "rocket0001.png",
+      "title_rocketship_launch": "rocket0002.png",
+      "foreground": "moon.png",
+      "background": "splash_bg_plain.png"
+    },
+    "piefull": [ "game_pie_alcohol_hi.png","game_pie_tobacco_hi.png",
+      "game_pie_inhalants_hi.png","game_pie_marijuana_hi.png"],
+    "default_card": "star-up.png",
+    "audio_off": "audio_btn_stars0002.png",
+    "audio_on":  "audio_btn_stars0001.png"
+  },
+  "animations": {
+    "card_over": [
+      "star-over0001.png", "star-over0002.png", "star-over0003.png", "star-over0004.png", "star-over0005.png", 
+      "star-over0006.png", "star-over0007.png", "star-over0008.png", "star-over0009.png", "star-over0010.png", 
+      "star-over0011.png", "star-over0012.png", "star-over0013.png", "star-over0014.png", "star-over0015.png", 
+      "star-over0016.png", "star-over0017.png", "star-over0018.png", "star-over0019.png"],
+    "card_reveal": [
+      "star-reveal0001.png", "star-reveal0002.png", "star-reveal0003.png", "star-reveal0004.png", "star-reveal0005.png",
+      "star-reveal0006.png", "star-reveal0007.png", "star-reveal0008.png", "star-reveal0009.png", "star-reveal0010.png"
+    ],
+    "card_hide": [
+      "star-reveal0010.png", "star-reveal0009.png", "star-reveal0008.png", "star-reveal0007.png", "star-reveal0006.png",
+      "star-reveal0005.png", "star-reveal0004.png", "star-reveal0003.png", "star-reveal0002.png", "star-reveal0001.png",
+      "star-up.png"
+    ],
+    "play_button_intro": [
+      "play animated0001.png", "play animated0002.png", "play animated0003.png", "play animated0004.png", "play animated0005.png", 
+      "play animated0006.png", "play animated0007.png", "play animated0008.png", "play animated0009.png", "play animated0010.png", 
+      "play animated0011.png", "play animated0012.png", "play animated0013.png", "play animated0014.png", "play animated0015.png", 
+      "play animated0016.png", "play animated0017.png", "play animated0018.png", "play animated0019.png", "play animated0020.png"
+    ],
+    "play_again_button": [
+      "play again anim0001.png", "play again anim0002.png", "play again anim0003.png", "play again anim0004.png", "play again anim0005.png", 
+      "play again anim0006.png", "play again anim0007.png", "play again anim0008.png", "play again anim0009.png", "play again anim0010.png", 
+      "play again anim0011.png", "play again anim0012.png", "play again anim0013.png", "play again anim0014.png", "play again anim0015.png", 
+      "play again anim0016.png", "play again anim0017.png", "play again anim0018.png", "play again anim0019.png", "play again anim0020.png" 
+    ]
+  },
+  "card_distributions": {
+    "good_cards": 2,
+    "bad_cards": 2
+  },
+  "bad_cards": [
+    {
+      "image": "Bacon.png",
+      "soundFile": "bacon",
+      "matchSound": "whoa"
+    },
+    {
+      "image": "Butter.png",
+      "soundFile": "butter",
+      "matchSound": "whoa"
+    },
+    {
+      "image": "CandyBar.png",
+      "soundFile": "candy bar",
+      "matchSound": "whoa"
+    },
+    {
+      "image": "ChocolateChipMuffin.png",
+      "soundFile": "chocolatechipmuffin",
+      "matchSound": "whoa"
+    },
+    {
+      "image": "Cookies.png",
+      "soundFile": "cookies",
+      "matchSound": "whoa"
+    },
+    {
+      "image": "Donut.png",
+      "soundFile": "donut",
+      "matchSound": "whoa"
+    },
+    {
+      "image": "FrenchFries.png",
+      "soundFile": "frenchfries",
+      "matchSound": "whoa"
+    },
+    {
+      "image": "HotDog.png",
+      "soundFile": "hotdog",
+      "matchSound": "whoa"
+    },
+    {
+      "image": "IceCream.png",
+      "soundFile": "icecream",
+      "matchSound": "whoa"
+    },
+    {
+      "image": "Pie.png",
+      "soundFile": "pie",
+      "matchSound": "whoa"
+    },
+    {
+      "image": "PotatoChips.png",
+      "soundFile": "potatochips",
+      "matchSound": "whoa"
+    },
+    {
+      "image": "Soda.png",
+      "soundFile": "soda",
+      "matchSound": "whoa"
+    }
+  ],
+  "good_cards": [
+    {
+      "image": "Apple.png",
+      "soundFile": "apple",
+      "matchSound": "go"
+    },
+    {
+      "image": "Banana.png",
+      "soundFile": "banana",
+      "matchSound": "go"
+    },
+    {
+      "image": "Beans.png",
+      "soundFile": "beans",
+      "matchSound": "go"
+    },
+    {
+      "image": "Broccoli.png",
+      "soundFile": "broccoli",
+      "matchSound": "go"
+    },
+    {
+      "image":  "Carrots.png",
+      "soundFile": "carrots",
+      "matchSound": "go"
+    },
+    {
+      "image":  "Celery.png",
+      "soundFile": "celery",
+      "matchSound": "go"
+    },
+    {
+      "image": "Cereal.png",
+      "soundFile": "cereal",
+      "matchSound": "go"
+    },
+    {
+      "image": "Cheese.png",
+      "soundFile": "cheese",
+      "matchSound": "go"
+    },
+    {
+      "image": "Chicken.png",
+      "soundFile": "chicken",
+      "matchSound": "go"
+    },
+    {
+      "image":  "Grapes.png",
+      "soundFile": "grapes",
+      "matchSound": "go"
+    },
+    {
+      "image":  "Milk.png",
+      "soundFile": "milk",
+      "matchSound": "go"
+    },
+    {
+      "image":  "TurkeySandwich.png",
+      "soundFile": "turkeysandwich",
+      "matchSound": "go"
+    },
+    {
+      "image": "WholeWheatBread.png",
+      "soundFile": "wholewheatbread",
+      "matchSound": "go"
+    }
+  ],
+  "buttons": {
+    "play": {
+      "over": "play button0002.png",
+      "out": "play button0001.png",
+      "down": "play button0002.png",
+      "up": "play button0001.png"
+    },
+    "play_again": {
+      "over": "play again button0002.png",
+      "out": "play again button0001.png",
+      "down": "play again button0002.png",
+      "up": "play again button0001.png"
+    }
+  },
+  "soundKey": "mtsSounds",
+  "soundFile": [
+    "media/default/mts.m4a",
+    "media/default/mts.ogg"
+  ],
+  "sounds": {
+    "apple": [
+      0,
+      0.617687074829932,
+      false,
+      "apple"
+    ],
+    "bacon": [
+      1,
+      0.7649433106575962,
+      false,
+      "bacon"
+    ],
+    "banana": [
+      2,
+      0.7156689342403628,
+      false,
+      "banana"
+    ],
+    "beans": [
+      3,
+      0.7653287981859411,
+      false,
+      "beans"
+    ],
+    "broccoli": [
+      4,
+      0.7435827664399088,
+      false,
+      "broccoli"
+    ],
+    "butter": [
+      5,
+      0.5694784580498862,
+      false,
+      "butter"
+    ],
+    "candy bar": [
+      6,
+      0.953356009070295,
+      false,
+      "candy bar"
+    ],
+    "carrots": [
+      7,
+      0.7851020408163265,
+      false,
+      "carrots"
+    ],
+    "celery": [
+      8,
+      0.8368707482993205,
+      false,
+      "celery"
+    ],
+    "cereal": [
+      9,
+      0.740861678004535,
+      false,
+      "cereal"
+    ],
+    "cheese": [
+      10,
+      0.6898866213151926,
+      false,
+      "cheese"
+    ],
+    "chicken": [
+      11,
+      0.5616326530612241,
+      false,
+      "chicken"
+    ],
+    "chocolatechipmuffin": [
+      12,
+      1.1937641723356016,
+      false,
+      "chocolatechipmuffin"
+    ],
+    "clickthestars": [
+      14,
+      2.935487528344673,
+      false,
+      "clickthestars"
+    ],
+    "cookies": [
+      17,
+      0.7284126984126971,
+      false,
+      "cookies"
+    ],
+    "donut": [
+      18,
+      0.7346485260770983,
+      false,
+      "donut"
+    ],
+    "frenchfries": [
+      19,
+      0.9807256235827673,
+      false,
+      "frenchfries"
+    ],
+    "go": [
+      20,
+      0.8690022675736948,
+      false,
+      "go"
+    ],
+    "goodjob": [
+      21,
+      16.19843537414966,
+      false,
+      "goodjob"
+    ],
+    "grapes": [
+      38,
+      0.6200907029478486,
+      false,
+      "grapes"
+    ],
+    "hotdog": [
+      39,
+      0.848390022675737,
+      false,
+      "hotdog"
+    ],
+    "icecream": [
+      40,
+      1.0764172335600932,
+      false,
+      "icecream"
+    ],
+    "milk": [
+      42,
+      0.6301814058956907,
+      false,
+      "milk"
+    ],
+    "pie": [
+      43,
+      0.6097959183673467,
+      false,
+      "pie"
+    ],
+    "potatochips": [
+      44,
+      1.0659863945578252,
+      false,
+      "potatochips"
+    ],
+    "rememberwhat": [
+      46,
+      16.268480725623583,
+      false,
+      "rememberwhat"
+    ],
+    "soda": [
+      63,
+      0.6565079365079356,
+      false,
+      "soda"
+    ],
+    "turkeysandwich": [
+      64,
+      1.1802494331065816,
+      false,
+      "turkeysandwich"
+    ],
+    "whoa": [
+      66,
+      1.12040816326531,
+      false,
+      "whoa"
+    ],
+    "wholewheatbread": [
+      68,
+      1.1756689342403632,
+      false,
+      "wholewheatbread"
+    ],
+    "blastoff": [
+      70,
+      2.007664399092974,
+      false,
+      "blastoff"
+    ],
+    "dinger": [
+      73,
+      1.7524263038548753,
+      false,
+      "dinger"
+    ],
+    "orchestraltadastinger01": [
+      75,
+      3.895147392290255,
+      false,
+      "orchestraltadastinger01"
+    ],
+    "rocket_loop_short": [
+      79,
+      5.176439909297045,
+      false,
+      "rocket_loop_short"
+    ],
+    "rocket_small02": [
+      85,
+      1.3264399092970507,
+      false,
+      "rocket_small02"
+    ],
+    "sugarplumfairyintro": [
+      87,
+      8.209818594104306,
+      false,
+      "sugarplumfairyintro"
+    ]
+  }
+}

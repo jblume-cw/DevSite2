@@ -1,0 +1,438 @@
+{
+  "texture": "media/default/texture.png",
+  "textureMap": "media/default/texture.json",
+  "textureKey": "texture",
+  "animations": [
+    {
+      "texture": "media/default/carly_running.png",
+      "textureMap": "media/default/carly_running.json",
+      "textureKey": "texture_cr"
+    },
+    {
+      "texture": "media/default/carly_blinking.png",
+      "textureMap": "media/default/carly_blinking.json",
+      "textureKey": "texture_cb"
+    },
+    {
+      "texture": "media/default/sofia_dog.png",
+      "textureMap": "media/default/sofia_dog.json",
+      "textureKey": "texture_sd"
+    },
+    {
+      "texture": "media/default/using_computer.png",
+      "textureMap": "media/default/using_computer.json",
+      "textureKey": "texture_uc"
+    }
+  ],
+  "data": "media/default/sceneData.json",
+  "fonts" : {
+    "title-bar" : {"font": "24px VT323", "fill": "#B7F149", "align": "left", "fontWeight": "400"},
+    "title": { "font": "66px Alegreya Sans", "fill": "#FEFD9A", "align": "left", "fontWeight": "800" },
+    "default-text": { "font": "25px Alegreya Sans", "fill": "#FEFD9A", "align": "left", "fontWeight": "800" },
+    "activity-pyramid-yellow": { "font": "25px Alegreya Sans", "fill": "#FBEC82", "align": "left", "fontWeight": "800" },
+    "activity-pyramid-orange": { "font": "25px Alegreya Sans", "fill": "#F4AC77", "align": "left", "fontWeight": "800" },
+    "activity-pyramid-blue": { "font": "25px Alegreya Sans", "fill": "#86C7EE", "align": "left", "fontWeight": "800" },
+    "activity-pyramid-green": { "font": "25px Alegreya Sans", "fill": "#BBE173", "align": "left", "fontWeight": "800" },
+    "activity-pyramid-counter": { "font": "150px Alegreya Sans", "fill": "#FEFD9A", "align": "left", "fontWeight": "800" },
+    "question-text":  { "font": "25px Alegreya Sans", "fill": "#FF9900", "align": "left", "fontWeight": "800" }
+  },
+  "images": {
+    "common": {
+      "title-bar": "title-bar.png",
+      "moon": "moon.png",
+      "star-bullet": "star-bullet.png",
+      "mission-health-logo": "mission health logo.png"
+    },
+    "activity-pyramid": {
+      "activity-pyramid": "activity_pyramid.png",
+      "zach-sitting-still": "zach-sittingstill.png",
+      "sofia-flexibility": "sofia-flexibility.png",
+      "carly": "carly_icon.png",
+      "carly-running": "carly_running.png",
+      "carly-running-bg": "carly-running-bg.png",
+      "carly-mat": "carly-mat.png",
+      "carly-everyday": "carly-steps.png",
+      "jack-aerobic": "jack-aerobic.png",
+      "carly-head": "carly0001.png",
+      "jack-head": "jack0001.png",
+      "sofia-head": "sofia0001.png",
+      "zach-head": "zach0001.png"
+    },
+    "carly-running": {
+      "filenamePrefix": "carly-running",
+      "startIndex": 1,
+      "endIndex": 24
+    },
+    "carly-blinking": {
+      "filenamePrefix": "carly-blinking",
+      "startIndex": 1,
+      "endIndex": 96
+    },
+    "sofia-dog": {
+      "filenamePrefix": "sofia-dog short",
+      "startIndex": 1,
+      "endIndex": 21
+    },
+    "using-computer": {
+      "filenamePrefix": "using-computer",
+      "startIndex": 1,
+      "endIndex": 60
+    }
+  },
+  "sceneImages": {
+    "bgspace": "sky-background.png"
+  },
+  "buttons": {
+    "home": {
+      "up": "home-btn0001.png",
+      "over": "home-btn0002.png",
+      "out": "home-btn0001.png",
+      "down": "home-btn0002.png"
+    },
+    "next": {
+      "up": "next-btn0001.png",
+      "over": "next-btn0002.png",
+      "out": "next-btn0001.png",
+      "down": "next-btn0002.png"
+    },
+    "back": {
+      "up": "back-btn0001.png",
+      "over": "back-btn0002.png",
+      "out": "back-btn0001.png",
+      "down": "back-btn0002.png"
+    },
+    "replay": {
+      "up": "replay-btn0001.png",
+      "over": "replay-btn0002.png",
+      "out": "replay-btn0001.png",
+      "down": "replay-btn0002.png"
+    },
+    "worksheet": {
+      "up": "worksheet-btn0001.png",
+      "over": "worksheet-btn0002.png",
+      "out": "worksheet-btn0001.png",
+      "down": "worksheet_btn0002.png"
+    },
+    "activity-pyramid-everyday": {
+      "up": "everyday.png",
+      "over": "everyday-down.png",
+      "out": "everyday.png",
+      "down": "everyday-down.png"
+    },
+    "activity-pyramid-aerobic": {
+      "up": "aerobic.png",
+      "over": "aerobic-down.png",
+      "out": "aerobic.png",
+      "down": "aerobic-down.png"
+    },
+    "activity-pyramid-strength": {
+      "up": "strength.png",
+      "over": "strength-down.png",
+      "out": "strength.png",
+      "down": "strength-down.png"
+    },
+    "activity-pyramid-sedentary": {
+      "up": "sedentary.png",
+      "over": "sedentary-down.png",
+      "out": "sedentary.png",
+      "down": "sedentary-down.png"
+    },
+    "planet-physical": {
+      "up": "physical-btn0001.png",
+      "over": "physical-btn0002.png",
+      "out": "physical-btn0001.png",
+      "down": "physical-btn0002.png"
+    },
+    "planet-sitting-still": {
+      "up": "still-btn0001.png",
+      "over": "still-btn0002.png",
+      "out": "still-btn0001.png",
+      "down": "still-btn0002.png"
+    },
+    "activity-place-bedroom": {
+      "over": "bedroom0002.png",
+      "out": "bedroom0001.png"
+    },
+    "activity-place-outside": {
+      "over": "outside0002.png",
+      "out": "outside0001.png"
+    },
+    "activity-place-playground": {
+      "over": "playground0002.png",
+      "out": "playground0001.png"
+    },
+    "activity-place-snow": {
+      "over": "snow0002.png",
+      "out": "snow0001.png"
+    },
+    "activity-place-swim": {
+      "over": "swim0002.png",
+      "out": "swim0001.png"
+    },
+    "activity-place-yard": {
+      "over": "yard0002.png",
+      "out": "yard0001.png"
+    },
+    "carly-head": {
+      "over": "carly0002.png",
+      "out": "carly0001.png"
+    },
+    "jack-head": {
+      "over": "jack0002.png",
+      "out": "jack0001.png"
+    },
+    "sofia-head": {
+      "over": "sofia0002.png",
+      "out": "sofia0001.png"
+    },
+    "zach-head": {
+      "over": "zach0002.png",
+      "out": "zach0001.png"
+    },
+    "sofia-dance": {
+      "up": "dance_btn0001.png",
+      "over": "dance_btn0002.png",
+      "out": "dance_btn0001.png",
+      "down": "dance_btn0002.png"
+    },
+    "tv": {
+      "up": "tv_btn0001.png",
+      "over": "tv_btn0002.png",
+      "out": "tv_btn0001.png",
+      "down": "tv_btn0002.png"
+    },
+    "baseball": {
+      "up": "baseball0001.png",
+      "over": "baseball0002.png",
+      "out": "baseball0001.png",
+      "down": "baseball0002.png"
+    },
+    "carly": {
+      "up": "carly_btn0001.png",
+      "over": "carly_btn0002.png",
+      "out": "carly_btn0001.png",
+      "down": "carly_btn0002.png"
+    }
+  },
+  "soundKey": "activitypyramid",
+  "soundFile": [ "media/default/activity-pyramid.m4a", "media/default/activity-pyramid.ogg" ],
+  "sounds": {
+    "slide4-split-part1": [
+      153,
+      38,
+      false,
+      "slide4"
+    ],
+    "slide4-split-part2": [
+      191,
+      4.082131519274384,
+      false,
+      "slide4"
+    ],
+    "slide7-split-part1": [
+      239,
+      15,
+      false,
+      "slide7"
+    ],
+    "slide7-split-part2": [
+      254,
+      22.90607709750566,
+      false,
+      "slide7"
+    ],
+    "slide1": [
+      0,
+      1.979750566893424,
+      false,
+      "slide1"
+    ],
+    "slide10": [
+      2,
+      3.8579591836734695,
+      false,
+      "slide10"
+    ],
+    "slide2-correct": [
+      6,
+      6.396077097505669,
+      false,
+      "slide2-correct"
+    ],
+    "slide2-incorrect": [
+      13,
+      4.060997732426305,
+      false,
+      "slide2-incorrect"
+    ],
+    "slide2": [
+      18,
+      33.291337868480724,
+      false,
+      "slide2"
+    ],
+    "slide3-correct": [
+      52,
+      7.411315192743764,
+      false,
+      "slide3-correct"
+    ],
+    "slide3-incorrect": [
+      60,
+      5.989977324263037,
+      false,
+      "slide3-incorrect"
+    ],
+    "slide3": [
+      66,
+      3.6041496598639498,
+      false,
+      "slide3"
+    ],
+    "slide4-aerobic": [
+      70,
+      23.75687074829932,
+      false,
+      "slide4-aerobic"
+    ],
+    "slide4-everyday": [
+      94,
+      18.376031746031742,
+      false,
+      "slide4-everyday"
+    ],
+    "slide4-sittingstill": [
+      113,
+      12.84290249433107,
+      false,
+      "slide4-sittingstill"
+    ],
+    "slide4-strength": [
+      126,
+      26.091927437641715,
+      false,
+      "slide4-strength"
+    ],
+    "slide4": [
+      153,
+      42.082131519274384,
+      false,
+      "slide4"
+    ],
+    "slide5-baseball": [
+      196,
+      1.864421768707473,
+      false,
+      "slide5-baseball"
+    ],
+    "slide5-dancing": [
+      198,
+      0.9382539682539743,
+      false,
+      "slide5-dancing"
+    ],
+    "slide5-gymnastics": [
+      199,
+      1.6726303854875368,
+      false,
+      "slide5-gymnastics"
+    ],
+    "slide5-tv": [
+      201,
+      2.0484353741496477,
+      false,
+      "slide5-tv"
+    ],
+    "slide5": [
+      204,
+      5.279297052154192,
+      false,
+      "slide5"
+    ],
+    "slide6": [
+      210,
+      28.51564625850341,
+      false,
+      "slide6"
+    ],
+    "slide7": [
+      239,
+      37.90607709750566,
+      false,
+      "slide7"
+    ],
+    "slide8-communitycenter": [
+      277,
+      13.70587301587301,
+      false,
+      "slide8-communitycenter"
+    ],
+    "slide8-home": [
+      291,
+      8.121995464852603,
+      false,
+      "slide8-home"
+    ],
+    "slide8-playground": [
+      300,
+      9.137256235827635,
+      false,
+      "slide8-playground"
+    ],
+    "slide8-snow": [
+      310,
+      6.243786848072546,
+      false,
+      "slide8-snow"
+    ],
+    "slide8-swimming": [
+      317,
+      11.979954648526075,
+      false,
+      "slide8-swimming"
+    ],
+    "slide8-yard": [
+      329,
+      6.294557823129253,
+      false,
+      "slide8-yard"
+    ],
+    "slide8": [
+      336,
+      8.223514739229017,
+      false,
+      "slide8"
+    ],
+    "slide9-carly": [
+      345,
+      5.203129251700659,
+      false,
+      "slide9-carly"
+    ],
+    "slide9-jack": [
+      351,
+      8.327800453514726,
+      false,
+      "slide9-jack"
+    ],
+    "slide9-sofia": [
+      360,
+      9.583741496598634,
+      false,
+      "slide9-sofia"
+    ],
+    "slide9-zach": [
+      370,
+      9.310975056689358,
+      false,
+      "slide9-zach"
+    ],
+    "slide9": [
+      380,
+      9.03573696145122,
+      false,
+      "slide9"
+    ]
+  }  
+}
+

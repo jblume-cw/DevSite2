@@ -1,0 +1,207 @@
+{
+  "texture": "media/default/texture.png",
+  "textureMap": "media/default/texture.json",
+  "textureKey": "texture",
+  "data": "media/default/sceneData.json",
+  "fonts" : {
+    "title-bar" : {"font": "24px VT323", "fill": "#B7F149", "align": "left", "fontWeight": "400"},
+    "title": { "font": "66px Alegreya Sans", "fill": "#FEFD9A", "align": "left", "fontWeight": "800" },
+    "default-text": { "font": "25px Alegreya Sans", "fill": "#FEFD9A", "align": "left", "fontWeight": "800" },
+    "myplate-red": { "font": "25px Alegreya Sans", "fill": "#FF5353", "align": "left", "fontWeight": "800" },
+    "myplate-orange": { "font": "25px Alegreya Sans", "fill": "#FEA33D", "align": "left", "fontWeight": "800" },
+    "myplate-blue": { "font": "25px Alegreya Sans", "fill": "#93F7FF", "align": "left", "fontWeight": "800" },
+    "myplate-green": { "font": "25px Alegreya Sans", "fill": "#6CF08D", "align": "left", "fontWeight": "800" },
+    "myplate-purple": { "font": "25px Alegreya Sans", "fill": "#D396FC", "align": "left", "fontWeight": "800" }
+  },
+  "images": {
+    "common": {
+      "title-bar": "title-bar.png",
+      "moon": "moon.png",
+      "star-bullet": "star-bullet.png",
+      "mission-health-logo": "mission health logo.png"
+    },
+    "my-plate": {
+      "myplate-sm": "myplate-sm.png",
+      "myplate-bg": "myplate-bg.png",
+      "dairy": "mplate-dairy0001.png",
+      "fruits": "myplate-fruits0001.png",
+      "protein": "myplate-protein0001.png",
+      "vegetables": "myplate-vegetables0001.png",
+      "grains": "myplate-grains0001.png",
+      "dairy-examples": "dairy-examples.png",
+      "fruits-examples": "fruits-examples.png",
+      "protein-examples": "protein-example.png",
+      "vegetables-examples": "vegetables-examples.png",
+      "grains-examples": "grains-examples.png",
+      "star-red": "star-red.png",
+      "star-blue": "star-blue.png",
+      "star-green": "star-green.png",
+      "star-orange": "star-orange.png",
+      "star-purple": "star-purple.png",
+      "felicia-soccer": "felicia-soccer.png"
+    }
+  },
+  "sceneImages": {
+    "bgspace": "sky-background.png"
+  },
+  "buttons": {
+    "home": {
+      "up": "home-btn0001.png",
+      "over": "home-btn0002.png",
+      "out": "home-btn0001.png",
+      "down": "home-btn0002.png"
+    },
+    "next": {
+      "up": "next-btn0001.png",
+      "over": "next-btn0002.png",
+      "out": "next-btn0001.png",
+      "down": "next-btn0002.png"
+    },
+    "back": {
+      "up": "back-btn0001.png",
+      "over": "back-btn0002.png",
+      "out": "back-btn0001.png",
+      "down": "back-btn0002.png"
+    },
+    "replay": {
+      "up": "replay-btn0001.png",
+      "over": "replay-btn0002.png",
+      "out": "replay-btn0001.png",
+      "down": "replay-btn0002.png"
+    },
+    "worksheet": {
+      "up": "worksheet-btn0001.png",
+      "over": "worksheet-btn0002.png",
+      "out": "worksheet-btn0001.png",
+      "down": "worksheet_btn0002.png"
+    },
+    "myplate-grains": {
+      "up": "myplate-grains0001.png",
+      "over": "myplate-grains0002.png",
+      "out": "myplate-grains0001.png",
+      "down": "myplate-grains0002.png"
+    },
+    "myplate-protein": {
+      "up": "myplate-protein0001.png",
+      "over": "myplate-protein0002.png",
+      "out": "myplate-protein0001.png",
+      "down": "myplate-protein0002.png"
+    },
+    "myplate-vegetables": {
+      "up": "myplate-vegetables0001.png",
+      "over": "myplate-vegetables0002.png",
+      "out": "myplate-vegetables0001.png",
+      "down": "myplate-vegetables0002.png"
+    },
+    "myplate-dairy": {
+      "up": "mplate-dairy0001.png",
+      "over": "mplate-dairy0002.png",
+      "out": "mplate-dairy0001.png",
+      "down": "mplate-dairy0002.png"
+    },
+    "myplate-fruits": {
+      "up": "myplate-fruits0001.png",
+      "over": "myplate-fruits0002.png",
+      "out": "myplate-fruits0001.png",
+      "down": "myplate-fruits0002.png"
+    },
+    "myplate-grains-block": {
+      "over": "grains0002.png",
+      "out": "grains0001.png"
+    },
+    "myplate-protein-block": {
+      "over": "protein0002.png",
+      "out": "protein0001.png"
+    },
+    "myplate-vegetables-block": {
+      "over": "vegetables0002.png",
+      "out": "vegetables0001.png"
+    },
+    "myplate-dairy-block": {
+      "over": "dairy0002.png",
+      "out": "dairy0001.png"
+    },
+    "myplate-fruits-block": {
+      "over": "fruits0002.png",
+      "out": "fruits0001.png"
+    }
+  },
+  "soundKey": "myplate",
+  "soundFile": [ "media/default/my-plate.m4a", "media/default/my-plate.ogg" ],
+  "sounds": {
+    "slide1": [
+      0,
+      2.5,
+      false,
+      "slide1"
+    ],
+    "slide2-bloop": [
+      3,
+      0.7199546485260768,
+      false,
+      "slide2-bloop"
+    ],
+    "slide2": [
+      4,
+      21.617097505668934,
+      false,
+      "slide2"
+    ],
+    "slide3-dairy": [
+      26,
+      13.844353741496597,
+      false,
+      "slide3-dairy"
+    ],
+    "slide3-fruits": [
+      40,
+      10.853469387755098,
+      false,
+      "slide3-fruits"
+    ],
+    "slide3-grains": [
+      51,
+      7.44489795918367,
+      false,
+      "slide3-grains"
+    ],
+    "slide3-protein": [
+      59,
+      14.3685260770975,
+      false,
+      "slide3-protein"
+    ],
+    "slide3-vegetables": [
+      74,
+      11.793877551020415,
+      false,
+      "slide3-vegetables"
+    ],
+    "slide3": [
+      86,
+      12.842222222222219,
+      false,
+      "slide3"
+    ],
+    "slide4": [
+      99,
+      42.23895691609977,
+      false,
+      "slide4"
+    ],
+    "slide5": [
+      142,
+      10.318367346938771,
+      false,
+      "slide5"
+    ],
+    "slide6": [
+      153,
+      3.97061224489795,
+      false,
+      "slide6"
+    ]
+  }
+  
+}
+
