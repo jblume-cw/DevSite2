@@ -1,0 +1,209 @@
+{
+  "texture": "media/default/texture.png",
+  "textureMap": "media/default/texture.json",
+  "textureKey": "texture",
+  "data": "media/default/sceneData.json",
+  "fonts" : {
+    "title-bar" : {"font": "24px VT323", "fill": "#B7F149", "align": "left", "fontWeight": "400"},
+    "title": { "font": "66px Alegreya Sans", "fill": "#FEFD9A", "align": "left", "fontWeight": "800" },
+    "default-text": { "font": "25px Alegreya Sans", "fill": "#FEFD9A", "align": "left", "fontWeight": "800" },
+    "large-text": { "font": "40px Alegreya Sans", "fill": "#FEFD9A", "align": "left", "fontWeight": "800" },
+    "orange-text": { "font": "25px Alegreya Sans", "fill": "#E19E50", "align": "left", "fontWeight": "700" }
+  },
+  "images": {
+    "common": {
+      "title-bar": "title-bar.png",
+      "moon": "moon.png",
+      "star-bullet": "star-bullet.png",
+      "mission-health-logo": "mission health logo.png"
+    },
+    "restaurants": {
+      "nutrition-facts-table": "nutrition facts table.jpg"
+    }
+  },
+  "sceneImages": {
+    "bgspace": "sky-background.png"
+  },
+  "buttons": {
+    "home": {
+      "up": "home-btn0001.png",
+      "over": "home-btn0002.png",
+      "out": "home-btn0001.png",
+      "down": "home-btn0002.png"
+    },
+    "next": {
+      "up": "next-btn0001.png",
+      "over": "next-btn0002.png",
+      "out": "next-btn0001.png",
+      "down": "next-btn0002.png"
+    },
+    "back": {
+      "up": "back-btn0001.png",
+      "over": "back-btn0002.png",
+      "out": "back-btn0001.png",
+      "down": "back-btn0002.png"
+    },
+    "replay": {
+      "up": "replay-btn0001.png",
+      "over": "replay-btn0002.png",
+      "out": "replay-btn0001.png",
+      "down": "replay-btn0002.png"
+    },
+    "cheeseburger-potato": {
+      "up": "cheeseburger-potato0001.png",
+      "over": "cheeseburger-potato0002.png",
+      "out": "cheeseburger-potato0001.png",
+      "down": "cheeseburger-potato0002.png"
+    },
+    "cheeseburger": {
+      "up":"cheeseburger0001.png",
+      "over":"cheeseburger0002.png",
+      "out": "cheeseburger0001.png",
+      "down": "cheeseburger0002.png"
+    },
+    "nuggets-fries": {
+      "up":"nuggets-fries0001.png",
+      "over":"nuggets-fries0002.png",
+      "out": "nuggets-fries0001.png",
+      "down": "nuggets-fries0002.png"
+    },
+    "fries": {
+      "up":"fries0001.png",
+      "over":"fries0002.png",
+      "out": "fries0001.png",
+      "down": "fries0002.png"
+    },
+    "potato": {
+      "up": "potato0001.png",
+      "over": "potato0002.png",
+      "out": "potato0001.png",
+      "down": "potato0002.png"
+    },
+    "nuggets": {
+      "up": "nuggets0001.png",
+      "over": "nuggets0002.png",
+      "out": "nuggets0001.png",
+      "down": "nuggets0002.png"
+    },
+    "salad": {
+      "up": "salad0001.png",
+      "over": "salad0002.png",
+      "out": "salad0001.png",
+      "down": "salad0002.png"
+    },
+    "salad-apple": {
+      "up": "salad-apple0001.png",
+      "over": "salad-apple0002.png",
+      "out": "salad-apple0001.png",
+      "down": "salad-apple0002.png"
+    },
+    "sandwich": {
+      "up": "sandwich0001.png",
+      "over": "sandwich0002.png",
+      "out": "sandwich0001.png",
+      "down": "sandwich0002.png"
+    }
+  },
+  "soundKey": "restaurants",
+  "soundFile": [ "media/default/restaurants.m4a", "media/default/restaurants.ogg" ],
+  "sounds": {
+    "slide3-split-part1": [
+      55,
+      36.5,
+      false,
+      "slide3"
+    ],
+    "slide3-split-part2": [
+      91.5,
+      19.41156462585033,
+      false,
+      "slide3"
+    ],
+    "slide1": [
+      0,
+      1.2580272108843538,
+      false,
+      "slide1"
+    ],
+    "slide2-cheeseburger": [
+      2,
+      6.29015873015873,
+      false,
+      "slide2-cheeseburger"
+    ],
+    "slide2-fries": [
+      9,
+      4.938956916099773,
+      false,
+      "slide2-fries"
+    ],
+    "slide2-nuggets": [
+      14,
+      6.196984126984127,
+      false,
+      "slide2-nuggets"
+    ],
+    "slide2-potato": [
+      21,
+      6.709501133786848,
+      false,
+      "slide2-potato"
+    ],
+    "slide2-salad": [
+      28,
+      10.297233560090703,
+      false,
+      "slide2-salad"
+    ],
+    "slide2-sandwich": [
+      39,
+      6.616326530612241,
+      false,
+      "slide2-sandwich"
+    ],
+    "slide2": [
+      46,
+      8.713061224489792,
+      false,
+      "slide2"
+    ],
+    "slide3": [
+      55,
+      55.91156462585033,
+      false,
+      "slide3"
+    ],
+    "slide4-cheeseburgerpotato": [
+      111,
+      7.188548752834464,
+      false,
+      "slide4-cheeseburgerpotato"
+    ],
+    "slide4-nuggetsfries": [
+      119,
+      5.917414965986396,
+      false,
+      "slide4-nuggetsfries"
+    ],
+    "slide4-saladapples": [
+      125,
+      10.017664399092979,
+      false,
+      "slide4-saladapples"
+    ],
+    "slide4": [
+      136,
+      6.42993197278912,
+      false,
+      "slide4"
+    ],
+    "slide5": [
+      143,
+      3.8672789115646253,
+      false,
+      "slide5"
+    ]
+  }
+  
+}
+

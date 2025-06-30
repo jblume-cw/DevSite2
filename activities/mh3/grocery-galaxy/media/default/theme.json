@@ -1,0 +1,352 @@
+{
+  "autoScale": true,
+  "texture": "media/default/texture.png",
+  "textureMap": "media/default/texture.json",
+  "textureKey": "wwtbhTextureKey",
+  "menuColor": "0xffffff",
+  "buttonFrames": [
+    "continue_shopping0001.png", "continue_shopping0002.png", "continue_shopping0003.png", "continue_shopping0004.png",
+    "continue_shopping0005.png", "continue_shopping0006.png", "continue_shopping0007.png", "continue_shopping0008.png",
+    "continue_shopping0009.png", "continue_shopping0010.png", "continue_shopping0011.png", "continue_shopping0012.png",
+    "continue_shopping0013.png", "continue_shopping0014.png", "continue_shopping0015.png", "continue_shopping0016.png",
+    "continue_shopping0017.png", "continue_shopping0018.png", "continue_shopping0019.png", "continue_shopping0020.png",
+    "continue_shopping0021.png", "continue_shopping0022.png", "continue_shopping0023.png"
+  ],
+  "summary": {
+    "background": "checkout-bg.png",
+    "foreground": "receipt-end.png",
+    "winText": "Way to go! Your meals and snacks are going to be super-healthy!",
+    "loseText": "Unfortunately, you didn’t create a balanced and healthy menu.\n\nClick on 'Continue Shopping' and select some different foods!"
+  },
+  "menu": {
+    "background": "splash-bg.png",
+    "logo": "logo-small.png",
+    "foreground": "logo-on-paper.png",
+    "receipt": "instructions-receipt.png",
+    "textTitle": "Instructions",
+    "text": "The outer space grocery store is just like the ones on Earth.\n\nIt has all kinds of Go Foods, Whoa Foods, and Slow Foods.\n\nYou'll have to pick out a good variety of foods for your breakfast, lunch, and dinner, plus snacks!\n\nYou can pick foods from different sections in the store. When you're finished shopping, click the shopping cart to see how you've done.\n\nClick play to get started."
+  },
+  "play": {
+    "background": "department-background.png",
+    "bgMusic": "dudleydowrong30"
+  },
+  "door": "fridge_door.png",
+  "sign": "department-sign.png",
+  "shoppingList": {
+    "background": "list.png",
+    "containers": [
+      {
+        "name": "breakfast", "x": 418, "y": 88, "images": ["list-drop-area0001.png", "list-drop-area0002.png"]
+      },
+      {
+        "name": "lunch", "x": 421, "y": 185, "images": ["list-drop-area0001.png", "list-drop-area0002.png"]
+      },
+      {
+        "name": "dinner", "x": 423, "y": 281, "images": ["list-drop-area0001.png", "list-drop-area0002.png"]
+      },
+      {
+        "name": "snacks", "x": 425, "y": 373, "images": ["list-drop-area-short0001.png", "list-drop-area-short0002.png"]
+      }
+    ],
+    "slots": [
+      { "type": "breakfast", "x": 427, "y": 96},
+      { "type": "breakfast", "x": 533, "y": 96},
+      { "type": "breakfast", "x": 427, "y": 125},
+      { "type": "breakfast", "x": 533, "y": 125},
+      { "type": "lunch", "x": 427, "y": 191},
+      { "type": "lunch", "x": 533, "y": 191},
+      { "type": "lunch", "x": 427, "y": 222},
+      { "type": "lunch", "x": 533, "y": 222},
+      { "type": "dinner", "x": 427, "y": 291},
+      { "type": "dinner", "x": 533, "y": 291},
+      { "type": "dinner", "x": 427, "y": 318},
+      { "type": "dinner", "x": 533, "y": 318},
+      { "type": "snacks", "x": 427, "y": 381},
+      { "type": "snacks", "x": 533, "y": 381}
+    ]
+  },
+  "categories": [
+    {
+      "title": "Packaged Foods",
+      "name": "packaged",
+      "button": {
+        "images": ["packaged foods0002.png", "packaged foods0001.png"],
+        "x": 10, "y": 391
+      },
+      "background": { "image": "packaged-shelves.png", "door": false, "x": 0, "y": 25}
+    },
+    {
+      "title": "Freezer",
+      "name": "freezer",
+      "button": {
+        "images": ["freezer0002.png", "freezer0001.png"],
+        "x": 140, "y": 391
+      },
+      "background":{ "image": "packaged-shelves.png", "door": true, "x": 0, "y": 25}
+    },
+    {
+      "title": "Produce",
+      "name": "produce",
+      "button": {
+        "images": ["produce0002.png", "produce0001.png"],
+        "x": 270, "y": 391
+      },
+      "background":{ "image": "produce-bg.png", "door": false, "x": 0, "y": 128}
+    },
+    {
+      "title": "Breads",
+      "name": "bread",
+      "button": {
+        "images": ["breads0002.png", "breads0001.png"],
+        "x": 10, "y": 433
+      },
+      "background":{ "image": "packaged-shelves.png", "door": false, "x": 0, "y": 25}
+    },
+    {
+      "title": "Beverage",
+      "name": "beverage",
+      "button": {
+        "images": ["beverage0002.png", "beverage0001.png"],
+        "x": 140, "y": 433
+      },
+      "background": { "image":"shelves-beverage.png", "door": false, "x": 0, "y": 25}
+    },
+    {
+      "title": "Meat & Dairy",
+      "name": "meatdairy",
+      "button": {
+        "images": ["meat dairy0002.png", "meat dairy0001.png"],
+        "x": 270, "y": 433
+      },
+      "background":{ "image": "meats-dairy-shelves.png", "door": true, "x": 0, "y": 15}
+    }
+  ],
+  "foods": {
+    "packaged": [
+     { "name": "whole wheat pasta", "value": 50, "image": "whole_wheat_pasta.png", "x": 14, "y": 78 },
+     { "name": "enriched pasta", "value": 50, "image": "enriched_pasta.png", "x": 95, "y": 79 },
+     { "name": "mac and cheese", "value": -20, "image": "mac_and_cheese_box.png", "x": 175, "y": 67 },
+      { "name": "high fiber cereal", "value": 50, "image": "high_fiber.png", "x": 235, "y": 65 },
+      { "name": "sweetened cereal", "value": 30, "image": "sweetened_cereal.png", "x": 296, "y": 66 },
+      { "name": "fruit snacks", "value": -50, "image": "fruit_snacks.png", "x": 356, "y": 64 },
+      { "name": "peaches in juice", "value": 50, "image": "canned_peaches.png", "x": 26, "y": 198 },
+      { "name": "pears in syrup", "value": 40, "image": "canned_pears_inSyrup.png", "x": 72, "y": 202 },
+      { "name": "canned green beans", "value": 50, "image": "canned_green_beans.png", "x": 121, "y": 203 },
+      { "name": "chicken noodle soup", "value": 40, "image": "chicken_noodle_soup.png", "x": 170, "y": 190 },
+      { "name": "mixed nuts", "value": 30, "image": "mixed_nuts.png", "x": 223, "y": 205 },
+      { "name": "pasta sauce", "value": 40, "image": "pasta sauce.png", "x": 277, "y": 180 },
+      { "name": "peanut butter", "value": 30, "image": "peanut butter.png", "x": 324, "y": 177 },
+      { "name": "jelly", "value": 20, "image": "jelly.png", "x": 371, "y": 186 },
+      { "name": "granola bars", "value": 20, "image": "plain_granola_bars.png", "x": 32, "y": 296 },
+      { "name": "toaster pastries", "value": -50, "image": "toaster_pastries.png", "x": 106, "y": 299 },
+      { "name": "chocolate cookies", "value": -50, "image": "choc_sandwich_cookies.png", "x": 178, "y": 303 },
+      { "name": "pretzels", "value": 20, "image": "pretzels.png", "x": 272, "y": 267 },
+      { "name": "potato chips", "value": -50, "image": "potato_chips.png", "x": 341, "y": 264 }
+   ],
+    "freezer": [
+     { "name": "frozen pizza", "value": -50, "image": "frozen_pizza.png", "x": 41, "y": 80 },
+     { "name": "fish sticks", "value": -40, "image": "fish_sticks.png", "x": 200, "y": 83 },
+     { "name": "chicken nuggets", "value": -40, "image": "chicken_nuggets.png", "x": 268, "y": 82 },
+     { "name": "french fries", "value": -50, "image": "french_fries.png", "x": 341, "y": 54 },
+     { "name": "whole grain waffles", "value": 50, "image": "whole_grain_waffles.png", "x": 58, "y": 168 },
+     { "name": "frozen yogurt", "value": -40, "image": "frozen_yogurt.png", "x": 151, "y": 188 },
+     { "name": "vanilla ice cream", "value": -50, "image": "vanilla_ice_cream.png", "x": 244, "y": 187 },
+     { "name": "waffles", "value": 30, "image": "plain_waffles.png", "x": 333, "y": 169 },
+     { "name": "frozen fruit", "value": 50, "image": "frozen_fruit.png", "x": 44, "y": 262 },
+     { "name": "broccoli", "value": 50, "image": "plain_broccoli.png", "x": 136, "y": 266 },
+     { "name": "green beans", "value": 50, "image": "green_beans.png", "x": 234, "y": 266 },
+     { "name": "broccoli in cheese sauce", "value": 10, "image": "broccoli_in_cheese.png", "x": 329, "y": 263 }
+  ],
+    "produce": [
+     { "name": "strawberry", "value": 50, "image": "strawberries.png", "x": 10, "y": 126 },
+      { "name": "raspberries", "value": 50, "image": "red_raspberries.png", "x": 73, "y": 114 },
+      { "name": "blueberries", "value": 50, "image": "blueberries.png", "x": 140, "y": 125 },
+      { "name": "tomatoes", "value": 50, "image": "tomatoes.png", "x": 225, "y": 120 },
+      { "name": "bag salad", "value": 50, "image": "bag_salad.png", "x": 295, "y": 128 },
+      { "name": "baby carrots", "value": 50, "image": "baby_carrots.png", "x": 359, "y": 143 },
+     { "name": "apple", "value": 50, "image": "apples.png", "x": 4, "y": 224 },
+      { "name": "orange", "value": 50, "image": "oranges.png", "x": 80, "y": 230 },
+      { "name": "banana", "value": 50, "image": "bananas.png", "x": 146, "y": 227 },
+      { "name": "broccoli", "value": 50, "image": "broccoli.png", "x": 215, "y": 228 },
+      { "name": "corn", "value": 50, "image": "corn_cobs.png", "x": 263, "y": 226 },
+      { "name": "celery", "value": 50, "image": "celeries.png", "x": 323, "y": 223 },
+     { "name": "spinach", "value": 50, "image": "spinach.png", "x": 364, "y": 227 }
+    ],
+    "bread": [
+     { "name": "white bread", "value": 20, "image": "white_bread.png", "x": 18, "y": 63 },
+     { "name": "whole grain bread", "value": 50, "image": "wholegrain_break.png", "x": 116, "y": 66 },
+     { "name": "whole wheat english muffins", "value": 50, "image": "wheat_engmuffins.png", "x": 215, "y": 75 },
+     { "name": "english muffins", "value": 20, "image": "plain_english_muffins.png", "x": 299, "y": 73 },
+      { "name": "hot dog buns", "value": 20, "image": "plain_hotdog_buns.png", "x": 38, "y": 179 },
+      { "name": "whole wheat hot dog buns", "value": 50, "image": "wheat_hotdog_buns.png", "x": 128, "y": 183 },
+      { "name": "corn tortillas", "value": 20, "image": "corn_tortillas.png", "x": 218, "y": 171 },
+      { "name": "flour tortillas", "value": 20, "image": "flour_tortillas.png", "x": 282, "y": 171 },
+      { "name": "whole wheat tortillas", "value": 50, "image": "whole_wheat_tortillas.png", "x": 342, "y": 171 },
+      { "name": "cake donuts", "value": -50, "image": "cake_donuts.png", "x": 41, "y": 300 },
+      { "name": "glazed donuts", "value": -50, "image": "glazed_donuts.png", "x": 134, "y": 307 },
+      { "name": "brownies", "value": -50, "image": "brownies.png", "x": 230, "y": 322 },
+      { "name": "cookies", "value": -50, "image": "bakery_cookies.png", "x": 325, "y": 321 }
+    ],
+    "beverage": [
+      { "name": "water", "value": 0, "image": "plain_bottled_water.png", "x": 52, "y": 111 },
+      { "name": "grape soda", "value": 0, "image": "grape_soda.png", "x": 145, "y": 120 },
+      { "name": "lemonade", "value": 0, "image": "lemonade.png", "x": 240, "y": 116 },
+      { "name": "energy drink", "value": 0, "image": "energy_drink.png", "x": 340, "y":117 },
+      { "name": "diet cola", "value": 0, "image": "diet_cola.png", "x": 52, "y": 252 },
+      { "name": "grape juice", "value": 0, "image": "grape_juice.png", "x": 143, "y": 266 },
+      { "name": "sports drink", "value": 0, "image": "sports_drink.png", "x": 242, "y": 254 },
+      { "name": "diet root beer", "value": 0, "image": "diet_root_beer.png", "x": 337, "y": 262 }
+    ],
+    "meatdairy": [
+      { "name": "tub margarine", "value": 20, "image": "margarine_tub.png", "x": 35, "y": 59 },
+      { "name": "butter", "value": -30, "image": "butter.png", "x": 95, "y": 59 },
+      { "name": "cheese", "value": 20, "image": "cheddar_cheese.png", "x": 158, "y": 61 },
+      { "name": "eggs", "value": 50, "image": "eggs.png", "x": 33, "y": 126 },
+      { "name": "pudding", "value": -20, "image": "pudding.png", "x": 93, "y": 124 },
+      { "name": "light yogurt", "value": 50, "image": "light_yogurt.png", "x": 144, "y": 116 },
+      { "name": "yogurt", "value": 30, "image": "yogurt.png", "x": 191, "y": 119 },
+      { "name": "reduced fat cottage cheese", "value": 30, "image": "cottage_cheese_noFat.png", "x": 232, "y": 111 },
+      { "name": "whole milk", "value": -20, "image": "milk_whole.png", "x": 287, "y": 73 },
+      { "name": "skim milk", "value": 50, "image": "milk_skim.png", "x": 329, "y": 72 },
+      { "name": "chocolate milk", "value": -20, "image": "milk_chocolate.png", "x": 371, "y": 72 },
+      { "name": "breakfast sausage links", "value": -30, "image": "breakfast_sausage_links.png", "x": 35, "y": 200 },
+      { "name": "hot dogs", "value": -40, "image": "hot_dogs.png", "x": 104, "y": 218 },
+      { "name": "corn dogs", "value": -50, "image": "corn_dogs.png", "x": 168, "y": 203 },
+      { "name": "deli turkey", "value": 20, "image": "delimeat_turkey.png", "x": 239, "y": 191 },
+      { "name": "shrimp", "value": 40, "image": "shrimp.png", "x": 290, "y": 180 },
+      { "name": "bacon", "value": -50, "image": "bacon.png", "x": 355, "y": 184 },
+      { "name": "boneless skinless chicken", "value": 50, "image": "bonless_skinless_chicken.png", "x": 22, "y": 278 },
+      { "name": "pork chop", "value": 30, "image": "pork_chop.png", "x": 91, "y": 284 },
+      { "name": "lean hamburgers", "value": 30, "image": "lean_hamburgers.png", "x": 165, "y": 279 },
+      { "name": "breaded chicken patties", "value": -40, "image": "breaded_chick_patties.png", "x": 251, "y": 279 },
+      { "name": "cod", "value": 50, "image": "cod.png", "x": 326, "y": 276 }
+    ]
+},
+  "buttons": {
+    "skip": {
+      "over": "skip button0002.png",
+      "out": "skip button0001.png",
+      "down": "skip button0002.png",
+      "up": "skip button0001.png"
+    },
+    "selectItem": {
+      "over": "check_btn0002.png",
+      "out": "check_btn0001.png",
+      "down": "check_btn0002.png",
+      "up": "check_btn0001.png"
+    },
+    "removeItem": {
+      "over": "remove0002.png",
+      "out": "remove0001.png",
+      "down": "remove0002.png",
+      "up": "remove0001.png"
+    },
+    "checkout": {
+      "over": "checkout0002.png",
+      "out": "checkout0001.png",
+      "down": "checkout0002.png",
+      "up": "checkout0001.png"
+    },
+    "begin": {
+      "over": "play_game0002.png",
+      "out": "play_game0001.png",
+      "down": "play_game0002.png",
+      "up": "play_game0001.png"
+    }
+  },
+  "fonts": {
+    "sign": {
+      "font": "21px 'Alegreya Sans'",
+      "fill": "white",
+      "align": "center",
+      "fontWeight": "normal"
+    },
+    "normal": {
+      "font": "12px Roboto ",
+      "fill": "black",
+      "align": "left",
+      "fontWeight": "700",
+      "wordWrap": true
+    },
+    "itemList": {
+      "font": "11px Roboto",
+      "fill": "black",
+      "align": "left",
+      "fontWeight": "700",
+      "wordWrap": true,
+      "wordWrapWidth": 83
+    },
+    "itemListSelected": {
+      "font": "11px Roboto",
+      "fill": "#CE3431",
+      "align": "left",
+      "fontWeight": "700",
+      "wordWrap": true,
+      "wordWrapWidth": 83
+    },
+    "gameOver": {
+      "font": "26pt 'VT323', monospace",
+      "fill": "#330033",
+      "align": "left",
+      "fontWeight": "normal"
+    },
+    "summary": {
+      "font": "13pt 'VT323', monospace",
+      "fill": "#330033",
+      "align": "left",
+      "wordWrap": true
+    },
+    "instructionsTitle": {
+      "font": "26pt 'VT323', monospace",
+      "fill": "#330033",
+      "align": "left"
+    },
+    "instructions": {
+      "font": "15pt 'VT323', monospace",
+      "fill": "#330033",
+      "align": "left",
+      "wordWrap": true,
+      "wordWrapWidth": "110px"
+    },
+    "score": {
+      "font": "28pt 'VT323', monospace",
+      "fill": "#00CC00",
+      "align": "left",
+      "fontWeight": "normal"
+    }
+  },
+  "soundKey": "ggSounds",
+  "soundFile": [ "media/default/grocery-galaxy.m4a", "media/default/grocery-galaxy.ogg" ],
+  "sounds": {
+    "ittakesawholeday": [
+      0,
+      12.208866213151927,
+      false,
+      "ittakesawholeday"
+    ],
+    "theouterspace": [
+      13,
+      26.79764172335601,
+      false,
+      "theouterspace"
+    ],
+    "unfortunately": [
+      40,
+      8.533151927437643,
+      false,
+      "unfortunately"
+    ],
+    "waytogo": [
+      49,
+      4.5,
+      false,
+      "waytogo"
+    ],
+    "dudleydowrong30": [
+      54,
+      20.48120181405895,
+      true,
+      "dudleydowrong30 -8.5db"
+    ]
+  }
+}

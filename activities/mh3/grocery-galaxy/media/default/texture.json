@@ -1,0 +1,1228 @@
+{"frames": {
+
+"apples.png":
+{
+	"frame": {"x":864,"y":1564,"w":63,"h":65},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":63,"h":65},
+	"sourceSize": {"w":63,"h":65}
+},
+"baby_carrots.png":
+{
+	"frame": {"x":1449,"y":1618,"w":61,"h":39},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":61,"h":39},
+	"sourceSize": {"w":61,"h":39}
+},
+"bacon.png":
+{
+	"frame": {"x":1982,"y":320,"w":45,"h":69},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":45,"h":69},
+	"sourceSize": {"w":45,"h":69}
+},
+"bag_salad.png":
+{
+	"frame": {"x":1666,"y":1415,"w":57,"h":55},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":57,"h":55},
+	"sourceSize": {"w":57,"h":55}
+},
+"bakery_cookies.png":
+{
+	"frame": {"x":864,"y":1631,"w":88,"h":24},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":4,"y":0,"w":88,"h":24},
+	"sourceSize": {"w":92,"h":26}
+},
+"bananas.png":
+{
+	"frame": {"x":1995,"y":391,"w":52,"h":66},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":52,"h":66},
+	"sourceSize": {"w":52,"h":66}
+},
+"beverage0001.png":
+{
+	"frame": {"x":410,"y":1508,"w":125,"h":36},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":125,"h":36},
+	"sourceSize": {"w":125,"h":36}
+},
+"beverage0002.png":
+{
+	"frame": {"x":405,"y":1546,"w":125,"h":36},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":125,"h":36},
+	"sourceSize": {"w":125,"h":36}
+},
+"blueberries.png":
+{
+	"frame": {"x":1339,"y":1459,"w":71,"h":55},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":71,"h":55},
+	"sourceSize": {"w":71,"h":55}
+},
+"bonless_skinless_chicken.png":
+{
+	"frame": {"x":1745,"y":695,"w":82,"h":83},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":82,"h":83},
+	"sourceSize": {"w":82,"h":83}
+},
+"breaded_chick_patties.png":
+{
+	"frame": {"x":1830,"y":608,"w":80,"h":84},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":80,"h":84},
+	"sourceSize": {"w":80,"h":84}
+},
+"breads0001.png":
+{
+	"frame": {"x":405,"y":1584,"w":125,"h":36},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":125,"h":36},
+	"sourceSize": {"w":125,"h":36}
+},
+"breads0002.png":
+{
+	"frame": {"x":332,"y":1622,"w":125,"h":36},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":125,"h":36},
+	"sourceSize": {"w":125,"h":36}
+},
+"breakfast_sausage_links.png":
+{
+	"frame": {"x":1592,"y":1493,"w":66,"h":52},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":0,"w":66,"h":52},
+	"sourceSize": {"w":66,"h":53}
+},
+"broccoli.png":
+{
+	"frame": {"x":1895,"y":1447,"w":46,"h":60},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":46,"h":60},
+	"sourceSize": {"w":46,"h":60}
+},
+"broccoli_in_cheese.png":
+{
+	"frame": {"x":1910,"y":156,"w":70,"h":80},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":70,"h":80},
+	"sourceSize": {"w":70,"h":80}
+},
+"brownies.png":
+{
+	"frame": {"x":1412,"y":1537,"w":88,"h":25},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":4,"y":0,"w":88,"h":25},
+	"sourceSize": {"w":92,"h":27}
+},
+"butter.png":
+{
+	"frame": {"x":1339,"y":1622,"w":55,"h":36},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":55,"h":36},
+	"sourceSize": {"w":55,"h":36}
+},
+"button-screen.png":
+{
+	"frame": {"x":1,"y":1432,"w":407,"h":94},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":407,"h":94},
+	"sourceSize": {"w":407,"h":94}
+},
+"cake_donuts.png":
+{
+	"frame": {"x":929,"y":1530,"w":89,"h":43},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":0,"w":89,"h":43},
+	"sourceSize": {"w":89,"h":45}
+},
+"canned_green_beans.png":
+{
+	"frame": {"x":591,"y":1621,"w":51,"h":37},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":51,"h":37},
+	"sourceSize": {"w":51,"h":37}
+},
+"canned_peaches.png":
+{
+	"frame": {"x":644,"y":1621,"w":51,"h":37},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":0,"w":51,"h":37},
+	"sourceSize": {"w":51,"h":38}
+},
+"canned_pears_inSyrup.png":
+{
+	"frame": {"x":1396,"y":1622,"w":51,"h":36},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":51,"h":36},
+	"sourceSize": {"w":51,"h":36}
+},
+"celeries.png":
+{
+	"frame": {"x":1950,"y":1592,"w":40,"h":66},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":40,"h":66},
+	"sourceSize": {"w":40,"h":66}
+},
+"check_btn0001.png":
+{
+	"frame": {"x":1931,"y":893,"w":20,"h":15},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":1,"y":3,"w":20,"h":15},
+	"sourceSize": {"w":108,"h":23}
+},
+"check_btn0002.png":
+{
+	"frame": {"x":1110,"y":1526,"w":20,"h":17},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":1,"y":2,"w":20,"h":17},
+	"sourceSize": {"w":108,"h":23}
+},
+"checkout-bg.png":
+{
+	"frame": {"x":1,"y":1,"w":640,"h":480},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":640,"h":480},
+	"sourceSize": {"w":640,"h":480}
+},
+"checkout0001.png":
+{
+	"frame": {"x":697,"y":1621,"w":97,"h":31},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":0,"w":97,"h":31},
+	"sourceSize": {"w":98,"h":34}
+},
+"checkout0002.png":
+{
+	"frame": {"x":697,"y":1621,"w":97,"h":31},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":0,"w":97,"h":31},
+	"sourceSize": {"w":98,"h":34}
+},
+"cheddar_cheese.png":
+{
+	"frame": {"x":1566,"y":1600,"w":51,"h":31},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":51,"h":31},
+	"sourceSize": {"w":51,"h":31}
+},
+"chicken_noodle_soup.png":
+{
+	"frame": {"x":1286,"y":1453,"w":51,"h":56},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":1,"w":51,"h":56},
+	"sourceSize": {"w":51,"h":57}
+},
+"chicken_nuggets.png":
+{
+	"frame": {"x":1925,"y":787,"w":62,"h":51},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":7,"y":4,"w":62,"h":51},
+	"sourceSize": {"w":69,"h":55}
+},
+"choc_sandwich_cookies.png":
+{
+	"frame": {"x":1745,"y":862,"w":96,"h":46},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":0,"w":96,"h":46},
+	"sourceSize": {"w":96,"h":49}
+},
+"cod.png":
+{
+	"frame": {"x":929,"y":1357,"w":83,"h":84},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":83,"h":84},
+	"sourceSize": {"w":83,"h":84}
+},
+"continue_shopping0001.png":
+{
+	"frame": {"x":1910,"y":402,"w":83,"h":54},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":49,"w":83,"h":54},
+	"sourceSize": {"w":83,"h":105}
+},
+"continue_shopping0002.png":
+{
+	"frame": {"x":779,"y":1564,"w":83,"h":54},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":49,"w":83,"h":54},
+	"sourceSize": {"w":83,"h":105}
+},
+"continue_shopping0003.png":
+{
+	"frame": {"x":1201,"y":1509,"w":83,"h":47},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":56,"w":83,"h":47},
+	"sourceSize": {"w":83,"h":105}
+},
+"continue_shopping0004.png":
+{
+	"frame": {"x":1725,"y":1447,"w":83,"h":41},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":62,"w":83,"h":41},
+	"sourceSize": {"w":83,"h":105}
+},
+"continue_shopping0005.png":
+{
+	"frame": {"x":1810,"y":1447,"w":83,"h":46},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":37,"w":83,"h":46},
+	"sourceSize": {"w":83,"h":105}
+},
+"continue_shopping0006.png":
+{
+	"frame": {"x":1507,"y":1493,"w":83,"h":51},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":18,"w":83,"h":51},
+	"sourceSize": {"w":83,"h":105}
+},
+"continue_shopping0007.png":
+{
+	"frame": {"x":1719,"y":1490,"w":83,"h":52},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":8,"w":83,"h":52},
+	"sourceSize": {"w":83,"h":105}
+},
+"continue_shopping0008.png":
+{
+	"frame": {"x":1804,"y":1495,"w":83,"h":53},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":4,"w":83,"h":53},
+	"sourceSize": {"w":83,"h":105}
+},
+"continue_shopping0009.png":
+{
+	"frame": {"x":1745,"y":608,"w":83,"h":85},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":8,"w":83,"h":85},
+	"sourceSize": {"w":83,"h":105}
+},
+"continue_shopping0010.png":
+{
+	"frame": {"x":779,"y":1564,"w":83,"h":54},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":49,"w":83,"h":54},
+	"sourceSize": {"w":83,"h":105}
+},
+"continue_shopping0011.png":
+{
+	"frame": {"x":1201,"y":1509,"w":83,"h":47},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":56,"w":83,"h":47},
+	"sourceSize": {"w":83,"h":105}
+},
+"continue_shopping0012.png":
+{
+	"frame": {"x":1725,"y":1447,"w":83,"h":41},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":62,"w":83,"h":41},
+	"sourceSize": {"w":83,"h":105}
+},
+"continue_shopping0013.png":
+{
+	"frame": {"x":779,"y":1564,"w":83,"h":54},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":49,"w":83,"h":54},
+	"sourceSize": {"w":83,"h":105}
+},
+"continue_shopping0014.png":
+{
+	"frame": {"x":1502,"y":1546,"w":83,"h":47},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":56,"w":83,"h":47},
+	"sourceSize": {"w":83,"h":105}
+},
+"continue_shopping0015.png":
+{
+	"frame": {"x":1587,"y":1547,"w":83,"h":51},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":52,"w":83,"h":51},
+	"sourceSize": {"w":83,"h":105}
+},
+"continue_shopping0016.png":
+{
+	"frame": {"x":1804,"y":1550,"w":83,"h":53},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":50,"w":83,"h":53},
+	"sourceSize": {"w":83,"h":105}
+},
+"continue_shopping0017.png":
+{
+	"frame": {"x":779,"y":1564,"w":83,"h":54},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":49,"w":83,"h":54},
+	"sourceSize": {"w":83,"h":105}
+},
+"continue_shopping0018.png":
+{
+	"frame": {"x":929,"y":1575,"w":83,"h":54},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":49,"w":83,"h":54},
+	"sourceSize": {"w":83,"h":105}
+},
+"continue_shopping0019.png":
+{
+	"frame": {"x":1957,"y":459,"w":83,"h":54},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":49,"w":83,"h":54},
+	"sourceSize": {"w":83,"h":105}
+},
+"continue_shopping0020.png":
+{
+	"frame": {"x":1960,"y":632,"w":83,"h":54},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":49,"w":83,"h":54},
+	"sourceSize": {"w":83,"h":105}
+},
+"continue_shopping0021.png":
+{
+	"frame": {"x":1201,"y":1453,"w":83,"h":54},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":49,"w":83,"h":54},
+	"sourceSize": {"w":83,"h":105}
+},
+"continue_shopping0022.png":
+{
+	"frame": {"x":1719,"y":1544,"w":83,"h":54},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":49,"w":83,"h":54},
+	"sourceSize": {"w":83,"h":105}
+},
+"continue_shopping0023.png":
+{
+	"frame": {"x":1719,"y":1600,"w":83,"h":54},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":49,"w":83,"h":54},
+	"sourceSize": {"w":83,"h":105}
+},
+"corn_cobs.png":
+{
+	"frame": {"x":1132,"y":1526,"w":57,"h":61},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":57,"h":61},
+	"sourceSize": {"w":57,"h":61}
+},
+"corn_dogs.png":
+{
+	"frame": {"x":1956,"y":735,"w":68,"h":50},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":3,"y":0,"w":68,"h":50},
+	"sourceSize": {"w":71,"h":50}
+},
+"corn_tortillas.png":
+{
+	"frame": {"x":1959,"y":515,"w":70,"h":71},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":70,"h":71},
+	"sourceSize": {"w":70,"h":71}
+},
+"cottage_cheese_noFat.png":
+{
+	"frame": {"x":1989,"y":787,"w":50,"h":51},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":50,"h":51},
+	"sourceSize": {"w":50,"h":51}
+},
+"delimeat_turkey.png":
+{
+	"frame": {"x":1111,"y":1595,"w":49,"h":63},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":49,"h":63},
+	"sourceSize": {"w":49,"h":63}
+},
+"department-background.png":
+{
+	"frame": {"x":1,"y":483,"w":640,"h":480},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":640,"h":480},
+	"sourceSize": {"w":640,"h":480}
+},
+"department-sign.png":
+{
+	"frame": {"x":410,"y":1432,"w":164,"h":74},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":0,"w":164,"h":74},
+	"sourceSize": {"w":167,"h":76}
+},
+"diet_cola.png":
+{
+	"frame": {"x":1982,"y":225,"w":45,"h":93},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":45,"h":93},
+	"sourceSize": {"w":45,"h":93}
+},
+"diet_root_beer.png":
+{
+	"frame": {"x":1934,"y":1509,"w":42,"h":81},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":42,"h":81},
+	"sourceSize": {"w":42,"h":81}
+},
+"eggs.png":
+{
+	"frame": {"x":1339,"y":1516,"w":71,"h":34},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":71,"h":34},
+	"sourceSize": {"w":71,"h":34}
+},
+"energy_drink.png":
+{
+	"frame": {"x":1996,"y":72,"w":44,"h":82},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":44,"h":82},
+	"sourceSize": {"w":44,"h":82}
+},
+"enriched_pasta.png":
+{
+	"frame": {"x":1398,"y":1564,"w":73,"h":52},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":5,"y":3,"w":73,"h":52},
+	"sourceSize": {"w":78,"h":55}
+},
+"fish_sticks.png":
+{
+	"frame": {"x":1931,"y":840,"w":61,"h":51},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":8,"y":4,"w":61,"h":51},
+	"sourceSize": {"w":69,"h":55}
+},
+"flour_tortillas.png":
+{
+	"frame": {"x":1057,"y":1453,"w":70,"h":71},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":70,"h":71},
+	"sourceSize": {"w":70,"h":71}
+},
+"freezer0001.png":
+{
+	"frame": {"x":459,"y":1622,"w":125,"h":36},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":125,"h":36},
+	"sourceSize": {"w":125,"h":36}
+},
+"freezer0002.png":
+{
+	"frame": {"x":1086,"y":1377,"w":125,"h":36},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":125,"h":36},
+	"sourceSize": {"w":125,"h":36}
+},
+"french_fries.png":
+{
+	"frame": {"x":1745,"y":780,"w":70,"h":80},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":70,"h":80},
+	"sourceSize": {"w":70,"h":80}
+},
+"fridge_door.png":
+{
+	"frame": {"x":1745,"y":1,"w":163,"h":455},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":1,"w":163,"h":455},
+	"sourceSize": {"w":166,"h":460}
+},
+"frozen_fruit.png":
+{
+	"frame": {"x":332,"y":1528,"w":71,"h":80},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":71,"h":80},
+	"sourceSize": {"w":71,"h":80}
+},
+"frozen_pizza.png":
+{
+	"frame": {"x":1101,"y":837,"w":162,"h":53},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":162,"h":53},
+	"sourceSize": {"w":162,"h":53}
+},
+"frozen_yogurt.png":
+{
+	"frame": {"x":1286,"y":1511,"w":51,"h":53},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":1,"w":51,"h":53},
+	"sourceSize": {"w":51,"h":54}
+},
+"fruit_snacks.png":
+{
+	"frame": {"x":1221,"y":1558,"w":57,"h":68},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":57,"h":68},
+	"sourceSize": {"w":57,"h":68}
+},
+"glazed_donuts.png":
+{
+	"frame": {"x":1960,"y":588,"w":87,"h":42},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":0,"w":87,"h":42},
+	"sourceSize": {"w":87,"h":45}
+},
+"grape_juice.png":
+{
+	"frame": {"x":1889,"y":1509,"w":43,"h":82},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":43,"h":82},
+	"sourceSize": {"w":43,"h":82}
+},
+"grape_soda.png":
+{
+	"frame": {"x":1992,"y":1576,"w":42,"h":81},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":42,"h":81},
+	"sourceSize": {"w":42,"h":81}
+},
+"green_beans.png":
+{
+	"frame": {"x":1910,"y":238,"w":70,"h":80},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":70,"h":80},
+	"sourceSize": {"w":70,"h":80}
+},
+"high_fiber.png":
+{
+	"frame": {"x":1660,"y":1472,"w":57,"h":69},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":2,"w":57,"h":69},
+	"sourceSize": {"w":57,"h":71}
+},
+"hot_dogs.png":
+{
+	"frame": {"x":796,"y":1620,"w":66,"h":35},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":66,"h":35},
+	"sourceSize": {"w":66,"h":35}
+},
+"instructions-receipt.png":
+{
+	"frame": {"x":1414,"y":910,"w":310,"h":503},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":0,"w":310,"h":503},
+	"sourceSize": {"w":312,"h":506}
+},
+"jelly.png":
+{
+	"frame": {"x":1912,"y":695,"w":42,"h":51},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":42,"h":51},
+	"sourceSize": {"w":42,"h":51}
+},
+"lean_hamburgers.png":
+{
+	"frame": {"x":929,"y":1443,"w":79,"h":85},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":79,"h":85},
+	"sourceSize": {"w":79,"h":85}
+},
+"lemonade.png":
+{
+	"frame": {"x":1912,"y":608,"w":46,"h":85},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":46,"h":85},
+	"sourceSize": {"w":46,"h":85}
+},
+"light_yogurt.png":
+{
+	"frame": {"x":1869,"y":694,"w":41,"h":46},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":41,"h":46},
+	"sourceSize": {"w":41,"h":46}
+},
+"list-drop-area-short0001.png":
+{
+	"frame": {"x":1745,"y":528,"w":212,"h":38},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":212,"h":38},
+	"sourceSize": {"w":212,"h":38}
+},
+"list-drop-area-short0002.png":
+{
+	"frame": {"x":1745,"y":568,"w":212,"h":38},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":212,"h":38},
+	"sourceSize": {"w":212,"h":38}
+},
+"list-drop-area0001.png":
+{
+	"frame": {"x":1726,"y":1377,"w":217,"h":68},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":217,"h":68},
+	"sourceSize": {"w":217,"h":68}
+},
+"list-drop-area0002.png":
+{
+	"frame": {"x":1745,"y":458,"w":210,"h":68},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":3,"y":0,"w":210,"h":68},
+	"sourceSize": {"w":217,"h":68}
+},
+"list.png":
+{
+	"frame": {"x":1101,"y":910,"w":311,"h":465},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":0,"w":311,"h":465},
+	"sourceSize": {"w":313,"h":467}
+},
+"loader-receipt.png":
+{
+	"frame": {"x":617,"y":1286,"w":310,"h":276},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":0,"w":310,"h":276},
+	"sourceSize": {"w":312,"h":279}
+},
+"logo-on-paper.png":
+{
+	"frame": {"x":1,"y":965,"w":614,"h":465},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":0,"w":614,"h":465},
+	"sourceSize": {"w":616,"h":467}
+},
+"logo-small.png":
+{
+	"frame": {"x":1,"y":1528,"w":329,"h":120},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":18,"y":3,"w":329,"h":120},
+	"sourceSize": {"w":363,"h":131}
+},
+"mac_and_cheese_box.png":
+{
+	"frame": {"x":1280,"y":1566,"w":57,"h":68},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":57,"h":68},
+	"sourceSize": {"w":57,"h":68}
+},
+"margarine_tub.png":
+{
+	"frame": {"x":1057,"y":1526,"w":51,"h":30},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":51,"h":30},
+	"sourceSize": {"w":51,"h":30}
+},
+"meat dairy0001.png":
+{
+	"frame": {"x":1213,"y":1377,"w":125,"h":36},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":125,"h":36},
+	"sourceSize": {"w":125,"h":36}
+},
+"meat dairy0002.png":
+{
+	"frame": {"x":1086,"y":1415,"w":125,"h":36},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":125,"h":36},
+	"sourceSize": {"w":125,"h":36}
+},
+"meats-dairy-shelves.png":
+{
+	"frame": {"x":1285,"y":1,"w":458,"h":458},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":458,"h":458},
+	"sourceSize": {"w":458,"h":458}
+},
+"milk_chocolate.png":
+{
+	"frame": {"x":1014,"y":1575,"w":38,"h":83},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":83},
+	"sourceSize": {"w":38,"h":83}
+},
+"milk_skim.png":
+{
+	"frame": {"x":576,"y":1432,"w":39,"h":83},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":39,"h":83},
+	"sourceSize": {"w":39,"h":83}
+},
+"milk_whole.png":
+{
+	"frame": {"x":1829,"y":695,"w":38,"h":83},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":38,"h":83},
+	"sourceSize": {"w":38,"h":83}
+},
+"mixed_nuts.png":
+{
+	"frame": {"x":1512,"y":1595,"w":52,"h":35},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":52,"h":35},
+	"sourceSize": {"w":52,"h":35}
+},
+"oranges.png":
+{
+	"frame": {"x":1817,"y":780,"w":53,"h":59},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":53,"h":59},
+	"sourceSize": {"w":53,"h":59}
+},
+"packaged foods0001.png":
+{
+	"frame": {"x":1213,"y":1415,"w":125,"h":36},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":125,"h":36},
+	"sourceSize": {"w":125,"h":36}
+},
+"packaged foods0002.png":
+{
+	"frame": {"x":1412,"y":1415,"w":125,"h":36},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":125,"h":36},
+	"sourceSize": {"w":125,"h":36}
+},
+"packaged-shelves.png":
+{
+	"frame": {"x":643,"y":837,"w":456,"h":447},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":456,"h":447},
+	"sourceSize": {"w":456,"h":447}
+},
+"pasta sauce.png":
+{
+	"frame": {"x":1887,"y":841,"w":42,"h":60},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":42,"h":60},
+	"sourceSize": {"w":42,"h":60}
+},
+"peanut butter.png":
+{
+	"frame": {"x":1843,"y":841,"w":42,"h":62},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":42,"h":62},
+	"sourceSize": {"w":42,"h":62}
+},
+"plain_bottled_water.png":
+{
+	"frame": {"x":1010,"y":1443,"w":45,"h":85},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":45,"h":85},
+	"sourceSize": {"w":45,"h":85}
+},
+"plain_broccoli.png":
+{
+	"frame": {"x":1910,"y":320,"w":70,"h":80},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":70,"h":80},
+	"sourceSize": {"w":70,"h":80}
+},
+"plain_english_muffins.png":
+{
+	"frame": {"x":1945,"y":1377,"w":102,"h":62},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":1,"y":0,"w":102,"h":62},
+	"sourceSize": {"w":103,"h":62}
+},
+"plain_granola_bars.png":
+{
+	"frame": {"x":1960,"y":688,"w":82,"h":45},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":1,"y":6,"w":82,"h":45},
+	"sourceSize": {"w":83,"h":51}
+},
+"plain_hotdog_buns.png":
+{
+	"frame": {"x":591,"y":1564,"w":92,"h":55},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":92,"h":55},
+	"sourceSize": {"w":92,"h":55}
+},
+"plain_waffles.png":
+{
+	"frame": {"x":1978,"y":1505,"w":57,"h":69},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":2,"y":0,"w":57,"h":69},
+	"sourceSize": {"w":59,"h":69}
+},
+"play_game0001.png":
+{
+	"frame": {"x":1054,"y":1558,"w":76,"h":35},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":8,"y":11,"w":76,"h":35},
+	"sourceSize": {"w":93,"h":66}
+},
+"play_game0002.png":
+{
+	"frame": {"x":1412,"y":1491,"w":93,"h":44},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":5,"w":93,"h":44},
+	"sourceSize": {"w":93,"h":66}
+},
+"pork_chop.png":
+{
+	"frame": {"x":1910,"y":72,"w":84,"h":82},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":84,"h":82},
+	"sourceSize": {"w":84,"h":82}
+},
+"potato_chips.png":
+{
+	"frame": {"x":1014,"y":1358,"w":70,"h":80},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":70,"h":80},
+	"sourceSize": {"w":70,"h":80}
+},
+"pretzels.png":
+{
+	"frame": {"x":1340,"y":1377,"w":70,"h":80},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":70,"h":80},
+	"sourceSize": {"w":70,"h":80}
+},
+"produce-bg.png":
+{
+	"frame": {"x":643,"y":483,"w":640,"h":352},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":640,"h":352},
+	"sourceSize": {"w":640,"h":352}
+},
+"produce0001.png":
+{
+	"frame": {"x":1539,"y":1415,"w":125,"h":36},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":125,"h":36},
+	"sourceSize": {"w":125,"h":36}
+},
+"produce0002.png":
+{
+	"frame": {"x":1412,"y":1453,"w":125,"h":36},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":125,"h":36},
+	"sourceSize": {"w":125,"h":36}
+},
+"pudding.png":
+{
+	"frame": {"x":1619,"y":1600,"w":50,"h":36},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":50,"h":36},
+	"sourceSize": {"w":50,"h":36}
+},
+"receipt-end.png":
+{
+	"frame": {"x":1726,"y":910,"w":310,"h":465},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":0,"w":310,"h":465},
+	"sourceSize": {"w":312,"h":467}
+},
+"red_raspberries.png":
+{
+	"frame": {"x":1982,"y":156,"w":65,"h":67},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":65,"h":67},
+	"sourceSize": {"w":65,"h":67}
+},
+"remove0001.png":
+{
+	"frame": {"x":1539,"y":1453,"w":101,"h":38},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":0,"w":101,"h":38},
+	"sourceSize": {"w":102,"h":39}
+},
+"remove0002.png":
+{
+	"frame": {"x":1539,"y":1453,"w":101,"h":38},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":0,"w":101,"h":38},
+	"sourceSize": {"w":102,"h":39}
+},
+"shelves-beverage.png":
+{
+	"frame": {"x":1285,"y":461,"w":458,"h":447},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":458,"h":447},
+	"sourceSize": {"w":458,"h":447}
+},
+"shrimp.png":
+{
+	"frame": {"x":1043,"y":1286,"w":54,"h":70},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":54,"h":70},
+	"sourceSize": {"w":54,"h":70}
+},
+"skip button0001.png":
+{
+	"frame": {"x":954,"y":1631,"w":44,"h":24},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":2,"y":2,"w":44,"h":24},
+	"sourceSize": {"w":48,"h":28}
+},
+"skip button0002.png":
+{
+	"frame": {"x":1221,"y":1628,"w":45,"h":26},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":1,"y":2,"w":45,"h":26},
+	"sourceSize": {"w":48,"h":28}
+},
+"spinach.png":
+{
+	"frame": {"x":1054,"y":1595,"w":55,"h":63},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":55,"h":63},
+	"sourceSize": {"w":55,"h":63}
+},
+"splash-bg.png":
+{
+	"frame": {"x":643,"y":1,"w":640,"h":480},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":640,"h":480},
+	"sourceSize": {"w":640,"h":480}
+},
+"sports_drink.png":
+{
+	"frame": {"x":1672,"y":1543,"w":45,"h":93},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":45,"h":93},
+	"sourceSize": {"w":45,"h":93}
+},
+"strawberries.png":
+{
+	"frame": {"x":532,"y":1564,"w":57,"h":56},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":57,"h":56},
+	"sourceSize": {"w":57,"h":56}
+},
+"sweetened_cereal.png":
+{
+	"frame": {"x":1162,"y":1589,"w":57,"h":69},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":57,"h":69},
+	"sourceSize": {"w":57,"h":69}
+},
+"toaster_pastries.png":
+{
+	"frame": {"x":537,"y":1517,"w":77,"h":45},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":1,"y":6,"w":77,"h":45},
+	"sourceSize": {"w":78,"h":51}
+},
+"tomatoes.png":
+{
+	"frame": {"x":1889,"y":1593,"w":59,"h":65},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":59,"h":65},
+	"sourceSize": {"w":59,"h":65}
+},
+"vanilla_ice_cream.png":
+{
+	"frame": {"x":1872,"y":787,"w":51,"h":52},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":51,"h":52},
+	"sourceSize": {"w":51,"h":52}
+},
+"wheat_engmuffins.png":
+{
+	"frame": {"x":1945,"y":1441,"w":102,"h":62},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":1,"y":0,"w":102,"h":62},
+	"sourceSize": {"w":103,"h":62}
+},
+"wheat_hotdog_buns.png":
+{
+	"frame": {"x":685,"y":1564,"w":92,"h":55},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":92,"h":55},
+	"sourceSize": {"w":92,"h":55}
+},
+"white_bread.png":
+{
+	"frame": {"x":929,"y":1286,"w":112,"h":69},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":112,"h":69},
+	"sourceSize": {"w":112,"h":69}
+},
+"whole_grain_waffles.png":
+{
+	"frame": {"x":1339,"y":1552,"w":57,"h":68},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":4,"y":0,"w":57,"h":68},
+	"sourceSize": {"w":61,"h":68}
+},
+"whole_wheat_pasta.png":
+{
+	"frame": {"x":1804,"y":1605,"w":73,"h":53},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":12,"y":1,"w":73,"h":53},
+	"sourceSize": {"w":85,"h":59}
+},
+"whole_wheat_tortillas.png":
+{
+	"frame": {"x":1129,"y":1453,"w":70,"h":71},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":70,"h":71},
+	"sourceSize": {"w":70,"h":71}
+},
+"wholegrain_break.png":
+{
+	"frame": {"x":1910,"y":1,"w":112,"h":69},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":112,"h":69},
+	"sourceSize": {"w":112,"h":69}
+},
+"yogurt.png":
+{
+	"frame": {"x":1994,"y":840,"w":41,"h":46},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":41,"h":46},
+	"sourceSize": {"w":41,"h":46}
+}},
+"meta": {
+	"app": "https://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "texture.png",
+	"format": "RGBA8888",
+	"size": {"w":2048,"h":1659},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:7b2cf231a836f8f3d7e78bed89cc8667:ca6ce7d9379a176319c4682edaf151ae:88db1022cd6b660616541d2788fcd4f7$"
+}
+}

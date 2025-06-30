@@ -1,0 +1,176 @@
+{
+  "texture": "media/default/texture.png",
+  "textureMap": "media/default/texture.json",
+  "textureKey": "texture",
+  "data": "media/default/sceneData.json",
+  "fonts" : {
+    "title-bar" : {"font": "24px VT323", "fill": "#B7F149", "align": "left", "fontWeight": "400"},
+    "title": { "font": "66px Alegreya Sans", "fill": "#FEFD9A", "align": "left", "fontWeight": "800" },
+    "default-text": { "font": "25px Alegreya Sans", "fill": "#FEFD9A", "align": "left", "fontWeight": "800" }
+  },
+  "images": {
+    "common": {
+      "title-bar": "title-bar.png",
+      "moon": "moon.png",
+      "mission-health": "mission health logo.png"
+    },
+    "blast-off": {
+      "blast-off": "blast_off.png"
+    }
+  },
+  "sceneImages": {
+    "bgspace": "sky-background.png"
+  },
+  "buttons": {
+    "home": {
+      "up": "home-btn0001.png",
+      "over": "home-btn0002.png",
+      "out": "home-btn0001.png",
+      "down": "home-btn0002.png"
+    },
+    "next": {
+      "up": "next-btn0001.png",
+      "over": "next-btn0002.png",
+      "out": "next-btn0001.png",
+      "down": "next-btn0002.png"
+    },
+    "back": {
+      "up": "back-btn0001.png",
+      "over": "back-btn0002.png",
+      "out": "back-btn0001.png",
+      "down": "back-btn0002.png"
+    },
+    "replay": {
+      "up": "replay-btn0001.png",
+      "over": "replay-btn0002.png",
+      "out": "replay-btn0001.png",
+      "down": "replay-btn0002.png"
+    },
+    "sofia": {
+      "up": "sofia0001.png",
+      "over": "sofia0002.png",
+      "out": "sofia0001.png",
+      "down": "sofia0002.png"
+    },
+    "carly": {
+      "up": "carly0001.png",
+      "over": "carly0002.png",
+      "out": "carly0001.png",
+      "down": "carly0002.png"
+    },
+    "jack": {
+      "up": "jack0001.png",
+      "over": "jack0002.png",
+      "out": "jack0001.png",
+      "down": "jack0002.png"
+    },       
+    "zach": {
+      "up": "zach0001.png",
+      "over": "zach0002.png",
+      "out": "zach0001.png",
+      "down": "zach0002.png"
+    }, 
+    "planet_3": {
+      "up": "planet30001.png",
+      "over": "planet30002.png",
+      "out": "planet30001.png",
+      "down": "planet30002.png"
+    }, 
+    "planet_2": {
+      "up": "planet20001.png",
+      "over": "planet20002.png",
+      "out": "planet20001.png",
+      "down": "planet20002.png"
+    }, 
+    "planet_1": {
+      "up": "planet10001.png",
+      "over": "planet10002.png",
+      "out": "planet10001.png",
+      "down": "planet10002.png"
+    }, 
+    "planet_0": {
+      "up": "planet00001.png",
+      "over": "planet00002.png",
+      "out": "planet00001.png",
+      "down": "planet00002.png"
+    } 
+  },
+  "soundKey": "blastoff",
+  "soundFile": [ "media/default/blast-off.m4a", "media/default/blast-off.ogg" ],
+  "sounds": {
+    "slide1": [
+      0,
+      1.825,
+      false,
+      "slide1"
+    ],
+    "slide2": [
+      42,
+      10.987,
+      false,
+      "slide2"
+    ],
+    "slide2-carly": [
+      2,
+      9.330,
+      false,
+      "slide2-carly"
+    ],
+    "slide2-jack": [
+      12,
+      8.000,
+      false,
+      "slide2-jack"
+    ],
+    "slide2-sofia": [
+      20,
+      11.107,
+      false,
+      "slide2-sofia"
+    ],
+    "slide2-zach": [
+      32,
+      9.977,
+      false,
+      "slide2-zach"
+    ],
+    "slide3": [
+      106,
+      11.106,
+      false,
+      "slide3"
+    ],
+    "slide3-0": [
+      53,
+      13.139,
+      false,
+      "slide3-0"
+    ],
+    "slide3-1": [
+      67,
+      10.390,
+      false,
+      "slide3-1"
+    ],
+    "slide3-2": [
+      78,
+      13.763,
+      false,
+      "slide3-2"
+    ],
+    "slide3-3": [
+      92,
+      13.843,
+      false,
+      "slide3-3"
+    ],
+    "slide4": [
+      118,
+      4.007,
+      false,
+      "slide4"
+    ]
+  }
+  
+}
+

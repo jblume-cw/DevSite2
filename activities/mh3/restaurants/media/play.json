@@ -1,0 +1,16 @@
+{
+  "name": "MH Restaurants",
+  "description": "Restaurants lesson",
+  "scorm": true,
+  "logging": false,
+  "autoScale": true,
+  "acts": {
+    "default": {
+      "id": "default",
+      "description": "Wellness and obesity prevention through nutrition and physical activity for third grade",
+      "name": "MH Restaurants",
+      "theme": "media/default/theme.json",
+      "objectives": []
+    }
+  }
+}
