@@ -1,0 +1,16 @@
+{
+  "name": "Mission: Health 5th Grade - Healthy Minds ",
+  "description": "Healthy Minds Lesson",
+  "scorm": false,
+  "logging": true,
+  "autoScale": true,
+  "acts": {
+    "default": {
+      "id": "default",
+      "description": "MH5 Healthy Minds",
+      "name": "MH5 Healthy Minds",
+      "theme": "media/default/theme.json",
+      "objective": "completion"
+    }
+  }
+}

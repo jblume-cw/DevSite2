@@ -1,0 +1,1405 @@
+{
+  "play": {
+    "start_skip": "slide01",
+    "start": "slide01",
+    "showPlayThrough": false,
+    "scenes": {
+      "slide01": {
+        "id": "slide01",
+        "background": "background",
+        "title": "Slide 1",
+        "description": "Slide 1",
+        "actors": [
+          {
+            "name": "sofia",
+            "type": "decoration",
+            "image": "sofia",
+            "location": [ 291, 115 ],
+            "scale": [1, 1],
+            "key": "decorations"
+          },
+          {
+            "name": "worksheetButton",
+            "type": "url-button",
+            "image": "worksheet_btn",
+            "location": [ 15, 544 ],
+            "url": "Physical Activity Worksheet.pdf",
+            "variable": "worksheetBtn"
+          },
+          {
+            "name": "backDisabled",
+            "type": "decoration",
+            "image": "back-disabled",
+            "location": [ 565, 545 ],
+            "key": "decorations"
+          },
+          {
+            "name": "replayButton",
+            "type": "button",
+            "image": "replay",
+            "location": [ 643, 545 ],
+            "variable": "replayButton"
+          },
+          {
+            "name": "nextButton",
+            "type": "button",
+            "image": "next",
+            "location": [ 721, 545 ],
+            "variable": "nextButton"
+          },
+          {
+            "name": "vo",
+            "type": "audio",
+            "audio": [ "Slide 01" ],
+            "variable": "slideVO"
+          },
+          {
+            "name": "lessonTitle",
+            "type": "text",
+            "font": "lesson-title",
+            "location": [ 55, 6 ],
+            "text": "Physical Activity"
+          }
+        ],
+        "outcomes": {
+          "vo_finished": {
+            "events": { "slideVO": "played" },
+            "actions": [
+              { "type": "remove-actor", "args": ["nextButton"] },
+              { "type": "add-actor", "args": [
+                {
+                  "name": "nextHighlight",
+                  "type": "button",
+                  "image": "nextHighlight",
+                  "animated": false,
+                  "location": [ 721, 545 ],
+                  "variable": "nextButtonHi"
+                }
+              ] }
+            ]
+          },
+          "replay_button": {
+            "events": { "replayButton": "*" },
+            "actions": [
+              { "type": "scene", "args": [ "empty_replay_scene" ] },
+              { "type": "scene", "args": [ "slide01" ] }
+            ]
+          },
+          "forward_button": {
+            "events": { "nextButton": "*" },
+            "actions": [ { "type": "scene", "args": [ "slide02" ] } ]
+          },
+          "forward_button_hi": {
+            "events": { "nextButtonHi": "*" },
+            "actions": [ { "type": "scene", "args": [ "slide02" ] } ]
+          }
+        }
+      },
+      "slide02": {
+        "id": "slide02",
+        "background": "background",
+        "title": "Slide 2",
+        "description": "Slide 2",
+        "actors": [
+          {
+            "name": "lessonTitle",
+            "type": "text",
+            "font": "lesson-title",
+            "location": [ 55, 6 ],
+            "text": "Physical Activity"
+          },
+          {
+            "name": "balance",
+            "type": "decoration",
+            "image": "balance",
+            "location": [ 114, 198 ],
+            "scale": [1, 1],
+            "key": "decorations"
+          },
+          {
+            "name": "backButton",
+            "type": "button",
+            "image": "back",
+            "location": [ 565, 545 ],
+            "variable": "backButton"
+          },
+          {
+            "name": "replayButton",
+            "type": "button",
+            "image": "replay",
+            "location": [ 643, 545 ],
+            "variable": "replayButton"
+          },
+           {
+            "name": "nextButton",
+            "type": "button",
+            "image": "next",
+            "location": [ 721, 545 ],
+            "variable": "nextButton"
+          },
+          {
+            "name": "vo",
+            "type": "audio",
+            "audio": [ "Slide 02" ],
+            "variable": "slideVO",
+            "startDelay": 500
+          }
+        ],
+        "outcomes": {
+           "vo_finished": {
+            "events": { "slideVO": "played" },
+            "actions": [
+              { "type": "remove-actor", "args": ["nextButton"] },
+              { "type": "add-actor", "args": [
+                {
+                  "name": "nextHighlight",
+                  "type": "button",
+                  "image": "nextHighlight",
+                  "animated": false,
+                  "location": [ 721, 545 ],
+                  "variable": "nextButtonHi"
+                }
+              ] }
+            ]
+          },
+          "replay_button": {
+            "events": { "replayButton": "*" },
+            "actions": [
+              { "type": "scene", "args": [ "empty_replay_scene" ] },
+              { "type": "scene", "args": [ "slide02" ] }
+            ]
+          },
+          "forward_button": {
+            "events": { "nextButton": "*" },
+            "actions": [ { "type": "scene", "args": [ "slide03" ] } ]
+          },
+          "forward_button_hi": {
+            "events": { "nextButtonHi": "*" },
+            "actions": [ { "type": "scene", "args": [ "slide03" ] } ]
+          },
+          "back_button": {
+            "events": { "backButton": "*" },
+            "actions": [ { "type": "scene", "args": [ "slide01" ] } ]
+          }
+        }
+      },
+      "slide03": {
+        "id": "slide03",
+        "background": "background",
+        "title": "Slide 3",
+        "description": "Slide 3",
+        "actors": [
+          {
+            "name": "lessonTitle",
+            "type": "text",
+            "font": "lesson-title",
+            "location": [ 55, 6 ],
+            "text": "Physical Activity"
+          },
+          {
+            "name": "slideTitle",
+            "type": "text",
+            "font": "content-title",
+            "location": [ 133, 157 ],
+            "text": "Three types of physical activity"
+          },
+          {
+            "name": "bullet1",
+            "type": "text",
+            "font": "content-body",
+            "location": [ 182, 221 ],
+            "text": "Aerobic",
+            "bullet": true,
+            "startDelay": 6000
+          },
+          {
+            "name": "bullet2",
+            "type": "text",
+            "font": "content-body",
+            "location": [ 182, 271 ],
+            "text": "Strength",
+            "bullet": true,
+            "startDelay": 6900
+          },
+          {
+            "name": "bullet3",
+            "type": "text",
+            "font": "content-body",
+            "location": [ 182, 321 ],
+            "text": "Stretching",
+            "bullet": true,
+            "startDelay": 7800
+          },
+          {
+            "name": "backButton",
+            "type": "button",
+            "image": "back",
+            "location": [ 565, 545 ],
+            "variable": "backButton"
+          },
+          {
+            "name": "replayButton",
+            "type": "button",
+            "image": "replay",
+            "location": [ 643, 545 ],
+            "variable": "replayButton"
+          },
+           {
+            "name": "nextButton",
+            "type": "button",
+            "image": "next",
+            "location": [ 721, 545 ],
+            "variable": "nextButton"
+          },
+          {
+            "name": "vo",
+            "type": "audio",
+            "audio": [ "Slide 03" ],
+            "variable": "slideVO",
+            "startDelay": 500
+          }
+        ],
+        "outcomes": {
+           "vo_finished": {
+            "events": { "slideVO": "played" },
+            "actions": [
+              { "type": "remove-actor", "args": ["nextButton"] },
+              { "type": "add-actor", "args": [
+                {
+                  "name": "nextHighlight",
+                  "type": "button",
+                  "image": "nextHighlight",
+                  "animated": false,
+                  "location": [ 721, 545 ],
+                  "variable": "nextButtonHi"
+                }
+              ] }
+            ]
+          },
+          "replay_button": {
+            "events": { "replayButton": "*" },
+            "actions": [
+              { "type": "scene", "args": [ "empty_replay_scene" ] },
+              { "type": "scene", "args": [ "slide03" ] }
+            ]
+          },
+          "forward_button": {
+            "events": { "nextButton": "*" },
+            "actions": [ { "type": "scene", "args": [ "slide04" ] } ]
+          },
+          "forward_button_hi": {
+            "events": { "nextButtonHi": "*" },
+            "actions": [ { "type": "scene", "args": [ "slide04" ] } ]
+          },
+          "back_button": {
+            "events": { "backButton": "*" },
+            "actions": [ { "type": "scene", "args": [ "slide02" ] } ]
+          }
+        }
+      },
+      "slide04": {
+        "id": "slide04",
+        "background": "background",
+        "title": "Slide 4",
+        "description": "Slide 4",
+        "actors": [
+          {
+            "name": "lessonTitle",
+            "type": "text",
+            "font": "lesson-title",
+            "location": [ 55, 6 ],
+            "text": "Physical Activity"
+          },
+          {
+            "name": "slideTitle",
+            "type": "text",
+            "font": "content-title",
+            "location": [ 259, 84 ],
+            "text": "Aerobic activity"
+          },
+          {
+            "name": "aerobicActivity",
+            "type": "decoration",
+            "image": "aerobic-activity",
+            "location": [ 153, 145 ],
+            "scale": [1, 1],
+            "key": "decorations"
+          },
+          {
+            "name": "definition",
+            "type": "text",
+            "font": "content-body-med",
+            "location": [ 76, 503 ],
+            "text": "Gets your whole body moving and your heart rate up"
+          },
+          {
+            "name": "backButton",
+            "type": "button",
+            "image": "back",
+            "location": [ 565, 545 ],
+            "variable": "backButton"
+          },
+          {
+            "name": "replayButton",
+            "type": "button",
+            "image": "replay",
+            "location": [ 643, 545 ],
+            "variable": "replayButton"
+          },
+           {
+            "name": "nextButton",
+            "type": "button",
+            "image": "next",
+            "location": [ 721, 545 ],
+            "variable": "nextButton"
+          },
+          {
+            "name": "vo",
+            "type": "audio",
+            "audio": [ "Slide 04" ],
+            "variable": "slideVO",
+            "startDelay": 500
+          }
+        ],
+        "outcomes": {
+           "vo_finished": {
+            "events": { "slideVO": "played" },
+            "actions": [
+              { "type": "remove-actor", "args": ["nextButton"] },
+              { "type": "add-actor", "args": [
+                {
+                  "name": "nextHighlight",
+                  "type": "button",
+                  "image": "nextHighlight",
+                  "animated": false,
+                  "location": [ 721, 545 ],
+                  "variable": "nextButtonHi"
+                }
+              ] }
+            ]
+          },
+          "replay_button": {
+            "events": { "replayButton": "*" },
+            "actions": [
+              { "type": "scene", "args": [ "empty_replay_scene" ] },
+              { "type": "scene", "args": [ "slide04" ] }
+            ]
+          },
+          "forward_button": {
+            "events": { "nextButton": "*" },
+            "actions": [ { "type": "scene", "args": [ "slide05" ] } ]
+          },
+          "forward_button_hi": {
+            "events": { "nextButtonHi": "*" },
+            "actions": [ { "type": "scene", "args": [ "slide05" ] } ]
+          },
+          "back_button": {
+            "events": { "backButton": "*" },
+            "actions": [ { "type": "scene", "args": [ "slide03" ] } ]
+          }
+        }
+      },
+      "slide05": {
+        "id": "slide05",
+        "background": "background",
+        "title": "Slide 5",
+        "description": "Slide 5",
+        "actors": [
+          {
+            "name": "lessonTitle",
+            "type": "text",
+            "font": "lesson-title",
+            "location": [ 55, 6 ],
+            "text": "Physical Activity"
+          },
+          {
+            "name": "slideTitle",
+            "type": "text",
+            "font": "content-title",
+            "location": [ 321, 84 ],
+            "text": "Strength"
+          },
+          {
+            "name": "strength",
+            "type": "decoration",
+            "image": "strength",
+            "location": [ 138, 141 ],
+            "scale": [1, 1],
+            "key": "decorations"
+          },
+          {
+            "name": "definition",
+            "type": "text",
+            "font": "content-body-med",
+            "location": [ 55, 502 ],
+            "text": "When you use your muscles to move parts of your body"
+          },
+          {
+            "name": "backButton",
+            "type": "button",
+            "image": "back",
+            "location": [ 565, 545 ],
+            "variable": "backButton"
+          },
+          {
+            "name": "replayButton",
+            "type": "button",
+            "image": "replay",
+            "location": [ 643, 545 ],
+            "variable": "replayButton"
+          },
+           {
+            "name": "nextButton",
+            "type": "button",
+            "image": "next",
+            "location": [ 721, 545 ],
+            "variable": "nextButton"
+          },
+          {
+            "name": "vo",
+            "type": "audio",
+            "audio": [ "Slide 05" ],
+            "variable": "slideVO",
+            "startDelay": 500
+          }
+        ],
+        "outcomes": {
+           "vo_finished": {
+            "events": { "slideVO": "played" },
+            "actions": [
+              { "type": "remove-actor", "args": ["nextButton"] },
+              { "type": "add-actor", "args": [
+                {
+                  "name": "nextHighlight",
+                  "type": "button",
+                  "image": "nextHighlight",
+                  "animated": false,
+                  "location": [ 721, 545 ],
+                  "variable": "nextButtonHi"
+                }
+              ] }
+            ]
+          },
+          "replay_button": {
+            "events": { "replayButton": "*" },
+            "actions": [
+              { "type": "scene", "args": [ "empty_replay_scene" ] },
+              { "type": "scene", "args": [ "slide05" ] }
+            ]
+          },
+          "forward_button": {
+            "events": { "nextButton": "*" },
+            "actions": [ { "type": "scene", "args": [ "slide06" ] } ]
+          },
+          "forward_button_hi": {
+            "events": { "nextButtonHi": "*" },
+            "actions": [ { "type": "scene", "args": [ "slide06" ] } ]
+          },
+          "back_button": {
+            "events": { "backButton": "*" },
+            "actions": [ { "type": "scene", "args": [ "slide04" ] } ]
+          }
+        }
+      },
+      "slide06": {
+        "id": "slide06",
+        "background": "background",
+        "title": "Slide 6",
+        "description": "Slide 6",
+        "actors": [
+          {
+            "name": "lessonTitle",
+            "type": "text",
+            "font": "lesson-title",
+            "location": [ 55, 6 ],
+            "text": "Physical Activity"
+          },
+          {
+            "name": "slideTitle",
+            "type": "text",
+            "font": "content-title",
+            "location": [ 306, 84 ],
+            "text": "Stretching"
+          },
+          {
+            "name": "stretching",
+            "type": "decoration",
+            "image": "stretching",
+            "location": [ 106, 128 ],
+            "scale": [1, 1],
+            "key": "decorations"
+          },
+          {
+            "name": "definition",
+            "type": "text",
+            "font": "content-body-med",
+            "location": [ 267, 506 ],
+            "text": "Stretch your muscles"
+          },
+          {
+            "name": "backButton",
+            "type": "button",
+            "image": "back",
+            "location": [ 565, 545 ],
+            "variable": "backButton"
+          },
+          {
+            "name": "replayButton",
+            "type": "button",
+            "image": "replay",
+            "location": [ 643, 545 ],
+            "variable": "replayButton"
+          },
+           {
+            "name": "nextButton",
+            "type": "button",
+            "image": "next",
+            "location": [ 721, 545 ],
+            "variable": "nextButton"
+          },
+          {
+            "name": "vo",
+            "type": "audio",
+            "audio": [ "Slide 06" ],
+            "variable": "slideVO",
+            "startDelay": 500
+          }
+        ],
+        "outcomes": {
+           "vo_finished": {
+            "events": { "slideVO": "played" },
+            "actions": [
+              { "type": "remove-actor", "args": ["nextButton"] },
+              { "type": "add-actor", "args": [
+                {
+                  "name": "nextHighlight",
+                  "type": "button",
+                  "image": "nextHighlight",
+                  "animated": false,
+                  "location": [ 721, 545 ],
+                  "variable": "nextButtonHi"
+                }
+              ] }
+            ]
+          },
+          "replay_button": {
+            "events": { "replayButton": "*" },
+            "actions": [
+              { "type": "scene", "args": [ "empty_replay_scene" ] },
+              { "type": "scene", "args": [ "slide06" ] }
+            ]
+          },
+          "forward_button": {
+            "events": { "nextButton": "*" },
+            "actions": [ { "type": "scene", "args": [ "slide07" ] } ]
+          },
+          "forward_button_hi": {
+            "events": { "nextButtonHi": "*" },
+            "actions": [ { "type": "scene", "args": [ "slide07" ] } ]
+          },
+          "back_button": {
+            "events": { "backButton": "*" },
+            "actions": [ { "type": "scene", "args": [ "slide05" ] } ]
+          }
+        }
+      },
+      "slide07": {
+        "id": "slide07",
+        "background": "background",
+        "title": "Slide 7",
+        "description": "Slide 7",
+        "actors": [
+          {
+            "name": "lessonTitle",
+            "type": "text",
+            "font": "lesson-title",
+            "location": [ 55, 6 ],
+            "text": "Physical Activity"
+          },
+          {
+            "name": "slideTitle",
+            "type": "text",
+            "font": "content-title",
+            "location": [ 237, 104 ],
+            "text": "Sedentary activity"
+          },
+          {
+            "name": "sedentary",
+            "type": "decoration",
+            "image": "sedentary",
+            "location": [ 125, 178 ],
+            "scale": [1, 1],
+            "key": "decorations"
+          },
+          {
+            "name": "definition",
+            "type": "text",
+            "font": "content-body",
+            "location": [ 60, 480 ],
+            "text": "You are sitting still and not moving your body"
+          },
+          {
+            "name": "backButton",
+            "type": "button",
+            "image": "back",
+            "location": [ 565, 545 ],
+            "variable": "backButton"
+          },
+          {
+            "name": "replayButton",
+            "type": "button",
+            "image": "replay",
+            "location": [ 643, 545 ],
+            "variable": "replayButton"
+          },
+           {
+            "name": "nextButton",
+            "type": "button",
+            "image": "next",
+            "location": [ 721, 545 ],
+            "variable": "nextButton"
+          },
+          {
+            "name": "vo",
+            "type": "audio",
+            "audio": [ "Slide 07" ],
+            "variable": "slideVO",
+            "startDelay": 500
+          }
+        ],
+        "outcomes": {
+           "vo_finished": {
+            "events": { "slideVO": "played" },
+            "actions": [
+              { "type": "remove-actor", "args": ["nextButton"] },
+              { "type": "add-actor", "args": [
+                {
+                  "name": "nextHighlight",
+                  "type": "button",
+                  "image": "nextHighlight",
+                  "animated": false,
+                  "location": [ 721, 545 ],
+                  "variable": "nextButtonHi"
+                }
+              ] }
+            ]
+          },
+          "replay_button": {
+            "events": { "replayButton": "*" },
+            "actions": [
+              { "type": "scene", "args": [ "empty_replay_scene" ] },
+              { "type": "scene", "args": [ "slide07" ] }
+            ]
+          },
+          "forward_button": {
+            "events": { "nextButton": "*" },
+            "actions": [ { "type": "scene", "args": [ "slide08" ] } ]
+          },
+          "forward_button_hi": {
+            "events": { "nextButtonHi": "*" },
+            "actions": [ { "type": "scene", "args": [ "slide08" ] } ]
+          },
+          "back_button": {
+            "events": { "backButton": "*" },
+            "actions": [ { "type": "scene", "args": [ "slide06" ] } ]
+          }
+        }
+      },
+      "slide08": {
+        "id": "slide08",
+        "background": "background",
+        "title": "Slide 8",
+        "description": "Slide 8",
+        "actors": [
+          {
+            "name": "lessonTitle",
+            "type": "text",
+            "font": "lesson-title",
+            "location": [ 55, 6 ],
+            "text": "Physical Activity"
+          },
+          {
+            "name": "slideTitle",
+            "type": "text",
+            "font": "content-title",
+            "location": [ 89, 145 ],
+            "text": "Benefits of physical activity"
+          },
+          {
+            "name": "bullet1",
+            "type": "text",
+            "font": "content-body",
+            "location": [ 127, 204 ],
+            "text": "Gives you more energy",
+            "bullet": true,
+            "startDelay": 6000
+          },
+          {
+            "name": "bullet2",
+            "type": "text",
+            "font": "content-body",
+            "location": [ 127, 254 ],
+            "text": "Helps you focus",
+            "bullet": true,
+            "startDelay": 7800
+          },
+          {
+            "name": "bullet3",
+            "type": "text",
+            "font": "content-body",
+            "location": [ 127, 304 ],
+            "text": "Helps you sleep better",
+            "bullet": true,
+            "startDelay": 9000
+          },
+          {
+            "name": "bullet4",
+            "type": "text",
+            "font": "content-body",
+            "location": [ 127, 354 ],
+            "text": "Makes you feel better about yourself",
+            "bullet": true,
+            "startDelay": 10900
+          },
+          {
+            "name": "bullet5",
+            "type": "text",
+            "font": "content-body",
+            "location": [ 127, 404 ],
+            "text": "Develops stronger bones and muscles",
+            "bullet": true,
+            "startDelay": 14200
+          },
+          {
+            "name": "backButton",
+            "type": "button",
+            "image": "back",
+            "location": [ 565, 545 ],
+            "variable": "backButton"
+          },
+          {
+            "name": "replayButton",
+            "type": "button",
+            "image": "replay",
+            "location": [ 643, 545 ],
+            "variable": "replayButton"
+          },
+          {
+            "name": "nextButton",
+            "type": "button",
+            "image": "next",
+            "location": [ 721, 545 ],
+            "variable": "nextButton"
+          },
+          {
+            "name": "vo",
+            "type": "audio",
+            "audio": [ "Slide 08" ],
+            "variable": "slideVO",
+            "startDelay": 500
+          }
+        ],
+        "outcomes": {
+           "vo_finished": {
+            "events": { "slideVO": "played" },
+            "actions": [
+              { "type": "remove-actor", "args": ["nextButton"] },
+              { "type": "add-actor", "args": [
+                {
+                  "name": "nextHighlight",
+                  "type": "button",
+                  "image": "nextHighlight",
+                  "animated": false,
+                  "location": [ 721, 545 ],
+                  "variable": "nextButtonHi"
+                }
+              ] }
+            ]
+          },
+          "replay_button": {
+            "events": { "replayButton": "*" },
+            "actions": [
+              { "type": "scene", "args": [ "empty_replay_scene" ] },
+              { "type": "scene", "args": [ "slide08" ] }
+            ]
+          },
+          "forward_button": {
+            "events": { "nextButton": "*" },
+            "actions": [ { "type": "scene", "args": [ "slide09" ] } ]
+          },
+          "forward_button_hi": {
+            "events": { "nextButtonHi": "*" },
+            "actions": [ { "type": "scene", "args": [ "slide09" ] } ]
+          },
+          "back_button": {
+            "events": { "backButton": "*" },
+            "actions": [ { "type": "scene", "args": [ "slide07" ] } ]
+          }
+        }
+      },
+      "slide09": {
+        "id": "slide09",
+        "background": "background",
+        "title": "Slide 9",
+        "description": "Slide 9",
+        "actors": [
+          {
+            "name": "lessonTitle",
+            "type": "text",
+            "font": "lesson-title",
+            "location": [ 55, 6 ],
+            "text": "Physical Activity"
+          },
+          {
+            "name": "barriers",
+            "type": "text",
+            "font": "content-title",
+            "location": [ 105, 105 ],
+            "text": "Barriers"
+          },
+          {
+            "name": "barriers_definition",
+            "type": "text",
+            "font": "content-body",
+            "location": [ 258, 110 ],
+            "text": "= Things that get in the way"
+          },
+          {
+            "name": "slideTitle",
+            "type": "text",
+            "font": "content-title",
+            "location": [ 65, 170 ],
+            "text": "Indoor activities",
+            "startDelay": 16000
+          },
+          {
+            "name": "dancing",
+            "type": "decoration",
+            "image": "dancing",
+            "location": [ 560, 218 ],
+            "scale": [1, 1],
+            "key": "decorations",
+            "startDelay": 16010
+          },
+          {
+            "name": "bullet1",
+            "type": "text",
+            "font": "content-body",
+            "location": [ 85, 220 ],
+            "text": "Jumping jacks",
+            "bullet": true,
+            "startDelay": 17900
+          },
+          {
+            "name": "bullet2",
+            "type": "text",
+            "font": "content-body",
+            "location": [ 85, 270 ],
+            "text": "Running up and down stairs",
+            "bullet": true,
+            "startDelay": 19300
+          },
+          {
+            "name": "bullet3",
+            "type": "text",
+            "font": "content-body",
+            "location": [ 85, 320 ],
+            "text": "Dance party",
+            "bullet": true,
+            "startDelay": 20900
+          },
+          {
+            "name": "bullet4",
+            "type": "text",
+            "font": "content-body",
+            "location": [ 85, 370 ],
+            "text": "Clean your room",
+            "bullet": true,
+            "startDelay": 22300
+          },
+          {
+            "name": "bullet5",
+            "type": "text",
+            "font": "content-body",
+            "location": [ 85, 420 ],
+            "text": "Sit-ups",
+            "bullet": true,
+            "startDelay": 24600
+          },
+          {
+            "name": "bullet6",
+            "type": "text",
+            "font": "content-body",
+            "location": [ 85, 470 ],
+            "text": "Push-ups",
+            "bullet": true,
+            "startDelay": 25200
+          },
+          {
+            "name": "bullet7",
+            "type": "text",
+            "font": "content-body",
+            "location": [ 85, 520 ],
+            "text": "Local community center",
+            "bullet": true,
+            "startDelay": 26500
+          },
+          {
+            "name": "backButton",
+            "type": "button",
+            "image": "back",
+            "location": [ 565, 545 ],
+            "variable": "backButton"
+          },
+          {
+            "name": "replayButton",
+            "type": "button",
+            "image": "replay",
+            "location": [ 643, 545 ],
+            "variable": "replayButton"
+          },
+          {
+            "name": "nextButton",
+            "type": "button",
+            "image": "next",
+            "location": [ 721, 545 ],
+            "variable": "nextButton"
+          },
+          {
+            "name": "vo",
+            "type": "audio",
+            "audio": [ "Slide 09" ],
+            "variable": "slideVO",
+            "startDelay": 500
+          }
+        ],
+        "outcomes": {
+           "vo_finished": {
+            "events": { "slideVO": "played" },
+            "actions": [
+              { "type": "remove-actor", "args": ["nextButton"] },
+              { "type": "add-actor", "args": [
+                {
+                  "name": "nextHighlight",
+                  "type": "button",
+                  "image": "nextHighlight",
+                  "animated": false,
+                  "location": [ 721, 545 ],
+                  "variable": "nextButtonHi"
+                }
+              ] }
+            ]
+          },
+          "replay_button": {
+            "events": { "replayButton": "*" },
+            "actions": [
+              { "type": "scene", "args": [ "empty_replay_scene" ] },
+              { "type": "scene", "args": [ "slide09" ] }
+            ]
+          },
+          "forward_button": {
+            "events": { "nextButton": "*" },
+            "actions": [ { "type": "scene", "args": [ "slide10" ] } ]
+          },
+          "forward_button_hi": {
+            "events": { "nextButtonHi": "*" },
+            "actions": [ { "type": "scene", "args": [ "slide10" ] } ]
+          },
+          "back_button": {
+            "events": { "backButton": "*" },
+            "actions": [ { "type": "scene", "args": [ "slide08" ] } ]
+          }
+        }
+      },
+      "slide10": {
+        "id": "slide10",
+        "background": "background",
+        "title": "Slide 10",
+        "description": "Slide 10",
+        "actors": [
+          {
+            "name": "lessonTitle",
+            "type": "text",
+            "font": "lesson-title",
+            "location": [ 55, 6 ],
+            "text": "Physical Activity"
+          },
+          {
+            "name": "slideTitle",
+            "type": "text",
+            "font": "content-title",
+            "location": [ "center", 92 ],
+            "text": "Decision making"
+          },
+          {
+            "name": "decisionMaking",
+            "type": "decoration",
+            "image": "decision-making",
+            "location": [ 291, 159 ],
+            "scale": [1, 1],
+            "key": "decorations"
+          },
+          {
+            "name": "backButton",
+            "type": "button",
+            "image": "back",
+            "location": [ 565, 545 ],
+            "variable": "backButton"
+          },
+          {
+            "name": "replayButton",
+            "type": "button",
+            "image": "replay",
+            "location": [ 643, 545 ],
+            "variable": "replayButton"
+          },
+           {
+            "name": "nextButton",
+            "type": "button",
+            "image": "next",
+            "location": [ 721, 545 ],
+            "variable": "nextButton"
+          },
+          {
+            "name": "vo",
+            "type": "audio",
+            "audio": [ "Slide 10" ],
+            "variable": "slideVO",
+            "startDelay": 500
+          }
+        ],
+        "outcomes": {
+           "vo_finished": {
+            "events": { "slideVO": "played" },
+            "actions": [
+              { "type": "remove-actor", "args": ["nextButton"] },
+              { "type": "add-actor", "args": [
+                {
+                  "name": "nextHighlight",
+                  "type": "button",
+                  "image": "nextHighlight",
+                  "animated": false,
+                  "location": [ 721, 545 ],
+                  "variable": "nextButtonHi"
+                }
+              ] }
+            ]
+          },
+          "replay_button": {
+            "events": { "replayButton": "*" },
+            "actions": [
+              { "type": "scene", "args": [ "empty_replay_scene" ] },
+              { "type": "scene", "args": [ "slide10" ] }
+            ]
+          },
+          "forward_button": {
+            "events": { "nextButton": "*" },
+            "actions": [ { "type": "scene", "args": [ "slide11" ] } ]
+          },
+          "forward_button_hi": {
+            "events": { "nextButtonHi": "*" },
+            "actions": [ { "type": "scene", "args": [ "slide11" ] } ]
+          },
+          "back_button": {
+            "events": { "backButton": "*" },
+            "actions": [ { "type": "scene", "args": [ "slide09" ] } ]
+          }
+        }
+      },
+      "slide11": {
+        "id": "slide11",
+        "background": "background",
+        "title": "Slide 11",
+        "description": "Slide 11",
+        "actors": [
+          {
+            "name": "lessonTitle",
+            "type": "text",
+            "font": "lesson-title",
+            "location": [ 55, 6 ],
+            "text": "Physical Activity"
+          },
+          {
+            "name": "slideTitle",
+            "type": "text",
+            "font": "content-title",
+            "location": [ 79, 135 ],
+            "text": "Decision-making process"
+          },
+          {
+            "name": "bullet1",
+            "type": "text",
+            "font": "content-body-med",
+            "location": [ 107, 200 ],
+            "text": "1. Define the situation.",
+            "startDelay": 8000
+          },
+          {
+            "name": "bullet2",
+            "type": "text",
+            "font": "content-body-med",
+            "location": [ 107, 250 ],
+            "text": "2. Look at your options.",
+            "startDelay": 14000
+          },
+          {
+            "name": "bullet3",
+            "type": "text",
+            "font": "content-body-med",
+            "location": [ 107, 300 ],
+            "text": "3. List the positives and negatives of each option.",
+            "startDelay": 18500
+          },
+          {
+            "name": "bullet4",
+            "type": "text",
+            "font": "content-body-med",
+            "location": [ 107, 350 ],
+            "text": "4. Make your decision.",
+            "startDelay": 23900
+          },
+          {
+            "name": "bullet5",
+            "type": "text",
+            "font": "content-body-med",
+            "location": [ 107, 400 ],
+            "text": "5. Evaluate your decision.",
+            "startDelay": 27800
+          },
+          {
+            "name": "backButton",
+            "type": "button",
+            "image": "back",
+            "location": [ 565, 545 ],
+            "variable": "backButton"
+          },
+          {
+            "name": "replayButton",
+            "type": "button",
+            "image": "replay",
+            "location": [ 643, 545 ],
+            "variable": "replayButton"
+          },
+          {
+            "name": "nextButton",
+            "type": "button",
+            "image": "next",
+            "location": [ 721, 545 ],
+            "variable": "nextButton"
+          },
+          {
+            "name": "vo",
+            "type": "audio",
+            "audio": [ "Slide 11" ],
+            "variable": "slideVO",
+            "startDelay": 500
+          }
+        ],
+        "outcomes": {
+           "vo_finished": {
+            "events": { "slideVO": "played" },
+            "actions": [
+              { "type": "remove-actor", "args": ["nextButton"] },
+              { "type": "add-actor", "args": [
+                {
+                  "name": "nextHighlight",
+                  "type": "button",
+                  "image": "nextHighlight",
+                  "animated": false,
+                  "location": [ 721, 545 ],
+                  "variable": "nextButtonHi"
+                }
+              ] }
+            ]
+          },
+          "replay_button": {
+            "events": { "replayButton": "*" },
+            "actions": [
+              { "type": "scene", "args": [ "empty_replay_scene" ] },
+              { "type": "scene", "args": [ "slide11" ] }
+            ]
+          },
+          "forward_button": {
+            "events": { "nextButton": "*" },
+            "actions": [ { "type": "scene", "args": [ "slide12" ] } ]
+          },
+          "forward_button_hi": {
+            "events": { "nextButtonHi": "*" },
+            "actions": [ { "type": "scene", "args": [ "slide12" ] } ]
+          },
+          "back_button": {
+            "events": { "backButton": "*" },
+            "actions": [ { "type": "scene", "args": [ "slide09" ] } ]
+          }
+        }
+      },
+      "slide12": {
+        "id": "slide12",
+        "background": "background",
+        "title": "Slide 12",
+        "description": "Slide 12",
+        "actors": [
+          {
+            "name": "lessonTitle",
+            "type": "text",
+            "font": "lesson-title",
+            "location": [ 55, 6 ],
+            "text": "Physical Activity"
+          },
+          {
+            "name": "loading",
+            "type": "text",
+            "font": "content-body",
+            "location": [ 331, 279 ],
+            "text": "loading..."
+          },
+          {
+            "name": "backButton",
+            "type": "button",
+            "image": "back",
+            "location": [ 565, 545 ],
+            "variable": "backButton"
+          },
+          {
+            "name": "replayButton",
+            "type": "button",
+            "image": "replay",
+            "location": [ 643, 545 ],
+            "variable": "replayButton"
+          },
+          {
+            "name": "nextButton",
+            "type": "button",
+            "image": "next",
+            "location": [ 721, 545 ],
+            "variable": "nextButton"
+          },
+          {
+            "name": "videoScribe",
+            "type": "wistia",
+            "location": [ 80, 120 ],
+            "size": [ 640, 360 ],
+            "hideCloseButton": true,
+            "video": "59ok5vgq0q",
+            "variable": "videoScribe",
+            "autoplay": true
+          }
+        ],
+        "outcomes": {
+           "vo_finished": {
+            "events": { "videoScribe": "finished" },
+            "actions": [
+              { "type": "remove-actor", "args": ["nextButton"] },
+              { "type": "add-actor", "args": [
+                {
+                  "name": "nextHighlight",
+                  "type": "button",
+                  "image": "nextHighlight",
+                  "animated": false,
+                  "location": [ 721, 545 ],
+                  "variable": "nextButtonHi"
+                }
+              ] }
+            ]
+          },
+          "replay_button": {
+            "events": { "replayButton": "*" },
+            "actions": [
+              { "type": "scene", "args": [ "empty_replay_scene" ] },
+              { "type": "scene", "args": [ "slide12" ] }
+            ]
+          },
+          "forward_button": {
+            "events": { "nextButton": "*" },
+            "actions": [ { "type": "scene", "args": [ "slide13" ] } ]
+          },
+          "forward_button_hi": {
+            "events": { "nextButtonHi": "*" },
+            "actions": [ { "type": "scene", "args": [ "slide13" ] } ]
+          },
+          "back_button": {
+            "events": { "backButton": "*" },
+            "actions": [ { "type": "scene", "args": [ "slide11" ] } ]
+          }
+        }
+      },
+      "slide13": {
+        "id": "slide13",
+        "background": "background",
+        "title": "Slide 13",
+        "description": "Slide 13",
+        "actors": [
+          {
+            "name": "lessonTitle",
+            "type": "text",
+            "font": "lesson-title",
+            "location": [ 55, 6 ],
+            "text": "Physical Activity"
+          },
+          {
+            "name": "slideTitle",
+            "type": "text",
+            "font": "final-title",
+            "location": [ 265, 190 ],
+            "text": "Great job!"
+          },
+          {
+            "name": "backButton",
+            "type": "button",
+            "image": "back",
+            "location": [ 565, 545 ],
+            "variable": "backButton"
+          },
+          {
+            "name": "replayButton",
+            "type": "button",
+            "image": "replay",
+            "location": [ 643, 545 ],
+            "variable": "replayButton"
+          },
+          {
+            "name": "next-disabled",
+            "type": "decoration",
+            "image": "next-disabled",
+            "location": [ 721, 545 ],
+            "variable": "next-disabled",
+            "key": "decorations"
+          },
+          {
+            "name": "vo",
+            "type": "audio",
+            "audio": [ "Slide 13" ],
+            "variable": "slideVO",
+            "startDelay": 500
+          }
+        ],
+        "outcomes": {
+           "vo_finished": {
+            "events": { "slideVO": "played" },
+            "actions": [
+             
+            ]
+          },
+          "replay_button": {
+            "events": { "replayButton": "*" },
+            "actions": [
+              { "type": "scene", "args": [ "empty_replay_scene" ] },
+              { "type": "scene", "args": [ "slide13" ] }
+            ]
+          },
+          "back_button": {
+            "events": { "backButton": "*" },
+            "actions": [ { "type": "scene", "args": [ "slide12" ] } ]
+          }
+        },
+        "actions": [
+          { "type": "choice", "args": [ "objective_complete", 1] }
+        ]
+      },
+      "empty_replay_scene": {
+        "id": "empty_replay_scene",
+        "description": "since a scene change request to the current scene is ignored, first change to this empty scene"
+      }
+    }
+  }
+}

@@ -1,0 +1,157 @@
+{
+  "src": "lessonaudio.ogg",
+  "data": {
+    "audioSprite": {
+      "Slide 01": [
+        0,
+        17.99609977324263,
+        false,
+        "Slide 01"
+      ],
+      "Slide 02": [
+        19,
+        19.49868480725624,
+        false,
+        "Slide 02"
+      ],
+      "Slide 03": [
+        40,
+        35.37068027210884,
+        false,
+        "Slide 03"
+      ],
+      "Slide 04": [
+        77,
+        24.463424036281182,
+        false,
+        "Slide 04"
+      ],
+      "Slide 05": [
+        103,
+        18.677346938775514,
+        false,
+        "Slide 05"
+      ],
+      "Slide 06": [
+        123,
+        41.70716553287983,
+        false,
+        "Slide 06"
+      ],
+      "Slide 07": [
+        166,
+        51.33079365079365,
+        false,
+        "Slide 07"
+      ],
+      "Slide 08": [
+        219,
+        17.424104308390014,
+        false,
+        "Slide 08"
+      ],
+      "Slide 09": [
+        238,
+        17.693333333333328,
+        false,
+        "Slide 09"
+      ],
+      "Slide 10": [
+        257,
+        18.473083900226754,
+        false,
+        "Slide 10"
+      ],
+      "Slide 11": [
+        277,
+        47.866258503401355,
+        false,
+        "Slide 11"
+      ],
+      "Slide 12": [
+        326,
+        15.608344671201792,
+        false,
+        "Slide 12"
+      ],
+      "Slide 13 Carly feedback": [
+        343,
+        10.834036281179124,
+        false,
+        "Slide 13 Carly feedback"
+      ],
+      "Slide 13 Carly": [
+        355,
+        4.616666666666674,
+        false,
+        "Slide 13 Carly"
+      ],
+      "Slide 13 Ian feedback": [
+        361,
+        10.581337868480716,
+        false,
+        "Slide 13 Ian feedback"
+      ],
+      "Slide 13 Ian": [
+        373,
+        6.717913832199542,
+        false,
+        "Slide 13 Ian"
+      ],
+      "Slide 13 Sofia feedback": [
+        381,
+        8.987188208616772,
+        false,
+        "Slide 13 Sofia feedback"
+      ],
+      "Slide 13 Sofia": [
+        391,
+        5.2020861678004735,
+        false,
+        "Slide 13 Sofia"
+      ],
+      "Slide 13": [
+        398,
+        14.552902494331079,
+        false,
+        "Slide 13"
+      ],
+      "Slide 14": [
+        414,
+        9.621337868480737,
+        false,
+        "Slide 14"
+      ],
+      "Slide 15": [
+        425,
+        46.46439909297055,
+        false,
+        "Slide 15"
+      ],
+      "Slide 16": [
+        473,
+        38.4773469387755,
+        false,
+        "Slide 16"
+      ],
+      "Slide 17": [
+        513,
+        42.048004535147356,
+        false,
+        "Slide 17"
+      ],
+      "Slide 18": [
+        557,
+        13.333333333333371,
+        false,
+        "Slide 18"
+      ],
+      "Slide 19": [
+        572,
+        2.282653061224437,
+        false,
+        "Slide 19"
+      ]
+    }
+  }
+}

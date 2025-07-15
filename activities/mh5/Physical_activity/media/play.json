@@ -1,0 +1,16 @@
+{
+  "name": "Mission: Health 5th Grade - Physical Activity",
+  "description": "Physical Activity Lesson",
+  "scorm": false,
+  "logging": true,
+  "autoScale": true,
+  "acts": {
+    "default": {
+      "id": "default",
+      "description": "MH5 Physical Activity lesson",
+      "name": "MH5 Physical Activity",
+      "theme": "media/default/theme.json",
+      "objective": "completion"
+    }
+  }
+}
