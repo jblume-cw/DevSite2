@@ -1,0 +1,113 @@
+{
+	"resources": [
+		"output/vaping-hs-environmentalhealth-scratch/vo.ogg",
+		"output/vaping-hs-environmentalhealth-scratch/vo.m4a"
+	],
+	"spritemap": {
+		"Question 1 correct": {
+			"start": 0,
+			"end": 12.047437641723356,
+			"loop": false
+		},
+		"Question 1 incorrect": {
+			"start": 14,
+			"end": 28,
+			"loop": false
+		},
+		"Question 1": {
+			"start": 29,
+			"end": 41.27138321995465,
+			"loop": false
+		},
+		"Question 2 correct": {
+			"start": 43,
+			"end": 43.70727891156463,
+			"loop": false
+		},
+		"Question 2 incorrect": {
+			"start": 45,
+			"end": 51.68439909297052,
+			"loop": false
+		},
+		"Question 2": {
+			"start": 53,
+			"end": 67.25546485260772,
+			"loop": false
+		},
+		"Question 3 correct": {
+			"start": 69,
+			"end": 70.06902494331065,
+			"loop": false
+		},
+		"Question 3 incorrect": {
+			"start": 72,
+			"end": 83.88301587301588,
+			"loop": false
+		},
+		"Question 3": {
+			"start": 85,
+			"end": 104.5530612244898,
+			"loop": false
+		},
+		"Question 4 correct": {
+			"start": 106,
+			"end": 106.9,
+			"loop": false
+		},
+		"Question 4 incorrect": {
+			"start": 108,
+			"end": 115.17269841269841,
+			"loop": false
+		},
+		"Question 4": {
+			"start": 117,
+			"end": 134.0134013605442,
+			"loop": false
+		},
+		"Slide 2": {
+			"start": 136,
+			"end": 149.78015873015872,
+			"loop": false
+		},
+		"Slide 2a": {
+			"start": 151,
+			"end": 209,
+			"loop": false
+		},
+		"Slide 2b": {
+			"start": 210,
+			"end": 277.4109977324263,
+			"loop": false
+		},
+		"Slide 2c": {
+			"start": 279,
+			"end": 299.2159410430839,
+			"loop": false
+		},
+		"Slide 3": {
+			"start": 301,
+			"end": 342.0443083900227,
+			"loop": false
+		},
+		"Slide 4": {
+			"start": 344,
+			"end": 370.29414965986393,
+			"loop": false
+		},
+		"Slide 5": {
+			"start": 372,
+			"end": 405.5237868480726,
+			"loop": false
+		},
+		"Slide 6": {
+			"start": 407,
+			"end": 435.4595691609977,
+			"loop": false
+		},
+		"Slide 7": {
+			"start": 437,
+			"end": 446.87927437641724,
+			"loop": false
+		}
+	}
+}
