@@ -1,0 +1,83 @@
+{
+  "resources": [
+    "output/MH7activities/skeeball.ogg",
+    "output/MH7activities/skeeball.m4a"
+  ],
+  "spritemap": {
+    "ball-jump": {
+      "start": 0,
+      "end": 0.37281179138321996,
+      "loop": false
+    },
+    "Choose": {
+      "start": 1,
+      "end": 2.903514739229025,
+      "loop": false
+    },
+    "echo": {
+      "start": 3,
+      "end": 4.1834013605442175,
+      "loop": false
+    },
+    "For1000": {
+      "start": 5,
+      "end": 6.467460317460318,
+      "loop": false
+    },
+    "For2000": {
+      "start": 7,
+      "end": 8.517777777777777,
+      "loop": false
+    },
+    "For3000": {
+      "start": 9,
+      "end": 10.41716553287982,
+      "loop": false
+    },
+    "gamemachine03-short": {
+      "start": 11,
+      "end": 11.362131519274376,
+      "loop": false
+    },
+    "gamemachine19-short": {
+      "start": 12,
+      "end": 12.575578231292518,
+      "loop": false
+    },
+    "hole-score": {
+      "start": 13,
+      "end": 14.095759637188209,
+      "loop": false
+    },
+    "Instructions": {
+      "start": 15,
+      "end": 28.248979591836736,
+      "loop": false
+    },
+    "pinball_start02": {
+      "start": 29,
+      "end": 29.47392290249433,
+      "loop": false
+    },
+    "pool_bumper_04": {
+      "start": 30,
+      "end": 30.37950113378685,
+      "loop": false
+    },
+    "pool_pocket_05": {
+      "start": 31,
+      "end": 31.487709750566893,
+      "loop": false
+    },
+    "rolling_ball_loop04": {
+      "start": 32,
+      "end": 36.632380952380956,
+      "loop": false
+    },
+    "score-tick": {
+      "start": 37,
+      "end": 38.68,
+      "loop": false
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "name": "MH Healthy Minds",
+  "description": "Healthy Minds lesson",
+  "scorm": true,
+  "logging": false,
+  "autoScale": true,
+  "acts": {
+    "default": {
+      "id": "default",
+      "description": "Mission Health 8th grade lesson",
+      "name": "MH Healthy Minds",
+      "theme": "media/default/theme.json",
+      "objectives": []
+    }
+  }
+}

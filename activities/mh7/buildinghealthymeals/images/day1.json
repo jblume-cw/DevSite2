@@ -1,0 +1,420 @@
+{"frames": {
+
+"Beef.png":
+{
+	"frame": {"x":1905,"y":219,"w":76,"h":76},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":76,"h":76},
+	"sourceSize": {"w":76,"h":76}
+},
+"Blueberry Yogurt.jpg":
+{
+	"frame": {"x":1,"y":1,"w":236,"h":410},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":236,"h":410},
+	"sourceSize": {"w":236,"h":410}
+},
+"Cheerios-box.png":
+{
+	"frame": {"x":1905,"y":297,"w":76,"h":76},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":76,"h":76},
+	"sourceSize": {"w":76,"h":76}
+},
+"Cheerios.jpg":
+{
+	"frame": {"x":239,"y":1,"w":236,"h":410},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":236,"h":410},
+	"sourceSize": {"w":236,"h":410}
+},
+"CheeseHighFat.png":
+{
+	"frame": {"x":1905,"y":375,"w":76,"h":76},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":76,"h":76},
+	"sourceSize": {"w":76,"h":76}
+},
+"CheeseReducedFat.png":
+{
+	"frame": {"x":1905,"y":453,"w":76,"h":76},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":76,"h":76},
+	"sourceSize": {"w":76,"h":76}
+},
+"ChickenShredded.png":
+{
+	"frame": {"x":1905,"y":531,"w":76,"h":76},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":76,"h":76},
+	"sourceSize": {"w":76,"h":76}
+},
+"Chocolate Milk.jpg":
+{
+	"frame": {"x":477,"y":1,"w":236,"h":410},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":236,"h":410},
+	"sourceSize": {"w":236,"h":410}
+},
+"Corn With Butter Sauce.jpg":
+{
+	"frame": {"x":715,"y":1,"w":236,"h":410},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":236,"h":410},
+	"sourceSize": {"w":236,"h":410}
+},
+"Corn.jpg":
+{
+	"frame": {"x":953,"y":1,"w":236,"h":410},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":236,"h":410},
+	"sourceSize": {"w":236,"h":410}
+},
+"Corn.png":
+{
+	"frame": {"x":1905,"y":609,"w":76,"h":76},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":76,"h":76},
+	"sourceSize": {"w":76,"h":76}
+},
+"CornWithButter.png":
+{
+	"frame": {"x":1905,"y":687,"w":76,"h":76},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":76,"h":76},
+	"sourceSize": {"w":76,"h":76}
+},
+"Flavored Sparkling Water.jpg":
+{
+	"frame": {"x":1191,"y":1,"w":236,"h":410},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":236,"h":410},
+	"sourceSize": {"w":236,"h":410}
+},
+"Flavored Water.jpg":
+{
+	"frame": {"x":1429,"y":1,"w":236,"h":410},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":236,"h":410},
+	"sourceSize": {"w":236,"h":410}
+},
+"Frosted Cheerios.jpg":
+{
+	"frame": {"x":1667,"y":1,"w":236,"h":410},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":236,"h":410},
+	"sourceSize": {"w":236,"h":410}
+},
+"FrostedCheerios-box.png":
+{
+	"frame": {"x":1905,"y":765,"w":76,"h":76},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":76,"h":76},
+	"sourceSize": {"w":76,"h":76}
+},
+"Fruit Cup (In Light Syrup).jpg":
+{
+	"frame": {"x":1,"y":413,"w":236,"h":410},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":236,"h":410},
+	"sourceSize": {"w":236,"h":410}
+},
+"Fruit Cup (No Sugar Added).jpg":
+{
+	"frame": {"x":239,"y":413,"w":236,"h":410},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":236,"h":410},
+	"sourceSize": {"w":236,"h":410}
+},
+"Fruit Flavored Soda.jpg":
+{
+	"frame": {"x":477,"y":413,"w":236,"h":410},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":236,"h":410},
+	"sourceSize": {"w":236,"h":410}
+},
+"FruitCupInSyrup.png":
+{
+	"frame": {"x":1905,"y":843,"w":76,"h":76},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":76,"h":76},
+	"sourceSize": {"w":76,"h":76}
+},
+"FruitCupNoSugarAdded.png":
+{
+	"frame": {"x":1905,"y":921,"w":76,"h":76},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":76,"h":76},
+	"sourceSize": {"w":76,"h":76}
+},
+"GrapesRed.png":
+{
+	"frame": {"x":1905,"y":1,"w":94,"h":108},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":94,"h":108},
+	"sourceSize": {"w":94,"h":108}
+},
+"HardBoiledEgg.png":
+{
+	"frame": {"x":1905,"y":111,"w":83,"h":106},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":83,"h":106},
+	"sourceSize": {"w":83,"h":106}
+},
+"High Fat Cheese.jpg":
+{
+	"frame": {"x":715,"y":413,"w":236,"h":410},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":236,"h":410},
+	"sourceSize": {"w":236,"h":410}
+},
+"JuiceOrange.png":
+{
+	"frame": {"x":1905,"y":999,"w":76,"h":76},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":76,"h":76},
+	"sourceSize": {"w":76,"h":76}
+},
+"KoolAidReg.png":
+{
+	"frame": {"x":1905,"y":1077,"w":76,"h":76},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":76,"h":76},
+	"sourceSize": {"w":76,"h":76}
+},
+"Light Caesar Salad.jpg":
+{
+	"frame": {"x":953,"y":413,"w":236,"h":410},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":236,"h":410},
+	"sourceSize": {"w":236,"h":410}
+},
+"Light Greek Yogurt.jpg":
+{
+	"frame": {"x":1191,"y":413,"w":236,"h":410},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":236,"h":410},
+	"sourceSize": {"w":236,"h":410}
+},
+"MilkChocolate.png":
+{
+	"frame": {"x":1905,"y":1155,"w":76,"h":76},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":76,"h":76},
+	"sourceSize": {"w":76,"h":76}
+},
+"MilkSkim.png":
+{
+	"frame": {"x":1905,"y":1233,"w":76,"h":76},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":76,"h":76},
+	"sourceSize": {"w":76,"h":76}
+},
+"Orange Juice.jpg":
+{
+	"frame": {"x":1429,"y":413,"w":236,"h":410},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":236,"h":410},
+	"sourceSize": {"w":236,"h":410}
+},
+"Orange-fruit.png":
+{
+	"frame": {"x":1,"y":1237,"w":76,"h":76},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":76,"h":76},
+	"sourceSize": {"w":76,"h":76}
+},
+"Orange.jpg":
+{
+	"frame": {"x":1667,"y":413,"w":236,"h":410},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":236,"h":410},
+	"sourceSize": {"w":236,"h":410}
+},
+"Reduced Fat Cheese.jpg":
+{
+	"frame": {"x":1,"y":825,"w":236,"h":410},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":236,"h":410},
+	"sourceSize": {"w":236,"h":410}
+},
+"Regular Caesar Salad.jpg":
+{
+	"frame": {"x":239,"y":825,"w":236,"h":410},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":236,"h":410},
+	"sourceSize": {"w":236,"h":410}
+},
+"Regular Kool Aid.jpg":
+{
+	"frame": {"x":477,"y":825,"w":236,"h":410},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":236,"h":410},
+	"sourceSize": {"w":236,"h":410}
+},
+"SaladCaesarLight.png":
+{
+	"frame": {"x":79,"y":1237,"w":76,"h":76},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":76,"h":76},
+	"sourceSize": {"w":76,"h":76}
+},
+"SaladCaesarReg.png":
+{
+	"frame": {"x":157,"y":1237,"w":76,"h":76},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":76,"h":76},
+	"sourceSize": {"w":76,"h":76}
+},
+"Shredded Chicken.jpg":
+{
+	"frame": {"x":715,"y":825,"w":236,"h":410},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":236,"h":410},
+	"sourceSize": {"w":236,"h":410}
+},
+"SodaFruitFlavored.png":
+{
+	"frame": {"x":235,"y":1237,"w":76,"h":76},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":76,"h":76},
+	"sourceSize": {"w":76,"h":76}
+},
+"SodaGrape.png":
+{
+	"frame": {"x":313,"y":1237,"w":76,"h":76},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":76,"h":76},
+	"sourceSize": {"w":76,"h":76}
+},
+"Taco Beef.jpg":
+{
+	"frame": {"x":953,"y":825,"w":236,"h":410},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":236,"h":410},
+	"sourceSize": {"w":236,"h":410}
+},
+"TortillaWhite.png":
+{
+	"frame": {"x":391,"y":1237,"w":76,"h":76},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":76,"h":76},
+	"sourceSize": {"w":76,"h":76}
+},
+"TortillaWholeWheat.png":
+{
+	"frame": {"x":469,"y":1237,"w":76,"h":76},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":76,"h":76},
+	"sourceSize": {"w":76,"h":76}
+},
+"WaterFlavored.png":
+{
+	"frame": {"x":547,"y":1237,"w":76,"h":76},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":76,"h":76},
+	"sourceSize": {"w":76,"h":76}
+},
+"WaterSparkling.png":
+{
+	"frame": {"x":625,"y":1237,"w":76,"h":76},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":76,"h":76},
+	"sourceSize": {"w":76,"h":76}
+},
+"White Skim Milk.jpg":
+{
+	"frame": {"x":1191,"y":825,"w":236,"h":410},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":236,"h":410},
+	"sourceSize": {"w":236,"h":410}
+},
+"White Tortilla.jpg":
+{
+	"frame": {"x":1429,"y":825,"w":236,"h":410},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":236,"h":410},
+	"sourceSize": {"w":236,"h":410}
+},
+"Whole Wheat Tortilla.jpg":
+{
+	"frame": {"x":1667,"y":825,"w":236,"h":410},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":236,"h":410},
+	"sourceSize": {"w":236,"h":410}
+},
+"YogurtBlueberry.png":
+{
+	"frame": {"x":703,"y":1237,"w":76,"h":76},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":76,"h":76},
+	"sourceSize": {"w":76,"h":76}
+},
+"YogurtLightGreek.png":
+{
+	"frame": {"x":781,"y":1237,"w":76,"h":76},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":76,"h":76},
+	"sourceSize": {"w":76,"h":76}
+}},
+"meta": {
+	"app": "https://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "day1.png",
+	"format": "RGBA8888",
+	"size": {"w":2000,"h":1314},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:254ac14358b579239412a4e1e1ca9be9:589e0a8ca9e278796a13f191d38848e3:c6b566b8749ba133d0a46b62cc393259$"
+}
+}

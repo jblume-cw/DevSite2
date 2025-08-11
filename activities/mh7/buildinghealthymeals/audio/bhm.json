@@ -1,0 +1,158 @@
+{
+  "resources": [
+    "output/MH7activities/bhm.ogg",
+    "output/MH7activities/bhm.m4a"
+  ],
+  "spritemap": {
+    "Breakfast Intro": {
+      "start": 0,
+      "end": 5.4924489795918365,
+      "loop": false
+    },
+    "Breakfast Summary One Wrong": {
+      "start": 6,
+      "end": 13.756507936507937,
+      "loop": false
+    },
+    "Breakfast Summary Perfect": {
+      "start": 14,
+      "end": 20.624489795918368,
+      "loop": false
+    },
+    "Breakfast Summary Two or More Wrong": {
+      "start": 21,
+      "end": 30.131746031746033,
+      "loop": false
+    },
+    "Choice Correct": {
+      "start": 31,
+      "end": 33.43179138321995,
+      "loop": false
+    },
+    "Choice Incorrect": {
+      "start": 34,
+      "end": 36.758820861678004,
+      "loop": false
+    },
+    "Day Summary Good": {
+      "start": 37,
+      "end": 41.796462585034014,
+      "loop": false
+    },
+    "Day Summary Intro": {
+      "start": 42,
+      "end": 56.83800453514739,
+      "loop": false
+    },
+    "Day Summary Ok": {
+      "start": 57,
+      "end": 63.85927437641723,
+      "loop": false
+    },
+    "Dinner Summary  Perfect": {
+      "start": 64,
+      "end": 70.07945578231292,
+      "loop": false
+    },
+    "Dinner Summary One Wrong": {
+      "start": 71,
+      "end": 78.4546485260771,
+      "loop": false
+    },
+    "Dinner Summary Two or More Wrong": {
+      "start": 79,
+      "end": 85.0878231292517,
+      "loop": false
+    },
+    "Instructions": {
+      "start": 86,
+      "end": 98.85904761904762,
+      "loop": false
+    },
+    "Lunch Dinner Intro 01": {
+      "start": 99,
+      "end": 101.01251700680272,
+      "loop": false
+    },
+    "Lunch Dinner Intro 02": {
+      "start": 102,
+      "end": 104.29761904761905,
+      "loop": false
+    },
+    "Lunch Dinner Intro 03": {
+      "start": 105,
+      "end": 107.10471655328799,
+      "loop": false
+    },
+    "Lunch Dinner Intro": {
+      "start": 108,
+      "end": 110.29761904761905,
+      "loop": false
+    },
+    "Lunch Summary One Wrong": {
+      "start": 111,
+      "end": 118.09408163265306,
+      "loop": false
+    },
+    "Lunch Summary Perfect": {
+      "start": 119,
+      "end": 126.46303854875283,
+      "loop": false
+    },
+    "Lunch Summary Two or More Wrong": {
+      "start": 127,
+      "end": 133.85927437641723,
+      "loop": false
+    },
+    "Snack Choice Correct Dairy": {
+      "start": 134,
+      "end": 136.85943310657598,
+      "loop": false
+    },
+    "Snack Choice Correct Fruits": {
+      "start": 137,
+      "end": 139.88460317460317,
+      "loop": false
+    },
+    "Snack Choice Correct Grains": {
+      "start": 140,
+      "end": 143.01038548752834,
+      "loop": false
+    },
+    "Snack Choice Correct Protein": {
+      "start": 144,
+      "end": 147.12775510204082,
+      "loop": false
+    },
+    "Snack Choice Correct Vegetables": {
+      "start": 148,
+      "end": 150.91814058956916,
+      "loop": false
+    },
+    "Snack Choice Incorrect Dairy": {
+      "start": 151,
+      "end": 155.41074829931972,
+      "loop": false
+    },
+    "Snack Choice Incorrect Fruits": {
+      "start": 156,
+      "end": 160.45265306122448,
+      "loop": false
+    },
+    "Snack Choice Incorrect Grains": {
+      "start": 161,
+      "end": 165.5029931972789,
+      "loop": false
+    },
+    "Snack Choice Incorrect Protein": {
+      "start": 166,
+      "end": 170.49460317460318,
+      "loop": false
+    },
+    "Snack Choice Incorrect Vegetables": {
+      "start": 171,
+      "end": 175.51975056689344,
+      "loop": false
+    }
+  }
+}
