@@ -1,0 +1,133 @@
+{
+	"resources": [
+		"output/vaping-hs-health-scratch/vo.ogg",
+		"output/vaping-hs-health-scratch/vo.m4a"
+	],
+	"spritemap": {
+		"Question 1 correct": {
+			"start": 0,
+			"end": 5.494625850340136,
+			"loop": false
+		},
+		"Question 1 incorrect": {
+			"start": 7,
+			"end": 10.935827664399092,
+			"loop": false
+		},
+		"Question 1": {
+			"start": 12,
+			"end": 16.313537414965985,
+			"loop": false
+		},
+		"Question 2 correct": {
+			"start": 18,
+			"end": 24.715895691609976,
+			"loop": false
+		},
+		"Question 2 incorrect": {
+			"start": 26,
+			"end": 32.89045351473923,
+			"loop": false
+		},
+		"Question 2": {
+			"start": 34,
+			"end": 40.47907029478458,
+			"loop": false
+		},
+		"Question 3 correct": {
+			"start": 42,
+			"end": 49.33804988662131,
+			"loop": false
+		},
+		"Question 3 incorrect": {
+			"start": 51,
+			"end": 57.35172335600907,
+			"loop": false
+		},
+		"Question 3": {
+			"start": 59,
+			"end": 65,
+			"loop": false
+		},
+		"Question 4 correct": {
+			"start": 66,
+			"end": 72,
+			"loop": false
+		},
+		"Question 4 incorrect": {
+			"start": 73,
+			"end": 79.32718820861678,
+			"loop": false
+		},
+		"Question 4": {
+			"start": 81,
+			"end": 85.21138321995466,
+			"loop": false
+		},
+		"Slide 2": {
+			"start": 87,
+			"end": 114.58573696145125,
+			"loop": false
+		},
+		"Slide 3": {
+			"start": 116,
+			"end": 151.10163265306122,
+			"loop": false
+		},
+		"Slide 4 addiction": {
+			"start": 153,
+			"end": 177.19020408163266,
+			"loop": false
+		},
+		"Slide 4 long-term": {
+			"start": 179,
+			"end": 195,
+			"loop": false
+		},
+		"Slide 4 short-term": {
+			"start": 196,
+			"end": 212.58442176870747,
+			"loop": false
+		},
+		"Slide 4": {
+			"start": 214,
+			"end": 218.7528798185941,
+			"loop": false
+		},
+		"Slide 5 family": {
+			"start": 220,
+			"end": 230.06643990929706,
+			"loop": false
+		},
+		"Slide 5 laws": {
+			"start": 232,
+			"end": 240,
+			"loop": false
+		},
+		"Slide 5 rules": {
+			"start": 241,
+			"end": 254.38378684807256,
+			"loop": false
+		},
+		"Slide 5": {
+			"start": 256,
+			"end": 262.8169387755102,
+			"loop": false
+		},
+		"Slide 6": {
+			"start": 264,
+			"end": 290.2026984126984,
+			"loop": false
+		},
+		"Slide 7": {
+			"start": 292,
+			"end": 341.66539682539684,
+			"loop": false
+		},
+		"Slide 8": {
+			"start": 343,
+			"end": 370.6052154195011,
+			"loop": false
+		}
+	}
+}
