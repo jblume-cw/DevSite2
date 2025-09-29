@@ -1,0 +1,58 @@
+﻿html,body {margin:0px auto; overflow:hidden;}
+#gameContainer
+{
+	position:relative;
+}
+#game
+{
+	position:relative; 
+	border:none; 
+}	
+#vidContainer 
+{	
+	background-image:url('../media/videoDialog.png');
+	z-index: 100;
+	display:none;
+	position:absolute;
+	top:50px;
+	left:125px;	
+	width:711px;
+	height:487px;
+}
+#vidPlayer
+{
+	width:640px;
+	height:360px;
+	margin:36px 35px;	
+}
+.flowplayer {
+   width: 640px;
+   height: 360px;
+}
+#vidBackButton
+{
+	position:absolute;
+	bottom:24px;
+	left:40px;
+}
+#vidSkipButton
+{
+	position:absolute;
+	bottom:24px;
+	right:40px;
+}
+.darkClass
+{
+    background-color: black;
+    filter:alpha(opacity=80); /* IE */
+    opacity: 0.8; /* Safari, Opera */
+    -moz-opacity:0.80; /* FireFox */
+    z-index: 20;
+    height: 100%;
+    width: 100%;
+    background-repeat:no-repeat;
+    background-position:center;
+    position:absolute;
+    top: 0px;
+    left: 0px;
+}
