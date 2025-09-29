@@ -1,0 +1,113 @@
+{
+	"resources": [
+		"output/vaping-hs-environmentalhealth/vo.ogg",
+		"output/vaping-hs-environmentalhealth/vo.m4a"
+	],
+	"spritemap": {
+		"Question 1 correct": {
+			"start": 0,
+			"end": 11.891473922902493,
+			"loop": false
+		},
+		"Question 1 incorrect": {
+			"start": 13,
+			"end": 27.845396825396826,
+			"loop": false
+		},
+		"Question 1": {
+			"start": 29,
+			"end": 43.946394557823126,
+			"loop": false
+		},
+		"Question 2  correct": {
+			"start": 45,
+			"end": 45.6059410430839,
+			"loop": false
+		},
+		"Question 2  incorrect": {
+			"start": 47,
+			"end": 55.48308390022676,
+			"loop": false
+		},
+		"Question 2": {
+			"start": 57,
+			"end": 75.17802721088435,
+			"loop": false
+		},
+		"Question 3 correct": {
+			"start": 77,
+			"end": 77.9846485260771,
+			"loop": false
+		},
+		"Question 3 incorrect": {
+			"start": 79,
+			"end": 91.80122448979591,
+			"loop": false
+		},
+		"Question 3": {
+			"start": 93,
+			"end": 116.71979591836734,
+			"loop": false
+		},
+		"Question 4 correct": {
+			"start": 118,
+			"end": 118.71621315192743,
+			"loop": false
+		},
+		"Question 4 incorrect": {
+			"start": 120,
+			"end": 127.08492063492064,
+			"loop": false
+		},
+		"Question 4": {
+			"start": 129,
+			"end": 148.15521541950113,
+			"loop": false
+		},
+		"Slide 2": {
+			"start": 150,
+			"end": 164.38061224489795,
+			"loop": false
+		},
+		"Slide 2a": {
+			"start": 166,
+			"end": 231.4998185941043,
+			"loop": false
+		},
+		"Slide 2b": {
+			"start": 233,
+			"end": 301.4945124716553,
+			"loop": false
+		},
+		"Slide 2c": {
+			"start": 303,
+			"end": 323.49179138321995,
+			"loop": false
+		},
+		"Slide 3": {
+			"start": 325,
+			"end": 366.73072562358277,
+			"loop": false
+		},
+		"Slide 4": {
+			"start": 368,
+			"end": 395.1531746031746,
+			"loop": false
+		},
+		"Slide 5": {
+			"start": 397,
+			"end": 434.2345124716553,
+			"loop": false
+		},
+		"Slide 6": {
+			"start": 436,
+			"end": 465.7286394557823,
+			"loop": false
+		},
+		"Slide 7": {
+			"start": 467,
+			"end": 477.9573242630386,
+			"loop": false
+		}
+	}
+}

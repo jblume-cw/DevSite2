@@ -1,0 +1,15 @@
+/*
+ * @license @wistia/type-guards v0.9.1
+ *
+ * Copyright (c) 2023-2025, Wistia, Inc. and its affiliates.
+ *
+ * This source code is unlicensed, all rights reserved.
+ */
+
+/*! regenerator-runtime -- Copyright (c) 2014-present, Facebook, Inc. -- license (MIT): https://github.com/babel/babel/blob/main/packages/babel-helpers/LICENSE */
+
+/**
+ * @author       Richard Davey <rich@photonstorm.com>
+ * @copyright    2019 Photon Storm Ltd.
+ * @license      {@link https://github.com/photonstorm/phaser/blob/master/license.txt|MIT License}
+ */
