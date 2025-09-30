@@ -1,0 +1,253 @@
+{
+	"resources": [
+		"output/vaping-hs-spellingbee/vo.ogg",
+		"output/vaping-hs-spellingbee/vo.m4a"
+	],
+	"spritemap": {
+		"Menu Choose": {
+			"start": 0,
+			"end": 1.1745578231292517,
+			"loop": false
+		},
+		"Menu Complete": {
+			"start": 3,
+			"end": 13.89437641723356,
+			"loop": false
+		},
+		"Puzzle 1 correct": {
+			"start": 15,
+			"end": 19.386507936507936,
+			"loop": false
+		},
+		"Puzzle 1": {
+			"start": 21,
+			"end": 24.343832199546487,
+			"loop": false
+		},
+		"Puzzle 10 correct": {
+			"start": 26,
+			"end": 31.908639455782314,
+			"loop": false
+		},
+		"Puzzle 10": {
+			"start": 33,
+			"end": 37.931836734693874,
+			"loop": false
+		},
+		"Puzzle 11 correct": {
+			"start": 39,
+			"end": 44.70487528344671,
+			"loop": false
+		},
+		"Puzzle 11": {
+			"start": 46,
+			"end": 50.81199546485261,
+			"loop": false
+		},
+		"Puzzle 12 correct": {
+			"start": 52,
+			"end": 57.830725623582765,
+			"loop": false
+		},
+		"Puzzle 12": {
+			"start": 59,
+			"end": 64.50111111111111,
+			"loop": false
+		},
+		"Puzzle 13 correct": {
+			"start": 66,
+			"end": 72.29814058956916,
+			"loop": false
+		},
+		"Puzzle 13": {
+			"start": 74,
+			"end": 79.44718820861678,
+			"loop": false
+		},
+		"Puzzle 14 correct": {
+			"start": 81,
+			"end": 88.13709750566893,
+			"loop": false
+		},
+		"Puzzle 14": {
+			"start": 90,
+			"end": 96.35804988662132,
+			"loop": false
+		},
+		"Puzzle 15 correct": {
+			"start": 98,
+			"end": 104.03444444444445,
+			"loop": false
+		},
+		"Puzzle 15": {
+			"start": 106,
+			"end": 110.8119954648526,
+			"loop": false
+		},
+		"Puzzle 16 correct": {
+			"start": 112,
+			"end": 117.86666666666666,
+			"loop": false
+		},
+		"Puzzle 16": {
+			"start": 119,
+			"end": 123.41052154195012,
+			"loop": false
+		},
+		"Puzzle 17 correct": {
+			"start": 125,
+			"end": 133.1875283446712,
+			"loop": false
+		},
+		"Puzzle 17": {
+			"start": 135,
+			"end": 142.5045351473923,
+			"loop": false
+		},
+		"Puzzle 18 correct": {
+			"start": 144,
+			"end": 149.3192290249433,
+			"loop": false
+		},
+		"Puzzle 18": {
+			"start": 151,
+			"end": 155.60548752834467,
+			"loop": false
+		},
+		"Puzzle 19 correct": {
+			"start": 157,
+			"end": 163.7466439909297,
+			"loop": false
+		},
+		"Puzzle 19": {
+			"start": 165,
+			"end": 170.7231746031746,
+			"loop": false
+		},
+		"Puzzle 2 correct": {
+			"start": 172,
+			"end": 179.17902494331065,
+			"loop": false
+		},
+		"Puzzle 2": {
+			"start": 181,
+			"end": 186.8367120181406,
+			"loop": false
+		},
+		"Puzzle 20 correct": {
+			"start": 188,
+			"end": 195.75662131519275,
+			"loop": false
+		},
+		"Puzzle 20": {
+			"start": 197,
+			"end": 203.84090702947844,
+			"loop": false
+		},
+		"Puzzle 21 correct": {
+			"start": 205,
+			"end": 214.66315192743764,
+			"loop": false
+		},
+		"Puzzle 21": {
+			"start": 216,
+			"end": 224.7127210884354,
+			"loop": false
+		},
+		"Puzzle 22 correct": {
+			"start": 226,
+			"end": 233.4468934240363,
+			"loop": false
+		},
+		"Puzzle 22": {
+			"start": 235,
+			"end": 241.58074829931974,
+			"loop": false
+		},
+		"Puzzle 23 correct": {
+			"start": 243,
+			"end": 253.25920634920635,
+			"loop": false
+		},
+		"Puzzle 23": {
+			"start": 255,
+			"end": 263.8360544217687,
+			"loop": false
+		},
+		"Puzzle 3 correct": {
+			"start": 265,
+			"end": 271.55580498866215,
+			"loop": false
+		},
+		"Puzzle 3": {
+			"start": 273,
+			"end": 278.9325850340136,
+			"loop": false
+		},
+		"Puzzle 4 correct": {
+			"start": 280,
+			"end": 287.63444444444445,
+			"loop": false
+		},
+		"Puzzle 4": {
+			"start": 289,
+			"end": 295.59176870748297,
+			"loop": false
+		},
+		"Puzzle 5 correct": {
+			"start": 297,
+			"end": 304.35879818594105,
+			"loop": false
+		},
+		"Puzzle 5": {
+			"start": 306,
+			"end": 312.1722902494331,
+			"loop": false
+		},
+		"Puzzle 6 correct": {
+			"start": 314,
+			"end": 321.9700453514739,
+			"loop": false
+		},
+		"Puzzle 6": {
+			"start": 323,
+			"end": 330.0112471655329,
+			"loop": false
+		},
+		"Puzzle 7 correct": {
+			"start": 332,
+			"end": 338.37603174603174,
+			"loop": false
+		},
+		"Puzzle 7": {
+			"start": 340,
+			"end": 344.5902721088435,
+			"loop": false
+		},
+		"Puzzle 8 correct": {
+			"start": 346,
+			"end": 353.6045124716553,
+			"loop": false
+		},
+		"Puzzle 8": {
+			"start": 355,
+			"end": 362.08315192743765,
+			"loop": false
+		},
+		"Puzzle 9 correct": {
+			"start": 364,
+			"end": 369.9745351473923,
+			"loop": false
+		},
+		"Puzzle 9": {
+			"start": 371,
+			"end": 375.5063945578231,
+			"loop": false
+		},
+		"Splash": {
+			"start": 377,
+			"end": 378.0546712018141,
+			"loop": false
+		}
+	}
+}
