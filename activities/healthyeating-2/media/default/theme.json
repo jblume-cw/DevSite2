@@ -1,0 +1,252 @@
+{
+  "texture": "media/default/texture.png",
+  "textureMap": "media/default/texture.json",
+  "textureKey": "texture",
+  "data": "media/default/sceneData.json",
+  "fonts": {
+    "title-bar": {
+      "font": "24px VT323",
+      "fill": "#B7F149",
+      "align": "left",
+      "fontWeight": "400"
+    },
+    "title": {
+      "font": "66px Alegreya Sans",
+      "fill": "#FEFD9A",
+      "align": "left",
+      "fontWeight": "800"
+    },
+    "default-text": {
+      "font": "25px Alegreya Sans",
+      "fill": "#FEFD9A",
+      "align": "left",
+      "fontWeight": "800"
+    },
+    "myplate-red": {
+      "font": "25px Alegreya Sans",
+      "fill": "#FF5353",
+      "align": "left",
+      "fontWeight": "800"
+    },
+    "myplate-orange": {
+      "font": "25px Alegreya Sans",
+      "fill": "#FEA33D",
+      "align": "left",
+      "fontWeight": "800"
+    },
+    "myplate-blue": {
+      "font": "25px Alegreya Sans",
+      "fill": "#93F7FF",
+      "align": "left",
+      "fontWeight": "800"
+    },
+    "myplate-green": {
+      "font": "25px Alegreya Sans",
+      "fill": "#6CF08D",
+      "align": "left",
+      "fontWeight": "800"
+    },
+    "myplate-purple": {
+      "font": "25px Alegreya Sans",
+      "fill": "#D396FC",
+      "align": "left",
+      "fontWeight": "800"
+    },
+    "myplate-question": {
+      "font": "25px Alegreya Sans",
+      "fill": "#FF9900",
+      "align": "left",
+      "fontWeight": "800"
+    },
+    "food-label-white": {
+      "font": "25px Alegreya Sans",
+      "fill": "#FFFFFF",
+      "align": "left",
+      "fontWeight": "800"
+    }
+  },
+  "images": {
+    "common": {
+      "title-bar": "title-bar.png",
+      "moon": "moon.png",
+      "star-bullet": "star-bullet.png",
+      "mission-health-logo": "mission health logo.png"
+    },
+    "my-plate": {
+      "chicken-milk-cheese": "chicken-milk-cheese.png",
+      "dairy-examples": "dairy-examples.png",
+      "fish-peapods": "fish-peapods.png",
+      "fruits-examples": "fruits-examples.png",
+      "grains-examples": "grains-examples.png",
+      "myplate-bg": "myplate-bg.png",
+      "myplate-sm": "myplate-sm.png",
+      "protein-examples": "protein-examples.png",
+      "sofia-jack": "sofia-jack.png",
+      "sofia": "sofia.jpg",
+      "star-red": "star-red.png",
+      "star-blue": "star-blue.png",
+      "star-green": "star-green.png",
+      "star-orange": "star-orange.png",
+      "star-purple": "star-purple.png",
+      "vegetables-examples": "vegetables-examples.png",
+      "dairy": "mplate-dairy0001.png",
+      "fruits": "myplate-fruits0001.png",
+      "protein": "myplate-protein0001.png",
+      "vegetables": "myplate-vegetables0001.png",
+      "grains": "myplate-grains0001.png"
+    }
+  },
+  "sceneImages": {
+    "bgspace": "sky-background.png"
+  },
+  "buttons": {
+    "home": {
+      "up": "home-btn0001.png",
+      "over": "home-btn0002.png",
+      "out": "home-btn0001.png",
+      "down": "home-btn0002.png"
+    },
+    "next": {
+      "up": "next-btn0001.png",
+      "over": "next-btn0002.png",
+      "out": "next-btn0001.png",
+      "down": "next-btn0002.png"
+    },
+    "back": {
+      "up": "back-btn0001.png",
+      "over": "back-btn0002.png",
+      "out": "back-btn0001.png",
+      "down": "back-btn0002.png"
+    },
+    "replay": {
+      "up": "replay-btn0001.png",
+      "over": "replay-btn0002.png",
+      "out": "replay-btn0001.png",
+      "down": "replay-btn0002.png"
+    },
+    "worksheet": {
+      "up": "worksheet-btn0001.png",
+      "over": "worksheet-btn0002.png",
+      "out": "worksheet-btn0001.png",
+      "down": "worksheet_btn0002.png"
+    },
+    "myplate-grains": {
+      "up": "myplate-grains0001.png",
+      "over": "myplate-grains0002.png",
+      "out": "myplate-grains0001.png",
+      "down": "myplate-grains0002.png"
+    },
+    "myplate-protein": {
+      "up": "myplate-protein0001.png",
+      "over": "myplate-protein0002.png",
+      "out": "myplate-protein0001.png",
+      "down": "myplate-protein0002.png"
+    },
+    "myplate-vegetables": {
+      "up": "myplate-vegetables0001.png",
+      "over": "myplate-vegetables0002.png",
+      "out": "myplate-vegetables0001.png",
+      "down": "myplate-vegetables0002.png"
+    },
+    "myplate-dairy": {
+      "up": "mplate-dairy0001.png",
+      "over": "mplate-dairy0002.png",
+      "out": "mplate-dairy0001.png",
+      "down": "mplate-dairy0002.png"
+    },
+    "myplate-fruits": {
+      "up": "myplate-fruits0001.png",
+      "over": "myplate-fruits0002.png",
+      "out": "myplate-fruits0001.png",
+      "down": "myplate-fruits0002.png"
+    },
+    "food-bread": {
+      "over": "bread0002.png",
+      "out": "bread0001.png"
+    },
+    "food-cheese": {
+      "over": "cheese block0002.png",
+      "out": "cheese block0001.png"
+    },
+    "food-chicken": {
+      "over": "chicken0002.png",
+      "out": "chicken0001.png"
+    },
+    "food-corn": {
+      "over": "corn0002.png",
+      "out": "corn0001.png"
+    },
+    "food-mayo": {
+      "over": "mayo0002.png",
+      "out": "mayo0001.png"
+    },
+    "food-pears": {
+      "over": "pears0002.png",
+      "out": "pears0001.png"
+    },
+    "food-pie": {
+      "over": "pie0002.png",
+      "out": "pie0001.png"
+    },
+    "food-toaster-pastry": {
+      "over": "toaster-pastry0002.png",
+      "out": "toaster-pastry0001.png"
+    },
+    "food-yogurt-toast-fruit": {
+      "over": "yogurt-toast-fruit0002.png",
+      "out": "yogurt-toast-fruit0001.png"
+    },
+    "planet-yes-button": {
+      "over": "yes_btn0002.png",
+      "out": "yes_btn0001.png"
+    },
+    "planet-no-button": {
+      "over": "no_btn0002.png",
+      "out": "no_btn0001.png"
+    }
+  },
+  "soundKey": "myplate",
+  "soundFile": ["media/default/my-plate.m4a", "media/default/my-plate.ogg"],
+  "sounds": {
+    "slide1": [0, 1.8030839002267574, false, "slide1"],
+    "slide2-dairy": [2, 22, false, "slide2-dairy"],
+    "slide2-fruits": [24, 17, false, "slide2-fruits"],
+    "slide2-grains": [41, 23.372335600907036, false, "slide2-grains"],
+    "slide2-protein": [65, 19.348163265306127, false, "slide2-protein"],
+    "slide2-vegetables": [85, 17.74480725623583, false, "slide2-vegetables"],
+    "slide2": [103, 16.57310657596372, false, "slide2"],
+    "slide2a": [107, 3.2, false, "slide2a"],
+    "slide2b": [115, 4, false, "slide2b"],
+    "slide3-bread": [120, 1.5, false, "slide3-bread"],
+    "slide3-cheese": [122, 2.23641723356009, false, "slide3-cheese"],
+    "slide3-chicken": [125, 1.6457142857142912, false, "slide3-chicken"],
+    "slide3-corn": [127, 2.189977324263026, false, "slide3-corn"],
+    "slide3-pears": [130, 2, false, "slide3-pears"],
+    "slide3": [132, 12.094693877551009, false, "slide3"],
+    "slide4": [145, 74.69659863945577, false, "slide4"],
+    "slide4a": [157, 20, false, "slide4a"],
+    "slide4b": [186, 27, false, "slide4b"],
+    "slide5-correct": [220, 6.530612244897952, false, "slide5-correct"],
+    "slide5-incorrect": [227, 5.537959183673479, false, "slide5-incorrect"],
+    "slide5": [233, 8.40709750566893, false, "slide5"],
+    "slide6-correct": [242, 7.000816326530611, false, "slide6-correct"],
+    "slide6-incorrect": [250, 6.295510204081609, false, "slide6-incorrect"],
+    "slide6": [257, 2.533877551020396, false, "slide6"],
+    "slide7": [260, 46.00163265306122, false, "slide7"],
+    "slide8-pie": [307, 6.399999999999977, false, "slide8-pie"],
+    "slide8-toasterpastry": [
+      314,
+      7.314285714285688,
+      false,
+      "slide8-toasterpastry"
+    ],
+    "slide8-yogurttoastfruit": [
+      322,
+      7.6538775510204005,
+      false,
+      "slide8-yogurttoastfruit"
+    ],
+    "slide8": [330, 8.071836734693875, false, "slide8"],
+    "slide9": [339, 1.25, false, "slide9"]
+  }
+}

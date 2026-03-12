@@ -1,0 +1,1854 @@
+{
+  "play": {
+    "start": "resumeFork",
+    "persist": ["lessonLocation"],
+    "modelType": "basic",
+    "showPlaythrough": false,
+    "global": {
+      "actors": {
+        "title-bar": {
+          "name": "title-bar",
+          "type": "decoration",
+          "image": "title-bar",
+          "key": "common",
+          "location": [0, 0]
+        },
+        "moon": {
+          "name": "moon",
+          "type": "decoration",
+          "image": "moon",
+          "key": "common",
+          "location": [0, 568]
+        },
+        "title-bar-text": {
+          "name": "title-bar-text",
+          "type": "text",
+          "text": "HEALTHY EATING - $scene_title$",
+          "font": "title-bar",
+          "location": [25, 4]
+        },
+        "home-btn": {
+          "name": "home-btn",
+          "type": "button",
+          "variable": "home-btn",
+          "image": "home",
+          "location": [709, 5]
+        },
+        "back-btn": {
+          "name": "back-btn",
+          "type": "button",
+          "variable": "back-btn",
+          "image": "back",
+          "location": [391, 498]
+        },
+        "replay-btn": {
+          "name": "replay-btn",
+          "type": "button",
+          "variable": "replay-btn",
+          "image": "replay",
+          "location": [548, 493]
+        },
+        "next-btn": {
+          "name": "next-btn",
+          "type": "button",
+          "image": "next",
+          "variable": "next-btn",
+          "location": [629, 498]
+        }
+      },
+      "outcomes": [
+        {
+          "events": { "home-btn": "!reset" },
+          "actions": [
+            { "type": "variable", "args": ["home-btn", "reset"] },
+            { "type": "scene", "args": ["empty-replay-scene"] },
+            { "type": "scene", "args": ["intro"] }
+          ]
+        },
+        {
+          "events": { "replay-btn": "!reset" },
+          "actions": [
+            { "type": "variable", "args": ["replay-btn", "reset"] },
+            { "type": "scene", "args": ["empty-replay-scene"] },
+            { "type": "scene", "args": ["$previous_scene_name"] }
+          ]
+        },
+        {
+          "events": { "highlight-next-btn": "!reset" },
+          "actions": [
+            {
+              "type": "add-actor",
+              "args": [
+                {
+                  "name": "next-btn",
+                  "type": "button",
+                  "image": "next",
+                  "variable": "next-btn",
+                  "location": [713, 538],
+                  "anchor": [0.5, 0.5],
+                  "tween": {
+                    "scale": [1.05, 1.05],
+                    "time": 666,
+                    "loop": true,
+                    "chainedTweens": [
+                      {
+                        "scale": [1, 1],
+                        "time": 666
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            { "type": "variable", "args": ["highlight-next-btn", "reset"] }
+          ]
+        }
+      ],
+      "actions": []
+    },
+    "scenes": {
+      "resumeFork": {
+        "id": "resumeFork",
+        "background": "bgspace",
+        "actors": [],
+        "outcomes": {
+          "no_resume": {
+            "events": { "lessonLocation": "undefined" },
+            "actions": [{ "type": "scene", "args": ["intro"] }]
+          },
+          "resume": {
+            "events": { "lessonLocation": "*" },
+            "actions": [{ "type": "scene", "args": ["$lessonLocation"] }]
+          }
+        },
+        "actions": [{ "type": "check-outcomes", "args": ["lessonLocation"] }]
+      },
+      "intro": {
+        "id": "intro",
+        "background": "bgspace",
+        "actors": [
+          {
+            "name": "title-bar",
+            "type": "reference"
+          },
+          {
+            "name": "moon",
+            "type": "reference"
+          },
+          {
+            "name": "home-btn",
+            "type": "reference"
+          },
+          {
+            "name": "replay-btn",
+            "type": "reference"
+          },
+          {
+            "name": "next-btn",
+            "type": "reference"
+          }
+        ],
+        "outcomes": {
+          "next-btn": {
+            "events": { "next-btn": "!reset" },
+            "actions": [
+              { "type": "variable", "args": ["next-btn", "reset"] },
+              { "type": "scene", "args": ["food-groups"] }
+            ]
+          },
+          "highlight-next-btn": {
+            "events": {
+              "audio": "*"
+            },
+            "actions": [
+              { "type": "variable", "args": ["highlight-next-btn", 1, true] }
+            ]
+          }
+        },
+        "actions": [
+          { "type": "variable", "args": ["scene_title", "INTRO"] },
+          {
+            "type": "add-actor",
+            "args": [
+              {
+                "name": "title-bar-text",
+                "type": "reference"
+              },
+              {
+                "name": "title",
+                "type": "text",
+                "text": "Healthy Eating",
+                "font": "title",
+                "location": ["center", 148]
+              }
+            ]
+          },
+          {
+            "type": "variable",
+            "args": ["lessonLocation", "$current_scene_name"]
+          }
+        ]
+      },
+      "food-groups": {
+        "id": "food-groups",
+        "background": "bgspace",
+        "actions": [
+          { "type": "variable", "args": ["scene_title", "FOOD GROUPS"] },
+          {
+            "type": "add-actor",
+            "args": [
+              {
+                "name": "title-bar-text",
+                "type": "reference"
+              }
+            ]
+          },
+          {
+            "type": "variable",
+            "args": ["lessonLocation", "$current_scene_name"]
+          },
+          { "type": "variable", "args": ["grains-clicked", "reset"] },
+          { "type": "variable", "args": ["dairy-clicked", "reset"] },
+          { "type": "variable", "args": ["vegetables-clicked", "reset"] },
+          { "type": "variable", "args": ["protein-clicked", "reset"] },
+          { "type": "variable", "args": ["fruits-clicked", "reset"] }
+        ],
+        "actors": [
+          {
+            "name": "title-bar",
+            "type": "reference"
+          },
+          {
+            "name": "moon",
+            "type": "reference"
+          },
+          {
+            "name": "home-btn",
+            "type": "reference"
+          },
+          {
+            "name": "back-btn",
+            "type": "reference"
+          },
+          {
+            "name": "replay-btn",
+            "type": "reference"
+          },
+          {
+            "name": "next-btn",
+            "type": "reference"
+          },
+          {
+            "name": "audio",
+            "type": "audio",
+            "audio": ["slide2a", "slide2b"],
+            "variable": "audio"
+          },
+          {
+            "name": "text-line1",
+            "type": "text",
+            "text": "Food groups:",
+            "font": "default-text",
+            "location": [439, 92]
+          },
+          {
+            "name": "grains-btn",
+            "type": "button",
+            "image": "myplate-grains",
+            "location": [223, 95],
+            "variable": "button-audio"
+          },
+          {
+            "name": "fruits-btn",
+            "type": "button",
+            "image": "myplate-fruits",
+            "location": [63, 95],
+            "variable": "button-audio"
+          },
+          {
+            "name": "vegetables-btn",
+            "type": "button",
+            "image": "myplate-vegetables",
+            "location": [23, 245],
+            "variable": "button-audio"
+          },
+          {
+            "name": "protein-btn",
+            "type": "button",
+            "image": "myplate-protein",
+            "location": [263, 245],
+            "variable": "button-audio"
+          },
+          {
+            "name": "dairy-btn",
+            "type": "button",
+            "image": "myplate-dairy",
+            "location": [143, 349],
+            "variable": "button-audio"
+          }
+        ],
+        "outcomes": {
+          "back-btn": {
+            "events": { "back-btn": "!reset" },
+            "actions": [
+              { "type": "variable", "args": ["back-btn", "reset"] },
+              { "type": "scene", "args": ["intro"] }
+            ]
+          },
+          "next-btn": {
+            "events": { "next-btn": "!reset" },
+            "actions": [
+              { "type": "variable", "args": ["next-btn", "reset"] },
+              { "type": "scene", "args": ["flying-foods"] }
+            ]
+          },
+          "highlight-next-btn": {
+            "events": {
+              "grains-clicked": "!reset",
+              "dairy-clicked": "!reset",
+              "vegetables-clicked": "!reset",
+              "protein-clicked": "!reset",
+              "fruits-clicked": "!reset",
+              "button-audio": "played"
+            },
+            "actions": [
+              { "type": "variable", "args": ["highlight-next-btn", 1, true] }
+            ]
+          },
+          "grains-btn": {
+            "events": { "button-audio": "grains-btn" },
+            "actions": [
+              { "type": "variable", "args": ["grains-clicked", 1] },
+              {
+                "type": "remove-actor",
+                "args": [
+                  "button-audio",
+                  "grans-examples",
+                  "grains-text",
+                  "grains-star"
+                ]
+              },
+              {
+                "type": "add-actor",
+                "args": [
+                  {
+                    "name": "grains-examples",
+                    "type": "decoration",
+                    "image": "grains-examples",
+                    "key": "my-plate",
+                    "location": [246, 96]
+                  },
+                  {
+                    "name": "grains-text",
+                    "type": "text",
+                    "text": "Orange for Grains Group",
+                    "font": "myplate-orange",
+                    "location": [485, 181]
+                  },
+                  {
+                    "name": "grains-star",
+                    "type": "decoration",
+                    "image": "star-orange",
+                    "key": "my-plate",
+                    "location": [448, 178]
+                  },
+                  {
+                    "name": "button-audio",
+                    "type": "audio",
+                    "audio": "slide2-grains",
+                    "variable": "button-audio"
+                  }
+                ]
+              }
+            ]
+          },
+          "dairy-btn": {
+            "events": { "button-audio": "dairy-btn" },
+            "actions": [
+              { "type": "variable", "args": ["dairy-clicked", 1] },
+              {
+                "type": "remove-actor",
+                "args": [
+                  "button-audio",
+                  "dairy-examples",
+                  "dairy-text",
+                  "dairy-star"
+                ]
+              },
+              {
+                "type": "add-actor",
+                "args": [
+                  {
+                    "name": "dairy-examples",
+                    "type": "decoration",
+                    "image": "dairy-examples",
+                    "key": "my-plate",
+                    "location": [166, 359]
+                  },
+                  {
+                    "name": "dairy-text",
+                    "type": "text",
+                    "text": "Blue for Dairy Group",
+                    "font": "myplate-blue",
+                    "location": [485, 310]
+                  },
+                  {
+                    "name": "dairy-star",
+                    "type": "decoration",
+                    "image": "star-blue",
+                    "key": "my-plate",
+                    "location": [448, 307]
+                  },
+                  {
+                    "name": "button-audio",
+                    "type": "audio",
+                    "audio": "slide2-dairy",
+                    "variable": "button-audio"
+                  }
+                ]
+              }
+            ]
+          },
+          "vegetables-btn": {
+            "events": { "button-audio": "vegetables-btn" },
+            "actions": [
+              { "type": "variable", "args": ["vegetables-clicked", 1] },
+              {
+                "type": "remove-actor",
+                "args": [
+                  "button-audio",
+                  "vegetables-examples",
+                  "vegetables-text",
+                  "vegetables-star"
+                ]
+              },
+              {
+                "type": "add-actor",
+                "args": [
+                  {
+                    "name": "vegetables-examples",
+                    "type": "decoration",
+                    "image": "vegetables-examples",
+                    "key": "my-plate",
+                    "location": [45, 247]
+                  },
+                  {
+                    "name": "vegetables-text",
+                    "type": "text",
+                    "text": "Green for Vegetable Group",
+                    "font": "myplate-green",
+                    "location": [485, 224]
+                  },
+                  {
+                    "name": "vegetables-star",
+                    "type": "decoration",
+                    "image": "star-green",
+                    "key": "my-plate",
+                    "location": [448, 221]
+                  },
+                  {
+                    "name": "button-audio",
+                    "type": "audio",
+                    "audio": "slide2-vegetables",
+                    "variable": "button-audio"
+                  }
+                ]
+              }
+            ]
+          },
+          "protein-btn": {
+            "events": { "button-audio": "protein-btn" },
+            "actions": [
+              { "type": "variable", "args": ["protein-clicked", 1] },
+              {
+                "type": "remove-actor",
+                "args": [
+                  "button-audio",
+                  "protein-examples",
+                  "protein-text",
+                  "protein-star"
+                ]
+              },
+              {
+                "type": "add-actor",
+                "args": [
+                  {
+                    "name": "protein-examples",
+                    "type": "decoration",
+                    "image": "protein-examples",
+                    "key": "my-plate",
+                    "location": [288, 255]
+                  },
+                  {
+                    "name": "protein-text",
+                    "type": "text",
+                    "text": "Purple for Protein Group",
+                    "font": "myplate-purple",
+                    "location": [485, 267]
+                  },
+                  {
+                    "name": "protein-star",
+                    "type": "decoration",
+                    "image": "star-purple",
+                    "key": "my-plate",
+                    "location": [448, 264]
+                  },
+                  {
+                    "name": "button-audio",
+                    "type": "audio",
+                    "audio": "slide2-protein",
+                    "variable": "button-audio"
+                  }
+                ]
+              }
+            ]
+          },
+          "fruits-btn": {
+            "events": { "button-audio": "fruits-btn" },
+            "actions": [
+              { "type": "variable", "args": ["fruits-clicked", 1] },
+              {
+                "type": "remove-actor",
+                "args": [
+                  "button-audio",
+                  "fruits-examples",
+                  "fruits-text",
+                  "fruits-star"
+                ]
+              },
+              {
+                "type": "add-actor",
+                "args": [
+                  {
+                    "name": "fruits-examples",
+                    "type": "decoration",
+                    "image": "fruits-examples",
+                    "key": "my-plate",
+                    "location": [83, 115]
+                  },
+                  {
+                    "name": "fruits-text",
+                    "type": "text",
+                    "text": "Red for Fruit Group",
+                    "font": "myplate-red",
+                    "location": [485, 138]
+                  },
+                  {
+                    "name": "fruits-star",
+                    "type": "decoration",
+                    "image": "star-red",
+                    "key": "my-plate",
+                    "location": [448, 135]
+                  },
+                  {
+                    "name": "button-audio",
+                    "type": "audio",
+                    "audio": "slide2-fruits",
+                    "variable": "button-audio"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      },
+      "flying-foods": {
+        "id": "flying-foods",
+        "background": "bgspace",
+        "actions": [
+          { "type": "variable", "args": ["scene_title", "FOOD GROUPS"] },
+          {
+            "type": "add-actor",
+            "args": [
+              {
+                "name": "title-bar-text",
+                "type": "reference"
+              }
+            ]
+          },
+          {
+            "type": "variable",
+            "args": ["lessonLocation", "$current_scene_name"]
+          },
+          { "type": "variable", "args": ["bread-clicked", "reset"] },
+          { "type": "variable", "args": ["corn-clicked", "reset"] },
+          { "type": "variable", "args": ["chicken-clicked", "reset"] },
+          { "type": "variable", "args": ["pears-clicked", "reset"] },
+          { "type": "variable", "args": ["cheese-clicked", "reset"] }
+        ],
+        "actors": [
+          {
+            "name": "title-bar",
+            "type": "reference"
+          },
+          {
+            "name": "moon",
+            "type": "reference"
+          },
+          {
+            "name": "home-btn",
+            "type": "reference"
+          },
+          {
+            "name": "back-btn",
+            "type": "reference"
+          },
+          {
+            "name": "replay-btn",
+            "type": "reference"
+          },
+          {
+            "name": "next-btn",
+            "type": "reference"
+          },
+          {
+            "name": "audio",
+            "type": "audio",
+            "audio": "slide3",
+            "variable": "audio"
+          },
+          {
+            "name": "bread",
+            "type": "button",
+            "image": "food-bread",
+            "variable": "button-audio",
+            "location": [617, 179],
+            "tween": {
+              "loop": true,
+              "location": [200, 410],
+              "time": 5000,
+              "chainedTweens": [
+                {
+                  "location": [20, 148],
+                  "time": 5000
+                },
+                {
+                  "location": [243, 56],
+                  "time": 5000
+                },
+                {
+                  "location": [617, 179],
+                  "time": 5000
+                }
+              ]
+            }
+          },
+          {
+            "name": "cheese",
+            "type": "button",
+            "image": "food-cheese",
+            "variable": "button-audio",
+            "location": [241, 246],
+            "tween": {
+              "loop": true,
+              "location": [216, 456],
+              "time": 5000,
+              "chainedTweens": [
+                {
+                  "location": [338, 220],
+                  "time": 5000
+                },
+                {
+                  "location": [610, 220],
+                  "time": 5000
+                },
+                {
+                  "location": [575, 62],
+                  "time": 5000
+                },
+                {
+                  "location": [241, 246],
+                  "time": 5000
+                }
+              ]
+            }
+          },
+          {
+            "name": "chicken",
+            "type": "button",
+            "image": "food-chicken",
+            "variable": "button-audio",
+            "location": [40, 60],
+            "tween": {
+              "loop": true,
+              "location": [670, 370],
+              "time": 5000,
+              "chainedTweens": [
+                {
+                  "location": [372, 56],
+                  "time": 5000
+                },
+                {
+                  "location": [13, 450],
+                  "time": 5000
+                },
+                {
+                  "location": [40, 60],
+                  "time": 5000
+                }
+              ]
+            }
+          },
+          {
+            "name": "corn",
+            "type": "button",
+            "image": "food-corn",
+            "variable": "button-audio",
+            "location": [343, 393],
+            "tween": {
+              "loop": true,
+              "location": [585, 393],
+              "time": 5000,
+              "chainedTweens": [
+                {
+                  "location": [535, 52],
+                  "time": 5000
+                },
+                {
+                  "location": [343, 393],
+                  "time": 5000
+                }
+              ]
+            }
+          },
+          {
+            "name": "pears",
+            "type": "button",
+            "image": "food-pears",
+            "variable": "button-audio",
+            "location": [632, 91],
+            "tween": {
+              "loop": true,
+              "location": [56, 75],
+              "time": 5000,
+              "chainedTweens": [
+                {
+                  "location": [385, 276],
+                  "time": 5000
+                },
+                {
+                  "location": [632, 91],
+                  "time": 5000
+                }
+              ]
+            }
+          }
+        ],
+        "outcomes": {
+          "back-btn": {
+            "events": { "back-btn": "!reset" },
+            "actions": [
+              { "type": "variable", "args": ["back-btn", "reset"] },
+              { "type": "scene", "args": ["food-groups"] }
+            ]
+          },
+          "next-btn": {
+            "events": { "next-btn": "!reset" },
+            "actions": [
+              { "type": "variable", "args": ["next-btn", "reset"] },
+              { "type": "scene", "args": ["balance-and-variety"] }
+            ]
+          },
+          "highlight-next-btn": {
+            "events": {
+              "bread-clicked": "!reset",
+              "cheese-clicked": "!reset",
+              "chicken-clicked": "!reset",
+              "corn-clicked": "!reset",
+              "pears-clicked": "!reset",
+              "button-audio": "played"
+            },
+            "actions": [
+              { "type": "variable", "args": ["highlight-next-btn", 1, true] }
+            ]
+          },
+          "bread-btn": {
+            "events": { "button-audio": "bread" },
+            "actions": [
+              { "type": "remove-actor", "args": ["button-audio"] },
+              { "type": "variable", "args": ["bread-clicked", 1] },
+              {
+                "type": "add-actor",
+                "args": [
+                  {
+                    "name": "button-audio",
+                    "type": "audio",
+                    "audio": "slide3-bread",
+                    "variable": "button-audio"
+                  }
+                ]
+              }
+            ]
+          },
+          "cheese-btn": {
+            "events": { "button-audio": "cheese" },
+            "actions": [
+              { "type": "remove-actor", "args": ["button-audio"] },
+              { "type": "variable", "args": ["cheese-clicked", 1] },
+              {
+                "type": "add-actor",
+                "args": [
+                  {
+                    "name": "button-audio",
+                    "type": "audio",
+                    "audio": "slide3-cheese",
+                    "variable": "button-audio"
+                  }
+                ]
+              }
+            ]
+          },
+          "chicken-btn": {
+            "events": { "button-audio": "chicken" },
+            "actions": [
+              { "type": "remove-actor", "args": ["button-audio"] },
+              { "type": "variable", "args": ["chicken-clicked", 1] },
+              {
+                "type": "add-actor",
+                "args": [
+                  {
+                    "name": "button-audio",
+                    "type": "audio",
+                    "audio": "slide3-chicken",
+                    "variable": "button-audio"
+                  }
+                ]
+              }
+            ]
+          },
+          "corn-btn": {
+            "events": { "button-audio": "corn" },
+            "actions": [
+              { "type": "remove-actor", "args": ["button-audio"] },
+              { "type": "variable", "args": ["corn-clicked", 1] },
+              {
+                "type": "add-actor",
+                "args": [
+                  {
+                    "name": "button-audio",
+                    "type": "audio",
+                    "audio": "slide3-corn",
+                    "variable": "button-audio"
+                  }
+                ]
+              }
+            ]
+          },
+          "pears-btn": {
+            "events": { "button-audio": "pears" },
+            "actions": [
+              { "type": "remove-actor", "args": ["button-audio"] },
+              { "type": "variable", "args": ["pears-clicked", 1] },
+              {
+                "type": "add-actor",
+                "args": [
+                  {
+                    "name": "button-audio",
+                    "type": "audio",
+                    "audio": "slide3-pears",
+                    "variable": "button-audio"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      },
+      "balance-and-variety": {
+        "id": "balance-and-variety",
+        "background": "bgspace",
+        "actions": [
+          { "type": "variable", "args": ["scene_title", "BALANCE & VARIETY"] },
+          {
+            "type": "add-actor",
+            "args": [
+              {
+                "name": "title-bar-text",
+                "type": "reference"
+              }
+            ]
+          },
+          {
+            "type": "variable",
+            "args": ["lessonLocation", "$current_scene_name"]
+          }
+        ],
+        "actors": [
+          {
+            "name": "title-bar",
+            "type": "reference"
+          },
+          {
+            "name": "moon",
+            "type": "reference"
+          },
+          {
+            "name": "home-btn",
+            "type": "reference"
+          },
+          {
+            "name": "back-btn",
+            "type": "reference"
+          },
+          {
+            "name": "replay-btn",
+            "type": "reference"
+          },
+          {
+            "name": "next-btn",
+            "type": "reference"
+          },
+          {
+            "name": "audio",
+            "type": "audio",
+            "audio": ["slide4a", "slide4b"],
+            "variable": "audio"
+          },
+          {
+            "name": "myplate-sm",
+            "type": "decoration",
+            "image": "myplate-sm",
+            "key": "my-plate",
+            "location": [28, 70]
+          },
+          {
+            "name": "sofia-jack",
+            "type": "decoration",
+            "image": "sofia-jack",
+            "key": "my-plate",
+            "startDelay": 22300,
+            "location": [28, 370]
+          },
+          {
+            "name": "text2",
+            "type": "text",
+            "text": "Eat a variety of foods from every food group each day.",
+            "wordWrapWidth": 360,
+            "font": "default-text",
+            "location": [842, 120],
+            "startDelay": 0,
+            "tween": {
+              "time": 1000,
+              "location": [407, 120],
+              "easing": "Quad.easeOut"
+            }
+          },
+          {
+            "name": "text2-star",
+            "type": "decoration",
+            "image": "star-bullet",
+            "key": "common",
+            "location": [800, 120],
+            "startDelay": 0,
+            "tween": {
+              "time": 1000,
+              "location": [365, 120],
+              "easing": "Quad.easeOut"
+            }
+          },
+          {
+            "name": "text4",
+            "type": "text",
+            "text": "Be active for one hour a day.",
+            "wordWrapWidth": 360,
+            "font": "default-text",
+            "location": [842, 210],
+            "startDelay": 22300,
+            "tween": {
+              "time": 1000,
+              "location": [407, 210],
+              "easing": "Quad.easeOut"
+            }
+          },
+          {
+            "name": "text4-star",
+            "type": "decoration",
+            "image": "star-bullet",
+            "key": "common",
+            "location": [800, 210],
+            "startDelay": 22300,
+            "tween": {
+              "time": 1000,
+              "location": [365, 210],
+              "easing": "Quad.easeOut"
+            }
+          },
+          {
+            "name": "text5",
+            "type": "text",
+            "text": "Balance is being active and eating healthy foods.",
+            "wordWrapWidth": 360,
+            "font": "default-text",
+            "location": [842, 265],
+            "startDelay": 40000,
+            "tween": {
+              "time": 1000,
+              "location": [407, 265],
+              "easing": "Quad.easeOut"
+            }
+          },
+          {
+            "name": "text5-star",
+            "type": "decoration",
+            "image": "star-bullet",
+            "key": "common",
+            "location": [800, 265],
+            "startDelay": 40000,
+            "tween": {
+              "time": 1000,
+              "location": [365, 265],
+              "easing": "Quad.easeOut"
+            }
+          }
+        ],
+        "outcomes": {
+          "back-btn": {
+            "events": { "back-btn": "!reset" },
+            "actions": [
+              { "type": "variable", "args": ["back-btn", "reset"] },
+              { "type": "scene", "args": ["flying-foods"] }
+            ]
+          },
+          "next-btn": {
+            "events": { "next-btn": "!reset" },
+            "actions": [
+              { "type": "variable", "args": ["next-btn", "reset"] },
+              { "type": "scene", "args": ["chicken-milk-cheese"] }
+            ]
+          },
+          "highlight-next-btn": {
+            "events": {
+              "audio": "*"
+            },
+            "actions": [
+              { "type": "variable", "args": ["highlight-next-btn", 1, true] }
+            ]
+          }
+        }
+      },
+      "chicken-milk-cheese": {
+        "id": "chicken-milk-cheese",
+        "background": "bgspace",
+        "actions": [
+          { "type": "variable", "args": ["scene_title", "VARIETY"] },
+          {
+            "type": "add-actor",
+            "args": [
+              {
+                "name": "title-bar-text",
+                "type": "reference"
+              }
+            ]
+          },
+          {
+            "type": "variable",
+            "args": ["lessonLocation", "$current_scene_name"]
+          },
+          { "type": "variable", "args": ["correct-answer-audio", "reset"] }
+        ],
+        "actors": [
+          {
+            "name": "title-bar",
+            "type": "reference"
+          },
+          {
+            "name": "moon",
+            "type": "reference"
+          },
+          {
+            "name": "home-btn",
+            "type": "reference"
+          },
+          {
+            "name": "back-btn",
+            "type": "reference"
+          },
+          {
+            "name": "replay-btn",
+            "type": "reference"
+          },
+          {
+            "name": "next-btn",
+            "type": "reference"
+          },
+          {
+            "name": "chicken-milk-cheese",
+            "type": "decoration",
+            "image": "chicken-milk-cheese",
+            "key": "my-plate",
+            "location": [75, 122]
+          },
+          {
+            "name": "chicken-milk-cheese-text",
+            "type": "text",
+            "text": "Chicken, milk and cheese",
+            "font": "food-label-white",
+            "location": [127, 327]
+          },
+          {
+            "name": "text1",
+            "type": "text",
+            "text": "Is there enough variety in this meal?",
+            "wordWrapWidth": 285,
+            "font": "myplate-question",
+            "location": [456, 113]
+          },
+          {
+            "name": "audio",
+            "type": "audio",
+            "audio": "slide5",
+            "variable": "audio"
+          },
+          {
+            "name": "planet-yes",
+            "type": "button",
+            "variable": "planet-yes-btn",
+            "image": "planet-yes-button",
+            "location": [515, 239]
+          },
+          {
+            "name": "planet-no",
+            "type": "button",
+            "variable": "planet-no-btn",
+            "image": "planet-no-button",
+            "location": [633, 239]
+          }
+        ],
+        "outcomes": {
+          "back-btn": {
+            "events": { "back-btn": "!reset" },
+            "actions": [
+              { "type": "variable", "args": ["back-btn", "reset"] },
+              { "type": "scene", "args": ["balance-and-variety"] }
+            ]
+          },
+          "next-btn": {
+            "events": { "next-btn": "!reset" },
+            "actions": [
+              { "type": "variable", "args": ["next-btn", "reset"] },
+              { "type": "scene", "args": ["fish-peapods"] }
+            ]
+          },
+          "highlight-next-btn": {
+            "events": {
+              "correct-answer-audio": "played"
+            },
+            "actions": [
+              { "type": "variable", "args": ["highlight-next-btn", 1, true] }
+            ]
+          },
+          "planet-no-btn": {
+            "events": { "planet-no-btn": "*" },
+            "actions": [
+              {
+                "type": "variable",
+                "args": ["planet-no-btn", 0, true]
+              },
+              {
+                "type": "remove-actor",
+                "args": [
+                  "correct-answer",
+                  "correct-answer-line2",
+                  "correct-answer-line3",
+                  "audio"
+                ]
+              },
+              {
+                "type": "add-actor",
+                "args": [
+                  {
+                    "name": "correct-answer",
+                    "type": "text",
+                    "text": "Chicken, milk and cheese",
+                    "font": "myplate-question",
+                    "location": [450, 334]
+                  },
+                  {
+                    "name": "correct-answer-line2",
+                    "type": "text",
+                    "text": "-Two food groups",
+                    "font": "myplate-question",
+                    "location": [450, 374]
+                  },
+                  {
+                    "name": "correct-answer-line3",
+                    "type": "text",
+                    "text": "-Not enough variety",
+                    "font": "myplate-question",
+                    "location": [450, 414]
+                  },
+                  {
+                    "name": "audio",
+                    "type": "audio",
+                    "audio": "slide5-correct",
+                    "variable": "correct-answer-audio"
+                  }
+                ]
+              }
+            ]
+          },
+          "planet-yes-btn": {
+            "events": { "planet-yes-btn": "*" },
+            "actions": [
+              {
+                "type": "variable",
+                "args": ["planet-yes-btn", 0, true]
+              },
+              {
+                "type": "remove-actor",
+                "args": [
+                  "correct-answer",
+                  "correct-answer-line2",
+                  "correct-answer-line3",
+                  "audio"
+                ]
+              },
+              {
+                "type": "add-actor",
+                "args": [
+                  {
+                    "name": "incorrect-answer",
+                    "type": "audio",
+                    "audio": ["slide5-incorrect"],
+                    "variable": "incorrect-answer-audio"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      },
+      "fish-peapods": {
+        "id": "fish-peapods",
+        "background": "bgspace",
+        "actions": [
+          { "type": "variable", "args": ["scene_title", "VARIETY"] },
+          {
+            "type": "add-actor",
+            "args": [
+              {
+                "name": "title-bar-text",
+                "type": "reference"
+              }
+            ]
+          },
+          {
+            "type": "variable",
+            "args": ["lessonLocation", "$current_scene_name"]
+          },
+          { "type": "variable", "args": ["correct-answer-audio", "reset"] }
+        ],
+        "actors": [
+          {
+            "name": "title-bar",
+            "type": "reference"
+          },
+          {
+            "name": "moon",
+            "type": "reference"
+          },
+          {
+            "name": "home-btn",
+            "type": "reference"
+          },
+          {
+            "name": "back-btn",
+            "type": "reference"
+          },
+          {
+            "name": "replay-btn",
+            "type": "reference"
+          },
+          {
+            "name": "next-btn",
+            "type": "reference"
+          },
+          {
+            "name": "fish-peapods",
+            "type": "decoration",
+            "image": "fish-peapods",
+            "key": "my-plate",
+            "location": [78, 195]
+          },
+          {
+            "name": "fish-peapods-text",
+            "type": "text",
+            "text": "Fish, pea pods, bread and pineapple rings",
+            "wordWrapWidth": 300,
+            "font": "food-label-white",
+            "location": [127, 327]
+          },
+          {
+            "name": "text",
+            "type": "text",
+            "text": "Is there enough variety in this meal?",
+            "wordWrapWidth": 285,
+            "font": "myplate-question",
+            "location": [456, 113],
+            "audio": "slide6"
+          },
+          {
+            "name": "planet-yes",
+            "type": "button",
+            "variable": "planet-yes-btn",
+            "image": "planet-yes-button",
+            "location": [515, 239]
+          },
+          {
+            "name": "planet-no",
+            "type": "button",
+            "variable": "planet-no-btn",
+            "image": "planet-no-button",
+            "location": [633, 239]
+          }
+        ],
+        "outcomes": {
+          "back-btn": {
+            "events": { "back-btn": "!reset" },
+            "actions": [
+              { "type": "variable", "args": ["back-btn", "reset"] },
+              { "type": "scene", "args": ["chicken-milk-cheese"] }
+            ]
+          },
+          "next-btn": {
+            "events": { "next-btn": "!reset" },
+            "actions": [
+              { "type": "variable", "args": ["next-btn", "reset"] },
+              { "type": "scene", "args": ["three-meals-a-day"] }
+            ]
+          },
+          "highlight-next-btn": {
+            "events": {
+              "correct-answer-audio": "played"
+            },
+            "actions": [
+              { "type": "variable", "args": ["highlight-next-btn", 1, true] }
+            ]
+          },
+          "planet-yes-btn": {
+            "events": { "planet-yes-btn": "*" },
+            "actions": [
+              {
+                "type": "variable",
+                "args": ["planet-yes-btn", 0, true]
+              },
+              {
+                "type": "remove-actor",
+                "args": [
+                  "correct-answer",
+                  "correct-answer-line2",
+                  "correct-answer-line3",
+                  "audio"
+                ]
+              },
+              {
+                "type": "add-actor",
+                "args": [
+                  {
+                    "name": "correct-answer",
+                    "type": "text",
+                    "text": "Fish, pea pods, bread and pineapple rings",
+                    "wordWrapWidth": 300,
+                    "font": "myplate-question",
+                    "location": [450, 334]
+                  },
+                  {
+                    "name": "correct-answer-line2",
+                    "type": "text",
+                    "text": "-Four food groups",
+                    "font": "myplate-question",
+                    "location": [450, 419]
+                  },
+                  {
+                    "name": "correct-answer-line3",
+                    "type": "text",
+                    "text": "-Enough variety",
+                    "font": "myplate-question",
+                    "location": [450, 459]
+                  },
+                  {
+                    "name": "audio",
+                    "type": "audio",
+                    "audio": "slide6-correct",
+                    "variable": "correct-answer-audio"
+                  }
+                ]
+              }
+            ]
+          },
+          "planet-no-btn": {
+            "events": { "planet-no-btn": "*" },
+            "actions": [
+              {
+                "type": "variable",
+                "args": ["planet-no-btn", 0, true]
+              },
+              {
+                "type": "remove-actor",
+                "args": [
+                  "correct-answer",
+                  "correct-answer-line2",
+                  "correct-answer-line3",
+                  "audio"
+                ]
+              },
+              {
+                "type": "add-actor",
+                "args": [
+                  {
+                    "name": "incorrect-answer",
+                    "type": "audio",
+                    "audio": ["slide6-incorrect"],
+                    "variable": "incorrect-answer-audio"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      },
+      "three-meals-a-day": {
+        "id": "three-meals-a-day",
+        "background": "bgspace",
+        "actions": [
+          { "type": "variable", "args": ["scene_title", "THREE MEALS A DAY"] },
+          {
+            "type": "add-actor",
+            "args": [
+              {
+                "name": "title-bar-text",
+                "type": "reference"
+              }
+            ]
+          },
+          {
+            "type": "variable",
+            "args": ["lessonLocation", "$current_scene_name"]
+          }
+        ],
+        "actors": [
+          {
+            "name": "title-bar",
+            "type": "reference"
+          },
+          {
+            "name": "moon",
+            "type": "reference"
+          },
+          {
+            "name": "home-btn",
+            "type": "reference"
+          },
+          {
+            "name": "back-btn",
+            "type": "reference"
+          },
+          {
+            "name": "replay-btn",
+            "type": "reference"
+          },
+          {
+            "name": "next-btn",
+            "type": "reference"
+          },
+          {
+            "name": "audio",
+            "type": "audio",
+            "audio": "slide7",
+            "variable": "audio"
+          },
+          {
+            "name": "star-bullet1",
+            "type": "decoration",
+            "image": "star-bullet",
+            "key": "common",
+            "location": [800, 157],
+            "startDelay": 500,
+            "tween": {
+              "time": 1000,
+              "location": [352, 157],
+              "easing": "Quad.easeOut"
+            }
+          },
+          {
+            "name": "text-line1",
+            "type": "text",
+            "text": "Eat three meals a day.",
+            "font": "default-text",
+            "location": [842, 158],
+            "startDelay": 500,
+            "tween": {
+              "time": 1000,
+              "location": [394, 158],
+              "easing": "Quad.easeOut"
+            }
+          },
+          {
+            "name": "star-bullet2",
+            "type": "decoration",
+            "image": "star-bullet",
+            "key": "common",
+            "location": [800, 203],
+            "startDelay": 15000,
+            "tween": {
+              "time": 1000,
+              "location": [352, 203],
+              "easing": "Quad.easeOut"
+            }
+          },
+          {
+            "name": "text-line2",
+            "type": "text",
+            "text": "Breakfast is most important.",
+            "font": "default-text",
+            "location": [842, 204],
+            "startDelay": 15000,
+            "tween": {
+              "time": 1000,
+              "location": [394, 204],
+              "easing": "Quad.easeOut"
+            }
+          },
+          {
+            "name": "star-bullet3",
+            "type": "decoration",
+            "image": "star-bullet",
+            "key": "common",
+            "location": [800, 249],
+            "startDelay": 22000,
+            "tween": {
+              "time": 1000,
+              "location": [352, 249],
+              "easing": "Quad.easeOut"
+            }
+          },
+          {
+            "name": "text-line3",
+            "type": "text",
+            "text": "Choose foods that give you energy.",
+            "font": "default-text",
+            "location": [842, 250],
+            "startDelay": 22000,
+            "tween": {
+              "time": 1000,
+              "location": [394, 250],
+              "easing": "Quad.easeOut"
+            }
+          },
+          {
+            "name": "star-bullet4",
+            "type": "decoration",
+            "image": "star-bullet",
+            "key": "common",
+            "location": [800, 295],
+            "startDelay": 30000,
+            "tween": {
+              "time": 1000,
+              "location": [352, 295],
+              "easing": "Quad.easeOut"
+            }
+          },
+          {
+            "name": "text-line4",
+            "type": "text",
+            "text": "Choose foods that you like.",
+            "font": "default-text",
+            "location": [842, 296],
+            "startDelay": 30000,
+            "tween": {
+              "time": 1000,
+              "location": [394, 296],
+              "easing": "Quad.easeOut"
+            }
+          },
+          {
+            "name": "sofia",
+            "type": "decoration",
+            "image": "sofia",
+            "key": "my-plate",
+            "location": [31, 70]
+          }
+        ],
+        "outcomes": {
+          "back-btn": {
+            "events": { "back-btn": "!reset" },
+            "actions": [
+              { "type": "variable", "args": ["back-btn", "reset"] },
+              { "type": "scene", "args": ["fish-peapods"] }
+            ]
+          },
+          "next-btn": {
+            "events": { "next-btn": "!reset" },
+            "actions": [
+              { "type": "variable", "args": ["next-btn", "reset"] },
+              { "type": "scene", "args": ["breakfast"] }
+            ]
+          },
+          "highlight-next-btn": {
+            "events": {
+              "audio": "*"
+            },
+            "actions": [
+              { "type": "variable", "args": ["highlight-next-btn", 1, true] }
+            ]
+          }
+        }
+      },
+      "breakfast": {
+        "id": "breakfast",
+        "background": "bgspace",
+        "actions": [
+          { "type": "variable", "args": ["scene_title", "BREAKFAST"] },
+          {
+            "type": "add-actor",
+            "args": [
+              {
+                "name": "title-bar-text",
+                "type": "reference"
+              }
+            ]
+          },
+          {
+            "type": "variable",
+            "args": ["lessonLocation", "$current_scene_name"]
+          },
+          { "type": "variable", "args": ["correct-answer-audio", "reset"] }
+        ],
+        "actors": [
+          {
+            "name": "title-bar",
+            "type": "reference"
+          },
+          {
+            "name": "moon",
+            "type": "reference"
+          },
+          {
+            "name": "home-btn",
+            "type": "reference"
+          },
+          {
+            "name": "back-btn",
+            "type": "reference"
+          },
+          {
+            "name": "replay-btn",
+            "type": "reference"
+          },
+          {
+            "name": "next-btn",
+            "type": "reference"
+          },
+          {
+            "name": "audio",
+            "type": "audio",
+            "audio": "slide8",
+            "variable": "audio"
+          },
+          {
+            "name": "text-line1",
+            "type": "text",
+            "text": "Which breakfast choice is most healthy?",
+            "font": "default-text",
+            "location": ["center", 90]
+          },
+          {
+            "name": "slide8-yogurttoastfruit",
+            "type": "button",
+            "image": "food-yogurt-toast-fruit",
+            "location": [26, 234],
+            "variable": "food-choice"
+          },
+          {
+            "name": "slide8-pie",
+            "type": "button",
+            "image": "food-pie",
+            "location": [325, 252],
+            "variable": "food-choice"
+          },
+          {
+            "name": "slide8-toasterpastry",
+            "type": "button",
+            "image": "food-toaster-pastry",
+            "location": [580, 262],
+            "variable": "food-choice"
+          },
+          {
+            "name": "yogurt-toast-fruit-text",
+            "type": "text",
+            "text": "Yogurt, toast and fruit",
+            "location": [55, 369],
+            "font": "default-text"
+          },
+          {
+            "name": "pie-text",
+            "type": "text",
+            "text": "Pie",
+            "location": [395, 369],
+            "font": "default-text"
+          },
+          {
+            "name": "toaster-pastry-text",
+            "type": "text",
+            "text": "Toaster pastry",
+            "location": [583, 369],
+            "font": "default-text"
+          }
+        ],
+        "outcomes": {
+          "back-btn": {
+            "events": { "back-btn": "!reset" },
+            "actions": [
+              { "type": "variable", "args": ["back-btn", "reset"] },
+              { "type": "scene", "args": ["three-meals-a-day"] }
+            ]
+          },
+          "next-btn": {
+            "events": { "next-btn": "!reset" },
+            "actions": [
+              { "type": "variable", "args": ["next-btn", "reset"] },
+              {
+                "type": "mh-scene",
+                "args": ["mission-complete", { "objective_complete": 1 }]
+              }
+            ]
+          },
+          "highlight-next-btn": {
+            "events": {
+              "correct-answer-audio": "played"
+            },
+            "actions": [
+              { "type": "variable", "args": ["highlight-next-btn", 1, true] }
+            ]
+          },
+          "food-choice-yogurttoastfruit": {
+            "events": { "food-choice": "slide8-yogurttoastfruit" },
+            "actions": [
+              { "type": "remove-actor", "args": ["audio"] },
+              {
+                "type": "add-actor",
+                "args": [
+                  {
+                    "name": "audio",
+                    "type": "audio",
+                    "audio": "slide8-yogurttoastfruit",
+                    "variable": "correct-answer-audio"
+                  }
+                ]
+              },
+              { "type": "variable", "args": ["food-choice", "0", true] }
+            ]
+          },
+          "food-choice-toasterpastry": {
+            "events": { "food-choice": "slide8-toasterpastry" },
+            "actions": [
+              { "type": "remove-actor", "args": ["audio"] },
+              {
+                "type": "add-actor",
+                "args": [
+                  {
+                    "name": "audio",
+                    "type": "audio",
+                    "audio": "slide8-toasterpastry",
+                    "variable": "incorrect-answer-audio"
+                  }
+                ]
+              },
+              { "type": "variable", "args": ["food-choice", "0", true] }
+            ]
+          },
+          "food-choice-pie": {
+            "events": { "food-choice": "slide8-pie" },
+            "actions": [
+              { "type": "remove-actor", "args": ["audio"] },
+              {
+                "type": "add-actor",
+                "args": [
+                  {
+                    "name": "audio",
+                    "type": "audio",
+                    "audio": "slide8-pie",
+                    "variable": "incorrect-answer-audio"
+                  }
+                ]
+              },
+              { "type": "variable", "args": ["food-choice", "0", true] }
+            ]
+          }
+        }
+      },
+      "mission-complete": {
+        "id": "mission-complete",
+        "background": "bgspace",
+        "actions": [
+          { "type": "variable", "args": ["scene_title", "GOOD JOB!"] },
+          {
+            "type": "add-actor",
+            "args": [
+              {
+                "name": "title-bar-text",
+                "type": "reference"
+              }
+            ]
+          },
+          {
+            "type": "variable",
+            "args": ["lessonLocation", "$current_scene_name"]
+          }
+        ],
+        "actors": [
+          {
+            "name": "title-bar",
+            "type": "reference"
+          },
+          {
+            "name": "moon",
+            "type": "reference"
+          },
+          {
+            "name": "home-btn",
+            "type": "reference"
+          },
+          {
+            "name": "back-btn",
+            "type": "reference"
+          },
+          {
+            "name": "replay-btn",
+            "type": "reference"
+          },
+          {
+            "name": "title",
+            "type": "text",
+            "text": "Good job!",
+            "font": "title",
+            "location": ["center", 200]
+          },
+          {
+            "name": "audio",
+            "type": "audio",
+            "audio": "slide9",
+            "variable": "audio"
+          }
+        ],
+        "outcomes": {
+          "back-btn": {
+            "events": { "back-btn": "!reset" },
+            "actions": [
+              { "type": "variable", "args": ["back-btn", "reset"] },
+              { "type": "scene", "args": ["breakfast"] }
+            ]
+          }
+        }
+      },
+      "empty-replay-scene": {
+        "id": "empty-replay-scene",
+        "description": "since a scene change request to the current scene is ignored, first change to this empty scene",
+        "background": "none",
+        "actors": [],
+        "outcomes": {},
+        "actions": []
+      }
+    }
+  }
+}
