@@ -1,0 +1,199 @@
+{
+  "src": "lessonaudio.ogg",
+  "data": {
+    "audioSprite": {
+      "Slide 1": [
+        0,
+        15.227936507936509,
+        false,
+        "Slide 1"
+      ],
+      "Slide 10": [
+        17,
+        24.04283446712018,
+        false,
+        "Slide 10"
+      ],
+      "Slide 11": [
+        43,
+        36.491678004535146,
+        false,
+        "Slide 11"
+      ],
+      "Slide 12": [
+        81,
+        47.383333333333326,
+        false,
+        "Slide 12"
+      ],
+      "Slide 13 Carly Full": [
+        130,
+        5.156258503401375,
+        false,
+        "Slide 13 Carly Full"
+      ],
+      "Slide 13 Carly Hungry": [
+        137,
+        5.416666666666657,
+        false,
+        "Slide 13 Carly Hungry"
+      ],
+      "Slide 13 Carly Satisfied": [
+        144,
+        4.039183673469381,
+        false,
+        "Slide 13 Carly Satisfied"
+      ],
+      "Slide 13 Carly": [
+        150,
+        6.8053514739229115,
+        false,
+        "Slide 13 Carly"
+      ],
+      "Slide 13 Jack": [
+        158,
+        5.439999999999998,
+        false,
+        "Slide 13 Jack"
+      ],
+      "Slide 13 Sofia": [
+        165,
+        5.333333333333343,
+        false,
+        "Slide 13 Sofia"
+      ],
+      "Slide 13": [
+        172,
+        8.354172335600907,
+        false,
+        "Slide 13"
+      ],
+      "Slide 14 Jack Full": [
+        182,
+        3.84167800453514,
+        false,
+        "Slide 14 Jack Full"
+      ],
+      "Slide 14 Jack Hungry": [
+        187,
+        3.816666666666663,
+        false,
+        "Slide 14 Jack Hungry"
+      ],
+      "Slide 14 Jack Satisfied": [
+        192,
+        4.041678004535157,
+        false,
+        "Slide 14 Jack Satisfied"
+      ],
+      "Slide 14": [
+        198,
+        3.9625170068027273,
+        false,
+        "Slide 14"
+      ],
+      "Slide 15 Sofia Full": [
+        203,
+        5.316666666666663,
+        false,
+        "Slide 15 Sofia Full"
+      ],
+      "Slide 15 Sofia Hungry": [
+        210,
+        3.9456689342403592,
+        false,
+        "Slide 15 Sofia Hungry"
+      ],
+      "Slide 15 Sofia Satisfied": [
+        215,
+        3.8958503401360645,
+        false,
+        "Slide 15 Sofia Satisfied"
+      ],
+      "Slide 15": [
+        220,
+        3.5543537414966124,
+        false,
+        "Slide 15"
+      ],
+      "Slide 16": [
+        225,
+        2.095850340136053,
+        false,
+        "Slide 16"
+      ],
+      "Slide 2": [
+        229,
+        24.925646258503406,
+        false,
+        "Slide 2"
+      ],
+      "Slide 3": [
+        255,
+        27.525,
+        false,
+        "Slide 3"
+      ],
+      "Slide 4": [
+        290,
+        18.28077097505667,
+        false,
+        "Slide 4"
+      ],
+      "Slide 5": [
+        310,
+        22.231678004535127,
+        false,
+        "Slide 5"
+      ],
+      "Slide 6 Correct": [
+        334,
+        3.3120181405895437,
+        false,
+        "Slide 6 Correct"
+      ],
+      "Slide 6 Incorrect": [
+        339,
+        5.649999999999977,
+        false,
+        "Slide 6 Incorrect"
+      ],
+      "Slide 6": [
+        346,
+        29.416666666666686,
+        false,
+        "Slide 6"
+      ],
+      "Slide 7 Correct": [
+        377,
+        12.779501133786823,
+        false,
+        "Slide 7 Correct"
+      ],
+      "Slide 7 Incorrect": [
+        391,
+        16.142653061224507,
+        false,
+        "Slide 7 Incorrect"
+      ],
+      "Slide 7": [
+        409,
+        27.962517006802727,
+        false,
+        "Slide 7"
+      ],
+      "Slide 8": [
+        438,
+        16.15417233560089,
+        false,
+        "Slide 8"
+      ],
+      "Slide 9": [
+        456,
+        12.720839002267553,
+        false,
+        "Slide 9"
+      ]
+    }
+  }
+}

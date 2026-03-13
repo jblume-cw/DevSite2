@@ -1,0 +1,238 @@
+{
+  "texture": "media/default/spritesheet.png",
+  "textureMap": "media/default/spritesheet.json",
+  "textureKey": "spritesheet",
+  "data": "media/default/sceneData.json",
+  "fonts": {
+    "lesson-title": {
+      "font": "Luckiest Guy",
+      "fontSize": "38px",
+      "fill": "#ffffff",
+      "fontWeight": "normal",
+      "align": "left",
+      "wordWrap": false
+    },
+    "final-title": {
+      "font": "Luckiest Guy",
+      "fontSize": "58px",
+      "fill": "#095889",
+      "fontWeight": "normal",
+      "align": "left",
+      "wordWrap": false
+    },
+    "content-title": {
+      "font": "Heebo",
+      "fontSize": "40px",
+      "fill": "#095889",
+      "fontWeight": "bold",
+      "align": "left",
+      "wordWrap": false
+    },
+    "content-body": {
+      "font": "Heebo",
+      "fontSize": "34px",
+      "fill": "#095889",
+      "fontWeight": "normal",
+      "align": "left",
+      "wordWrap": false
+    },
+    "content-label": {
+      "font": "Heebo",
+      "fontSize": "24px",
+      "fill": "#095889",
+      "fontWeight": "bold",
+      "align": "left",
+      "wordWrap": false
+    }
+  },
+  "images": {
+    "actorImages": {},
+    "decorations": {
+      "back-disabled": "back-disabled.png",
+      "next-disabled": "next-disabled.png",
+      "ian": "slide1-ian.png",
+      "healthy-foods": "slide2.png",
+      "myPlate": "slide3-myplate.png",
+      "gatorade-label": "slide4-label2.png",
+      "chips-label": "slide4-label3.png",
+      "milk-label": "slide4-label1.png",
+      "cereal1-selected": "slide6-label1-selected.png",
+      "cereal2-selected": "slide6-label2-selected.png",
+      "arrow": "arrow.png",
+      "nuggets-selected": "slide7-nuggets-selected.png",
+      "breasts-selected": "slide7-breasts-selected.png",
+      "hershey-bar": "slide9-hersheys.png",
+      "fruit-snack-box": "slide9-motts.png",
+      "hershey-circle": "slide9-circle1.png",
+      "fruit-snack-circle": "slide9-circle2.png",
+      "swedish-fish": "slide10-package.png",
+      "swedish-fish-label": "slide10-label.png",
+      "swedish-fish-circle1": "slide10-circle.png",
+      "swedish-fish-circle2": "slide10-circle2.png",
+      "sofia-sandwich": "slide12-sofia1.png",
+      "sofia-signal": "slide12-sofia2.png",
+      "jack": "jack.png",
+      "sofia": "sofia.png",
+      "carly": "carly.png"
+    }
+  },
+  "sceneImages": {
+    "background": "background.png"
+  },
+  "buttons": {
+    "next": {
+      "up": "next-up.png",
+      "over": "next-down.png",
+      "out": "next-up.png",
+      "down": "next-down.png"
+    },
+    "nextHighlight": {
+      "up": "next-hi.png",
+      "over": "next-down.png",
+      "out": "next-hi.png",
+      "down": "next-down.png"
+    },
+    "back": {
+      "up": "back-up.png",
+      "over": "back-down.png",
+      "out": "back-up.png",
+      "down": "back-down.png"
+    },
+    "replay": {
+      "up": "replay-up.png",
+      "over": "replay-down.png",
+      "out": "replay-up.png",
+      "down": "replay-down.png"
+    },
+    "worksheet_btn": {
+      "up": "worksheet-up.png",
+      "over": "worksheet-down.png",
+      "out": "worksheet-up.png",
+      "down": "worksheet-down.png"
+    },
+    "cereal_label_1": {
+      "up": "slide6-label1-up.png",
+      "over": "slide6-label1-down.png",
+      "out": "slide6-label1-up.png",
+      "down": "slide6-label1-down.png"
+    },
+    "cereal_label_2": {
+      "up": "slide6-label2-up.png",
+      "over": "slide6-label2-down.png",
+      "out": "slide6-label2-up.png",
+      "down": "slide6-label2-down.png"
+    },
+    "chicken_nuggets_label": {
+      "up": "slide7-nuggets-up.png",
+      "over": "slide7-nuggets-down.png",
+      "out": "slide7-nuggets-up.png",
+      "down": "slide7-nuggets-down.png"
+    },
+    "chicken_breasts_label": {
+      "up": "slide7-breatsts-up.png",
+      "over": "slide7-breasts-down.png",
+      "out": "slide7-breatsts-up.png",
+      "down": "slide7-breasts-down.png"
+    },
+    "hungry_btn": {
+      "up": "hungry-up.png",
+      "over": "hungry-down.png",
+      "out": "hungry-up.png",
+      "down": "hungry-down.png"
+    },
+    "satisfied_btn": {
+      "up": "satisfied-up.png",
+      "over": "satisfied-down.png",
+      "out": "satisfied-up.png",
+      "down": "satisfied-down.png"
+    },
+    "full_btn": {
+      "up": "full-up.png",
+      "over": "full-down.png",
+      "out": "full-up.png",
+      "down": "full-down.png"
+    }
+  },
+  "soundKey": "output_sounds",
+  "soundFile": [
+    "media/default/lessonaudio.m4a",
+    "media/default/lessonaudio.ogg"
+  ],
+  "sounds": {
+    "Slide 1": [0, 15.227936507936509, false, "Slide 1"],
+    "Slide 10": [17, 24.04283446712018, false, "Slide 10"],
+    "Slide 11": [43, 36.491678004535146, false, "Slide 11"],
+    "Slide 12": [81, 47.383333333333326, false, "Slide 12"],
+    "Slide 13 Carly Full": [
+      130,
+      5.156258503401375,
+      false,
+      "Slide 13 Carly Full"
+    ],
+    "Slide 13 Carly Hungry": [
+      137,
+      5.416666666666657,
+      false,
+      "Slide 13 Carly Hungry"
+    ],
+    "Slide 13 Carly Satisfied": [
+      144,
+      4.039183673469381,
+      false,
+      "Slide 13 Carly Satisfied"
+    ],
+    "Slide 13 Carly": [150, 6.8053514739229115, false, "Slide 13 Carly"],
+    "Slide 13 Jack": [158, 5.439999999999998, false, "Slide 13 Jack"],
+    "Slide 13 Sofia": [165, 5.333333333333343, false, "Slide 13 Sofia"],
+    "Slide 13": [172, 8.354172335600907, false, "Slide 13"],
+    "Slide 14 Jack Full": [182, 3.84167800453514, false, "Slide 14 Jack Full"],
+    "Slide 14 Jack Hungry": [
+      187,
+      3.816666666666663,
+      false,
+      "Slide 14 Jack Hungry"
+    ],
+    "Slide 14 Jack Satisfied": [
+      192,
+      4.041678004535157,
+      false,
+      "Slide 14 Jack Satisfied"
+    ],
+    "Slide 14": [198, 3.9625170068027273, false, "Slide 14"],
+    "Slide 15 Sofia Full": [
+      203,
+      5.316666666666663,
+      false,
+      "Slide 15 Sofia Full"
+    ],
+    "Slide 15 Sofia Hungry": [
+      210,
+      3.9456689342403592,
+      false,
+      "Slide 15 Sofia Hungry"
+    ],
+    "Slide 15 Sofia Satisfied": [
+      215,
+      3.8958503401360645,
+      false,
+      "Slide 15 Sofia Satisfied"
+    ],
+    "Slide 15": [220, 3.5543537414966124, false, "Slide 15"],
+    "Slide 16": [225, 2.095850340136053, false, "Slide 16"],
+    "Slide 2": [229, 24.925646258503406, false, "Slide 2"],
+    "Slide 3": [255, 27.5, false, "Slide 3"],
+    "Slide 4": [290, 18.28077097505667, false, "Slide 4"],
+    "Slide 4a": [260.5, 2.837, false, "Slide 4a"],
+    "Slide 4b": [292.674, 15.68, false, "Slide 4b"],
+    "Slide 5": [310, 22.231678004535127, false, "Slide 5"],
+    "Slide 6 Correct": [334, 3.3120181405895437, false, "Slide 6 Correct"],
+    "Slide 6 Incorrect": [339, 5.649999999999977, false, "Slide 6 Incorrect"],
+    "Slide 6": [346, 29.416666666666686, false, "Slide 6"],
+    "Slide 7 Correct": [377, 12.779501133786823, false, "Slide 7 Correct"],
+    "Slide 7 Incorrect": [391, 16.142653061224507, false, "Slide 7 Incorrect"],
+    "Slide 7": [409, 27.962517006802727, false, "Slide 7"],
+    "Slide 8": [438, 16.15417233560089, false, "Slide 8"],
+    "Slide 8a": [440.5, 13.65, false, "Slide 8a"],
+    "Slide 9": [456, 12.720839002267553, false, "Slide 9"]
+  }
+}

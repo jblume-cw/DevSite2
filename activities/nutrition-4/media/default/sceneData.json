@@ -1,0 +1,2253 @@
+{
+  "play": {
+    "start_skip": "slide01",
+    "start": "slide01",
+    "showPlayThrough": false,
+    "scenes": {
+      "slide01": {
+        "id": "slide01",
+        "background": "background",
+        "title": "Slide 1",
+        "description": "Slide 1",
+        "actors": [
+          {
+            "name": "ian",
+            "type": "decoration",
+            "image": "ian",
+            "location": [301, 134],
+            "scale": [1, 1],
+            "key": "decorations"
+          },
+          {
+            "name": "worksheetButton",
+            "type": "url-button",
+            "image": "worksheet_btn",
+            "location": [15, 544],
+            "url": "Nutrition Worksheet.pdf",
+            "variable": "worksheetBtn"
+          },
+          {
+            "name": "backDisabled",
+            "type": "decoration",
+            "image": "back-disabled",
+            "location": [565, 545],
+            "key": "decorations"
+          },
+          {
+            "name": "replayButton",
+            "type": "button",
+            "image": "replay",
+            "location": [643, 545],
+            "variable": "replayButton"
+          },
+          {
+            "name": "nextButton",
+            "type": "button",
+            "image": "next",
+            "location": [721, 545],
+            "variable": "nextButton"
+          },
+          {
+            "name": "vo",
+            "type": "audio",
+            "audio": ["Slide 1"],
+            "variable": "slideVO"
+          },
+          {
+            "name": "lessonTitle",
+            "type": "text",
+            "font": "lesson-title",
+            "location": [55, 6],
+            "text": "Nutrition"
+          }
+        ],
+        "outcomes": {
+          "vo_finished": {
+            "events": { "slideVO": "played" },
+            "actions": [
+              { "type": "remove-actor", "args": ["nextButton"] },
+              {
+                "type": "add-actor",
+                "args": [
+                  {
+                    "name": "nextHighlight",
+                    "type": "button",
+                    "image": "nextHighlight",
+                    "animated": false,
+                    "location": [721, 545],
+                    "variable": "nextButtonHi"
+                  }
+                ]
+              }
+            ]
+          },
+          "replay_button": {
+            "events": { "replayButton": "*" },
+            "actions": [
+              { "type": "scene", "args": ["empty_replay_scene"] },
+              { "type": "scene", "args": ["slide01"] }
+            ]
+          },
+          "forward_button": {
+            "events": { "nextButton": "*" },
+            "actions": [{ "type": "scene", "args": ["slide02"] }]
+          },
+          "forward_button_hi": {
+            "events": { "nextButtonHi": "*" },
+            "actions": [{ "type": "scene", "args": ["slide02"] }]
+          }
+        }
+      },
+      "slide02": {
+        "id": "slide02",
+        "background": "background",
+        "title": "Slide 2",
+        "description": "Slide 2",
+        "actors": [
+          {
+            "name": "lessonTitle",
+            "type": "text",
+            "font": "lesson-title",
+            "location": [55, 6],
+            "text": "Nutrition"
+          },
+          {
+            "name": "slideTitle",
+            "type": "text",
+            "font": "content-title",
+            "location": [295, 100],
+            "text": "Food = fuel"
+          },
+          {
+            "name": "healthyFoods",
+            "type": "decoration",
+            "image": "healthy-foods",
+            "location": [138, 189],
+            "scale": [1, 1],
+            "key": "decorations"
+          },
+          {
+            "name": "backButton",
+            "type": "button",
+            "image": "back",
+            "location": [565, 545],
+            "variable": "backButton"
+          },
+          {
+            "name": "replayButton",
+            "type": "button",
+            "image": "replay",
+            "location": [643, 545],
+            "variable": "replayButton"
+          },
+          {
+            "name": "nextButton",
+            "type": "button",
+            "image": "next",
+            "location": [721, 545],
+            "variable": "nextButton"
+          },
+          {
+            "name": "vo",
+            "type": "audio",
+            "audio": ["Slide 2"],
+            "variable": "slideVO",
+            "startDelay": 500
+          }
+        ],
+        "outcomes": {
+          "vo_finished": {
+            "events": { "slideVO": "played" },
+            "actions": [
+              { "type": "remove-actor", "args": ["nextButton"] },
+              {
+                "type": "add-actor",
+                "args": [
+                  {
+                    "name": "nextHighlight",
+                    "type": "button",
+                    "image": "nextHighlight",
+                    "animated": false,
+                    "location": [721, 545],
+                    "variable": "nextButtonHi"
+                  }
+                ]
+              }
+            ]
+          },
+          "replay_button": {
+            "events": { "replayButton": "*" },
+            "actions": [
+              { "type": "scene", "args": ["empty_replay_scene"] },
+              { "type": "scene", "args": ["slide02"] }
+            ]
+          },
+          "forward_button": {
+            "events": { "nextButton": "*" },
+            "actions": [{ "type": "scene", "args": ["slide04"] }]
+          },
+          "forward_button_hi": {
+            "events": { "nextButtonHi": "*" },
+            "actions": [{ "type": "scene", "args": ["slide04"] }]
+          },
+          "back_button": {
+            "events": { "backButton": "*" },
+            "actions": [{ "type": "scene", "args": ["slide01"] }]
+          }
+        }
+      },
+      "slide03": {
+        "id": "slide03",
+        "background": "background",
+        "title": "Slide 3",
+        "description": "Slide 3",
+        "actors": [
+          {
+            "name": "lessonTitle",
+            "type": "text",
+            "font": "lesson-title",
+            "location": [55, 6],
+            "text": "Nutrition"
+          },
+          {
+            "name": "slideTitle",
+            "type": "text",
+            "font": "content-title",
+            "location": [325, 115],
+            "text": "MyPlate"
+          },
+          {
+            "name": "myPlate",
+            "type": "decoration",
+            "image": "myPlate",
+            "location": [225, 180],
+            "scale": [1, 1],
+            "key": "decorations"
+          },
+          {
+            "name": "backButton",
+            "type": "button",
+            "image": "back",
+            "location": [565, 545],
+            "variable": "backButton"
+          },
+          {
+            "name": "replayButton",
+            "type": "button",
+            "image": "replay",
+            "location": [643, 545],
+            "variable": "replayButton"
+          },
+          {
+            "name": "nextButton",
+            "type": "button",
+            "image": "next",
+            "location": [721, 545],
+            "variable": "nextButton"
+          },
+          {
+            "name": "vo",
+            "type": "audio",
+            "audio": ["Slide 3"],
+            "variable": "slideVO",
+            "startDelay": 500
+          }
+        ],
+        "outcomes": {
+          "vo_finished": {
+            "events": { "slideVO": "played" },
+            "actions": [
+              { "type": "remove-actor", "args": ["nextButton"] },
+              {
+                "type": "add-actor",
+                "args": [
+                  {
+                    "name": "nextHighlight",
+                    "type": "button",
+                    "image": "nextHighlight",
+                    "animated": false,
+                    "location": [721, 545],
+                    "variable": "nextButtonHi"
+                  }
+                ]
+              }
+            ]
+          },
+          "replay_button": {
+            "events": { "replayButton": "*" },
+            "actions": [
+              { "type": "scene", "args": ["empty_replay_scene"] },
+              { "type": "scene", "args": ["slide03"] }
+            ]
+          },
+          "forward_button": {
+            "events": { "nextButton": "*" },
+            "actions": [{ "type": "scene", "args": ["slide04"] }]
+          },
+          "forward_button_hi": {
+            "events": { "nextButtonHi": "*" },
+            "actions": [{ "type": "scene", "args": ["slide04"] }]
+          },
+          "back_button": {
+            "events": { "backButton": "*" },
+            "actions": [{ "type": "scene", "args": ["slide02"] }]
+          }
+        }
+      },
+      "slide04": {
+        "id": "slide04",
+        "background": "background",
+        "title": "Slide 4",
+        "description": "Slide 4",
+        "actors": [
+          {
+            "name": "lessonTitle",
+            "type": "text",
+            "font": "lesson-title",
+            "location": [55, 6],
+            "text": "Nutrition"
+          },
+          {
+            "name": "slideTitle",
+            "type": "text",
+            "font": "content-title",
+            "location": [210, 80],
+            "text": "Nutrition facts labels"
+          },
+          {
+            "name": "label1",
+            "type": "decoration",
+            "image": "milk-label",
+            "location": [44, 152],
+            "scale": [1, 1],
+            "key": "decorations"
+          },
+          {
+            "name": "label2",
+            "type": "decoration",
+            "image": "gatorade-label",
+            "location": [301, 189],
+            "scale": [1, 1],
+            "key": "decorations"
+          },
+          {
+            "name": "label3",
+            "type": "decoration",
+            "image": "chips-label",
+            "location": [339, 365],
+            "scale": [1, 1],
+            "key": "decorations"
+          },
+          {
+            "name": "backButton",
+            "type": "button",
+            "image": "back",
+            "location": [565, 545],
+            "variable": "backButton"
+          },
+          {
+            "name": "replayButton",
+            "type": "button",
+            "image": "replay",
+            "location": [643, 545],
+            "variable": "replayButton"
+          },
+          {
+            "name": "nextButton",
+            "type": "button",
+            "image": "next",
+            "location": [721, 545],
+            "variable": "nextButton"
+          },
+          {
+            "name": "vo",
+            "type": "audio",
+            "audio": ["Slide 4a", "Slide 4b"],
+            "variable": "slideVO",
+            "startDelay": 500
+          }
+        ],
+        "outcomes": {
+          "vo_finished": {
+            "events": { "slideVO": "played" },
+            "actions": [
+              { "type": "remove-actor", "args": ["nextButton"] },
+              {
+                "type": "add-actor",
+                "args": [
+                  {
+                    "name": "nextHighlight",
+                    "type": "button",
+                    "image": "nextHighlight",
+                    "animated": false,
+                    "location": [721, 545],
+                    "variable": "nextButtonHi"
+                  }
+                ]
+              }
+            ]
+          },
+          "replay_button": {
+            "events": { "replayButton": "*" },
+            "actions": [
+              { "type": "scene", "args": ["empty_replay_scene"] },
+              { "type": "scene", "args": ["slide04"] }
+            ]
+          },
+          "forward_button": {
+            "events": { "nextButton": "*" },
+            "actions": [{ "type": "scene", "args": ["slide05"] }]
+          },
+          "forward_button_hi": {
+            "events": { "nextButtonHi": "*" },
+            "actions": [{ "type": "scene", "args": ["slide05"] }]
+          },
+          "back_button": {
+            "events": { "backButton": "*" },
+            "actions": [{ "type": "scene", "args": ["slide02"] }]
+          }
+        }
+      },
+      "slide05": {
+        "id": "slide05",
+        "background": "background",
+        "title": "Slide 5",
+        "description": "Slide 5",
+        "actors": [
+          {
+            "name": "lessonTitle",
+            "type": "text",
+            "font": "lesson-title",
+            "location": [55, 6],
+            "text": "Nutrition"
+          },
+          {
+            "name": "slideTitle",
+            "type": "text",
+            "font": "content-title",
+            "location": [152, 155],
+            "text": "Calories are units of energy"
+          },
+          {
+            "name": "slideText",
+            "type": "text",
+            "font": "content-body",
+            "location": [144, 240],
+            "text": "100 calories = 100 units of energy"
+          },
+          {
+            "name": "backButton",
+            "type": "button",
+            "image": "back",
+            "location": [565, 545],
+            "variable": "backButton"
+          },
+          {
+            "name": "replayButton",
+            "type": "button",
+            "image": "replay",
+            "location": [643, 545],
+            "variable": "replayButton"
+          },
+          {
+            "name": "nextButton",
+            "type": "button",
+            "image": "next",
+            "location": [721, 545],
+            "variable": "nextButton"
+          },
+          {
+            "name": "vo",
+            "type": "audio",
+            "audio": ["Slide 5"],
+            "variable": "slideVO",
+            "startDelay": 500
+          }
+        ],
+        "outcomes": {
+          "vo_finished": {
+            "events": { "slideVO": "played" },
+            "actions": [
+              { "type": "remove-actor", "args": ["nextButton"] },
+              {
+                "type": "add-actor",
+                "args": [
+                  {
+                    "name": "nextHighlight",
+                    "type": "button",
+                    "image": "nextHighlight",
+                    "animated": false,
+                    "location": [721, 545],
+                    "variable": "nextButtonHi"
+                  }
+                ]
+              }
+            ]
+          },
+          "replay_button": {
+            "events": { "replayButton": "*" },
+            "actions": [
+              { "type": "scene", "args": ["empty_replay_scene"] },
+              { "type": "scene", "args": ["slide05"] }
+            ]
+          },
+          "forward_button": {
+            "events": { "nextButton": "*" },
+            "actions": [{ "type": "scene", "args": ["slide06"] }]
+          },
+          "forward_button_hi": {
+            "events": { "nextButtonHi": "*" },
+            "actions": [{ "type": "scene", "args": ["slide06"] }]
+          },
+          "back_button": {
+            "events": { "backButton": "*" },
+            "actions": [{ "type": "scene", "args": ["slide04"] }]
+          }
+        }
+      },
+      "slide06": {
+        "id": "slide06",
+        "background": "background",
+        "title": "Slide 6",
+        "description": "Slide 6",
+        "actors": [
+          {
+            "name": "lessonTitle",
+            "type": "text",
+            "font": "lesson-title",
+            "location": [55, 6],
+            "text": "Nutrition"
+          },
+          {
+            "name": "cereal_label_1",
+            "type": "button",
+            "image": "cereal_label_1",
+            "location": [151, 88],
+            "variable": "cereal1"
+          },
+          {
+            "name": "cereal_label_2",
+            "type": "button",
+            "image": "cereal_label_2",
+            "location": [460, 88],
+            "variable": "cereal2"
+          },
+          {
+            "name": "arrowServing1",
+            "type": "decoration",
+            "image": "arrow",
+            "location": [113, 116],
+            "scale": [1, 1],
+            "key": "decorations",
+            "startDelay": 9100
+          },
+          {
+            "name": "arrowServing2",
+            "type": "decoration",
+            "image": "arrow",
+            "location": [421, 128],
+            "scale": [1, 1],
+            "key": "decorations",
+            "startDelay": 9110
+          },
+          {
+            "name": "arrowCalories1",
+            "type": "decoration",
+            "image": "arrow",
+            "location": [113, 171],
+            "scale": [1, 1],
+            "key": "decorations",
+            "startDelay": 10300
+          },
+          {
+            "name": "arrowCalories2",
+            "type": "decoration",
+            "image": "arrow",
+            "location": [421, 196],
+            "scale": [1, 1],
+            "key": "decorations",
+            "startDelay": 10310
+          },
+          {
+            "name": "arrow1",
+            "type": "decoration",
+            "image": "arrow",
+            "location": [113, 279],
+            "scale": [1, 1],
+            "key": "decorations",
+            "startDelay": 12850
+          },
+          {
+            "name": "arrow2",
+            "type": "decoration",
+            "image": "arrow",
+            "location": [421, 322],
+            "scale": [1, 1],
+            "key": "decorations",
+            "startDelay": 12900
+          },
+          {
+            "name": "arrow3",
+            "type": "decoration",
+            "image": "arrow",
+            "location": [421, 353],
+            "scale": [1, 1],
+            "key": "decorations",
+            "startDelay": 13300
+          },
+          {
+            "name": "arrow4",
+            "type": "decoration",
+            "image": "arrow",
+            "location": [113, 300],
+            "scale": [1, 1],
+            "key": "decorations",
+            "startDelay": 13350
+          },
+          {
+            "name": "backButton",
+            "type": "button",
+            "image": "back",
+            "location": [565, 545],
+            "variable": "backButton"
+          },
+          {
+            "name": "replayButton",
+            "type": "button",
+            "image": "replay",
+            "location": [643, 545],
+            "variable": "replayButton"
+          },
+          {
+            "name": "nextButton",
+            "type": "button",
+            "image": "next",
+            "location": [721, 545],
+            "variable": "nextButton"
+          },
+          {
+            "name": "vo",
+            "type": "audio",
+            "audio": ["Slide 6"],
+            "variable": "slideVO",
+            "startDelay": 500
+          }
+        ],
+        "outcomes": {
+          "correct_vo_finished": {
+            "events": { "correctAudio": "played" },
+            "actions": [
+              { "type": "remove-actor", "args": ["nextButton"] },
+              {
+                "type": "add-actor",
+                "args": [
+                  {
+                    "name": "nextHighlight",
+                    "type": "button",
+                    "image": "nextHighlight",
+                    "animated": false,
+                    "location": [721, 545],
+                    "variable": "nextButtonHi"
+                  }
+                ]
+              }
+            ]
+          },
+          "incorrect_vo_finished": {
+            "events": { "incorrectAudio": "played" },
+            "actions": [
+              { "type": "remove-actor", "args": ["nextButton"] },
+              {
+                "type": "add-actor",
+                "args": [
+                  {
+                    "name": "nextHighlight",
+                    "type": "button",
+                    "image": "nextHighlight",
+                    "animated": false,
+                    "location": [721, 545],
+                    "variable": "nextButtonHi"
+                  }
+                ]
+              }
+            ]
+          },
+          "cereal1_clicked": {
+            "events": { "cereal1": "*" },
+            "actions": [
+              {
+                "type": "add-actor",
+                "args": [
+                  {
+                    "name": "vo",
+                    "type": "audio",
+                    "audio": ["Slide 6 Correct"],
+                    "variable": "correctAudio"
+                  }
+                ]
+              },
+              {
+                "type": "add-actor",
+                "args": [
+                  {
+                    "name": "cereal1_hi",
+                    "type": "decoration",
+                    "image": "cereal1-selected",
+                    "location": [151, 88],
+                    "key": "decorations"
+                  }
+                ]
+              },
+              { "type": "remove-actor", "args": ["cereal2_hi"] }
+            ]
+          },
+          "cereal2_clicked": {
+            "events": { "cereal2": "*" },
+            "actions": [
+              {
+                "type": "add-actor",
+                "args": [
+                  {
+                    "name": "vo",
+                    "type": "audio",
+                    "audio": ["Slide 6 Incorrect"],
+                    "variable": "incorrectAudio"
+                  }
+                ]
+              },
+              {
+                "type": "add-actor",
+                "args": [
+                  {
+                    "name": "cereal2_hi",
+                    "type": "decoration",
+                    "image": "cereal2-selected",
+                    "location": [460, 88],
+                    "key": "decorations"
+                  }
+                ]
+              },
+              { "type": "remove-actor", "args": ["cereal1_hi"] }
+            ]
+          },
+          "replay_button": {
+            "events": { "replayButton": "*" },
+            "actions": [
+              { "type": "scene", "args": ["empty_replay_scene"] },
+              { "type": "scene", "args": ["slide06"] }
+            ]
+          },
+          "forward_button": {
+            "events": { "nextButton": "*" },
+            "actions": [{ "type": "scene", "args": ["slide07"] }]
+          },
+          "forward_button_hi": {
+            "events": { "nextButtonHi": "*" },
+            "actions": [{ "type": "scene", "args": ["slide07"] }]
+          },
+          "back_button": {
+            "events": { "backButton": "*" },
+            "actions": [{ "type": "scene", "args": ["slide05"] }]
+          }
+        }
+      },
+      "slide07": {
+        "id": "slide07",
+        "background": "background",
+        "title": "Slide 7",
+        "description": "Slide 7",
+        "actors": [
+          {
+            "name": "lessonTitle",
+            "type": "text",
+            "font": "lesson-title",
+            "location": [55, 6],
+            "text": "Nutrition"
+          },
+          {
+            "name": "breasts_title",
+            "type": "text",
+            "font": "content-label",
+            "location": [152, 95],
+            "text": "Chicken breasts"
+          },
+          {
+            "name": "nuggets_title",
+            "type": "text",
+            "font": "content-label",
+            "location": [442, 95],
+            "text": "Chicken nuggets"
+          },
+          {
+            "name": "chicken_breasts_label",
+            "type": "button",
+            "image": "chicken_breasts_label",
+            "location": [139, 127],
+            "variable": "breasts"
+          },
+          {
+            "name": "chicken_nuggets_label",
+            "type": "button",
+            "image": "chicken_nuggets_label",
+            "location": [435, 127],
+            "variable": "nuggets"
+          },
+          {
+            "name": "arrow1",
+            "type": "decoration",
+            "image": "arrow",
+            "location": [101, 213],
+            "scale": [1, 1],
+            "key": "decorations",
+            "startDelay": 14000
+          },
+          {
+            "name": "arrow2",
+            "type": "decoration",
+            "image": "arrow",
+            "location": [399, 213],
+            "scale": [1, 1],
+            "key": "decorations",
+            "startDelay": 14050
+          },
+          {
+            "name": "arrow3",
+            "type": "decoration",
+            "image": "arrow",
+            "location": [101, 262],
+            "scale": [1, 1],
+            "key": "decorations",
+            "startDelay": 16400
+          },
+          {
+            "name": "arrow4",
+            "type": "decoration",
+            "image": "arrow",
+            "location": [399, 260],
+            "scale": [1, 1],
+            "key": "decorations",
+            "startDelay": 16450
+          },
+          {
+            "name": "arrow5",
+            "type": "decoration",
+            "image": "arrow",
+            "location": [101, 277],
+            "scale": [1, 1],
+            "key": "decorations",
+            "startDelay": 17500
+          },
+          {
+            "name": "arrow6",
+            "type": "decoration",
+            "image": "arrow",
+            "location": [399, 275],
+            "scale": [1, 1],
+            "key": "decorations",
+            "startDelay": 17550
+          },
+          {
+            "name": "backButton",
+            "type": "button",
+            "image": "back",
+            "location": [565, 545],
+            "variable": "backButton"
+          },
+          {
+            "name": "replayButton",
+            "type": "button",
+            "image": "replay",
+            "location": [643, 545],
+            "variable": "replayButton"
+          },
+          {
+            "name": "nextButton",
+            "type": "button",
+            "image": "next",
+            "location": [721, 545],
+            "variable": "nextButton"
+          },
+          {
+            "name": "vo",
+            "type": "audio",
+            "audio": ["Slide 7"],
+            "variable": "slideVO",
+            "startDelay": 500
+          }
+        ],
+        "outcomes": {
+          "correct_vo_finished": {
+            "events": { "correctAudio": "played" },
+            "actions": [
+              { "type": "remove-actor", "args": ["nextButton"] },
+              {
+                "type": "add-actor",
+                "args": [
+                  {
+                    "name": "nextHighlight",
+                    "type": "button",
+                    "image": "nextHighlight",
+                    "animated": false,
+                    "location": [721, 545],
+                    "variable": "nextButtonHi"
+                  }
+                ]
+              }
+            ]
+          },
+          "incorrect_vo_finished": {
+            "events": { "incorrectAudio": "played" },
+            "actions": [
+              { "type": "remove-actor", "args": ["nextButton"] },
+              {
+                "type": "add-actor",
+                "args": [
+                  {
+                    "name": "nextHighlight",
+                    "type": "button",
+                    "image": "nextHighlight",
+                    "animated": false,
+                    "location": [721, 545],
+                    "variable": "nextButtonHi"
+                  }
+                ]
+              }
+            ]
+          },
+          "breasts_clicked": {
+            "events": { "breasts": "*" },
+            "actions": [
+              {
+                "type": "add-actor",
+                "args": [
+                  {
+                    "name": "vo",
+                    "type": "audio",
+                    "audio": ["Slide 7 Correct"],
+                    "variable": "correctAudio"
+                  }
+                ]
+              },
+              {
+                "type": "add-actor",
+                "args": [
+                  {
+                    "name": "breasts_hi",
+                    "type": "decoration",
+                    "image": "breasts-selected",
+                    "location": [139, 127],
+                    "key": "decorations"
+                  }
+                ]
+              },
+              { "type": "remove-actor", "args": ["nuggets_hi"] }
+            ]
+          },
+          "nuggets_selected": {
+            "events": { "nuggets": "*" },
+            "actions": [
+              {
+                "type": "add-actor",
+                "args": [
+                  {
+                    "name": "vo",
+                    "type": "audio",
+                    "audio": ["Slide 7 Incorrect"],
+                    "variable": "incorrectAudio"
+                  }
+                ]
+              },
+              {
+                "type": "add-actor",
+                "args": [
+                  {
+                    "name": "nuggets_hi",
+                    "type": "decoration",
+                    "image": "nuggets-selected",
+                    "location": [435, 127],
+                    "key": "decorations"
+                  }
+                ]
+              },
+              { "type": "remove-actor", "args": ["breasts_hi"] }
+            ]
+          },
+          "replay_button": {
+            "events": { "replayButton": "*" },
+            "actions": [
+              { "type": "scene", "args": ["empty_replay_scene"] },
+              { "type": "scene", "args": ["slide07"] }
+            ]
+          },
+          "forward_button": {
+            "events": { "nextButton": "*" },
+            "actions": [{ "type": "scene", "args": ["slide08"] }]
+          },
+          "forward_button_hi": {
+            "events": { "nextButtonHi": "*" },
+            "actions": [{ "type": "scene", "args": ["slide08"] }]
+          },
+          "back_button": {
+            "events": { "backButton": "*" },
+            "actions": [{ "type": "scene", "args": ["slide06"] }]
+          }
+        }
+      },
+      "slide08": {
+        "id": "slide08",
+        "background": "background",
+        "title": "Slide 8",
+        "description": "Slide 8",
+        "actors": [
+          {
+            "name": "lessonTitle",
+            "type": "text",
+            "font": "lesson-title",
+            "location": [55, 6],
+            "text": "Nutrition"
+          },
+          {
+            "name": "slideTitle",
+            "type": "text",
+            "font": "content-title",
+            "location": [202, 143],
+            "text": "Health professionals"
+          },
+          {
+            "name": "bullet1",
+            "type": "text",
+            "font": "content-body",
+            "location": [255, 199],
+            "text": "Doctor",
+            "bullet": true,
+            "startDelay": 7200
+          },
+          {
+            "name": "bullet2",
+            "type": "text",
+            "font": "content-body",
+            "location": [255, 249],
+            "text": "Nurse",
+            "bullet": true,
+            "startDelay": 7900
+          },
+          {
+            "name": "bullet3",
+            "type": "text",
+            "font": "content-body",
+            "location": [255, 299],
+            "text": "Dietitian",
+            "bullet": true,
+            "startDelay": 8500
+          },
+          {
+            "name": "bullet4",
+            "type": "text",
+            "font": "content-body",
+            "location": [255, 349],
+            "text": "Health educator",
+            "bullet": true,
+            "startDelay": 9700
+          },
+          {
+            "name": "backButton",
+            "type": "button",
+            "image": "back",
+            "location": [565, 545],
+            "variable": "backButton"
+          },
+          {
+            "name": "replayButton",
+            "type": "button",
+            "image": "replay",
+            "location": [643, 545],
+            "variable": "replayButton"
+          },
+          {
+            "name": "nextButton",
+            "type": "button",
+            "image": "next",
+            "location": [721, 545],
+            "variable": "nextButton"
+          },
+          {
+            "name": "vo",
+            "type": "audio",
+            "audio": ["Slide 8a"],
+            "variable": "slideVO",
+            "startDelay": 500
+          }
+        ],
+        "outcomes": {
+          "vo_finished": {
+            "events": { "slideVO": "played" },
+            "actions": [
+              { "type": "remove-actor", "args": ["nextButton"] },
+              {
+                "type": "add-actor",
+                "args": [
+                  {
+                    "name": "nextHighlight",
+                    "type": "button",
+                    "image": "nextHighlight",
+                    "animated": false,
+                    "location": [721, 545],
+                    "variable": "nextButtonHi"
+                  }
+                ]
+              }
+            ]
+          },
+          "replay_button": {
+            "events": { "replayButton": "*" },
+            "actions": [
+              { "type": "scene", "args": ["empty_replay_scene"] },
+              { "type": "scene", "args": ["slide08"] }
+            ]
+          },
+          "forward_button": {
+            "events": { "nextButton": "*" },
+            "actions": [{ "type": "scene", "args": ["slide09"] }]
+          },
+          "forward_button_hi": {
+            "events": { "nextButtonHi": "*" },
+            "actions": [{ "type": "scene", "args": ["slide09"] }]
+          },
+          "back_button": {
+            "events": { "backButton": "*" },
+            "actions": [{ "type": "scene", "args": ["slide07"] }]
+          }
+        }
+      },
+      "slide09": {
+        "id": "slide09",
+        "background": "background",
+        "title": "Slide 9",
+        "description": "Slide 9",
+        "actors": [
+          {
+            "name": "lessonTitle",
+            "type": "text",
+            "font": "lesson-title",
+            "location": [55, 6],
+            "text": "Nutrition"
+          },
+          {
+            "name": "hershey_bar",
+            "type": "decoration",
+            "image": "hershey-bar",
+            "location": [41, 188],
+            "scale": [1, 1],
+            "key": "decorations"
+          },
+          {
+            "name": "fruit_snack_box",
+            "type": "decoration",
+            "image": "fruit-snack-box",
+            "location": [515, 142],
+            "scale": [1, 1],
+            "key": "decorations"
+          },
+          {
+            "name": "hershey_circle",
+            "type": "decoration",
+            "image": "hershey-circle",
+            "location": [50, 272],
+            "scale": [1, 1],
+            "key": "decorations"
+          },
+          {
+            "name": "fruit_snack_circle",
+            "type": "decoration",
+            "image": "fruit-snack-circle",
+            "location": [628, 130],
+            "scale": [1, 1],
+            "key": "decorations"
+          },
+          {
+            "name": "backButton",
+            "type": "button",
+            "image": "back",
+            "location": [565, 545],
+            "variable": "backButton"
+          },
+          {
+            "name": "replayButton",
+            "type": "button",
+            "image": "replay",
+            "location": [643, 545],
+            "variable": "replayButton"
+          },
+          {
+            "name": "nextButton",
+            "type": "button",
+            "image": "next",
+            "location": [721, 545],
+            "variable": "nextButton"
+          },
+          {
+            "name": "vo",
+            "type": "audio",
+            "audio": ["Slide 9"],
+            "variable": "slideVO",
+            "startDelay": 500
+          }
+        ],
+        "outcomes": {
+          "vo_finished": {
+            "events": { "slideVO": "played" },
+            "actions": [
+              { "type": "remove-actor", "args": ["nextButton"] },
+              {
+                "type": "add-actor",
+                "args": [
+                  {
+                    "name": "nextHighlight",
+                    "type": "button",
+                    "image": "nextHighlight",
+                    "animated": false,
+                    "location": [721, 545],
+                    "variable": "nextButtonHi"
+                  }
+                ]
+              }
+            ]
+          },
+          "replay_button": {
+            "events": { "replayButton": "*" },
+            "actions": [
+              { "type": "scene", "args": ["empty_replay_scene"] },
+              { "type": "scene", "args": ["slide09"] }
+            ]
+          },
+          "forward_button": {
+            "events": { "nextButton": "*" },
+            "actions": [{ "type": "scene", "args": ["slide10"] }]
+          },
+          "forward_button_hi": {
+            "events": { "nextButtonHi": "*" },
+            "actions": [{ "type": "scene", "args": ["slide10"] }]
+          },
+          "back_button": {
+            "events": { "backButton": "*" },
+            "actions": [{ "type": "scene", "args": ["slide08"] }]
+          }
+        }
+      },
+      "slide10": {
+        "id": "slide10",
+        "background": "background",
+        "title": "Slide 10",
+        "description": "Slide 10",
+        "actors": [
+          {
+            "name": "lessonTitle",
+            "type": "text",
+            "font": "lesson-title",
+            "location": [55, 6],
+            "text": "Nutrition"
+          },
+          {
+            "name": "swedish_fish",
+            "type": "decoration",
+            "image": "swedish-fish",
+            "location": [19, 127],
+            "scale": [1, 1],
+            "key": "decorations"
+          },
+          {
+            "name": "label",
+            "type": "decoration",
+            "image": "swedish-fish-label",
+            "location": [538, 104],
+            "scale": [1, 1],
+            "key": "decorations",
+            "startDelay": 14500
+          },
+          {
+            "name": "backButton",
+            "type": "button",
+            "image": "back",
+            "location": [565, 545],
+            "variable": "backButton"
+          },
+          {
+            "name": "replayButton",
+            "type": "button",
+            "image": "replay",
+            "location": [643, 545],
+            "variable": "replayButton"
+          },
+          {
+            "name": "nextButton",
+            "type": "button",
+            "image": "next",
+            "location": [721, 545],
+            "variable": "nextButton"
+          },
+          {
+            "name": "vo",
+            "type": "audio",
+            "audio": ["Slide 10"],
+            "variable": "slideVO",
+            "startDelay": 500
+          }
+        ],
+        "outcomes": {
+          "vo_finished": {
+            "events": { "slideVO": "played" },
+            "actions": [
+              { "type": "remove-actor", "args": ["nextButton"] },
+              {
+                "type": "add-actor",
+                "args": [
+                  {
+                    "name": "nextHighlight",
+                    "type": "button",
+                    "image": "nextHighlight",
+                    "animated": false,
+                    "location": [721, 545],
+                    "variable": "nextButtonHi"
+                  }
+                ]
+              }
+            ]
+          },
+          "replay_button": {
+            "events": { "replayButton": "*" },
+            "actions": [
+              { "type": "scene", "args": ["empty_replay_scene"] },
+              { "type": "scene", "args": ["slide10"] }
+            ]
+          },
+          "forward_button": {
+            "events": { "nextButton": "*" },
+            "actions": [{ "type": "scene", "args": ["slide11"] }]
+          },
+          "forward_button_hi": {
+            "events": { "nextButtonHi": "*" },
+            "actions": [{ "type": "scene", "args": ["slide11"] }]
+          },
+          "back_button": {
+            "events": { "backButton": "*" },
+            "actions": [{ "type": "scene", "args": ["slide09"] }]
+          }
+        }
+      },
+      "slide11": {
+        "id": "slide11",
+        "background": "background",
+        "title": "Slide 11",
+        "description": "Slide 11",
+        "actors": [
+          {
+            "name": "lessonTitle",
+            "type": "text",
+            "font": "lesson-title",
+            "location": [55, 6],
+            "text": "Nutrition"
+          },
+          {
+            "name": "slideTitle",
+            "type": "text",
+            "font": "content-title",
+            "location": [202, 143],
+            "text": "Why do we eat?"
+          },
+          {
+            "name": "bullet1",
+            "type": "text",
+            "font": "content-body",
+            "location": [255, 199],
+            "text": "Hunger",
+            "bullet": true,
+            "startDelay": 9000
+          },
+          {
+            "name": "bullet2",
+            "type": "text",
+            "font": "content-body",
+            "location": [255, 249],
+            "text": "Food looks/smells good",
+            "bullet": true,
+            "startDelay": 11600
+          },
+          {
+            "name": "bullet3",
+            "type": "text",
+            "font": "content-body",
+            "location": [255, 299],
+            "text": "Boredom",
+            "bullet": true,
+            "startDelay": 14100
+          },
+          {
+            "name": "bullet4",
+            "type": "text",
+            "font": "content-body",
+            "location": [255, 349],
+            "text": "Everyone else is eating",
+            "bullet": true,
+            "startDelay": 16500
+          },
+          {
+            "name": "backButton",
+            "type": "button",
+            "image": "back",
+            "location": [565, 545],
+            "variable": "backButton"
+          },
+          {
+            "name": "replayButton",
+            "type": "button",
+            "image": "replay",
+            "location": [643, 545],
+            "variable": "replayButton"
+          },
+          {
+            "name": "nextButton",
+            "type": "button",
+            "image": "next",
+            "location": [721, 545],
+            "variable": "nextButton"
+          },
+          {
+            "name": "vo",
+            "type": "audio",
+            "audio": ["Slide 11"],
+            "variable": "slideVO",
+            "startDelay": 500
+          }
+        ],
+        "outcomes": {
+          "vo_finished": {
+            "events": { "slideVO": "played" },
+            "actions": [
+              { "type": "remove-actor", "args": ["nextButton"] },
+              {
+                "type": "add-actor",
+                "args": [
+                  {
+                    "name": "nextHighlight",
+                    "type": "button",
+                    "image": "nextHighlight",
+                    "animated": false,
+                    "location": [721, 545],
+                    "variable": "nextButtonHi"
+                  }
+                ]
+              }
+            ]
+          },
+          "replay_button": {
+            "events": { "replayButton": "*" },
+            "actions": [
+              { "type": "scene", "args": ["empty_replay_scene"] },
+              { "type": "scene", "args": ["slide11"] }
+            ]
+          },
+          "forward_button": {
+            "events": { "nextButton": "*" },
+            "actions": [{ "type": "scene", "args": ["slide12"] }]
+          },
+          "forward_button_hi": {
+            "events": { "nextButtonHi": "*" },
+            "actions": [{ "type": "scene", "args": ["slide12"] }]
+          },
+          "back_button": {
+            "events": { "backButton": "*" },
+            "actions": [{ "type": "scene", "args": ["slide10"] }]
+          }
+        }
+      },
+      "slide12": {
+        "id": "slide12",
+        "background": "background",
+        "title": "Slide 12",
+        "description": "Slide 12",
+        "actors": [
+          {
+            "name": "lessonTitle",
+            "type": "text",
+            "font": "lesson-title",
+            "location": [55, 6],
+            "text": "Nutrition"
+          },
+          {
+            "name": "slideTitle",
+            "type": "text",
+            "font": "content-title",
+            "location": [263, 98],
+            "text": "Hunger signals"
+          },
+          {
+            "name": "sofia1",
+            "type": "decoration",
+            "image": "sofia-sandwich",
+            "location": [292, 175],
+            "scale": [1, 1],
+            "key": "decorations"
+          },
+          {
+            "name": "sofia_blocker",
+            "type": "blocker",
+            "location": [279, 166],
+            "size": [280, 368],
+            "blockerTint": "0xebf6fd",
+            "startDelay": 20000
+          },
+          {
+            "name": "sofia2",
+            "type": "decoration",
+            "image": "sofia-signal",
+            "location": [292, 175],
+            "scale": [1, 1],
+            "key": "decorations",
+            "startDelay": 20050
+          },
+          {
+            "name": "backButton",
+            "type": "button",
+            "image": "back",
+            "location": [565, 545],
+            "variable": "backButton"
+          },
+          {
+            "name": "replayButton",
+            "type": "button",
+            "image": "replay",
+            "location": [643, 545],
+            "variable": "replayButton"
+          },
+          {
+            "name": "nextButton",
+            "type": "button",
+            "image": "next",
+            "location": [721, 545],
+            "variable": "nextButton"
+          },
+          {
+            "name": "vo",
+            "type": "audio",
+            "audio": ["Slide 12"],
+            "variable": "slideVO",
+            "startDelay": 500
+          }
+        ],
+        "outcomes": {
+          "vo_finished": {
+            "events": { "slideVO": "played" },
+            "actions": [
+              { "type": "remove-actor", "args": ["nextButton"] },
+              {
+                "type": "add-actor",
+                "args": [
+                  {
+                    "name": "nextHighlight",
+                    "type": "button",
+                    "image": "nextHighlight",
+                    "animated": false,
+                    "location": [721, 545],
+                    "variable": "nextButtonHi"
+                  }
+                ]
+              }
+            ]
+          },
+          "replay_button": {
+            "events": { "replayButton": "*" },
+            "actions": [
+              { "type": "scene", "args": ["empty_replay_scene"] },
+              { "type": "scene", "args": ["slide12"] }
+            ]
+          },
+          "forward_button": {
+            "events": { "nextButton": "*" },
+            "actions": [{ "type": "scene", "args": ["slide13"] }]
+          },
+          "forward_button_hi": {
+            "events": { "nextButtonHi": "*" },
+            "actions": [{ "type": "scene", "args": ["slide13"] }]
+          },
+          "back_button": {
+            "events": { "backButton": "*" },
+            "actions": [{ "type": "scene", "args": ["slide11"] }]
+          }
+        }
+      },
+      "slide13": {
+        "id": "slide13",
+        "background": "background",
+        "title": "Slide 13",
+        "description": "Slide 13",
+        "actors": [
+          {
+            "name": "lessonTitle",
+            "type": "text",
+            "font": "lesson-title",
+            "location": [55, 6],
+            "text": "Nutrition"
+          },
+          {
+            "name": "carly",
+            "type": "decoration",
+            "image": "carly",
+            "location": [173, 132],
+            "scale": [1, 1],
+            "key": "decorations"
+          },
+          {
+            "name": "backButton",
+            "type": "button",
+            "image": "back",
+            "location": [565, 545],
+            "variable": "backButton"
+          },
+          {
+            "name": "replayButton",
+            "type": "button",
+            "image": "replay",
+            "location": [643, 545],
+            "variable": "replayButton"
+          },
+          {
+            "name": "nextButton",
+            "type": "button",
+            "image": "next",
+            "location": [721, 545],
+            "variable": "nextButton"
+          },
+          {
+            "name": "vo",
+            "type": "audio",
+            "audio": ["Slide 13"],
+            "variable": "introVO",
+            "startDelay": 500
+          }
+        ],
+        "outcomes": {
+          "introVoFinished": {
+            "events": { "introVO": "played" },
+            "actions": [
+              {
+                "type": "add-actor",
+                "args": [
+                  {
+                    "name": "carlyVo1",
+                    "type": "audio",
+                    "audio": ["Slide 13 Carly"],
+                    "variable": "carlyVo1",
+                    "startDelay": 666
+                  }
+                ]
+              }
+            ]
+          },
+          "carlyVoFinished1": {
+            "events": { "carlyVo1": "played" },
+            "actions": [
+              {
+                "type": "add-actor",
+                "args": [
+                  {
+                    "name": "hungryButton",
+                    "type": "button",
+                    "image": "hungry_btn",
+                    "animated": false,
+                    "location": [418, 218],
+                    "variable": "carlyHungry"
+                  }
+                ]
+              },
+              {
+                "type": "add-actor",
+                "args": [
+                  {
+                    "name": "satisfiedButton",
+                    "type": "button",
+                    "image": "satisfied_btn",
+                    "animated": false,
+                    "location": [418, 288],
+                    "variable": "carlySatisfied"
+                  }
+                ]
+              },
+              {
+                "type": "add-actor",
+                "args": [
+                  {
+                    "name": "fullButton",
+                    "type": "button",
+                    "image": "full_btn",
+                    "animated": false,
+                    "location": [418, 358],
+                    "variable": "carlyFull"
+                  }
+                ]
+              }
+            ]
+          },
+          "replay_button": {
+            "events": { "replayButton": "*" },
+            "actions": [
+              { "type": "scene", "args": ["empty_replay_scene"] },
+              { "type": "scene", "args": ["slide13"] }
+            ]
+          },
+          "forward_button": {
+            "events": { "nextButton": "*" },
+            "actions": [{ "type": "scene", "args": ["slide14"] }]
+          },
+          "forward_button_hi": {
+            "events": { "nextButtonHi": "*" },
+            "actions": [{ "type": "scene", "args": ["slide14"] }]
+          },
+          "back_button": {
+            "events": { "backButton": "*" },
+            "actions": [{ "type": "scene", "args": ["slide12"] }]
+          },
+          "carly_hungry": {
+            "events": { "carlyHungry": "*" },
+            "actions": [
+              {
+                "type": "add-actor",
+                "args": [
+                  {
+                    "name": "carly_hungry_vo",
+                    "type": "audio",
+                    "audio": ["Slide 13 Carly Hungry"],
+                    "variable": "carlyHungryVO"
+                  }
+                ]
+              }
+            ]
+          },
+          "carly_satisfied": {
+            "events": { "carlySatisfied": "*" },
+            "actions": [
+              {
+                "type": "add-actor",
+                "args": [
+                  {
+                    "name": "carly_satisfied_vo",
+                    "type": "audio",
+                    "audio": ["Slide 13 Carly Satisfied"],
+                    "variable": "carlySatisfiedVO"
+                  }
+                ]
+              }
+            ]
+          },
+          "carly_full": {
+            "events": { "carlyFull": "*" },
+            "actions": [
+              {
+                "type": "add-actor",
+                "args": [
+                  {
+                    "name": "carly_full_vo",
+                    "type": "audio",
+                    "audio": ["Slide 13 Carly Full"],
+                    "variable": "carlyFullVO"
+                  }
+                ]
+              }
+            ]
+          },
+          "hungry_finished": {
+            "events": { "carlyHungryVO": "played" },
+            "actions": [
+              { "type": "remove-actor", "args": ["nextButton"] },
+              {
+                "type": "add-actor",
+                "args": [
+                  {
+                    "name": "nextHighlight",
+                    "type": "button",
+                    "image": "nextHighlight",
+                    "animated": false,
+                    "location": [721, 545],
+                    "variable": "nextButtonHi"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      },
+      "slide14": {
+        "id": "slide14",
+        "background": "background",
+        "title": "Slide 14",
+        "description": "Slide 14",
+        "actors": [
+          {
+            "name": "lessonTitle",
+            "type": "text",
+            "font": "lesson-title",
+            "location": [55, 6],
+            "text": "Nutrition"
+          },
+          {
+            "name": "jack",
+            "type": "decoration",
+            "image": "jack",
+            "location": [416, 140],
+            "scale": [1, 1],
+            "key": "decorations"
+          },
+          {
+            "name": "backButton",
+            "type": "button",
+            "image": "back",
+            "location": [565, 545],
+            "variable": "backButton"
+          },
+          {
+            "name": "replayButton",
+            "type": "button",
+            "image": "replay",
+            "location": [643, 545],
+            "variable": "replayButton"
+          },
+          {
+            "name": "nextButton",
+            "type": "button",
+            "image": "next",
+            "location": [721, 545],
+            "variable": "nextButton"
+          },
+          {
+            "name": "vo",
+            "type": "audio",
+            "audio": ["Slide 14"],
+            "variable": "introVO",
+            "startDelay": 500
+          }
+        ],
+        "outcomes": {
+          "introVoFinished": {
+            "events": { "introVO": "played" },
+            "actions": [
+              {
+                "type": "add-actor",
+                "args": [
+                  {
+                    "name": "jackVo1",
+                    "type": "audio",
+                    "audio": ["Slide 13 Jack"],
+                    "variable": "jackVo1",
+                    "startDelay": 666
+                  }
+                ]
+              }
+            ]
+          },
+          "jack_vo_finished1": {
+            "events": { "jackVo1": "played" },
+            "actions": [
+              {
+                "type": "add-actor",
+                "args": [
+                  {
+                    "name": "hungryButton",
+                    "type": "button",
+                    "image": "hungry_btn",
+                    "animated": false,
+                    "location": [168, 228],
+                    "variable": "jackHungry"
+                  }
+                ]
+              },
+              {
+                "type": "add-actor",
+                "args": [
+                  {
+                    "name": "satisfiedButton",
+                    "type": "button",
+                    "image": "satisfied_btn",
+                    "animated": false,
+                    "location": [168, 298],
+                    "variable": "jackSatisfied"
+                  }
+                ]
+              },
+              {
+                "type": "add-actor",
+                "args": [
+                  {
+                    "name": "fullButton",
+                    "type": "button",
+                    "image": "full_btn",
+                    "animated": false,
+                    "location": [168, 368],
+                    "variable": "jackFull"
+                  }
+                ]
+              }
+            ]
+          },
+          "replay_button": {
+            "events": { "replayButton": "*" },
+            "actions": [
+              { "type": "scene", "args": ["empty_replay_scene"] },
+              { "type": "scene", "args": ["slide14"] }
+            ]
+          },
+          "forward_button": {
+            "events": { "nextButton": "*" },
+            "actions": [{ "type": "scene", "args": ["slide15"] }]
+          },
+          "forward_button_hi": {
+            "events": { "nextButtonHi": "*" },
+            "actions": [{ "type": "scene", "args": ["slide15"] }]
+          },
+          "back_button": {
+            "events": { "backButton": "*" },
+            "actions": [{ "type": "scene", "args": ["slide13"] }]
+          },
+          "jack_hungry": {
+            "events": { "jackHungry": "*" },
+            "actions": [
+              {
+                "type": "add-actor",
+                "args": [
+                  {
+                    "name": "jack_hungry_vo",
+                    "type": "audio",
+                    "audio": ["Slide 14 Jack Hungry"],
+                    "variable": "jackHungryVO"
+                  }
+                ]
+              }
+            ]
+          },
+          "jack_satisfied": {
+            "events": { "jackSatisfied": "*" },
+            "actions": [
+              {
+                "type": "add-actor",
+                "args": [
+                  {
+                    "name": "jack_satisfied_vo",
+                    "type": "audio",
+                    "audio": ["Slide 14 Jack Satisfied"],
+                    "variable": "jackSatisfiedVO"
+                  }
+                ]
+              }
+            ]
+          },
+          "jack_full": {
+            "events": { "jackFull": "*" },
+            "actions": [
+              {
+                "type": "add-actor",
+                "args": [
+                  {
+                    "name": "jack_full_vo",
+                    "type": "audio",
+                    "audio": ["Slide 14 Jack Full"],
+                    "variable": "jackFullVO"
+                  }
+                ]
+              }
+            ]
+          },
+          "full_finished": {
+            "events": { "jackFullVO": "played" },
+            "actions": [
+              { "type": "remove-actor", "args": ["nextButton"] },
+              {
+                "type": "add-actor",
+                "args": [
+                  {
+                    "name": "nextHighlight",
+                    "type": "button",
+                    "image": "nextHighlight",
+                    "animated": false,
+                    "location": [721, 545],
+                    "variable": "nextButtonHi"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      },
+      "slide15": {
+        "id": "slide15",
+        "background": "background",
+        "title": "Slide 15",
+        "description": "Slide 15",
+        "actors": [
+          {
+            "name": "lessonTitle",
+            "type": "text",
+            "font": "lesson-title",
+            "location": [55, 6],
+            "text": "Nutrition"
+          },
+          {
+            "name": "sofia",
+            "type": "decoration",
+            "image": "sofia",
+            "location": [162, 132],
+            "scale": [1, 1],
+            "key": "decorations"
+          },
+          {
+            "name": "backButton",
+            "type": "button",
+            "image": "back",
+            "location": [565, 545],
+            "variable": "backButton"
+          },
+          {
+            "name": "replayButton",
+            "type": "button",
+            "image": "replay",
+            "location": [643, 545],
+            "variable": "replayButton"
+          },
+          {
+            "name": "nextButton",
+            "type": "button",
+            "image": "next",
+            "location": [721, 545],
+            "variable": "nextButton"
+          },
+          {
+            "name": "vo",
+            "type": "audio",
+            "audio": ["Slide 15"],
+            "variable": "introVO",
+            "startDelay": 500
+          }
+        ],
+        "outcomes": {
+          "introVoFinished": {
+            "events": { "introVO": "played" },
+            "actions": [
+              {
+                "type": "add-actor",
+                "args": [
+                  {
+                    "name": "sofiaVo1",
+                    "type": "audio",
+                    "audio": ["Slide 13 Sofia"],
+                    "variable": "sofiaVo1",
+                    "startDelay": 666
+                  }
+                ]
+              }
+            ]
+          },
+          "sofia_vo_finished": {
+            "events": { "sofiaVo1": "played" },
+            "actions": [
+              {
+                "type": "add-actor",
+                "args": [
+                  {
+                    "name": "hungryButton",
+                    "type": "button",
+                    "image": "hungry_btn",
+                    "animated": false,
+                    "location": [418, 228],
+                    "variable": "sofiaHungry"
+                  }
+                ]
+              },
+              {
+                "type": "add-actor",
+                "args": [
+                  {
+                    "name": "satisfiedButton",
+                    "type": "button",
+                    "image": "satisfied_btn",
+                    "animated": false,
+                    "location": [418, 298],
+                    "variable": "sofiaSatisfied"
+                  }
+                ]
+              },
+              {
+                "type": "add-actor",
+                "args": [
+                  {
+                    "name": "fullButton",
+                    "type": "button",
+                    "image": "full_btn",
+                    "animated": false,
+                    "location": [418, 368],
+                    "variable": "sofiaFull"
+                  }
+                ]
+              }
+            ]
+          },
+          "replay_button": {
+            "events": { "replayButton": "*" },
+            "actions": [
+              { "type": "scene", "args": ["empty_replay_scene"] },
+              { "type": "scene", "args": ["slide15"] }
+            ]
+          },
+          "forward_button": {
+            "events": { "nextButton": "*" },
+            "actions": [{ "type": "scene", "args": ["slide16"] }]
+          },
+          "forward_button_hi": {
+            "events": { "nextButtonHi": "*" },
+            "actions": [{ "type": "scene", "args": ["slide16"] }]
+          },
+          "back_button": {
+            "events": { "backButton": "*" },
+            "actions": [{ "type": "scene", "args": ["slide14"] }]
+          },
+          "jack_hungry": {
+            "events": { "sofiaHungry": "*" },
+            "actions": [
+              {
+                "type": "add-actor",
+                "args": [
+                  {
+                    "name": "sofia_hungry_vo",
+                    "type": "audio",
+                    "audio": ["Slide 15 Sofia Hungry"],
+                    "variable": "sofiaHungryVO"
+                  }
+                ]
+              }
+            ]
+          },
+          "sofia_satisfied": {
+            "events": { "sofiaSatisfied": "*" },
+            "actions": [
+              {
+                "type": "add-actor",
+                "args": [
+                  {
+                    "name": "sofia_satisfied_vo",
+                    "type": "audio",
+                    "audio": ["Slide 15 Sofia Satisfied"],
+                    "variable": "sofiaSatisfiedVO"
+                  }
+                ]
+              }
+            ]
+          },
+          "sofia_full": {
+            "events": { "sofiaFull": "*" },
+            "actions": [
+              {
+                "type": "add-actor",
+                "args": [
+                  {
+                    "name": "sofia_full_vo",
+                    "type": "audio",
+                    "audio": ["Slide 15 Sofia Full"],
+                    "variable": "sofiaFullVO"
+                  }
+                ]
+              }
+            ]
+          },
+          "satisfied_finished": {
+            "events": { "sofiaSatisfiedVO": "played" },
+            "actions": [
+              { "type": "remove-actor", "args": ["nextButton"] },
+              {
+                "type": "add-actor",
+                "args": [
+                  {
+                    "name": "nextHighlight",
+                    "type": "button",
+                    "image": "nextHighlight",
+                    "animated": false,
+                    "location": [721, 545],
+                    "variable": "nextButtonHi"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      },
+      "slide16": {
+        "id": "slide16",
+        "background": "background",
+        "title": "Slide 16",
+        "description": "Slide 16",
+        "actors": [
+          {
+            "name": "lessonTitle",
+            "type": "text",
+            "font": "lesson-title",
+            "location": [55, 6],
+            "text": "Nutrition"
+          },
+          {
+            "name": "slideTitle",
+            "type": "text",
+            "font": "final-title",
+            "location": [265, 190],
+            "text": "Great job!"
+          },
+          {
+            "name": "backButton",
+            "type": "button",
+            "image": "back",
+            "location": [565, 545],
+            "variable": "backButton"
+          },
+          {
+            "name": "replayButton",
+            "type": "button",
+            "image": "replay",
+            "location": [643, 545],
+            "variable": "replayButton"
+          },
+          {
+            "name": "next-disabled",
+            "type": "decoration",
+            "image": "next-disabled",
+            "location": [721, 545],
+            "variable": "next-disabled",
+            "key": "decorations"
+          },
+          {
+            "name": "vo",
+            "type": "audio",
+            "audio": ["Slide 16"],
+            "variable": "slideVO",
+            "startDelay": 500
+          }
+        ],
+        "outcomes": {
+          "vo_finished": {
+            "events": { "slideVO": "played" },
+            "actions": []
+          },
+          "replay_button": {
+            "events": { "replayButton": "*" },
+            "actions": [
+              { "type": "scene", "args": ["empty_replay_scene"] },
+              { "type": "scene", "args": ["slide16"] }
+            ]
+          },
+          "back_button": {
+            "events": { "backButton": "*" },
+            "actions": [{ "type": "scene", "args": ["slide15"] }]
+          }
+        },
+        "actions": [{ "type": "choice", "args": ["objective_complete", 1] }]
+      },
+      "empty_replay_scene": {
+        "id": "empty_replay_scene",
+        "description": "since a scene change request to the current scene is ignored, first change to this empty scene"
+      }
+    }
+  }
+}
