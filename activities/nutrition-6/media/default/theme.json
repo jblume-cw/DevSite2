@@ -1,0 +1,235 @@
+{
+  "texture": "media/default/nutrition.png",
+  "textureMap": "media/default/nutrition.json",
+  "textureKey": "texture",
+  "data": "media/default/sceneData.json",
+  "fonts": {
+    "title": {
+      "font": "Barlow",
+      "fontSize": "38px",
+      "fill": "#ffffff",
+      "fontWeight": "800",
+      "align": "left",
+      "wordWrap": false
+    },
+    "text": {
+      "font": "Barlow",
+      "fontSize": "38px",
+      "fill": "#ffffff",
+      "fontWeight": "700",
+      "align": "left",
+      "wordWrap": false
+    },
+    "text32": {
+      "font": "Barlow",
+      "fontSize": "32px",
+      "fill": "#ffffff",
+      "fontWeight": "700",
+      "align": "left",
+      "wordWrap": false
+    },
+    "myplate-text": {
+      "font": "Barlow",
+      "fontSize": "24px",
+      "fill": "#ffffff",
+      "fontWeight": "700",
+      "align": "left",
+      "wordWrap": false
+    },
+    "bullet": {
+      "font": "Barlow",
+      "fontSize": "28px",
+      "fill": "#ffffff",
+      "fontWeight": "bold",
+      "align": "left",
+      "wordWrap": false
+    },
+    "barlow-blue-36-exbold-centered-wrap400": {
+      "font": "36px Barlow",
+      "fill": "#007cc2",
+      "align": "center",
+      "fontWeight": "800",
+      "wordWrap": true,
+      "wordWrapWidth": 400,
+      "lineSpacing": -7
+    }
+  },
+  "images": {
+    "resumeBox": "resume-box.png",
+    "back-disabled": "nav_back_button_disabled.png",
+    "next-disabled": "nav_next_button_disabled.png",
+    "topBar": "interface-bars-top.png",
+    "bottomBar": "interface-bars-bottom.png",
+    "logo": "logo.png",
+    "intro-paper-blank": "intro-paper-blank.png",
+    "resume-box": "resume-box.png",
+    "resume-down": "resume-down.png",
+    "resume-over": "resume-over.png",
+    "resume-up": "resume-up.png",
+    "startover-down": "startover-down.png",
+    "startover-over": "startover-over.png",
+    "startover-up": "startover-up.png",
+    "bag-go-circle": "bag-go-circle.png",
+    "bag-go": "bag-go.png",
+    "bag-go-crop": "bag-go-crop.png",
+    "bag-slow-crop": "bag-slow-crop.png",
+    "bag-whoa-crop": "bag-whoa-crop.png",
+    "bag-slow-circle": "bag-slow-circle.png",
+    "bag-slow": "bag-slow.png",
+    "bag-whoa-circle": "bag-whoa-circle.png",
+    "bag-whoa": "bag-whoa.png",
+    "bag": "bag.png",
+    "basketball": "basketball.png",
+    "food-apples": "food-apples.png",
+    "food-burger": "food-burger.png",
+    "food-carrots": "food-carrots.png",
+    "food-cereal": "food-cereal.png",
+    "food-eggs": "food-eggs.png",
+    "food-fruit-snacks": "food-fruit-snacks.png",
+    "food-ice-cream": "food-ice-cream.png",
+    "food-milk": "food-milk.png",
+    "food-organge-juice": "food-orange-juice.png",
+    "food-potatoes": "food-potatoes.png",
+    "food-skim-milk": "food-skim-milk.png",
+    "food-tater-tots": "food-tater-tots.png",
+    "food-white-pasta": "food-white-pasta.png",
+    "food-whole-grain-bread": "food-whole-grain-bread.png",
+    "fried-chicken": "fried-chicken.png",
+    "ian-and-carly-split": "ian-and-carly-split-cropped.png",
+    "ian-and-carly1": "ian-and-carly1.png",
+    "ian-and-carly2": "ian-and-carly2.png",
+    "jack": "jack.png",
+    "reading": "reading.png",
+    "sofia": "sofia.png",
+    "trumpet": "trumpet.png",
+    "dairy_plate_icon": "myplate dairy0011.png",
+    "fruit_plate_icon": "myplate fruit0011.png",
+    "grain_plate_icon": "myplate grains0011.png",
+    "protein_plate_icon": "myplate protein0011.png",
+    "veggie_plate_icon": "myplate vegetables0011.png",
+    "myplate": "myplate.png",
+    "arrow": "nav_next_button_up.png",
+    "worksheetdummy": "worksheet_button_up.png"
+  },
+  "sceneImages": {
+    "background": "bg-blue-vert.png",
+    "background-1": "bg-yellow-vert.png"
+  },
+  "buttons": {
+    "next": {
+      "up": "nav_next_button_up.png",
+      "over": "nav_next_button_over.png",
+      "out": "nav_next_button_up.png",
+      "down": "nav_next_button_down.png"
+    },
+    "next-hi": {
+      "up": "nav_next_button_over.png",
+      "over": "nav_next_button_over.png",
+      "out": "nav_next_button_over.png",
+      "down": "nav_next_button_down.png"
+    },
+    "back": {
+      "up": "nav_back_button_up.png",
+      "over": "nav_back_button_over.png",
+      "out": "nav_back_button_up.png",
+      "down": "nav_back_button_down.png"
+    },
+    "replay": {
+      "up": "nav_replay_button_up.png",
+      "over": "nav_replay_button_over.png",
+      "out": "nav_replay_button_up.png",
+      "down": "nav_replay_button_down.png"
+    },
+    "worksheet": {
+      "up": "worksheet_button_up.png",
+      "over": "worksheet_button_over.png",
+      "out": "worksheet_button_up.png",
+      "down": "worksheet_button_down.png"
+    },
+    "dairy": {
+      "up": "mplate-dairy0001.png",
+      "over": "mplate-dairy0002.png",
+      "out": "mplate-dairy0001.png",
+      "down": "mplate-dairy0002.png"
+    },
+    "grains": {
+      "up": "myplate-grains0001.png",
+      "over": "myplate-grains0002.png",
+      "out": "myplate-grains0001.png",
+      "down": "myplate-grains0002.png"
+    },
+    "fruits": {
+      "up": "myplate-fruits0001.png",
+      "over": "myplate-fruits0002.png",
+      "out": "myplate-fruits0001.png",
+      "down": "myplate-fruits0002.png"
+    },
+    "protein": {
+      "up": "myplate-protein0001.png",
+      "over": "myplate-protein0002.png",
+      "out": "myplate-protein0001.png",
+      "down": "myplate-protein0002.png"
+    },
+    "veggie": {
+      "up": "myplate-vegetables0001.png",
+      "over": "myplate-vegetables0002.png",
+      "out": "myplate-vegetables0001.png",
+      "down": "myplate-vegetables0002.png"
+    },
+    "resumeBtn": {
+      "up": "resume-up.png",
+      "over": "resume-over.png",
+      "out": "resume-up.png",
+      "down": "resume-down.png"
+    },
+    "startOverBtn": {
+      "up": "startover-up.png",
+      "over": "startover-over.png",
+      "out": "startover-up.png",
+      "down": "startover-down.png"
+    }
+  },
+  "soundKey": "nutrition-a",
+  "soundFile": [
+    "media/default/nutrition-a.m4a",
+    "media/default/nutrition-a.ogg"
+  ],
+  "sounds": {
+    "Slide 10a": [0, 4.5, false, "Slide 10a"],
+    "Slide 10b": [5, 21.75, false, "Slide 10b"],
+    "Slide 11a": [27, 6, false, "Slide 11a"],
+    "Slide 11b": [33, 38.36260770975056, false, "Slide 11b"],
+    "Slide 11c": [33, 25.8, false, "Slide 11c"],
+    "Slide 12 Jack": [72, 14.686984126984129, false, "Slide 12 Jack"],
+    "Slide 12a Sofia": [87, 10.5, false, "Slide 12a Sofia"],
+    "Slide 12b Sofia": [98, 5.791678004535143, false, "Slide 12b Sofia"],
+    "Slide 13": [104, 59.616077097505666, false, "Slide 13"],
+    "Slide 14 Jack": [164, 9.5, false, "Slide 14 Jack"],
+    "Slide 14 Sofia": [174, 11.647936507936521, false, "Slide 14 Sofia"],
+    "Slide 15": [186, 51.87501133786847, false, "Slide 15"],
+    "Slide 16": [238, 16, false, "Slide 16"],
+    "Slide 17 Jack": [254, 17.630748299319748, false, "Slide 17 Jack"],
+    "Slide 17a Sofia": [272, 7.510430839002254, false, "Slide 17a Sofia"],
+    "Slide 17b Sofia": [280, 12.931247165532909, false, "Slide 17b Sofia"],
+    "Slide 1a Jack": [293, 9.791678004535129, false, "Slide 1a Jack"],
+    "Slide 1a Sofia": [303, 10.3750113378685, false, "Slide 1a Sofia"],
+    "Slide 4": [314, 18, false, "Slide 4"],
+    "Slide 5 Dairy": [337, 13, false, "Slide 5 Dairy"],
+    "Slide 5 Fruits": [350, 17, false, "Slide 5 Fruits"],
+    "Slide 5 Grains": [367, 22.25, false, "Slide 5 Grains"],
+    "Slide 5 Intro": [390, 7.833333333333314, false, "Slide 5 Intro"],
+    "Slide 5 Protein": [398, 16.958344671201814, false, "Slide 5 Protein"],
+    "Slide 5 Vegetables": [415, 20, false, "Slide 5 Vegetables"],
+    "Slide 5 Vegetables a": [421, 14, false, "Slide 5 Vegetables a"],
+    "Slide 6": [435, 32, false, "Slide 6"],
+    "Slide 7a": [467, 13.5, false, "Slide 7a"],
+    "Slide 7b": [481, 17.5, false, "Slide 7b"],
+    "Slide 8a": [499, 4.5, false, "Slide 8a"],
+    "Slide 8b": [504, 15.958321995464871, false, "Slide 8b"],
+    "Slide 9a": [520, 5, false, "Slide 9a"],
+    "Slide 9b": [525, 21.25, false, "Slide 9b"],
+    "Slide2": [547, 41, false, "Slide2"],
+    "Slide3": [588, 31.5, false, "Slide3"],
+    "magicmallet_c": [620, 0.9723356009070585, false, "magicmallet_c"]
+  }
+}

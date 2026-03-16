@@ -1,0 +1,208 @@
+{
+  "sprite": {
+    "Slide 10a": [
+      0,
+      4.5,
+      false,
+      "Slide 10a"
+    ],
+    "Slide 10b": [
+      5,
+      21.75,
+      false,
+      "Slide 10b"
+    ],
+    "Slide 11a": [
+      27,
+      6,
+      false,
+      "Slide 11a"
+    ],
+    "Slide 11b": [
+      33,
+      38.36260770975056,
+      false,
+      "Slide 11b"
+    ],
+    "Slide 12 Jack": [
+      72,
+      14.686984126984129,
+      false,
+      "Slide 12 Jack"
+    ],
+    "Slide 12a Sofia": [
+      87,
+      10.5,
+      false,
+      "Slide 12a Sofia"
+    ],
+    "Slide 12b Sofia": [
+      98,
+      5.791678004535143,
+      false,
+      "Slide 12b Sofia"
+    ],
+    "Slide 13": [
+      104,
+      59.616077097505666,
+      false,
+      "Slide 13"
+    ],
+    "Slide 14 Jack": [
+      164,
+      9.5,
+      false,
+      "Slide 14 Jack"
+    ],
+    "Slide 14 Sofia": [
+      174,
+      11.647936507936521,
+      false,
+      "Slide 14 Sofia"
+    ],
+    "Slide 15": [
+      186,
+      51.87501133786847,
+      false,
+      "Slide 15"
+    ],
+    "Slide 16": [
+      238,
+      16,
+      false,
+      "Slide 16"
+    ],
+    "Slide 17 Jack": [
+      254,
+      17.630748299319748,
+      false,
+      "Slide 17 Jack"
+    ],
+    "Slide 17a Sofia": [
+      272,
+      7.510430839002254,
+      false,
+      "Slide 17a Sofia"
+    ],
+    "Slide 17b Sofia": [
+      280,
+      12.931247165532909,
+      false,
+      "Slide 17b Sofia"
+    ],
+    "Slide 1a Jack": [
+      293,
+      9.791678004535129,
+      false,
+      "Slide 1a Jack"
+    ],
+    "Slide 1a Sofia": [
+      303,
+      10.3750113378685,
+      false,
+      "Slide 1a Sofia"
+    ],
+    "Slide 4": [
+      314,
+      23,
+      false,
+      "Slide 4"
+    ],
+    "Slide 5 Dairy": [
+      337,
+      13,
+      false,
+      "Slide 5 Dairy"
+    ],
+    "Slide 5 Fruits": [
+      350,
+      17,
+      false,
+      "Slide 5 Fruits"
+    ],
+    "Slide 5 Grains": [
+      367,
+      22.25,
+      false,
+      "Slide 5 Grains"
+    ],
+    "Slide 5 Intro": [
+      390,
+      7.833333333333314,
+      false,
+      "Slide 5 Intro"
+    ],
+    "Slide 5 Protein": [
+      398,
+      16.958344671201814,
+      false,
+      "Slide 5 Protein"
+    ],
+    "Slide 5 Vegetables": [
+      415,
+      20,
+      false,
+      "Slide 5 Vegetables"
+    ],
+    "Slide 6": [
+      435,
+      32,
+      false,
+      "Slide 6"
+    ],
+    "Slide 7a": [
+      467,
+      13.5,
+      false,
+      "Slide 7a"
+    ],
+    "Slide 7b": [
+      481,
+      17.5,
+      false,
+      "Slide 7b"
+    ],
+    "Slide 8a": [
+      499,
+      4.5,
+      false,
+      "Slide 8a"
+    ],
+    "Slide 8b": [
+      504,
+      15.958321995464871,
+      false,
+      "Slide 8b"
+    ],
+    "Slide 9a": [
+      520,
+      5,
+      false,
+      "Slide 9a"
+    ],
+    "Slide 9b": [
+      525,
+      21.25,
+      false,
+      "Slide 9b"
+    ],
+    "Slide2": [
+      547,
+      41,
+      false,
+      "Slide2"
+    ],
+    "Slide3": [
+      588,
+      31.5,
+      false,
+      "Slide3"
+    ],
+    "magicmallet_c": [
+      620,
+      0.9723356009070585,
+      false,
+      "magicmallet_c"
+    ]
+  }
+}
