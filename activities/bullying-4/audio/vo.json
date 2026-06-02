@@ -1,0 +1,128 @@
+{
+	"resources": [
+		"output/bp4-bullying-lesson-scratch/vo.ogg",
+		"output/bp4-bullying-lesson-scratch/vo.m4a"
+	],
+	"spritemap": {
+		"slide 2 1": {
+			"start": 0,
+			"end": 5.281927437641723,
+			"loop": false
+		},
+		"slide 2 2": {
+			"start": 7,
+			"end": 10.4,
+			"loop": false
+		},
+		"slide 2 3": {
+			"start": 12,
+			"end": 21.16176870748299,
+			"loop": false
+		},
+		"slide 2": {
+			"start": 23,
+			"end": 39.19283446712018,
+			"loop": false
+		},
+		"slide 3 cyberbullying": {
+			"start": 41,
+			"end": 67.91410430839002,
+			"loop": false
+		},
+		"slide 3 outro": {
+			"start": 69,
+			"end": 85.53947845804989,
+			"loop": false
+		},
+		"slide 3 physical": {
+			"start": 87,
+			"end": 98.85975056689342,
+			"loop": false
+		},
+		"slide 3 social": {
+			"start": 100,
+			"end": 113.53120181405896,
+			"loop": false
+		},
+		"slide 3 verbal": {
+			"start": 115,
+			"end": 127.61231292517007,
+			"loop": false
+		},
+		"slide 3": {
+			"start": 129,
+			"end": 137.00632653061226,
+			"loop": false
+		},
+		"slide 4": {
+			"start": 139,
+			"end": 175.50589569160996,
+			"loop": false
+		},
+		"slide 5 feelings": {
+			"start": 177,
+			"end": 187.5,
+			"loop": false
+		},
+		"slide 5 power": {
+			"start": 189,
+			"end": 198.42580498866212,
+			"loop": false
+		},
+		"slide 5 repeated": {
+			"start": 200,
+			"end": 206,
+			"loop": false
+		},
+		"slide 5 sides": {
+			"start": 207,
+			"end": 230.19691609977323,
+			"loop": false
+		},
+		"slide 5 solution": {
+			"start": 232,
+			"end": 240,
+			"loop": false
+		},
+		"slide 5": {
+			"start": 241,
+			"end": 247.84482993197278,
+			"loop": false
+		},
+		"slide 6": {
+			"start": 249,
+			"end": 270.33106575963717,
+			"loop": false
+		},
+		"slide 7 afraid": {
+			"start": 272,
+			"end": 279.8384126984127,
+			"loop": false
+		},
+		"slide 7 angry": {
+			"start": 281,
+			"end": 287.84097505668933,
+			"loop": false
+		},
+		"slide 7 confused": {
+			"start": 289,
+			"end": 297.31290249433107,
+			"loop": false
+		},
+		"slide 7 guilty": {
+			"start": 299,
+			"end": 307.7038775510204,
+			"loop": false
+		},
+		"slide 7 sad": {
+			"start": 309,
+			"end": 317.1530612244898,
+			"loop": false
+		},
+		"slide 7": {
+			"start": 319,
+			"end": 328.46489795918365,
+			"loop": false
+		}
+	}
+}
