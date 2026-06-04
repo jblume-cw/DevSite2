@@ -1,0 +1,113 @@
+{
+	"resources": [
+		"output/bp4-taking-action-lesson-scratch/vo.ogg",
+		"output/bp4-taking-action-lesson-scratch/vo.m4a"
+	],
+	"spritemap": {
+		"slide 10 tattling": {
+			"start": 0,
+			"end": 7.5,
+			"loop": false
+		},
+		"slide 10 telling": {
+			"start": 9,
+			"end": 13,
+			"loop": false
+		},
+		"slide 10": {
+			"start": 14,
+			"end": 28.64496598639456,
+			"loop": false
+		},
+		"slide 11 tattling": {
+			"start": 30,
+			"end": 37.84018140589569,
+			"loop": false
+		},
+		"slide 11 telling": {
+			"start": 39,
+			"end": 45.190725623582765,
+			"loop": false
+		},
+		"slide 11": {
+			"start": 47,
+			"end": 62.5,
+			"loop": false
+		},
+		"slide 2": {
+			"start": 64,
+			"end": 132.29308390022675,
+			"loop": false
+		},
+		"slide 3": {
+			"start": 134,
+			"end": 165.69195011337868,
+			"loop": false
+		},
+		"slide 4": {
+			"start": 167,
+			"end": 185,
+			"loop": false
+		},
+		"slide 5": {
+			"start": 186,
+			"end": 231.89006802721087,
+			"loop": false
+		},
+		"slide 6 empathy": {
+			"start": 233,
+			"end": 248.2217006802721,
+			"loop": false
+		},
+		"slide 6 go with": {
+			"start": 250,
+			"end": 261.6986394557823,
+			"loop": false
+		},
+		"slide 6 help": {
+			"start": 263,
+			"end": 271,
+			"loop": false
+		},
+		"slide 6 invite": {
+			"start": 272,
+			"end": 279.3821088435374,
+			"loop": false
+		},
+		"slide 6 outro": {
+			"start": 281,
+			"end": 292.43442176870747,
+			"loop": false
+		},
+		"slide 6": {
+			"start": 294,
+			"end": 309.0643764172336,
+			"loop": false
+		},
+		"slide 7": {
+			"start": 311,
+			"end": 322.367074829932,
+			"loop": false
+		},
+		"slide 8": {
+			"start": 324,
+			"end": 347.178820861678,
+			"loop": false
+		},
+		"slide 9 tattling": {
+			"start": 349,
+			"end": 356.5,
+			"loop": false
+		},
+		"slide 9 telling": {
+			"start": 358,
+			"end": 365.4014739229025,
+			"loop": false
+		},
+		"slide 9": {
+			"start": 367,
+			"end": 385.6664172335601,
+			"loop": false
+		}
+	}
+}
