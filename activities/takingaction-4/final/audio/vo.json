@@ -1,0 +1,113 @@
+{
+	"resources": [
+		"output/bp4-taking-action-lesson/vo.ogg",
+		"output/bp4-taking-action-lesson/vo.m4a"
+	],
+	"spritemap": {
+		"slide 10 tattling": {
+			"start": 0,
+			"end": 7.605918367346939,
+			"loop": false
+		},
+		"slide 10 telling": {
+			"start": 9,
+			"end": 13.590045351473922,
+			"loop": false
+		},
+		"slide 10": {
+			"start": 15,
+			"end": 28.22124716553288,
+			"loop": false
+		},
+		"slide 11 tattling": {
+			"start": 30,
+			"end": 36.3356462585034,
+			"loop": false
+		},
+		"slide 11 telling": {
+			"start": 38,
+			"end": 43.76253968253968,
+			"loop": false
+		},
+		"slide 11": {
+			"start": 45,
+			"end": 60.30471655328798,
+			"loop": false
+		},
+		"slide 2": {
+			"start": 62,
+			"end": 128.99673469387756,
+			"loop": false
+		},
+		"slide 3": {
+			"start": 130,
+			"end": 161.28748299319727,
+			"loop": false
+		},
+		"slide 4": {
+			"start": 163,
+			"end": 182.44471655328798,
+			"loop": false
+		},
+		"slide 5": {
+			"start": 184,
+			"end": 227.0791836734694,
+			"loop": false
+		},
+		"slide 6 empathy": {
+			"start": 229,
+			"end": 244.31587301587302,
+			"loop": false
+		},
+		"slide 6 go with": {
+			"start": 246,
+			"end": 258.4541723356009,
+			"loop": false
+		},
+		"slide 6 help": {
+			"start": 260,
+			"end": 267.69950113378684,
+			"loop": false
+		},
+		"slide 6 invite": {
+			"start": 269,
+			"end": 276.7731065759637,
+			"loop": false
+		},
+		"slide 6 outro": {
+			"start": 278,
+			"end": 290.0981859410431,
+			"loop": false
+		},
+		"slide 6": {
+			"start": 292,
+			"end": 306.20251700680274,
+			"loop": false
+		},
+		"slide 7": {
+			"start": 308,
+			"end": 319.6953968253968,
+			"loop": false
+		},
+		"slide 8": {
+			"start": 321,
+			"end": 342.79916099773243,
+			"loop": false
+		},
+		"slide 9 tattling": {
+			"start": 344,
+			"end": 349.6463492063492,
+			"loop": false
+		},
+		"slide 9 telling": {
+			"start": 351,
+			"end": 357.4518594104308,
+			"loop": false
+		},
+		"slide 9": {
+			"start": 359,
+			"end": 376.4579365079365,
+			"loop": false
+		}
+	}
+}
