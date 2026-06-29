@@ -1,0 +1,23 @@
+{
+	"resources": [
+		"output/zinkthezebra-4/vo.ogg",
+		"output/zinkthezebra-4/vo.m4a"
+	],
+	"spritemap": {
+		"Intro 1": {
+			"start": 0,
+			"end": 22.379024943310657,
+			"loop": false
+		},
+		"Outro 1": {
+			"start": 24,
+			"end": 73.25827664399094,
+			"loop": false
+		},
+		"Outro 2": {
+			"start": 75,
+			"end": 84.40732426303855,
+			"loop": false
+		}
+	}
+}
