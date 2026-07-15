@@ -1,0 +1,13 @@
+{
+	"resources": [
+		"output/bp4-wewillrise/wewillrise.ogg",
+		"output/bp4-wewillrise/wewillrise.m4a"
+	],
+	"spritemap": {
+		"WeWillRise": {
+			"start": 0,
+			"end": 169.09090702947844,
+			"loop": false
+		}
+	}
+}
