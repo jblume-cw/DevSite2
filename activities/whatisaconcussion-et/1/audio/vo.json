@@ -1,0 +1,53 @@
+{
+	"resources": [
+		"output/whatisaconcussion-et/vo.ogg",
+		"output/whatisaconcussion-et/vo.m4a"
+	],
+	"spritemap": {
+		"silence": {
+			"start": 0,
+			"end": 1,
+			"loop": false
+		},
+		"slide 1": {
+			"start": 2,
+			"end": 8.370839002267573,
+			"loop": false
+		},
+		"slide 3": {
+			"start": 10,
+			"end": 45.42918367346939,
+			"loop": false
+		},
+		"slide 4": {
+			"start": 47,
+			"end": 75.24412698412698,
+			"loop": false
+		},
+		"slide 5 correct": {
+			"start": 77,
+			"end": 78.10913832199546,
+			"loop": false
+		},
+		"slide 5 incorrect": {
+			"start": 80,
+			"end": 84.52181405895692,
+			"loop": false
+		},
+		"slide 5 question": {
+			"start": 86,
+			"end": 92.13337868480725,
+			"loop": false
+		},
+		"slide 6 incorrect": {
+			"start": 94,
+			"end": 104.16235827664399,
+			"loop": false
+		},
+		"slide 6 question": {
+			"start": 106,
+			"end": 132.54430839002268,
+			"loop": false
+		}
+	}
+}
